@@ -1,0 +1,251 @@
+{
+
+    "intelligence" :{
+        "definitions": [
+            "Turing intelligence definition", 
+            "Legg-Hutter intelligence definition",
+            "DNN-based definition",
+            "Representation-based intelligence definition"]
+    },
+    
+    "Representation-based intelligence definition" : {
+        "definition": "The ability of an agent to represent the surrounding reality in order to improve its success there.",
+        "explanation": "An intelligent agent builds a model of its environment and uses this model to make decisions that enhance its performance in achieving its goals."
+    },
+
+    "AI": {
+        "successes" : ["AI classification", "text generation", "image generation", "autonomous cars"],
+        "business_value": ["Billion USD business (2023: ~ 200 bUSD)"],
+        "challenges": [
+            "AI needs balanced datasets",
+            "catastrophic forgetting",
+            "no error control",
+            "no goals, no planning"
+        ]
+    },
+
+    "no error control" : {
+        "issues": [
+            "adversarial attack",
+            "hallucinations"
+        ]
+    },
+
+    "AI needs balanced datasets" :{
+        "requirements": [
+            "representative samples for all categories",
+            "sufficient number of samples for all categories"
+        ],
+        "technologies": [
+            "data augmentation",
+            "synthetic data generation"
+        ]
+    },
+
+    "AI classification" : {
+        "examples": [
+            "dog breeds",
+            "faces",
+            "birdsong",
+            "flowers"
+        ]
+    },
+
+    "text generation" : {
+        "examples": [
+            "chatGPT",
+            "Bing",
+            "DeepSeek"
+        ]
+    },
+    "image generation" : {
+        "examples": [
+            "midjourney",
+            "Dall-E",
+            "Dreamstudio"
+        ]
+    },
+    "autonomous cars" : {
+        "examples": [
+            "AI driving assistants"
+        ]
+    },
+
+    "problem solving" : {
+        "approaches": [
+            "historic times problem solving",
+            "problem solving with machines",
+            "problem solving with computers",
+            "problem solving with artificial intelligence"],
+        "methods": [
+            "traditional algorithms",
+            "artificial intelligence based problem solving"
+        ]
+    },
+
+    "historic times problem solving" : {
+        "observation made by": "human",
+        "modelling done by": "human",
+        "computation done by": "human",
+        "action taken by": "human"
+    },
+    "problem solving with machines" : {
+        "observation made by": "machine",
+        "modelling done by": "human",
+        "computation done by": "human",
+        "action taken by": "human"
+    },
+    "problem solving with computers" : {
+        "observation made by": "machine",
+        "modelling done by": "human",
+        "computation done by": "machine",
+        "action taken by": "human"
+    },
+    "problem solving with artificial intelligence" : {
+        "observation made by": "machine",
+        "modelling done by": "machine",
+        "computation done by": "machine",
+        "action taken by": "human"
+    },
+
+    "traditional algorithms" : {
+        "workflow": [
+            "we understand the problem",
+            "write a code",
+            "run the code"],
+        "characteristics": [
+            "machine does the same than we should do, just faster",
+            "machine is not smarter (just faster)"
+        ]
+    },
+
+    "artificial intelligence based problem solving" : {
+        "workflow": [
+            "we understand learning",
+            "write a learning code",
+            "the code learns the problem and solves it"
+        ],
+        "characteristics": [
+            "we do not know the solution of the problem (only the learning strategy)",
+            "machine is smarter in specific fields"
+        ]
+    },
+
+    "representation of reality" :{
+        "aspects": ["general reality", "actual reality"],
+        "main stream AI representation": "general reality is represented much deeper than actual reality",
+        "methods of representing reality": [
+            "gather information",
+            "relevant features"
+        ]
+    },
+
+    "general reality" : {
+        "description": "laws and generic algorithms describing how the world works",
+        "examples": [
+            "map describing the streets",
+            "LLM body, to find out which token comes",
+            "sport example: tool of the athlete (bycicle, gun, etc), the physical ability (strength, speed, precision)"
+        ],
+        "improvement_methods": [
+            "better tools",
+            "hard training"
+        ],
+        "in_AI": "part of the (trained) hardware → represented by millions to ~100billions of parameters"
+
+    },
+
+    "actual reality" : {
+        "description": "describes the actual environment, the objects, persons and phenomena that are actually active",
+        "examples": [
+            "in the map the actual traffic, road works, detours, obstacles, etc.",
+            "LLMs: the prompt describing the actual task",
+            "in sport: actual form of the athlete"
+        ],
+        "in_AI": "part of the input → ~million tokens",
+        "initial_conditions": [
+            "represent actual reality",
+            "in science (differential equations): exact representation of future",
+            "in real systems (noisy, chaotic): represents reality for a range",
+            "there is always a validity range",
+            "deviation from the 'exact' path in simulations",
+            "hallucination radius in LLMs"
+        ],
+        "maintain_precision": [
+            "needs always project the predictions to the actual reality",
+            "control can be simple (even linear)",
+            "example: lossless compression"
+        ]
+    },
+
+    "worldview" :{
+        "worldview approaches" : [
+            "scientific approach",
+            "intelligence approach"
+        ]
+    },
+
+    "gather information" : {
+        "characteristics" : ["facts", "interpretation agnostic"],
+        "in_IT": [
+            "big data approach, collect all available information (databases, data lakes)",
+            "avoid information loss",
+            "very large amount of data"
+        ],
+        "example": [
+            "pixel color",
+            "logs",
+            "amplitudes in a wave"
+        ],
+        "storage methods": [
+            "datalakes",
+            "relational databases",
+            "non-relational databases"
+        ]
+    },
+
+    "evolution" : {
+        "stages" : ["physical evolution", "biological evolution", "change in the nervous system change", "cultural evolution", "learning processes"]
+    },
+    "physical evolution" : {
+        "definition": "Changes in the physical state of the environment over time, governed by physical laws.",
+        "examples": [
+            "weather patterns",
+            "geological changes",
+            "movement of celestial bodies"
+        ]
+    },
+    "biological evolution" : {
+        "definition": "The process by which living organisms change over generations through genetic variation and natural selection.",
+        "examples": [
+            "adaptation of species to their environment",
+            "development of new traits",
+            "speciation events"
+        ]
+    },
+    "change in the nervous system change" : {
+        "definition": "Modifications in the structure and function of the nervous system in response to experiences and learning.",
+        "examples": [
+            "neuroplasticity",
+            "formation of new neural connections",
+            "learning and memory processes"
+        ]
+    },
+    "cultural evolution" : {
+        "definition": "The transmission and modification of cultural information, behaviors, and practices over time.",
+        "examples": [
+            "language development",
+            "technological advancements",
+            "social norms and customs"
+        ]
+    },
+    "learning processes" : {
+        "definition": "The acquisition of knowledge or skills through experience, study, or teaching.",
+        "examples": [
+            "classical conditioning",
+            "operant conditioning",
+            "observational learning"
+        ]
+    }
+
+}

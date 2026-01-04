@@ -1,0 +1,194 @@
+{
+    "world": {
+        "definition": ["the complete world"],
+        "_parent": ["countable set"],
+        "symbol": ["$W = T\\times \\Omega$"],
+        "symbol explanation": ["$T$ = time", "$\\Omega$ = states of the world"],
+        "time": ["$T = \\{ t_n \\;\\vert\\; n \\in \\mathbb{N} \\}$"],
+        "states": ["$\\Omega = \\{ \\omega_n \\;\\vert\\; t_n \\in T \\}$"],
+        "time evolution": ["$\\omega_{n+1} = f_{world}(\\omega_n)$", "Markov process" ]
+    },
+
+    "observation": {
+        "definition": ["a process of obtaining a value from the world"],
+        "formulation": ["$obs: W \\to B\\subset\\mathbb{R}$"],
+        "examples": [
+            "measuring temperature with a thermometer",
+            "recording the color of a pixel with a camera"
+        ],
+        "result" : ["fact"],
+        "alternative name": ["measurement"]
+    },
+
+    "fact" : {
+        "definition": ["result of an observation, an elementary piece of information about the world"],
+        "formulation": ["(obs, $fact = obs(\\omega))$"],
+        "examples": [
+            "the value of color of a pixel",
+            "the value of temperature at a point",
+            "the value of speed of an object"
+        ]
+    },
+
+    "context" : {
+        "definition": ["a partition the world"],
+        "subsets" : ["subsets of the partition", "classes"],
+        "symbol": ["$C$"],
+        "projector" : ["$\\Pi:\\Omega\\to C$"],
+        "formulation": ["$\\bigcup_{c\\in C} c = W,\\; c_1\\cap c_2 = \\emptyset \\text{ for } c_1 \\neq c_2$"],
+        "sigma algebra": ["set of subsets belonging to the context"],
+        "sigma algebra symbol": ["$\\mathcal{F}$"],
+        "measurable space" : ["$(W, \\mathcal{F})$"],
+        "time evolution": ["c_n\\in C", "$c_{n+1} = \\Pi(f_{world}(\\omega_n))$"],
+        "examples" : ["particle physics", "taxonomy of living beings"]
+    },
+
+    "class" : {
+        "definition": ["a subset belonging to a context"],
+        "alternative name": ["object"]
+    },
+
+    "subcontext" : {
+        "definition": ["a coarsening of a context"],
+        "formulation": ["$C_1$ is a subcontext of $C_2$ if every class in $C_1$ is a union of classes in $C_2$"],
+        "examples": [
+            "animal kingdom as a subcontext of taxonomy of living beings",
+            "primary colors as a subcontext of color space"
+        ]
+    },
+
+    "unifying context":{
+        "definition": ["a context that is finer than two compatible contexts"],
+        "formulation": ["$C$ is a unifying context of $C_1, C_2$ if $C_1, C_2$ are subcontexts of $C$"],
+        "construction": ["C = \\{ c_1 \\cap c_2 \\;\\vert\\; c_1 \\in C_1, c_2 \\in C_2 \\}"]
+    },
+
+    "feature" :{
+        "definition": ["an observation measurable with respect to a context", "random variable in a context"],
+        "context" : ["the defining context of the feature"],
+        "formulation": ["$F: W \\to B\\subset\\mathbb{R},\\; F(x)=F(y)\\; \\mathrm{if}\\; x,y \\in c \\in C$"],
+        "examples": [
+            "color of a pixel",
+            "temperature at a point",
+            "speed of an object"
+        ],
+        "alternative names": ["class-constant function"]
+    },
+
+    "independent features" : {
+        "definition" : ["$F_i$ are features of the context $C$, and $F_i-F_j$ is not constant if $i\\neq j$"]
+    },
+
+    "coordination" : {
+        "definition": ["F_1 \\times F_2 \\times ... \\times F_n : W \\to B_1 \\times B_2 \\times ... \\times B_n, bijection, where F_i are features"],
+        "examples": [
+            "RGB colors of pixels of an image",
+            "position and velocity of an object"
+        ]
+    },
+
+    "relevant feature" : {
+        "definition" : ["$C_1$ is a subcontext of $C$, $f$ is a feature of $C_1$"],
+        "alternative name" : ["selective feature"]
+    },
+
+    "descriptive feature" :{
+        "definition" : ["$C_1$ is a subcontext of $C$, $f$ is a feature of $C$, but not of $C_1$"],
+        "property": ["$f$ varies inside the classes of $C_1$"],
+        "alternative name" : ["irrelevant feature"]
+    },
+
+    "model" : {
+        "setup": ["$X$ and $Y$ are contexts, $Y$ is a coarsening of $X$"],
+        "task" : ["find the mapping $G: X \\to Y$ such that $G(x) = y$ if $x \\subseteq y$"],
+        "continuous contexts": [
+            "$X\\sim \\mathbb{R}^N$",
+            "$Y\\sim \\mathbb{R}^M$",
+            "$M\\le N$"
+        ],
+        "discrete contexts": [
+            "$X = \\{ x_1, x_2, ..., x_K \\}$",
+            "$K$ is typically very large",
+            "$Y = \\{ y_1, y_2, ..., y_L \\}$",
+            "$L$ is typically much smaller than $K$"
+        ],
+        "possible functions" : [
+            "${\\cal F} = \\{X\\toY\\;\\vert\\; |X|=K,\\, |Y|=L\\}$",
+            "$|{\\cal F}| = L^K$",
+            "very large function space",
+            "need to restrict to a smaller subset"    
+        ],
+        "functional space" : ["paramerized subset of ${\\cal F}$"],
+        "parameters" : ["$P\\sim \\mathbb{R}^M$", "set of parameters of the model", "$M$ dimensional space"],
+        "formulation" : ["$F : X \\times P \\to Y$"],
+        "example" : [
+            "pattern recognition",
+            "data compression"
+        ],
+        "context definition in AI": [
+            "supervised learning",
+            "data driven approach",
+            "unsupervised learning", 
+            "reinforcement learning"
+        ]
+    },
+
+    "pattern recognition" : {
+        "definition": ["find the meaningful classes from raw data"],
+        "example": [
+            "image classification",
+            "speech recognition"
+        ],
+        "basic context": ["pixels", "audio samples", "raw sensor data", "$X\\sim \\mathbb{R}^N$"],
+        "target context": ["object classes", "$Y = \\{ c_1, c_2, ..., c_K \\}$"]
+    },
+
+    "data compression" : {
+        "definition": ["represent the data with fewer bits by removing irrelevant features"],
+        "example": [
+            "image compression",
+            "audio compression"
+        ],
+        "basic context": ["pixels", "audio samples", "raw sensor data", "$X\\sim \\mathbb{R}^N$"],
+        "target context": ["compressed representation", "$Y\\sim \\mathbb{R}^M, M<N$"]
+    },
+
+    "supervised learning" : {
+        "definition": ["learning a model from labeled data"],
+        "labels" : [
+            "$(x, G(x))\\; \\mathrm{pairs, where}\\; x\\in X_{sample}$",
+            "$X_{sample}\\subset X$ = input context",
+            "$Y$ = output context",
+            "$G$ = model function"
+        ],
+        "example": [
+            "image classification with labeled images",
+            "speech recognition with transcribed audio"
+        ]
+    },
+
+    "data driven approach" : {
+        "definition": ["learning a model from raw data without explicit labels"],
+        "context definition": [
+            "implicit patterns in data",
+            "temporal subsequences",
+            "symmetries in data",
+            "distances of data points"
+        ],
+        "data": [
+            "$X_{sample}\\subset X$ = input context"
+        ],
+        "example": [
+            "clustering of images",
+            "determining physical laws from measurement data",
+            "dimensionality reduction of audio data"
+        ],
+        "methods": [
+            "autoencoders",
+            "generative models",
+            "Principal Component Analysis",
+            "Linear Laws Discovery",
+            "contrastive learning"
+        ]
+    }
+}

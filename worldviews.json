@@ -1,0 +1,519 @@
+{
+    "worldviews" :{
+        "types" : ["pre-scientific worldview", "scientific worldview", "intelligence worldview"]
+    },
+
+    "pre-scientific worldview" :{
+        "characteristics": [
+            "nature is chaotic and unpredictable",
+            "antropomorphic explanations",
+            "personal skills to understand and predict nature",
+            "artistic view, skills, ateliers and schools",
+            "everything is art, from bridge building to poetry",
+            "divine spheres are controlled by laws"
+            ],
+        "example" :[
+            "castle building",
+            "medieval art",
+            "Hagia Sophia dome"
+        ]
+    },
+
+    "scientific worldview" :{
+        "characteristics": [
+            "nature is governed by laws",
+            "laws can be discovered by systematic observations and experiments",
+            "mathematical description of nature",
+            "predictive models",
+            "technology based on scientific knowledge",
+            "laws are simple and elegant (Occam's razor)"
+            ],
+        "worldview": ["analytic", "reductionist", "deterministic"],
+        "method": ["scientific method"],
+        "example" :[
+            "Newtonian mechanics",
+            "Maxwell's equations",
+            "General relativity",
+            "chemical elements"
+        ]
+    },
+
+    "science and intelligence" :{
+        "goal" : ["represent a context by relevant features"],
+        "methodologies": [
+            "scientific method",
+            "intelligence method"
+        ]
+    },
+
+    "scientific method" : {
+        "steps": ["observation", "modelling", "computation", "prediction", "experiment", "theory refinement"],
+        "assumptions": [
+            "nature is objective",
+            "laws are universal",
+            "experiments are reproducible",
+            "all effects have distinct causes"
+        ],
+        "requirements": [
+            "parameters can be fixed by experiments",
+            "accurate measurements",
+            "controlled experiments",
+            "few relevant variables"
+        ],
+        "consequences" : [
+            "unique theory can be derived",
+            "theory can predict new phenomena",
+            "theory has limited validity range",
+            "theory can be falsified by experiments"
+        ],
+        "hints" : [
+            "symmetry principles",
+            "conservation laws",
+            "dimensional analysis",
+            "Occam's razor"
+        ],
+        "examples" : [
+            "Ising model",
+            "Newtonian mechanics",
+            "physics (mechanics, electromagnetism, thermodynamics, quantum mechanics, relativity, quantum field theory)",
+            "chemistry of simple systems",
+            "genetics, molecular biology of simple organisms",
+            "constraint systems (engineering, traffic, logistics)"
+        ]
+    },
+
+    "Ising model" : {
+        "definition": "A mathematical model used in statistical mechanics to describe ferromagnetism in materials.",
+        "lattice": ["$M = \\{1,\\dots, N\\}^d$", "d-dimensional cubic lattice with N sites in each direction"],
+        "states" : ["$M\\times \\{0,1\\}$ lattice", "each site has a spin up (+1) or down (-1)"],
+        "Hamiltonian": ["$H(\\sigma) = -J \\sum_{\\langle i,j \\rangle} \\sigma_i \\sigma_j - h \\sum_i \\sigma_i$"],
+        "relevant_parameters": [
+            "J: interaction strength between neighboring spins",
+            "h: external magnetic field"
+        ],
+        "partition_function": ["$Z = \\sum_{\\{\\sigma\\}} e^{-\\beta H(\\sigma)}$"],
+        "temperature": ["$\\beta = \\frac{1}{k_B T}$, where $k_B$ is Boltzmann constant and T is temperature"],
+        "components": [
+            "lattice of spins",
+            "interactions between neighboring spins",
+            "external magnetic field"
+        ],
+        "applications": [
+            "phase transitions",
+            "critical phenomena",
+            "complex systems"
+        ]
+    },
+
+    "Newtonian mechanics":{
+        "definition": "A classical physics framework that describes the motion of objects based on Newton's laws of motion and universal gravitation.",
+        "laws": [
+            "First Law (Inertia): An object at rest stays at rest, and an object in motion stays in motion unless acted upon by a net external force.",
+            "Second Law (F=ma): The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass.",
+            "Third Law (Action-Reaction): For every action, there is an equal and opposite reaction."
+        ],
+        "components": [
+            "point masses",
+            "objects with mass",
+            "forces acting on objects",
+            "time and space as absolute entities"
+        ],
+        "applications": [
+            "predicting the motion of planets",
+            "engineering mechanics",
+            "classical dynamics"
+        ]
+    },
+
+    "intelligence method" : {
+        "steps": ["set up a generic model", "gather information", "learn from data", "refine model by experience"],
+        "assumptions": [
+            "context contains lot of relevant features",
+            "features do not have unique role",
+            "not all effects have distinct causes"
+        ],
+        "requirements": [
+            "ability to learn from experience",
+            "adaptability to changing environments",
+            "handling of uncertainty",
+            "integration of multiple information sources"
+        ],
+        "consequences" : [
+            "lot of model can fit the data",
+            "no unique theory can be derived",
+            "models must be validated by performance in the real context",
+            "models always have limited validity and precision"
+        ],
+        "examples" :[
+            "pattern recognition",
+            "natural language processing",
+            "chemistry of complex molecules",
+            "biology of complex organisms",
+            "complex systems (economics, social systems, ecosystems)"
+        ]
+    },
+
+    "analytic worldview" : {
+        "definition": "A perspective that breaks down complex phenomena into their simpler components to understand the underlying principles and laws governing them.",
+        "examples" : [
+            "clockwork",
+            "from matter to atoms",
+            "from atoms to elementary particles",
+            "from elementary particles to Standard Model",
+            "from Standard Model to Theory of Everything",
+            "from human body to organs",
+            "from organs to tissues",
+            "from tissues to cells",
+            "from cells to biomolecules",
+            "from biomolecules to atoms"
+        ],
+        "characteristics": [
+            "reductionism",
+            "determinism",
+            "focus on individual elements"
+        ],
+        "ontology": ["complexity is apparent", "real existing elements are the elementary ingredients",  "realism", "materialism", "mechanism"],
+        "ultimate theory": ["theory of everything", "final physical theory "],
+        "practical ToE": ["standard model of particle physics", "general relativity"],
+        "criticism" : ["criticism of the analytic worldview"]
+    },
+
+    "the particle physicist and the cake of the grandma": {
+        "story" : [
+            "particle physicist studies hard for yeears to understand the fundamental particles and forces of the universe",
+            "after years of research, he returns to his grandma's house for a visit",
+            "grandma has baked a delicious cake and offers it to him",
+            "paradoxon 1: grandma can bake cake, despite she does not know particle physics",
+            "paradoxon 2: particle physicist can understand the universe, despite he does not know how to bake a cake",
+            "if ToE explains the universe, why grandma can bake cake without knowing it?",
+            "if ToE explains the universe, why particle physicist cannot bake cake, despite knowing it?"
+        ],
+        "moral" : ["analytic worldview must fail somewhere", "complexity is real",  "holism is needed"]
+    },
+
+    "criticism of the analytic worldview": {
+        "points": [
+            "two component systems are more complex then one component ones",
+            "three component systems are more complex then two component ones",
+            "lot of components are not necessarily more complex then few component ones",
+            "description of the multicomponent system needs new concepts"
+        ],
+        "mathematical background": ["change of context", "renormalization group", "emergence", "complexity theory"],
+        "examples" : [
+            "few molecule systems can be chaotic, many molecule systems often behave like ideal gases"
+        ]
+    },
+
+    "renormalization group": {
+        "definition": ["Mathematical framework to describe context change in physical systems, particularly in statistical mechanics and quantum field theory."],
+        "applications in physics": [
+            "phase transitions",
+            "critical phenomena",
+            "scaling behavior"],
+        "mechanism": [
+            "a given context is described by a set of independent features",
+            "when changing the context, other features become relevant",
+            "world is described by different sets of features in different contexts",
+            "complete description must contain irrelevant features of all contexts"
+        ],
+        "consequences" : [
+            "we can not have a complete description in a single context",
+            "emergent properties arise when changing context",
+            "different levels of description are needed for different contexts",
+            "analytic reductionism fails in multicomponent systems"
+        ],
+        "examples" : [
+            "position of Mars is irrelevant in chemistry",
+            "chemistry is irrelevant in astrophysics",
+            "the identity of the experimenting person is irrelevant in physics experiments",
+            "the quantum nature of atoms is irrelevant in biology"
+        ]
+    },
+
+    "software-harware analogy": {
+        "points": [
+            "from software does not follow hardware details",
+            "from hardware does not follow software details",
+            "same software can run on different hardware",
+            "different software can run on the same hardware",
+            "software and hardware are different levels of description of the same reality"
+        ],
+        "implications": [
+            "different disciplines are related like software and hardware",
+            "biology and psychology are related like software and hardware",
+            "different disciplines are not analytically connected",
+            "the world can not be understood as a whole by analytic methods",
+            "the world can not be described by a single context",
+            "different disciplines need their own independent concepts and methods"
+        ]
+    },
+
+    "evolution" : {
+        "stages" : ["physical evolution", "biological evolution", "change in the nervous system change", "cultural evolution", "learning processes"]
+    },
+    "physical evolution" : {
+        "definition": "Changes in the physical state of the environment over time, governed by physical laws.",
+        "examples": [
+            "weather patterns",
+            "geological changes",
+            "movement of celestial bodies"
+        ]
+    },
+    "biological evolution" : {
+        "definition": "The process by which living organisms change over generations through genetic variation and natural selection.",
+        "examples": [
+            "adaptation of species to their environment",
+            "development of new traits",
+            "speciation events"
+        ]
+    },
+    "change in the nervous system change" : {
+        "definition": "Modifications in the structure and function of the nervous system in response to experiences and learning.",
+        "examples": [
+            "neuroplasticity",
+            "formation of new neural connections",
+            "learning and memory processes"
+        ]
+    },
+    "cultural evolution" : {
+        "definition": "The transmission and modification of cultural information, behaviors, and practices over time.",
+        "examples": [
+            "language development",
+            "technological advancements",
+            "social norms and customs"
+        ]
+    },
+    "learning processes" : {
+        "definition": "The acquisition of knowledge or skills through experience, study, or teaching.",
+        "examples": [
+            "classical conditioning",
+            "operant conditioning",
+            "observational learning"
+        ]
+    },
+
+
+
+    "intelligence" :{
+        "definitions": [
+            "Turing intelligence definition", 
+            "Legg-Hutter intelligence definition",
+            "DNN-based definition",
+            "Representation-based intelligence definition"]
+    },
+    
+    "Representation-based intelligence definition" : {
+        "definition": "The ability of an agent to represent the surrounding reality in order to improve its success there.",
+        "explanation": "An intelligent agent builds a model of its environment and uses this model to make decisions that enhance its performance in achieving its goals."
+    },
+
+    "AI": {
+        "successes" : ["AI classification", "text generation", "image generation", "autonomous cars"],
+        "business_value": ["Billion USD business (2023: ~ 200 bUSD)"],
+        "challenges": [
+            "AI needs balanced datasets",
+            "catastrophic forgetting",
+            "no error control",
+            "no goals, no planning"
+        ]
+    },
+
+    "no error control" : {
+        "issues": [
+            "adversarial attack",
+            "hallucinations"
+        ]
+    },
+
+    "AI needs balanced datasets" :{
+        "requirements": [
+            "representative samples for all categories",
+            "sufficient number of samples for all categories"
+        ],
+        "technologies": [
+            "data augmentation",
+            "synthetic data generation"
+        ]
+    },
+
+    "AI classification" : {
+        "examples": [
+            "dog breeds",
+            "faces",
+            "birdsong",
+            "flowers"
+        ]
+    },
+
+    "text generation" : {
+        "examples": [
+            "chatGPT",
+            "Bing",
+            "DeepSeek"
+        ]
+    },
+    "image generation" : {
+        "examples": [
+            "midjourney",
+            "Dall-E",
+            "Dreamstudio"
+        ]
+    },
+    "autonomous cars" : {
+        "examples": [
+            "AI driving assistants"
+        ]
+    },
+
+    "problem solving" : {
+        "approaches": [
+            "historic times problem solving",
+            "problem solving with machines",
+            "problem solving with computers",
+            "problem solving with artificial intelligence"],
+        "methods": [
+            "traditional algorithms",
+            "artificial intelligence based problem solving"
+        ]
+    },
+
+    "historic times problem solving" : {
+        "observation made by": "human",
+        "modelling done by": "human",
+        "computation done by": "human",
+        "action taken by": "human"
+    },
+    "problem solving with machines" : {
+        "observation made by": "machine",
+        "modelling done by": "human",
+        "computation done by": "human",
+        "action taken by": "human"
+    },
+    "problem solving with computers" : {
+        "observation made by": "machine",
+        "modelling done by": "human",
+        "computation done by": "machine",
+        "action taken by": "human"
+    },
+    "problem solving with artificial intelligence" : {
+        "observation made by": "machine",
+        "modelling done by": "machine",
+        "computation done by": "machine",
+        "action taken by": "human"
+    },
+
+    "traditional algorithms" : {
+        "workflow": [
+            "we understand the problem",
+            "write a code",
+            "run the code"],
+        "characteristics": [
+            "machine does the same than we should do, just faster",
+            "machine is not smarter (just faster)"
+        ]
+    },
+
+    "artificial intelligence based problem solving" : {
+        "workflow": [
+            "we understand learning",
+            "write a learning code",
+            "the code learns the problem and solves it"
+        ],
+        "characteristics": [
+            "we do not know the solution of the problem (only the learning strategy)",
+            "machine is smarter in specific fields"
+        ]
+    },
+
+    "representation of reality" :{
+        "aspects": ["general reality", "actual reality"],
+        "main stream AI representation": "general reality is represented much deeper than actual reality",
+        "methods of representing reality": [
+            "gather information",
+            "relevant features"
+        ]
+    },
+
+    "general reality" : {
+        "description": "laws and generic algorithms describing how the world works",
+        "examples": [
+            "map describing the streets",
+            "LLM body, to find out which token comes",
+            "sport example: tool of the athlete (bycicle, gun, etc), the physical ability (strength, speed, precision)"
+        ],
+        "improvement_methods": [
+            "better tools",
+            "hard training"
+        ],
+        "in_AI": "part of the (trained) hardware → represented by millions to ~100billions of parameters"
+
+    },
+
+    "actual reality" : {
+        "description": "describes the actual environment, the objects, persons and phenomena that are actually active",
+        "examples": [
+            "in the map the actual traffic, road works, detours, obstacles, etc.",
+            "LLMs: the prompt describing the actual task",
+            "in sport: actual form of the athlete"
+        ],
+        "in_AI": "part of the input → ~million tokens",
+        "initial_conditions": [
+            "represent actual reality",
+            "in science (differential equations): exact representation of future",
+            "in real systems (noisy, chaotic): represents reality for a range",
+            "there is always a validity range",
+            "deviation from the 'exact' path in simulations",
+            "hallucination radius in LLMs"
+        ],
+        "maintain_precision": [
+            "needs always project the predictions to the actual reality",
+            "control can be simple (even linear)",
+            "example: lossless compression"
+        ]
+    },
+
+    "worldview" :{
+        "worldview approaches" : [
+            "scientific approach",
+            "intelligence approach"
+        ]
+    },
+
+    "gather information" : {
+        "characteristics" : ["facts", "interpretation agnostic"],
+        "in_IT": [
+            "big data approach, collect all available information (databases, data lakes)",
+            "avoid information loss",
+            "very large amount of data"
+        ],
+        "example": [
+            "pixel color",
+            "logs",
+            "amplitudes in a wave"
+        ],
+        "storage methods": [
+            "datalakes",
+            "relational databases",
+            "non-relational databases"
+        ]
+    },
+
+    "classes" : {
+        "definition" : [
+            "equivalence classes of facts based on relevant features"
+        ]
+    },
+
+    "relevant features": {
+        "premises" : ["classes are defined", "lot of possible facts", "fewer classes"],
+        "consequence" : [ "a lot of facts belong to the same class", "classes are equivalence classes of facts" ],
+        "separation of features" : [
+            "relevant features",
+            "irrelevant features"
+        ],
+        "characterization of classes": [
+            "class-constant functions as relevant features",
+            "mathematically: measurable functions or random variables"
+        ]
+    }
+}

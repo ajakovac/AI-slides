@@ -1,0 +1,691 @@
+{
+  "course_overview": {
+    "title": "Machine Learning in Practice I",
+    "instructor": "antal.jakovac@uni-corvinus.hu",
+    "objectives": [
+      "understand when and why to use machine learning",
+      "learn data handling methods",
+      "cover core ML models before deep learning",
+      "learn how to build an ML project"
+    ],
+    "evaluation": ["written exams together with exercises"],
+    "materials": [
+      "course slides",
+      "An Introduction to Statistical Learning (James, Witten, Hastie, Tibshirani)",
+      "Designing Machine Learning Systems (Chip Huyen)",
+      "github repository: https://github.com/ajakovac/ML-in-Practice-I"
+    ],
+    "setup": [
+      "git clone https://github.com/ajakovac/ML-in-Practice-I.git",
+      "cd ML-in-Practice-I",
+      "read README.md and follow instructions"
+    ]
+  },
+  "introduction": {
+    "why_ml": [
+      "AI solves modelling problems without us knowing the exact model",
+      "can outperform humans on specific tasks"
+    ],
+    "problem_solving_evolution": [
+      "historic: human handles observation, modelling, computation, action",
+      "machines: machine observes, human models and acts",
+      "computers: machine observes and computes, human models and acts",
+      "AI: machine observes, models, computes, human acts"
+    ],
+    "traditional_vs_ml": {
+      "traditional": "data + rules -> output",
+      "ml": "data + output -> rules"
+    },
+    "ml_types_traditional": {
+      "supervised": ["learn mapping from data + labels", "classification", "regression"],
+      "unsupervised": ["find patterns without labels", "clustering", "dimensionality reduction"],
+      "reinforcement": ["learn via environment interaction", "not covered in course"]
+    },
+    "ml_types_other_view": {
+      "task_driven_system_I": [
+        "define task and examples of success",
+        "optimize models for the task",
+        "includes most supervised and RL cases"
+      ],
+      "data_driven_system_II": [
+        "reveal structure from similar data without explicit labels",
+        "LLMs, autoencoders, similarity learning, self-supervised methods"
+      ]
+    },
+    "typical_tasks": {
+      "classification": [
+        "face, dog breeds, bird songs",
+        "spam detection, disease diagnosis, sentiment analysis"
+      ],
+      "regression": [
+        "price prediction",
+        "weather forecasting",
+        "energy demand"
+      ],
+      "clustering": [
+        "customer segmentation",
+        "document grouping",
+        "biological cell types"
+      ],
+      "compression": ["PCA", "visualization", "autoencoders", "embeddings"],
+      "decision_making": ["robotics", "games", "resource allocation", "monitoring"],
+      "generation": ["text", "translation", "image", "data", "molecular structures", "code"],
+      "outlier_detection": ["spam", "suspicious customers", "fraud"],
+      "recommendation": ["movies", "jobs", "code completion"],
+      "ranking_retrieval": ["search engines", "document or data retrieval"]
+    },
+    "overlap_example": ["chemical plant monitoring uses anomaly detection, classification, forecasting, control, recommendation"],
+    "classic_models": [
+      "linear regression and logistic probability",
+      "Bayesian analysis",
+      "support vector machines",
+      "decision trees and ensemble methods",
+      "k-nearest neighbour",
+      "principal component analysis",
+      "extreme learning machine",
+      "note: most production ML is not deep neural networks"
+    ],
+    "tools": {
+      "language": "Python",
+      "packages": [
+        "numpy for numerical computing",
+        "scipy and scikit-learn for classical ML",
+        "pandas for data manipulation",
+        "matplotlib and seaborn for visualization"
+      ],
+      "virtualenv": [
+        "python -m venv .venv",
+        "source .venv/bin/activate or .venv\\Scripts\\Activate",
+        "pip install matplotlib numpy scipy scikit-learn pandas seaborn ipykernel",
+        "pip freeze > requirements.txt",
+        "pip install -r requirements.txt"
+      ],
+      "dev_tools": [
+        "Jupyter or Google Colab for notebooks",
+        "VS Code or similar editors",
+        "WSL for Linux-like environment on Windows",
+        "docker for containerization",
+        "APIs with fastAPI or Flask for communication"
+      ]
+    }
+  },
+  "workflow": {
+    "steps": [
+      "problem_definition",
+      "data_collection",
+      "data_cleaning_preprocessing",
+      "feature_engineering",
+      "model_selection",
+      "training_validation",
+      "evaluation",
+      "deployment_monitoring"
+    ],
+    "problem_definition": [
+      "specify task such as classification, regression, clustering",
+      "judge if ML is adequate",
+      "define success criteria",
+      "respect domain constraints and goals"
+    ],
+    "data_collection": [
+      "ensure enough and diverse data",
+      "use sampling methods",
+      "obtain labels for supervised tasks"
+    ],
+    "data_cleaning_preprocessing": [
+      "handle missing values, duplicates, outliers",
+      "normalize or scale features",
+      "encode categorical variables",
+      "convert raw inputs into usable formats"
+    ],
+    "feature_engineering": [
+      "create meaningful input features",
+      "transform or combine attributes",
+      "apply domain knowledge"
+    ],
+    "model_selection": [
+      "choose suitable algorithms e.g. linear regression, SVM, RF, k-NN",
+      "balance interpretability, complexity, training time"
+    ],
+    "training_validation": [
+      "split into train/validation (and test)",
+      "train then validate",
+      "tune hyperparameters, e.g. cross-validation"
+    ],
+    "evaluation": [
+      "use task-appropriate metrics such as accuracy, precision, recall, F1, MSE, MAE, R2",
+      "inspect confusion matrices, ROC curves, residuals"
+    ],
+    "deployment_monitoring": [
+      "integrate model into production (web app, API, etc.)",
+      "monitor drift and performance degradation",
+      "retrain when needed"
+    ]
+  },
+  "logic_of_intelligence": {
+    "toy_world": [
+      "world with two pixels and states A, B",
+      "classification task: infer state from pixels"
+    ],
+    "data_processing": [
+      "pixels mapped to brightness in [0,1]",
+      "two numbers represent two pixels"
+    ],
+    "feature_workflow": [
+      "plot points for states; they lie in subspaces",
+      "introduce new coordinates aligned with states",
+      "u constant per state for classification, v varies within state for description"
+    ],
+    "feature_principles": [
+      "ideal features align with data classes",
+      "relevant/selective features constant within a class and different across classes",
+      "descriptive/irrelevant features vary within class for compression",
+      "model building seeks these coordinates"
+    ],
+    "practical_split": [
+      "feature selection: choose or combine original features",
+      "model selection: define functional space",
+      "training: fit parameters"
+    ],
+    "data_importance": [
+      "data often dominates importance",
+      "data engineering crucial; limited fundamental research focus"
+    ],
+    "evaluation": [
+      "estimate task success, robustness, outlier handling, business value"
+    ],
+    "deployment": [
+      "production use demands continuous monitoring and adaptation"
+    ],
+    "takeaway": [
+      "intelligence finds relevant features and adapts them to the task"
+    ]
+  },
+  "project_management": {
+    "workflows": {
+      "waterfall": [
+        "clear documentation and predictable timeline",
+        "inflexible, late error discovery",
+        "best for well-defined projects"
+      ],
+      "agile": [
+        "individuals and collaboration prioritized",
+        "working model preferred over detailed documentation",
+        "MVP-first, iterative improvement",
+        "customer collaboration and responsiveness to change",
+        "pros: flexible, communicative, customer-centric",
+        "cons: meeting overload, over-control, less predictable"
+      ]
+    },
+    "agile_practices": [
+      "loops and sprints",
+      "UI/UX focus",
+      "CI/CD pipelines",
+      "Kanban/Jira boards for backlog, todo, in progress, testing, done"
+    ],
+    "small_team_flow": [
+      "define goals and backlog (user stories)",
+      "create repo and branches",
+      "build MVP with backend, frontend, testbed",
+      "deploy to test environment",
+      "collect feedback and refine"
+    ],
+    "roles": {
+      "business_side": [
+        "client or stakeholder states requirements",
+        "business analyst/product manager bridges business goals to ML problems",
+        "project/product manager handles budgeting, timeline, resources"
+      ],
+      "data_model_experts": [
+        "data engineer builds and maintains pipelines, ETL/ELT, storage, monitoring",
+        "ML engineer/data scientist generates features, designs and trains models, prototypes, evaluates performance"
+      ],
+      "software_infrastructure": [
+        "software architect designs system, integration, APIs, databases",
+        "software developer implements algorithms, frontend, backend",
+        "DevOps/MLOps automates deployment, monitoring, scaling using docker, Kubernetes, CI/CD, cloud"
+      ],
+      "operations_safety": [
+        "QA/test engineer builds tests (unit, integration, stress)",
+        "monitoring/reliability engineer tracks health, drift, degradation",
+        "security engineer handles privacy, robustness, adversarial protection"
+      ],
+      "user_story_pipeline": [
+        "client wants early warnings for chemical plant dangers",
+        "BA reframes as anomaly detection",
+        "data engineer builds data pipeline",
+        "data scientist prototypes detector",
+        "ML engineer optimizes latency and accuracy",
+        "software architect and developers integrate service",
+        "MLOps deploys with monitoring",
+        "QA and monitoring validate performance",
+        "security ensures compliance"
+      ]
+    },
+    "artefacts": [
+      "product vision and roadmap",
+      "backlog with user stories and acceptance criteria",
+      "RACI and stakeholder map",
+      "definition of ready/done for work items",
+      "runbooks and playbooks for operations",
+      "architecture decision records (ADRs)",
+      "risk register with mitigations and owners"
+    ],
+    "ceremonies": [
+      "backlog refinement",
+      "sprint or iteration planning",
+      "daily standup",
+      "demo/review with stakeholders",
+      "retrospective for continuous improvement",
+      "release/launch readiness reviews"
+    ],
+    "estimation_planning": [
+      "relative sizing (story points, t-shirt sizing) vs time-based estimates",
+      "capacity planning per sprint or iteration",
+      "critical path identification for dependencies",
+      "buffering for integration/testing time",
+      "prioritization using value vs effort or WSJF"
+    ],
+    "metrics": [
+      "cycle time and lead time",
+      "deployment frequency",
+      "change failure rate and mean time to recovery (MTTR)",
+      "velocity trends (for forecasting only, not targets)",
+      "defect escape rate",
+      "uptime/service level indicators and objectives (SLI/SLO)"
+    ],
+    "risk_management": [
+      "track delivery, technical, data, and compliance risks",
+      "identify single points of failure in people, services, or data",
+      "define mitigations and fallbacks (feature flags, rollbacks)",
+      "run pre-mortems/post-mortems; document learnings"
+    ],
+    "quality_controls": [
+      "definition of done includes tests, docs, security checks, monitoring hooks",
+      "peer reviews for code, data pipelines, and model changes",
+      "test strategy: unit, integration, e2e, data/label quality checks",
+      "ML-specific checks: data drift, target leakage, performance on slices",
+      "staging environments with shadow/Canary releases for models"
+    ],
+    "compliance_security": [
+      "PII handling and data minimization",
+      "access control/least privilege for data and deployments",
+      "security reviews for APIs and model endpoints",
+      "audit trails for data changes and model versions"
+    ],
+    "documentation_onboarding": [
+      "quickstart guides for local dev and environments",
+      "architecture diagrams and sequence diagrams for services and data flows",
+      "model cards/datasheets for datasets and models",
+      "on-call rotations with escalation paths and contact sheet"
+    ]
+  },
+  "code_structure": {
+    "goals": ["effective development", "scalability", "extensibility", "maintainability"],
+    "monolith": {
+      "traits": [
+        "UI, business logic, data access in one codebase",
+        "stateful, imperative flow",
+        "fits procedural languages"
+      ],
+      "problems": [
+        "hard to trace bugs or changes",
+        "hidden state mutations",
+        "functions not reusable",
+        "large codes become unmaintainable"
+      ]
+    },
+    "oop": {
+      "idea": "bundle data and procedures into objects with class hierarchies and inheritance"
+    },
+    "functional": {
+      "idea": "stateless programs with immutable data and pure functions",
+      "primitives": ["map", "reduce/fold", "filter", "zip", "compose"]
+    },
+    "multi_paradigm": {
+      "examples": ["Python", "JavaScript", "Rust", "Swift"],
+      "note": "support OOP and functional constructs such as map/filter/reduce"
+    }
+  },
+  "architectures": {
+    "styles": [
+      "monolithic structure",
+      "frontend + backend separation",
+      "microservices",
+      "micro frontends"
+    ],
+    "frontend_backend": [
+      "web browsers as universal clients",
+      "separate task solving (backend) and visualization (frontend)",
+      "different languages and scaling strategies",
+      "require interface management via APIs or queues"
+    ],
+    "api_communication": [
+      "REST endpoints with JSON payloads",
+      "web servers listen on ports; Python via Flask or fastAPI",
+      "can be synchronous or async"
+    ],
+    "queue_communication": [
+      "message broker stores messages",
+      "workers deliver messages asynchronously",
+      "Python queue + threading example"
+    ],
+    "microservices": [
+      "many independent, narrowly scoped services",
+      "separate development, deployment, scaling",
+      "resilience by isolating failures",
+      "managed with docker and Kubernetes"
+    ],
+    "cicd": [
+      "continuous improvement and deployment",
+      "automation via GitHub Actions (build, test, install deps)",
+      "docker-compose for multi-service orchestration"
+    ],
+    "drawbacks": [
+      "operational complexity managing many services",
+      "network latency and debugging challenges"
+    ],
+    "trends": [
+      "modular monoliths with selective microservices",
+      "functions-as-a-service (AWS/Azure/GCP) running on demand"
+    ],
+    "code_infrastructure_guidelines": [
+      "use few necessary microservices with clear tasks",
+      "use lambda/FaaS for simple services",
+      "containerize services and manage with docker/Kubernetes",
+      "adopt CI/CD via GitHub or similar"
+    ]
+  },
+  "data_management": {
+    "sources": [
+      "user input such as text, images, video",
+      "system-generated logs, measurements, predictions",
+      "first-, second-, and third-party data"
+    ],
+    "formats": {
+      "csv": [
+        "text, human readable",
+        "row-major tabular, fast per-example access"
+      ],
+      "parquet": [
+        "binary, compact, column-major",
+        "fast per-feature access"
+      ],
+      "json": [
+        "hierarchical key-value text format",
+        "language agnostic; Python dict; supported widely"
+      ]
+    },
+    "storage_models": {
+      "relational": {
+        "traits": [
+          "tables with strict schemas",
+          "SQL for declarative queries",
+          "indexes for speed"
+        ],
+        "pros": ["simplicity", "wide adoption"],
+        "cons": ["schema rigidity", "complex table structures"],
+        "example_stack": ["SQLite with publishers/books tables"]
+      },
+      "nosql": {
+        "traits": [
+          "schema flexibility for unstructured data",
+          "document stores (MongoDB, CouchDB)",
+          "key-value stores (Redis, DynamoDB)",
+          "graph databases (Neo4j, Amazon Neptune, ArangoDB)"
+        ],
+        "pros": ["flexibility", "scalability"],
+        "cons": ["data chaos risk", "performance trade-offs"]
+      }
+    },
+    "storage_strategies": {
+      "data_warehouse": [
+        "historical, cleaned, integrated data",
+        "optimized for analytics with few large queries",
+        "ETL and OLAP",
+        "examples: Redshift, BigQuery"
+      ],
+      "database": [
+        "current operational data",
+        "optimized for many small transactions (OLTP)",
+        "examples: MySQL, PostgreSQL, MongoDB, DynamoDB"
+      ],
+      "data_lake": [
+        "raw data storage for future use",
+        "cheap, scalable (HDFS, S3, Azure, GCS)",
+        "schema-on-read with ELT and processing engines (Kafka, TensorFlow, Athena)",
+        "examples: logs, IoT data"
+      ]
+    },
+    "data_quality_governance": [
+      "track completeness, accuracy, timeliness, consistency, and uniqueness",
+      "validate schemas and ranges at ingestion; stop the line on critical issues",
+      "profile data and labels to catch drift or leakage",
+      "maintain lineage and a catalog for discoverability",
+      "version datasets, labels, and train/validation/test splits"
+    ],
+    "privacy_security": [
+      "classify data sensitivity and PII; collect only what is necessary",
+      "enforce least-privilege access and separate prod/test environments",
+      "mask, tokenize, or anonymize sensitive fields; consider differential privacy for sharing",
+      "encrypt at rest and in transit; rotate keys and credentials",
+      "log and audit dataset and model artifact access"
+    ],
+    "pipelines_operations": [
+      "ingest → validate → transform → store → serve data/features",
+      "orchestrate with schedulers (Airflow, Prefect, Dagster) or buses (Kafka, Kinesis)",
+      "monitor freshness, volume anomalies, schema drift, and data drift",
+      "use declarative configs and containerized steps for reproducibility",
+      "support rollback/reprocessing with idempotent steps and checkpoints"
+    ]
+  },
+  "monitoring_evaluation": {
+    "questions": [
+      "success measures depend on problem context",
+      "accuracy alone can be misleading with class imbalance"
+    ],
+    "baselines": [
+      "random baseline",
+      "zero rule (single-class prediction)",
+      "simple heuristics",
+      "human expert performance",
+      "alternative ML methods"
+    ],
+    "confusion_matrix": [
+      "joint probabilities of actual vs predicted classes",
+      "supports multi-class evaluation"
+    ],
+    "binary_metrics": [
+      "accuracy = (TP + TN)",
+      "precision = TP / (TP + FP)",
+      "recall = TP / (TP + FN)",
+      "type_I_error = FP rate",
+      "type_II_error = FN rate"
+    ],
+    "class_imbalance_examples": [
+      "always predicting majority class yields high accuracy but poor minority recall",
+      "random guessing shows mixed precision/recall"
+    ],
+    "threshold_effects": [
+      "thresholding signals changes trade-off between correct alarms and false alarms",
+      "ROC curves plot recall vs type I error; AUC summarizes performance"
+    ]
+  },
+  "data_modelling": {
+    "goal": "find selective and descriptive features for context-dependent classes",
+    "approach": [
+      "start with 1D classification and generalize",
+      "hard-margin separation if non-overlapping",
+      "use loss-based heuristics in overlapping regions (median/mean)",
+      "classification can be reframed as regression (linear or logistic)"
+    ]
+  },
+  "information_theory": {
+    "topics": [
+      "probability basics and entropy",
+      "cross-entropy and KL divergence",
+      "mutual information",
+      "uncertainty reduction as learning goal"
+    ]
+  },
+  "tree_and_knn_methods": {
+    "tree_based": [
+      "decision trees split on features",
+      "overfitting risks, pruning"
+    ],
+    "ensemble": [
+      "bagging and random forests for variance reduction",
+      "boosting for bias reduction"
+    ],
+    "knn": [
+      "classification by nearest neighbours",
+      "accuracy depends on k and distance metric"
+    ]
+  },
+  "feature_importance": {
+    "methods": [
+      "model-based importance (tree splits, weights)",
+      "permutation importance measuring performance drop",
+      "mutual information between feature and target"
+    ]
+  },
+  "regression": {
+    "topics": [
+      "fitting continuous targets",
+      "loss functions and regularization",
+      "train/validation splits and diagnostics"
+    ],
+    "linear_regression": {
+      "concerns": [
+        "overfitting without regularization",
+        "edge effects and extrapolation risks",
+        "prefer simpler models with fewer parameters",
+        "bounded bases and asymptotic constraints improve extrapolation"
+      ],
+      "regularization": [
+        "use to avoid exact fit and improve generalization",
+        "does not fix extrapolation failure"
+      ]
+    },
+    "nonlinear_regression": {
+      "methods": [
+        "general models optimized by iterative methods",
+        "steepest descent with step length control",
+        "simulated annealing or Metropolis approaches for non-convex landscapes"
+      ]
+    }
+  },
+  "optimization_methods": {
+    "steepest_descent": [
+      "choose start, iterate using gradient direction",
+      "simple and low cost with first derivatives",
+      "slow near minimum, sensitive to conditioning and local minima",
+      "use momentum, adaptive step size, gradient clipping for stability"
+    ],
+    "adaptive_step": [
+      "adjust step length based on improvement",
+      "stop when improvement vanishes or gradient small"
+    ],
+    "simulated_annealing": [
+      "random direction steps accepted with probability tied to temperature",
+      "escapes local minima without gradients",
+      "slow convergence and rare in DNN training"
+    ]
+  },
+  "feature_models": {
+    "linear_features": [
+      "use linear combinations or kernels to separate classes via hyperplanes",
+      "enables curved separators with nonlinear kernels"
+    ],
+    "perceptron": [
+      "finds vector w and bias b separating two labeled classes",
+      "updates on misclassified points to maximize margin"
+    ],
+    "svm": [
+      "maximizes margin using selective coordinate w",
+      "hinge loss for training",
+      "support vectors determine boundary",
+      "nonlinear kernels such as RBF map to higher dimensions",
+      "grid search and cross-validation tune kernel parameters"
+    ],
+    "elm": [
+      "uses random hidden-layer basis with fixed weights",
+      "fits linear output weights via pseudo-inverse",
+      "activation functions like tanh or Gaussian",
+      "supports classification or function fitting; perform best with regularization"
+    ]
+  },
+  "distribution_models": {
+    "gaussian_mixtures": [
+      "data often lies in compact ellipsoids",
+      "Gaussian distributions defined by mean and covariance",
+      "Naive Bayes treats class distributions independently",
+      "GMM models data as mixture of Gaussians using EM to maximize likelihood"
+    ],
+    "pca": [
+      "choose orthonormal coordinates aligned with data variance",
+      "largest eigenvalues capture major variation for compression and noise reduction",
+      "small eigenvalues approximate class-constant laws for classification features",
+      "reconstruct data from principal components"
+    ]
+  },
+  "computer_vision_examples": {
+    "datasets": [
+      "sklearn load_digits: 1797 samples, 8x8 grayscale digits",
+      "fetch_lfw_people",
+      "MNIST"
+    ],
+    "classifiers": [
+      "decision tree, random forest, bagging, AdaBoost",
+      "KNN",
+      "SVM with linear and RBF kernels",
+      "Naive Bayes",
+      "ELM",
+      "LLT",
+      "accuracies for digits near or above 95%"
+    ],
+    "compression": ["PCA reconstruction with limited components"]
+  },
+  "conclusions": {
+    "strong_models_few_features": [
+      "for low-dimensional tasks RF, KNN, SVM, ELM, LLT excel",
+      "PCA effective for compression",
+      "GMM useful for unsupervised clustering"
+    ],
+    "high_dimensionality": [
+      "efficiency drops with many degrees of freedom",
+      "hierarchical approaches and small-step processing help",
+      "deep networks and attention mechanisms address scale"
+    ]
+  },
+  "philosophy_ai": {
+    "why_intelligence": [
+      "intelligence enables adaptation by modelling beyond direct reactions",
+      "System I: fast, instinctive; System II: slower, model-based planning"
+    ],
+    "modelling_world": [
+      "pre-scientific view: chaotic world understood via art and craft",
+      "scientific view: world governed by simple laws (Occam's razor)",
+      "analysis breaks complex phenomena into simpler parts"
+    ],
+    "limits_of_reductionism": [
+      "grandma bakes cake without knowing particle physics",
+      "large-scale phenomena can be simpler than microscopic details",
+      "disciplines relate like software to hardware: partially independent",
+      "no single unique model captures all reality"
+    ],
+    "relevant_features_by_domain": [
+      "Ising model: ~3 relevant",
+      "point mechanics: ~5 relevant",
+      "Standard Model: ~21 relevant with symmetries",
+      "nuclear physics: tens of relevant",
+      "chemistry/biology: tens of relevant",
+      "natural environment: uncertain relevant/irrelevant mix",
+      "face recognition: ~30000 mostly irrelevant pixels",
+      "geometric images: ~10-100 irrelevant"
+    ],
+    "realm_division": [
+      "realm of science covers few-feature systems with clear laws",
+      "realm of intelligence handles many-feature systems with multiple possible models"
+    ]
+  }
+}
