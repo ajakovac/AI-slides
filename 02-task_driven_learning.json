@@ -1,0 +1,45 @@
+{
+    "task driven approach" : {
+        "definition": ["learning a model from labeled data"],
+        "labels" : [
+            "$(x, y=G(x))\\; \\mathrm{pairs, where}\\; x\\in X_{sample}$",
+            "$X_{sample}\\subset X$ = input context",
+            "$Y$ = output context",
+            "$G$ = model function"
+        ],
+        "optimal goal" : ["optimal goal of the task driven approach"],
+        "actual goal" : ["actual goal of the task driven approach"],
+        "example": [
+            "image classification with labeled images",
+            "speech recognition with transcribed audio"
+        ]
+    },
+
+    "optimal goal of the task driven approach" : {
+        "task" : ["find $F(x,\\omega)$ model for $F(x)=y$ for $x\\in X_{sample}$"],
+        "problems" : [
+            "not complete information about $G$ ($G$ is not measurable in the given context)",
+            "underfitting: $F(x)$ cannot approximate $G(x)$ even for $x\\in X_{sample}$"
+        ],
+        "consequences" : [
+            "for a given $x$ there belongs multiple $y$ values",
+            "need probabilistic models"
+        ],
+        "probabilistic models" : [
+            "$P(Y|X)$ = conditional probability distribution of $Y$ given $X$",
+            "model $F(x,\\omega)$ approximates $P(Y|X)$"
+        ]
+    },
+
+    "actual goal of the task driven approach" : {
+        "task" : ["approximate $F(x)\\approx G(x)$ for $x\\in X$"],
+        "problems" : [
+            "overfitting: $F(x)\\approx G(x)$ for $x\\in X_{sample}$ but not for $x\\in X\\setminus X_{sample}$",
+            "distribution shift: $P_{sample}(X) \\neq P(X)$"
+        ],
+        "consequences" : [
+            "need regularization techniques",
+            "need domain adaptation techniques"
+        ]
+    }
+}

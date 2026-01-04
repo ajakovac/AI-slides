@@ -121,13 +121,15 @@
         "functional space" : ["paramerized subset of ${\\cal F}$"],
         "parameters" : ["$P\\sim \\mathbb{R}^M$", "set of parameters of the model", "$M$ dimensional space"],
         "formulation" : ["$F : X \\times P \\to Y$"],
+        "optimization" : ["model optimization"],
         "example" : [
             "pattern recognition",
             "data compression"
         ],
         "context definition in AI": [
-            "supervised learning",
             "data driven approach",
+            "task driven approach",
+            "supervised learning",
             "unsupervised learning", 
             "reinforcement learning"
         ]
@@ -153,20 +155,6 @@
         "target context": ["compressed representation", "$Y\\sim \\mathbb{R}^M, M<N$"]
     },
 
-    "supervised learning" : {
-        "definition": ["learning a model from labeled data"],
-        "labels" : [
-            "$(x, G(x))\\; \\mathrm{pairs, where}\\; x\\in X_{sample}$",
-            "$X_{sample}\\subset X$ = input context",
-            "$Y$ = output context",
-            "$G$ = model function"
-        ],
-        "example": [
-            "image classification with labeled images",
-            "speech recognition with transcribed audio"
-        ]
-    },
-
     "data driven approach" : {
         "definition": ["learning a model from raw data without explicit labels"],
         "context definition": [
@@ -175,6 +163,7 @@
             "symmetries in data",
             "distances of data points"
         ],
+        "goal" : ["find the features of the target context"],
         "data": [
             "$X_{sample}\\subset X$ = input context"
         ],
@@ -189,6 +178,23 @@
             "Principal Component Analysis",
             "Linear Laws Discovery",
             "contrastive learning"
+        ]
+    },
+
+    "model optimization" :{
+        "definition": ["find the optimal parameters $P_{opt}$ of the model function $F$ to best approximate the target function $G$"],
+        "loss function": [
+            "$L : Y \\times Y \\to \\mathbb{R}$",
+            "measures the difference between predicted output $F(x,P)$ and true output $G(x)$"
+        ],
+        "optimization problem": [
+            "$P_{opt} = \\arg\\min_P \\sum_{x\\in X_{sample}} L(F(x,P), G(x))$"
+        ],
+        "methods": [
+            "gradient descent",
+            "stochastic gradient descent",
+            "evolutionary algorithms",
+            "Bayesian optimization"
         ]
     }
 }
