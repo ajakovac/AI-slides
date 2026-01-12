@@ -1,0 +1,192 @@
+{
+
+    "task driven learning" : {
+        "definition": ["learning a model from labeled data"],
+        "labels" : ["input_output_pairs"],
+        "contexts" : ["defined by labels"],
+        "approximate model" : [
+            "$F(x,\\omega) \\in {\\cal F}$ functional space", 
+            "approximates the true $G(x)$ model for context change",
+            "failure modes of input_output_pairs",
+            "not exact model",
+            "probabilistic learning"
+        ],
+        "method": ["probabilistic learning"]
+    },
+
+    "probabilistic learning" : {
+        "_parents" : ["likelihood"],
+
+        "objective" : [
+            "minimization of a task-specific loss function",
+            "empirical risk minimization",
+            "regularized risk minimization"
+        ],
+        "loss functions" : [
+            "mean squared error",
+            "cross-entropy loss",
+            "hinge loss",
+            "negative log-likelihood"
+        ],
+
+        "assumptions" : [
+            "availability of labeled data",
+            "independent and identically distributed samples",
+            "stationary data-generating process"
+        ],
+
+        "training setup" : [
+            "train-validation-test split",
+            "cross-validation",
+            "hyperparameter tuning"
+        ],
+
+        "evaluation metrics" : [
+            "accuracy",
+            "precision and recall",
+            "F1-score",
+            "mean squared error",
+            "area under ROC curve"
+        ],
+
+
+        "extensions" : [
+            "semi-supervised learning",
+            "weakly supervised learning",
+            "multi-task learning",
+            "transfer learning"
+        ],
+
+        "model classes" : [
+            "linear models",
+            "kernel methods",
+            "tree-based models",
+            "neural networks"
+        ],
+
+        "example": [
+            "image classification with labeled images",
+            "speech recognition with transcribed audio"
+        ],
+
+        "methods" : [
+            "regression",
+            "classification",
+            "logistic regression",
+            "linear discriminant analysis",
+            "support vector machines",
+            "k-nearest neighbors",
+            "decision trees",
+            "random forests",
+            "gradient boosting",
+            "neural networks",
+            "convolutional neural networks",
+            "recurrent neural networks"
+        ],
+
+        "optimization methods" : [
+            "function_fitting_in_functional_basis",
+            "gradient descent",
+            "stochastic gradient descent",
+            "second-order optimization",
+            "convex optimization (when applicable)",
+            "non-convex optimization"
+        ]
+
+    },
+
+
+
+    "generalization" : {
+        "definition" : [
+            "performance of the learned model on unseen data"
+        ],
+        "generalization gap" : [
+            "$R(F) - R_{emp}(F)$",
+            "difference between expected and empirical risk"
+        ],
+        "factors affecting generalization" : [
+            "model capacity",
+            "training data size",
+            "regularization strength",
+            "noise level"
+        ]
+    },
+
+    "bias-variance tradeoff" : {
+        "error decomposition" : [
+            "$\\mathbb{E}[(y - F(x))^2] = \\text{bias}^2 + \\text{variance} + \\text{noise}$"
+        ],
+        "bias" : [
+            "systematic error due to model restrictions",
+            "related to underfitting"
+        ],
+        "variance" : [
+            "sensitivity to training data fluctuations",
+            "related to overfitting"
+        ]
+    },
+
+    "regularization" : {
+        "definition" : [
+            "explicit control of model complexity"
+        ],
+        "methods" : [
+            "L1 regularization",
+            "L2 regularization",
+            "early stopping",
+            "data augmentation",
+            "dropout"
+        ],
+        "interpretation" : [
+            "introducing inductive bias",
+            "equivalent to parameter priors in Bayesian view"
+        ]
+    },
+
+    "hypothesis space" : {
+        "definition" : [
+            "$\\mathcal{H} = \\{F(x,\\omega)\\}$ set of admissible models"
+        ],
+        "capacity measures" : [
+            "VC dimension",
+            "Rademacher complexity",
+            "effective number of parameters"
+        ],
+        "role" : [
+            "controls expressivity",
+            "affects generalization bounds"
+        ]
+    },
+
+    "contrast to other learnings" : {
+        "task-driven vs data-driven" : [
+            "task-driven optimizes a predefined objective",
+            "data-driven focuses on structure discovery"
+        ],
+        "task-driven vs causal" : [
+            "task-driven learns correlations",
+            "causal learning aims at intervention-invariant relations"
+        ]
+    },
+
+    "model optimization" :{
+        "definition": ["find the optimal parameters $P_{opt}$ of the model function $F$ to best approximate the target function $G$"],
+        "loss function": [
+            "$L : Y \\times Y \\to \\mathbb{R}$",
+            "measures the difference between predicted output $F(x,P)$ and true output $G(x)$"
+        ],
+        "optimization problem": [
+            "$P_{opt} = \\arg\\min_P \\sum_{x\\in X_{sample}} L(F(x,P), G(x))$"
+        ],
+        "methods": [
+            "gradient descent",
+            "stochastic gradient descent",
+            "evolutionary algorithms",
+            "Bayesian optimization"
+        ]
+    }
+
+
+
+}

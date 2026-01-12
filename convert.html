@@ -1,0 +1,178 @@
+<h1 id="basic-mathematical-concepts">Basic mathematical concepts</h1>
+<p>These are the mathematical concepts used in the documentation. It is
+far from complete.</p>
+<hr />
+<p><a id="mathematical-object"></a> - <strong>object</strong>: a unique
+thing</p>
+<hr />
+<p><a id="pair"></a> - <strong>pair</strong> : <span
+class="math inline">(<em>x</em>,<em>y</em>) ↦ (<em>x</em>,<em>y</em>)</span>
+- note: ordered pair of two objects</p>
+<hr />
+<p><a id="mathematical-set"></a> - <strong>set</strong> : <span
+class="math inline">(<em>x</em><sub>1</sub>,<em>x</em><sub>2</sub>,…) ↦ {<em>x</em><sub>1</sub>, <em>x</em><sub>2</sub>, …}</span>
+- note: collection of distinct objects ***</p>
+<ul>
+<li><p><strong>Bool</strong> = <span class="math inline">{</span>
+<em>true</em>, <em>false</em><span class="math inline">}</span>
+***</p></li>
+<li><p><strong>predicate</strong> : $X $ Bool</p>
+<ul>
+<li>note: a condition for a selection ***</li>
+</ul></li>
+<li><p><strong>selection</strong>: <span
+class="math inline">(<em>X</em>,<em>p</em>) ↦ {<em>x</em> ∈ <em>X</em> ∣ <em>p</em>(<em>x</em>)=</span>
+<em>true</em> <span class="math inline">}</span></p></li>
+</ul>
+<hr />
+<ul>
+<li><strong>element relation</strong>: $(x, X) (x X) $ Bool
+<ul>
+<li>$x X = $ <em>true</em> if <span
+class="math inline"><em>x</em></span> is an element of <span
+class="math inline"><em>X</em></span></li>
+<li>$x X = $ <em>false</em> otherwise</li>
+</ul></li>
+</ul>
+<hr />
+<ul>
+<li><strong>cardinality</strong>: <span
+class="math inline"><em>X</em> ↦ |<em>X</em>| ∈ ℕ ∪ {∞}</span>
+<ul>
+<li>note: number of elements in a list</li>
+</ul></li>
+</ul>
+<hr />
+<ul>
+<li><strong>subset relation</strong>: <span
+class="math inline"><em>Y</em></span>, $X (Y X) $ Bool
+<ul>
+<li>$ Y X = $ <em>true</em> if every element of <span
+class="math inline"><em>Y</em></span> is an element of <span
+class="math inline"><em>X</em></span></li>
+<li>$ Y X = $ <em>false</em> otherwise</li>
+</ul></li>
+</ul>
+<hr />
+<ul>
+<li><strong>superset relation</strong>: <span
+class="math inline"><em>Y</em></span>, <span
+class="math inline"><em>X</em> ↦ (<em>Y</em>⊇<em>X</em>)∈</span> Bool
+<ul>
+<li>$ Y X = $ <em>true</em> if every element of <span
+class="math inline"><em>X</em></span> is an element of <span
+class="math inline"><em>Y</em></span></li>
+<li>$ Y X = $ <em>false</em> otherwise</li>
+</ul></li>
+</ul>
+<hr />
+<ul>
+<li><strong>power set</strong>: <span
+class="math inline"><em>X</em> ↦ 𝒫(<em>X</em>) = {<em>Y</em> ∣ <em>Y</em> ⊆ <em>X</em>}</span>
+<ul>
+<li>note: a set whose elements are subsets of a set</li>
+</ul></li>
+</ul>
+<hr />
+<p><a id="list"></a> - <strong>list</strong>: ↩︎ <a
+href="#mathematical-set">set</a> = <span
+class="math inline">(<em>x</em><sub>1</sub>,<em>x</em><sub>2</sub>,…)</span></p>
+<hr />
+<ul>
+<li><strong>sublist</strong>: list <span
+class="math inline"><em>L</em>→</span> list obtained by removing
+elements from <span class="math inline"><em>L</em></span> while
+preserving order
+<ul>
+<li>note: oreder set</li>
+</ul></li>
+</ul>
+<hr />
+<p><a id="successor"></a> - <strong>successor</strong>: <span
+class="math inline"><em>L</em> ↦ <em>x</em> ∈ <em>L</em> ↦ <em>x</em>′ ∈ <em>L</em></span>
+- note: gives the successor element</p>
+<hr />
+<p><a id="natural-number"></a> - <strong>natural number</strong> <span
+class="math inline"> → ℕ = (1,2,…)</span> - <a
+href="#successor">successor</a><span
+class="math inline">(ℕ) : <em>n</em> ↦ <em>n</em> + 1</span></p>
+<hr />
+<p><a id="cartesian-product"></a> - <strong>Cartesian product</strong>:
+<span
+class="math inline">(<em>X</em>,<em>Y</em>) → <em>X</em> × <em>Y</em> = {(<em>x</em>,<em>y</em>) ∣ <em>x</em> ∈ <em>X</em>, <em>y</em> ∈ <em>Y</em>}</span>
+- note: the set of all ordered pairs with first element from <span
+class="math inline"><em>X</em></span> and second from <span
+class="math inline"><em>Y</em></span></p>
+<hr />
+<p><a id="map"></a> - <strong>map</strong> : <span
+class="math inline">(<em>X</em>,<em>Y</em>) ↦ <em>M</em> ⊆ <em>X</em> × <em>Y</em></span>
+- notes: - a map may associate zero, one, or multiple elements of <span
+class="math inline"><em>Y</em></span> to an element of <span
+class="math inline"><em>X</em></span> - relation ***</p>
+<ul>
+<li><strong>domain</strong>: <span
+class="math inline">Dom  : <em>M</em> ↦ {<em>x</em> ∈ <em>X</em> ∣ ∃<em>y</em> ∈ <em>Y</em>: (<em>x</em>,<em>y</em>) ∈ <em>M</em>}</span>
+<ul>
+<li>note: the possible arguments of a map ***</li>
+</ul></li>
+<li><strong>range</strong>: <span
+class="math inline">Ran  : <em>M</em> → {<em>y</em> ∈ <em>Y</em> ∣ ∃<em>x</em> ∈ <em>X</em>: (<em>x</em>,<em>y</em>) ∈ <em>M</em>}</span>
+<ul>
+<li>note: the possible values of a map</li>
+</ul></li>
+</ul>
+<hr />
+<p><a id="image"></a> - <strong>image</strong> : <span
+class="math inline">ℳ : (<em>M</em> ⊆ <em>X</em> × <em>Y</em></span>,
+<span
+class="math inline"><em>A</em> ⊆ <em>X</em>) ↦ { <em>y</em> ∈ <em>Y</em> ∣ ∃<em>x</em> ∈ <em>A</em>: (<em>x</em>,<em>y</em>) ∈ <em>M</em> }</span>
+- special case (<span
+class="math inline"><em>A</em> = {<em>x</em>}</span>): - image of <span
+class="math inline"><em>x</em></span> - fiber over <span
+class="math inline"><em>x</em></span> - notes: - fiber of a map -
+generalizes the image of a single element</p>
+<hr />
+<p><a id="inverse-image"></a> - <strong>inverse image</strong> : <span
+class="math inline">ℳ<sup>−1</sup> : <em>M</em> ⊆ <em>X</em> × <em>Y</em></span>,
+<span
+class="math inline"><em>B</em> ⊆ <em>Y</em> → { <em>x</em> ∈ <em>X</em> ∣ ∃<em>y</em> ∈ <em>B</em>: (<em>x</em>,<em>y</em>) ∈ <em>M</em> }</span>
+- notes: - the set of all elements of <span
+class="math inline"><em>X</em></span> that are related to at least one
+element of <span class="math inline"><em>B</em></span> - preimage</p>
+<hr />
+<p><a id="total-map"></a> - <strong>total map</strong>: ↩︎ <a
+href="#map">map</a>, where <span
+class="math inline">Dom (<em>M</em>) = <em>X</em></span></p>
+<hr />
+<p><a id="function"></a> - <strong>function</strong>: ↩︎ <a
+href="#map">map</a>: <span
+class="math inline"><em>f</em> : <em>X</em> → <em>Y</em></span>, where
+<span
+class="math inline">∀<em>x</em> ∈ <em>X</em>: |ℳ(<em>x</em>)| = 1</span></p>
+<hr />
+<p><a id="partition-of-a-set"></a> - <strong>partition</strong>: <span
+class="math inline"><em>C</em> ⊂ 𝒫(<em>X</em>)</span> - conditions: -
+completeness condition: <span
+class="math inline">⋃<sub><em>c</em> ∈ <em>C</em></sub><em>c</em> = <em>X</em></span>
+- disjointness condition: <span
+class="math inline"><em>c</em> ∩ <em>c</em>′ = ∅  for
+<em>c</em> ≠ <em>c</em>′, <em>c</em>, <em>c</em>′ ∈ <em>C</em></span> -
+interpretation: each element of <span
+class="math inline"><em>X</em></span> belongs to exactly one element of
+<span class="math inline"><em>C</em></span> - induced structure:
+σ-algebra generated by the partition</p>
+<hr />
+<p><a id="sigma-algebra"></a> - <strong>σ-algebra</strong>: <span
+class="math inline">(<em>X</em>,<em>C</em>⊆𝒫(<em>X</em>)) ↦ <em>σ</em>(<em>C</em>) ⊆ 𝒫(<em>X</em>)</span>
+- conditions: - <span
+class="math inline">∀<em>c</em> ∈ <em>C</em>: <em>c</em> ∈ <em>σ</em>(<em>C</em>)</span>
+- <span class="math inline">∅ ∈ <em>σ</em>(<em>C</em>)</span> - <span
+class="math inline"><em>X</em> ∈ <em>σ</em>(<em>C</em>)</span> - closed
+under complement - closed under countable unions - construction of the
+smallest σ-algebra:<br />
+<span
+class="math inline"><em>σ</em>(<em>C</em>) = {⋃<sub><em>i</em> ∈ <em>J</em></sub><em>c</em><sub><em>i</em></sub> | <em>J</em>⊆<em>I</em>},  <em>C</em> = {<em>c</em><sub><em>i</em></sub>}<sub><em>i</em> ∈ <em>I</em></sub></span></p>
+<hr />
+<p><a id="measurable-space"></a> - <strong>measurable space</strong> =
+<span
+class="math inline">(<em>X</em>,<em>σ</em>(𝒫(<em>X</em>)))</span></p>

@@ -1,0 +1,26 @@
+{
+    "Gaussian_distribution" : {
+        "x" : ["_variable", "argument"],
+        "d" : ["_variable", "dimension"],
+        "C" : ["_variable", "correlation matrix", "variance"],
+        "mu": ["_variable", "mean"],
+        "pdf" : ["$1/(2*np.pi)**(d/2)/np.linalg.det(C)**(1/2)*np.exp(-1/2 * (x-mu).T @np.linalg.inv(C)@(x-mu) )$"],
+        "pdf_LaTeX" : "$\\frac{1}{(2\\pi)^{d/2}\\,|C|^{1/2}}\\exp\\!\\left(-\\frac{1}{2}\\,(x-\\mu)^{\\mathsf T} C^{-1}(x-\\mu)\\right)$",
+        "random variable" : ["$y$", "$\\xi=y-\\eta$"],
+        "expected values" : [
+            "$\\mathbb{E}(y)=\\mu$",
+            "$\\mathbb{E}(\\xi^{2n+1})=0$ is $n\\in\\mathbb{N}",
+            "$\\mathbb{E}(\\xi_i\\xi_j)=C_{ij}$",
+            "$\\mathbb{E}(\\xi_i\\xi_j\\xi_k\\xi_\\ell)=C_{ij}C_{k\\ell} + C_{ik}C_{j\\ell} + C_{i\\ell}C_{jk}$",
+            "higher correlators from pairing"
+        ]
+    },
+
+    "chi-squared distribution" : {
+        "definition" : ["$\\chi^2 = \\sum\\limits_1^d\\xi_i^2$ where $\\xi_i are i.i.d. normal random variables"],
+        "pdf" : ["$p(x) = \\frac{1}{2^{d/2}\\,\\Gamma\\!\\left(\\frac{d}{2}\\right)} x^{\\frac{d}{2}-1}e^{-x/2}$"],
+        "expected values" : [
+            "$\\mathbb{E}(\\chi^2)=d$"
+        ]
+    }
+}

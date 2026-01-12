@@ -1,0 +1,272 @@
+{
+    "input_output_pairs" : {
+        "description" : "input-output pairs sampled from a context_change",
+        "_parents" : "mathematical_set",
+        "input_context" : {"_parents" : "context"},
+        "output_context" : [{"_parents" : "context"}, "labels"],
+        "sample_space" : "subset of input_context",
+        "sample_values" : "subset of output_context",
+        "data " : "$(x, y)$ pairs, where $x\\in sample_space$, $y\\in sample_values$",
+        "assumption" : ["independent measurements"],
+        "failure modes" : [
+            "corrupted_label",
+            "not_enough_information"
+        ],
+        "examples" : [
+            "what is on an image?",
+            "what is the word the speaker says?"
+        ]
+    },
+
+    "not_enough_information": {
+        "definition": "a given input leads to different labels",
+        "formulation" : "labels are not measurable with respect to the input context",
+        "cause" : "input contains not enough information",
+        "consequence" : "we need a probabilistic method"
+    },
+
+    "corrupted_label" : {
+        "definition" : "label does not correspond to the class of the input",
+        "cause" : [
+            "human mistake",
+            "systematic error"
+        ]
+    },
+
+    "probabilistic_data_model" : {
+        "dataset" : {"_parents" : "input_output_pairs"},
+        "D" : "symbol of dataset",
+        "X" : "symbol of input_context of dataset",
+        "Y" : "symbol of output_context of dataset",
+        "parameters" : "finite_subset of real_numbers",
+        "{\\cal P}" : "symbol of parameter space",
+        "\\omega" : "symbol of parameters",
+        "P" : "symbol of probability",
+        "true_conditional_distribution" : "probability of measuring a value given the input",
+        "loss_function" : ["\\ell : $Y\\times Y \\to \\mathbb{R}$", "element of a functional space"],
+        "data_model" : "F: X \\times {\\cal P} \\to Y",
+        "conditional_distribution" : ["$P(y|x,\\omega) \\sim e^{-\\ell(y,F(x,\\omega))}"]
+    },
+
+    "Gaussian_loss" : {
+        "C_x" : ["_matrix", "covariance_matrix"],
+        "chi_squared_function" : "$\\chi^2(y,y') = (y-y')^T C_x^{-1} (y-y')",
+        "loss_function" : "chi_squared_function"
+    },
+
+    "MSE_loss" : {
+        "definition" : "Means Squared Error loss",
+        "loss_function" : "$\\ell(y,y') = |y-y'|^2"
+    },
+
+    "L_p_loss" : {
+        "definition" : "loss based on $L_p$ distance",
+        "p" : "_float",
+        "loss_function" : "$\\ell(y,y') = (|y-y'|^p)^{1/p}$"
+    },
+
+    "Kullback_Leibler_loss" : {
+        "conditions" : [
+            "$p$ and $q$ are probability distributions", 
+            "$\\sum_i p_i=1,\\;p_i\\[0,1]$",
+            "$\\sum_i q_i=1,\\;q_i\\[0,1]$"
+        ],
+        "loss_function" : "$\\ell(p,q) = \\sum_i p_i\\log(p_i/q_i)$"
+    },
+
+    "cross_entropy_loss" : {
+        "conditions" : [
+            "$p_i\\in\\{0,1\\}$",
+            "$q$ is a probability distribution", 
+            "$\\sum_i q_i=1,\\;q_i\\[0,1]$"
+        ],
+        "loss_function" : "$\\ell(p,q) = -\\sum_i p_i\\log(q_i)$"
+    },
+
+
+    "likelihood" : {
+        "description" : "the probability of measuring the actual dataset, given the probabilistic data model",
+        "_parents" : "probabilistic_data_model",
+        "formulation" : "L : {\\cal P} \\to [0,1]",
+        "definition" : "$L(\\omega) = P(D|\\omega) = \\prod_{(x,y) \\in dataset} P(x,y|\\omega)$",
+        "total_loss_function" : "$\\ell =\\sum_{(x,y) \\in dataset} \\ell(y, F(x,\\omega))$"
+    },
+
+    "parameter_distribution" : {
+        "_parents" : "likelihood",
+        "posterior" : "$P(\\omega|D)$",
+        "parameter_prior" : "$P(\\omega)$",
+        "value prior" : "$P(D)$",
+        "Bayes background" : [
+            "Bayes theorem",
+            "$P(\\omega|D) = P(D|\\omega) P(\\omega)/P(D)$"
+        ],
+        "assumptions" : [
+            "flat (uninformative) priors",
+            "$P(\\omega)$=constant", "$P(D)$=constant"
+        ],
+        "approximation" : ["$P(\\omega|D)\\sim L(\\omega)$"],
+        "normalization" : "$\\int_{\\omega\\in{\\cal P}} P(\\omega|D)=1$"
+    },
+
+    "confidence" : {
+        "_parents" : ["parameter_distribution"],
+        "levels" : {
+            "description" : "parameter values where the probability of measuring the given dataset is constant",
+            "_parents" : "hypersurface",
+            "S_p" : "symbol of _this",
+            "definition" : "$P(\\omega\\in S_p|D)=$ constant" },
+        "regions" : {
+            "description" : ["volume inside a confidence level", "surface of the confidence region is a confidence level"],
+            "_parents" : "volume",
+            "definition" : "$V_p$ volume in ${\\cal P}$ where $\\partial V_p=S_p$"
+        },
+        "parametrization" : ["$\\int_{\\omega\\in V_p} P(\\omega|D)=p$"]
+    },
+
+    "model_optimization" : {
+        "definition" : "find the optimal value of the parameters for given input_output_pairs",
+        "_parents" : ["parameter_distribution"],
+        "general_method" : [
+            "maximal value of the parameter_distribution",
+            "maximum likelihood method",
+            "MLE",
+            "$\frac{\\partial total_loss_function}{\\partial \\omega}=0$"
+        ],
+        "failure_modes" : [
+            "underfitting",
+            "overfitting",
+            "bad_convergence",
+            "label_noise_sensitivity",
+            "dataset_shift",
+            "shortcut_learning"
+        ],
+        "optimization_methods" : [
+            "function_fitting_in_functional_basis",
+            "gradient_descent",
+            "conjugate_gradient_descent",
+            "random_algorithms",
+            "second-order_optimization"
+        ]
+    },
+
+    "underfitting" : {
+        "approximate function" : ["$F(x,\\omega)$"],
+        "exact function" : ["$G(x)$"],
+        "X" : "domain of G",
+        "definition" : ["$F(x,\\omega)$ cannot approximate $G(x)$ for $x\\in X$ for any $\\omega$"],
+        "solution" : "better data model (more parameters) is needed"
+    },
+
+    "overfitting" : {
+        "approximate function" : ["$F(x,\\omega)$"],
+        "exact function" : ["$G(x)$"],
+        "domain" : ["X"],
+        "definition" : ["$F(x)\\approx G(x)$ for $x\\in X_{sample}$ but not for $x\\in X\\setminus X_{sample}$"],
+        "solution" : ["regularization techniques"]
+    },
+
+    "bad_convergence" : {
+        "approximate function" : ["$F(x,\\omega)$"],
+        "exact function" : ["$G(x)$"],
+        "domain" : ["X"],
+        "definition" : ["$F(x,\\omega)$ has flat directions near $G(x)$"],
+        "solution" : ["regularization techniques"]
+    },
+
+    "dataset_shift": {
+        "sample probability distribution" : ["$P(y|x)$ for $x\\in X_{sample}$"],
+        "complete probability distribution" : ["$P(y|x)$ for $x\\in X_{sample}$"],
+        "definition" : ["$P_{sample}(X)\\neq P(X)$"],
+        "solution" : ["domain adaptation techniques"]
+    },
+
+    "label_noise_sensitivity": {
+        "_parents": ["model_optimization", "corrupted_label"],
+        "definition": "small amount of wrong labels can cause large degradation in learned parameters or generalization",
+        "mitigations": [
+            "data cleaning / relabeling",
+            "robust losses (Huber, MAE, generalized cross entropy, label smoothing)",
+            "regularization (weight decay, early stopping, dropout)",
+            "sample reweighting (down-weight suspected noisy points)",
+            "noise-aware modeling (explicit noise transition matrix)",
+            "use larger and more diverse dataset"
+        ]
+    },
+
+    "shortcut_learning": {
+        "_parents": ["model_optimization"],
+        "definition": "model uses an easy-to-learn spurious feature correlated with labels instead of the intended causal/semantic signal",
+        "spurious_correlation": "feature s(x) correlates with y in training set but not in deployment context",
+        "causes": [
+            "dataset bias (collection process, background artifacts, watermarking)",
+            "label leakage (feature encodes label indirectly)",
+            "imbalance in contexts (same class appears in same environment)",
+            "insufficient variability in training data"
+        ],
+        "mitigations": [
+            "data augmentation targeting nuisance factors",
+            "collect data with controlled variation of contexts",
+            "adversarial training against spurious features"
+        ],
+        "examples": [
+            "image classification uses background instead of object",
+            "speech recognition uses channel noise as proxy for speaker/label"
+        ]
+    },
+
+
+    "function_fitting_in_functional_basis" : {
+            "problem" : "find the linear combination of a functional basis that approximates the best the input function",
+            "_parents" : ["model_optimization", "Gaussian_loss"],
+            "N" : ["_variable", "number of basis elements"],
+            "basis" : "$\\{ g_i : X\\to Y\\; \\vert\\; i\\in \\{1,2,\\dots, N\\}$",
+            "coefficients" : "$\\omega\\in \\mathbb{R}^N",
+            "data_model" : "$F = \\sum_{i=1}^N \\omega_i g_i$",
+            "matrix_notation" : [
+                "$G_{ni} = g_i(x_n)$, $x_n\\in$ sample_space of the dataset",
+                "$f = G \\omega$",
+                "$y_n\\in$ sample_values of the dataset"
+            ],
+            "loss_function" : "$\\ell = (y-f)^T C_x^{-1} (y-f) = (y-G\\omega)^T C_x^{-1} (y-G\\omega) ",
+            "calculation" : [
+                "$\\frac{\\partial \\ell}{\\partial \\omega} = 0$",
+                "$G^T C_x^{-1} G \\omega = G^T C_x^{-1} f$"
+            ],
+            "optimal_parameters" : "$\\omega_{opt} = (G^T C_x^{-1} G)^{-1} G^T C_x^{-1} f$",
+            "examples" : [
+                "linear regression",
+                "relevance of $C_x$"
+            ]
+    },
+
+    "gradient_descent" : {
+        "task" : "recursive method for minimum finding",
+        "function" : "$f:X\\to\\mathbb{R}$",
+        "position" : "x",
+        "starting_position" : "x_0",
+        "learning_rate" : "r",
+        "recursion_step" : "$x_{n+1} = x_n - r\\nabla f",
+        "improvement_in_linear_approximation" : 
+            "$f(x_{n+1}) = f(x_n-r\\nabla f) \\approx f(x_n) - r |\\nabla f|^2 < f(x_n)$",
+        "advantages" : [
+            "simple",
+            "robust",
+            "need only first derivative",
+            "stochastic and minibatch versions are possible"
+        ],
+        "disadvantages" : [
+            "slow (linear convergence), especially near minimum",
+            "for ill-conditioned functions long iteration path",
+            "sensitive to local minima",
+            "can lead to runaway solutions"
+        ],
+        "improvements" : [
+            "second_order_descent",
+            "conjugate_gradient_descent",
+            "momentum_methods",
+            "adaptive_step_size",
+            "gradient_clipping"
+        ]
+    }
+}

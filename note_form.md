@@ -6,7 +6,7 @@ The ability of an agent to represent the surrounding reality in roder to improve
 
 Neural networks → magnificent achievements
 - classification (dog breeds, faces, birdsong, flowers, etc.)
-- text generation (chatGPT, Bing, DeepSeek, etc.)
+- text generation (<a id="chatgpt"></a>chatGPT, Bing, DeepSeek, etc.)
 - image generation (midjourney, Dall-E, Dreamstudio, etc.)
 - autonomous cars / AI driving assistants
 - etc.
