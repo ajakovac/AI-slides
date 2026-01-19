@@ -5,39 +5,17 @@ These concepts define the basic structure used throughout the documentation.
 
 ---
 
-## States and time
+## States and classes
 
-It is difficult to determine where to start the whole descritpion. In human thinking th roots go deep into the unconscious.
+It is difficult to determine where to start the whole descritpion. In human thinking the roots go deep into the unconscious.
 
-We choose a somewhat physical basis, the states of the world, and the time evolution. But, as it will turn out later, the description is self-consistent, so the starting point is not so relevant.
+We choose a somewhat physical basis, the states of the Universe. But, as it will turn out later, the description is self-consistent, so the starting point is not so relevant.
 
 <a id="states"></a>
 - **states**: $\Omega$ $\hookleftarrow$ [set](mathematics_basics.md#mathematical-set)
     - contains all information to be able to predict the future
     - can be the complete world's state in a hyper (Cauchy) surface
     - a theoretical construct assuming that the future is deterministic if we fully fix a state.
-
-<a id="time"></a>
-- **time**: $T$ $\hookleftarrow$ number
-    - arrow of time: goes ahaed
-    - in real world parameters of the Cauchy surfaces where the states are set
-    - in general the index of time moments when we register the state
-    - observer dependent
-    - additive
-
-<a id="time-difference"></a>
-- **time difference**: $dT$ $\hookleftarrow$ positive number
-    - distance of two surfaces, where states are registered
-    
-<a id="time-evolution"></a>
-- **time evolution**: $TE: \Omega\times dT \to \Omega$
-    - Markov process
-    - does not depend on the absolute time, only the time difference
-    - consistency: $TE(\omega, dt) = TE(TE(\omega,dt/2),dt/2))$
-
-***
-
-## Classes in the world
 
 The world can not be described in every detail. We consider certain details irrelevent when we try to describe and predict the world. For example the position of the Mars is not important when we define a book, therefore the 'book' concept must contain the Mars in all positions. Therefore a concept or object we are interested in, means in fact a very huge collection of states of the world.
 
@@ -216,7 +194,7 @@ The features of a context are also features of a finer context:
 
 This does not work the other way around. Some of the features of a given context are contexts of another one, some are not.
 
-- **relevant** (feature): $(\mathcal C, f) \mapsto f\in \mathcal F_\mathcal C =$ true iff $f$ has a domain compatible with $\mathcal C$
+- **relevant** (feature): $(\mathcal C, f) \mapsto f\in \mathcal F_\mathcal C =$ true iff the induced context of $f$ is subcontext of $\mathcal C$
     - alternative name: selective feature
 
 - **irrelevant** (feature): not relevant

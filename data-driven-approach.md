@@ -1,0 +1,21 @@
+<a id="data-driven-approach"></a>
+- **data driven approach**
+    - definition: learning a model from raw data without explicit labels
+    - context definition:
+        - implicit patterns
+        - temporal subsequences
+        - symmetries
+        - distances
+    - goal: find features of the target context
+    - data:
+        - $X_{\text{sample}} \subset X$
+    - examples:
+        - image clustering
+        - discovering physical laws
+        - dimensionality reduction
+    - methods:
+        - autoencoders
+        - generative models
+        - principal component analysis
+        - linear laws discovery
+        - contrastive learning

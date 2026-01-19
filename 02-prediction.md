@@ -1,3 +1,33 @@
+# Prediction
+
+The real task of a living being is to react to its environment, in ordeer to avoid dangers and ultimately maintain itself for a long time.
+
+<a id="time"></a>
+- **time**: $T$ $\hookleftarrow$ number
+    - arrow of time: goes ahaed
+    - in real world parameters of the Cauchy surfaces where the states are set
+    - in general the index of time moments when we register the state
+    - observer dependent
+    - additive
+
+<a id="time-difference"></a>
+- **time difference**: $dT$ $\hookleftarrow$ positive number
+    - distance of two surfaces, where states are registered
+
+
+## Time evolution
+
+We assume that the world, at its base, is fully deterministic. That means that there is a function 
+
+<a id="time-evolution"></a>
+- **time evolution**: $TE: \Omega\times dT \to \Omega$
+    - Markov process
+    - does not depend on the absolute time, only the time difference
+    - consistency: $TE(\omega, dt) = TE(TE(\omega,dt/2),dt/2))$
+
+***
+
+
 # Model optimization
 
 This section describes the conceptual and mathematical foundations of model optimization,
@@ -82,6 +112,66 @@ from data representation to probabilistic modeling and optimization methods.
         - principal component analysis
         - linear laws discovery
         - contrastive learning
+
+
+<a id="probabilistic-data-model"></a>
+- **probabilistic data model** ↩ [context change](01-basics.md#context-change)
+    - dataset: [labelled samples](#input-output-pairs), $D$
+    - domain: input context of the dataset, $X$
+    - range: output context of the dataset, $Y$
+    - true conditional distribution: probability of measuring a value given the input
+    - loss function: $\ell : Y \times Y \to \mathbb{R}$
+    - probability: $P$
+    - conditional distribution: $P(y \mid x,\omega) \sim e^{-\ell(y,F(x,\omega))}$
+
+---
+
+<a id="likelihood"></a>
+- **likelihood** ↩ [probabilistic data model](#probabilistic-data-model)
+    - description:
+      probability of measuring the observed dataset given the model
+    - formulation:
+      $L : {\cal P} \to [0,1]$
+    - definition:
+      $L(\omega) = P(D \mid \omega)
+      = \prod_{(x,y)\in D} P(x,y \mid \omega)$
+    - total loss function:
+      $\ell(\omega) = \sum_{(x,y)\in D} \ell(y,F(x,\omega))$
+
+---
+
+<a id="parameter-distribution"></a>
+- **parameter distribution** ↩ [likelihood](#likelihood)
+    - posterior:
+      $P(\omega \mid D)$
+    - parameter prior:
+      $P(\omega)$
+    - value prior:
+      $P(D)$
+    - Bayes relation:
+      $P(\omega \mid D) = \frac{P(D \mid \omega) P(\omega)}{P(D)}$
+    - assumptions:
+        - flat priors
+        - $P(\omega)=\text{const}$
+        - $P(D)=\text{const}$
+    - approximation:
+      $P(\omega \mid D) \sim L(\omega)$
+    - normalization:
+      $\int_{\omega\in{\cal P}} P(\omega \mid D)=1$
+
+---
+
+<a id="confidence"></a>
+- **confidence** ↩ [parameter distribution](#parameter-distribution)
+    - confidence levels:
+        - definition:
+          $P(\omega \in S_p \mid D)=\text{const}$
+        - $S_p$: hypersurface in ${\cal P}$
+    - confidence regions:
+        - volume $V_p \subset {\cal P}$
+        - boundary $\partial V_p = S_p$
+    - parametrization:
+      $\int_{\omega\in V_p} P(\omega \mid D)=p$
 
 ---
 

@@ -1,0 +1,217 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+
+\title{Concepts, Contexts, and Action-Oriented Representation}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We propose an agent-relative, action-oriented framework for representing reality through concepts and contexts. Concepts are treated not as static labels but as operators inducing associations, actions, and refinements over other concepts. The framework unifies perception, classification, reasoning, and action under a single associative operation. We distinguish between fast, task-specific representations (System~1) and deliberative, compositional representations (System~2), and formalize robustness through coordinated concept application and hierarchical refinement. The approach is motivated by pragmatism, embodied cognition, and contemporary challenges in artificial intelligence.
+\end{abstract}
+
+\section{Foundations}
+
+\subsection{Agent-relative representation}
+
+Any description of the world is necessarily incomplete and selective. An intelligent actor—whether a biological organism or an artificial system—interacts only with a tiny fraction of the universe, constrained by sensory access, computational capacity, and, most importantly, purpose.
+
+The relevant structure of reality for an actor is therefore not given by individual states of the universe, but by collections of states that matter for action, prediction, and survival. A \emph{concept} such as ``pen'' corresponds not to a single physical configuration, but to a family of states that are equivalent with respect to the actor’s goals and affordances.
+
+\subsection{Concepts as action-oriented abstractions}
+
+Concepts are best understood as purpose-laden, action-oriented, agent-relative abstractions whose meaning is grounded in use, risk, and affordance. This view is supported by several traditions in philosophy and cognitive science, including pragmatism, instrumentalism, affordance-based perception, embodied and enactive cognition, and teleosemantics.
+
+Examples include:
+\begin{itemize}
+    \item ``Steep'' meaning \emph{requires braking, caution, balance}
+    \item ``Sharp'' meaning \emph{can cut me}
+    \item ``Edible'' meaning \emph{can nourish me}
+\end{itemize}
+
+Meaning is therefore not intrinsic, but relational and operational.
+
+\section{Concepts and Associations}
+
+\subsection{Concept algebra}
+
+Let $\Omega$ denote a set of concepts. We introduce a partial, multivalued association operation
+\[
+\cdot : \Omega \times \Omega \to \mathcal{P}(\Omega),
+\]
+where $\omega \cdot \omega'$ denotes the (possibly empty) set of concepts induced by applying $\omega'$ to $\omega$.
+
+\paragraph{Circularity rule.}
+Associations are assumed to be weakly symmetric in the following sense:
+\[
+\omega' \in \omega_1 \cdot \omega \quad \Rightarrow \quad \omega \in \omega' \cdot \omega_1.
+\]
+This reflects associative recall rather than logical implication.
+
+\subsection{Concept sets}
+
+Given two sets of concepts $A,B \subseteq \Omega$, we define
+\[
+A \cdot B = \bigcup_{a \in A,\, b \in B} (a \cdot b).
+\]
+
+\subsection{Example: family relations}
+
+Let Alice and Bob be parents, and Cecile and Daniel their children. The concept \emph{children} applied to \emph{Alice} yields
+\[
+\text{Alice} \cdot \text{children} = \{\text{Cecile}, \text{Daniel}\}.
+\]
+
+Associations are bidirectional:
+\[
+\text{Cecile} \cdot \text{Alice} = \{\text{children}, \dots\},
+\qquad
+\text{children} \cdot \text{Cecile} = \{\text{Alice}, \text{Bob}\}.
+\]
+
+Thus, a concept may act as object, context, or value, depending on usage.
+
+\subsection{Example: image classification}
+
+Let an image depicting cats be represented as \emph{cat image}. Then
+\[
+\text{cat image} \cdot \text{cat} = \{\text{cat}_1, \text{cat}_2, \dots\},
+\qquad
+\text{dog image} \cdot \text{cat} = \emptyset.
+\]
+
+Alternatively, a task-specific concept such as \emph{cat-and-dog classifier} may be defined:
+\[
+\begin{aligned}
+\text{cat image} \cdot \text{classifier} &= \{\text{cat}\},\\
+\text{dog image} \cdot \text{classifier} &= \{\text{dog}\},\\
+\text{cat-and-dog image} \cdot \text{classifier} &= \{\text{cat}, \text{dog}\}.
+\end{aligned}
+\]
+
+\section{General and Actual Reality}
+
+The collection of concepts is not closed. New concepts are created and forgotten continuously.
+
+\subsection{Type and token concepts}
+
+We distinguish between:
+\begin{itemize}
+    \item \textbf{General (type) concepts}, e.g.\ \emph{pen}
+    \item \textbf{Actual (token) concepts}, e.g.\ \emph{pen-1768645481}
+\end{itemize}
+
+An actual object is linked to its type via
+\[
+\text{pen-1768645481} \cdot \text{is-a} = \{\text{pen}\}.
+\]
+
+Properties are assigned similarly:
+\[
+\text{pen-1768645481} \cdot \text{color} = \{\text{blue}\}.
+\]
+
+The actual reality consists of tokens; the general reality consists of types. Type properties induce default expectations, while tokens may possess additional, unique attributes.
+
+\section{Concepts with Multiple Arguments}
+
+Some concepts depend on additional contextual factors. For instance, \emph{where-is} may refer to spatial position in an image or in the physical world.
+
+We model this by context refinement:
+\[
+\begin{aligned}
+\text{where-is} \cdot \text{image} &= \{\text{position-in-image}\},\\
+\text{where-is} \cdot \text{house} &= \{\text{position-in-house}\}.
+\end{aligned}
+\]
+
+Then:
+\[
+\begin{aligned}
+\text{cat-in-image} \cdot \text{position-in-image} &= \{\text{center}\},\\
+\text{cat-in-image} \cdot \text{position-in-house} &= \{\text{on-the-couch}\}.
+\end{aligned}
+\]
+
+Thus, multi-argument relations are decomposed into chained binary associations.
+
+\section{Representation and Robustness}
+
+There is no unique or optimal representation of reality. Different representations trade off efficiency, robustness, and generality.
+
+\subsection{System~1: direct mappings}
+
+System~1 concepts are task-specific, fast, and typically induce immediate action:
+\[
+\text{sensory input} \cdot \text{System~1 concept} = \{\text{action}\}.
+\]
+
+\paragraph{Advantages.}
+\begin{itemize}
+    \item Fast and low-cost execution
+    \item Naturally suited for reflexes and skills
+    \item Enables parallel execution
+\end{itemize}
+
+\paragraph{Limitations.}
+\begin{itemize}
+    \item Poor error awareness
+    \item Limited generalization
+    \item Fragility under distribution shift
+    \item Susceptible to catastrophic forgetting
+\end{itemize}
+
+\subsection{System~2: coordinated reasoning}
+
+System~2 applies multiple concepts in parallel and integrates their results.
+
+\subsubsection{Coordination}
+
+A \emph{coordination} is a set of concepts $\mathcal{C} = \{c_1,\dots,c_n\}$ acting on an input:
+\[
+\text{input} \cdot c_i = r_i.
+\]
+
+The final result is obtained by intersection:
+\[
+\text{final result} = \bigcap_{i=1}^n r_i.
+\]
+
+Each concept constrains the hypothesis space, yielding robustness through redundancy.
+
+\subsubsection{Concept hierarchy}
+
+Let $C_\ell$ denote the concept set at level $\ell$, with coordination $\mathcal{C}_\ell$. Define
+\[
+C_{\ell+1} = \bigcap_{c \in \mathcal{C}_\ell} (C_\ell \cdot c),
+\quad C_0 = \{\text{input}\}.
+\]
+
+The process terminates when no further refinement is possible.
+
+Taxonomic classification is a special case where the hierarchy forms a tree; optimal trees minimize expected path length and correspond to prefix codes such as Huffman codes.
+
+\section{Derived Definitions}
+
+\begin{itemize}
+    \item \textbf{Feature}: a concept $f$ is a feature of $c$ if $c \cdot f \neq \emptyset$.
+    \item \textbf{Context}: the context of $c$ is
+    \[
+    \mathcal{C}(c) = \{f \mid c \cdot f \neq \emptyset\}.
+    \]
+    \item \textbf{Relevant feature}: a feature whose induced context refines the original context.
+    \item \textbf{Irrelevant feature}: a descriptive concept that does not induce refinement.
+\end{itemize}
+
+\section{Conclusion}
+
+Meaning emerges from participation in a network of action-inducing associations. Concepts are not symbols but operators; understanding is not labeling but refinement. Robust intelligence arises from the coordinated application of simple concepts rather than reliance on brittle monolithic representations.
+
+\end{document}
