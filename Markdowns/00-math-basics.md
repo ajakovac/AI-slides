@@ -8,20 +8,20 @@ These are the mathematical concepts used in the documentation. It is far from co
 
 ***
 <a id="pair"></a>
-- **pair** :  $(x,y)\mapsto (x,y)$
+- **pair**:  $(x,y)\mapsto (x,y)$
   - note: ordered pair of two objects
 
 ***
 
 <a id="mathematical-set"></a>
-- **set** : $(x_1, x_2, \dots)\mapsto\{x_1, x_2, \dots\}$
+- **set**: $(x_1, x_2, \dots)\mapsto\{x_1, x_2, \dots\}$
   - note: collection of distinct objects
 ***
 
 - **Bool** = $\{$ *true*, *false*$\}$
 ***
 
-- **predicate** : $X \to $ Bool
+- **predicate**: $X \to $ Bool
   - note: a condition for a selection
 ***
 
@@ -56,7 +56,9 @@ These are the mathematical concepts used in the documentation. It is far from co
   - note: a set whose elements are subsets of a set
 
 ***
+- **indicator function**: $I(\text{condition})=1$ iff condition is true.
 
+***
 <a id="list"></a>
 - **list**: ↩  [set](#mathematical-set) = $(x_1, x_2, \dots)$
   
@@ -84,7 +86,7 @@ These are the mathematical concepts used in the documentation. It is far from co
 ***
 
 <a id="map"></a>
-- **map** : $(X, Y) \mapsto M \subseteq X \times Y$
+- **map**: $(X, Y) \mapsto M \subseteq X \times Y$
   - notes:
     - a map may associate zero, one, or multiple elements of $Y$ to an element of $X$
     - relation
@@ -99,7 +101,7 @@ These are the mathematical concepts used in the documentation. It is far from co
 
 ***
 <a id="image"></a>
-- **image** : $\mathcal{M}: (M \subseteq X \times Y$, $A \subseteq X) \mapsto \{\, y \in Y \mid \exists x \in A:\; (x,y) \in M \,\}$
+- **image**: $\mathcal{M}: (M \subseteq X \times Y$, $A \subseteq X) \mapsto \{\, y \in Y \mid \exists x \in A:\; (x,y) \in M \,\}$
     - special case ($A=\{x\}$):
         - image of $x$
         - fiber over $x$
@@ -109,7 +111,7 @@ These are the mathematical concepts used in the documentation. It is far from co
 
 ***
 <a id="inverse-image"></a>
-- **inverse image** : $\mathcal{M}^{-1}: M \subseteq X \times Y$, $B \subseteq Y\to \{\, x \in X \mid \exists y \in B:\; (x,y) \in M \,\}$
+- **inverse image**: $\mathcal{M}^{-1}: M \subseteq X \times Y$, $B \subseteq Y\to \{\, x \in X \mid \exists y \in B:\; (x,y) \in M \,\}$
     - notes:
       - the set of all elements of $X$ that are related to at least one element of $B$
       - preimage

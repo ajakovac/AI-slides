@@ -2,29 +2,16 @@
 
 The real task of a living being is to react to its environment, in ordeer to avoid dangers and ultimately maintain itself for a long time.
 
-<a id="time"></a>
-- **time**: $T$ $\hookleftarrow$ number
-    - arrow of time: goes ahaed
-    - in real world parameters of the Cauchy surfaces where the states are set
-    - in general the index of time moments when we register the state
-    - observer dependent
-    - additive
-
-<a id="time-difference"></a>
-- **time difference**: $dT$ $\hookleftarrow$ positive number
-    - distance of two surfaces, where states are registered
-
-
 ## Time evolution
 
 We assume that the world, at its base, is fully deterministic. That means that there is a function 
 
-<a id="time-evolution"></a>
-- **time evolution**: $TE: \Omega\times dT \to \Omega$
+- **time evolution**: $\tau: \Omega\times dT \to \Omega$
     - Markov process
-    - does not depend on the absolute time, only the time difference
-    - consistency: $TE(\omega, dt) = TE(TE(\omega,dt/2),dt/2))$
+    - does only on the time difference (not the absolute time)
+    - consistency: $\tau(\omega, t_{ac}) = \tau(\tau(\omega,t_{ab}),t_{bc}))$
 
+- **time evolution in a context**: $(\mathcal C, dt) \mapsto \Pi_\mathcal{C}(\tau(\omega, dt))$
 ***
 
 
@@ -116,7 +103,7 @@ from data representation to probabilistic modeling and optimization methods.
 
 <a id="probabilistic-data-model"></a>
 - **probabilistic data model** ↩ [context change](01-basics.md#context-change)
-    - dataset: [labelled samples](#input-output-pairs), $D$
+    - dataset: [sample data](#sample-data), $D$
     - domain: input context of the dataset, $X$
     - range: output context of the dataset, $Y$
     - true conditional distribution: probability of measuring a value given the input
@@ -175,7 +162,7 @@ from data representation to probabilistic modeling and optimization methods.
 
 ---
 
-<a id="input-output-pairs"></a>
+<a id="sample-data"></a>
 - **input–output pairs** ↩ [countable set](mathematics_basics.md#countable-set)
     - description: input–output pairs sampled from a context change
     - input context: [context](#context)
@@ -218,7 +205,7 @@ from data representation to probabilistic modeling and optimization methods.
 
 <a id="probabilistic-data-model"></a>
 - **probabilistic data model** ↩ [context change](01-basics.md#context-change)
-    - dataset: [input–output pairs](#input-output-pairs), $D$
+    - dataset: [input–output pairs](#sample-data), $D$
     - domain: input context of the dataset, $X$
     - range: output context of the dataset, $Y$
     - true conditional distribution: probability of measuring a value given the input
