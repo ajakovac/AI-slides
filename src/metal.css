@@ -1,0 +1,122 @@
+:root {
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  color: #0f1012;
+  background: #d5d8de;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,0.6), transparent 40%),
+    linear-gradient(135deg, #f0f3f6 0%, #c7cbd2 45%, #9aa2ad 100%);
+}
+
+.header {
+  background: linear-gradient(180deg, #f5f6f8 0%, #cfd4dc 100%);
+  border-bottom: 1px solid #aeb4bf;
+  padding: 16px 24px;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5);
+}
+
+.header-content {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #22272f;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.7);
+}
+
+.meta {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #4b5663;
+}
+
+.body {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-area {
+  display: flex;
+  height: 100%;
+  background: linear-gradient(180deg, #f7f8fa 0%, #d8dde5 100%);
+  border-right: 1px solid #b8bec8;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #e7eaf0 0%, #c0c6cf 100%);
+  padding: 18px;
+  border-left: 1px solid #aeb4bf;
+  height: 100%;
+}
+
+.pane {
+  padding: 24px;
+  height: 100%;
+  overflow: auto;
+  color: #1d2128;
+}
+
+.pane.left {
+  background: linear-gradient(180deg, #fdfdfe 0%, #dfe4eb 100%);
+}
+
+.pane.right {
+  background: linear-gradient(180deg, #f1f4f8 0%, #cfd5df 100%);
+  border-left: 1px solid #b8bec8;
+}
+
+.splitter {
+  background: linear-gradient(180deg, #f5f7fa 0%, #a1a8b2 100%);
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+  z-index: 5;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), inset 0 -1px 0 rgba(0,0,0,0.12);
+}
+
+.splitter:hover {
+  opacity: 1;
+}
+
+.splitter.horizontal {
+  height: 6px;
+  cursor: row-resize;
+}
+
+.splitter.vertical {
+  width: 6px;
+  cursor: col-resize;
+}
+
+@media (max-width: 900px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .brand {
+    font-size: 22px;
+  }
+}
