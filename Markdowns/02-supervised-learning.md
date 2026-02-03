@@ -9,6 +9,8 @@
       - depends on the "distance" $\to$ data representation
       - easy to manipulate (c.f. university ranking, economic data)
       - needs a clean definition of the context (e.g. temporal-spatial closeness)
+      - examples: university ranking, economic or individual performance evaluation, IQ tests
+      - see also intelligence in psychology
 
 <a id="sample-data"></a>
 - **sample data**: $\{(x_a,y_a) \mid x_a\in C, y\in \mathcal C: x_a\in y_a, a=1\dots N_{data}\}$, where $C=\text{underlying class}(\mathcal C)$
@@ -79,11 +81,12 @@
 
 - **classification via regression**
     - define a function $p_i(x, q)$
-        - the probability that the input $x$ belongs to class $i$
+        - Bayesian interpretation: $p_i(x)$ is the probability that the input $x$ belongs to class $i$
         - $q$ are parameters to optimize
     - can be defined from an unconstrained $f_i(x,q)$, using softmax normalization
     - loss function: $L(q) = \sum_{x\in\mathcal S} \ell(p_i(x), I(x\in c_i))$, where $I$ is the indicator function
       - smallest if $p_i(x)=1$ for the correct class
+      - $\ell$ preferrably cross-entropy loss
     - for a given input choose the class with the highest probability
     - technical implementation:
       - preceptron
@@ -199,24 +202,82 @@
 
 ---
 
-<a id="underfitting"></a>
 - **underfitting**
-    - definition:
-      $F(x,\omega)$ cannot approximate $G(x)$ for any $\omega$
-    - solution:
-      increase model capacity
+    - **definition:**
+      poor approximation already on \(X_{\text{sample}}\),
+      therefore also on \(X \setminus X_{\text{sample}}\)
+    - **symptom:**
+      high training error and high validation / test error
+    - **intuition:**
+      the model is too simple to capture the underlying structure
+      of the data
+    - **problem:**
+      - too few parameters
+      - overly restrictive model assumptions
+      - insufficient training or premature stopping
+    - **bias–variance viewpoint:**
+      - high bias (systematic error)
+      - low variance
+    - **example:**
+      - fitting a linear model to strongly nonlinear data
+      - low-degree polynomial fit for complex patterns
+      - shallow neural networks with very few hidden units
+    - **detection:**
+      - training and validation losses are both high
+      - increasing model capacity improves both errors
+    - **solution:**
+      - **model-related**
+        - increase model complexity
+        - add nonlinear features or interactions
+        - deepen or widen the network
+      - **training-related**
+        - train longer
+        - improve optimization (learning rate, optimizer choice)
+      - **feature-related**
+        - better feature engineering
+        - richer representations
+
 
 ---
 
-<a id="overfitting"></a>
 - **overfitting**
-    - definition:
-      good approximation on $X_{\text{sample}}$ but not on $X\setminus X_{\text{sample}}$
-    - problem: too many parameters, learn sampling noise
-    - example:
-      - high order polynomial fit
-    - solution:
-      regularization
+    - **definition:**
+      good approximation on \(X_{\text{sample}}\) but poor generalization on  
+      \(X \setminus X_{\text{sample}}\)
+    - **symptom:**
+      low training error, high validation / test error
+    - **intuition:**
+      the model adapts to accidental patterns (noise) in the finite sample
+      instead of the underlying structure
+    - **problem:**
+      - too many parameters relative to the amount of data
+      - learning sampling noise instead of signal
+      - excessive model flexibility
+    - **bias–variance viewpoint:**
+      - low bias
+      - high variance (small changes in data → large changes in the model)
+    - **example:**
+      - high-order polynomial fit oscillating between data points
+      - deep neural networks with a large number of parameters trained on small datasets
+      - decision trees grown to full depth
+    - **detection:**
+      - training loss decreases while validation loss increases
+      - unstable predictions under resampling (e.g. cross-validation)
+    - **solution:**
+      - **regularization**
+        - \(L_2\) (ridge, weight decay)
+        - \(L_1\) (lasso, sparsity)
+      - **data-related**
+        - more training data
+        - data augmentation
+      - **model-related**
+        - reduce model complexity
+        - early stopping
+        - pruning (decision trees)
+      - **validation techniques**
+        - cross-validation
+        - hold-out test set
+
 
 ---
 
