@@ -18,6 +18,7 @@
     - training
         - usually high dimensional optimization
         - needs gradient, now of composite functions $\to$ backpropagation
+        - Python optimizers: https://docs.pytorch.org/docs/stable/optim.html
     - problems with deep networks:
         - high dimensional optimization problems
         - vanishing and exploding gradient

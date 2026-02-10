@@ -193,5 +193,5 @@
         - solution
         $$ X^T X w = \lambda w $$
         - writing back $$ w^T X^T X w = \lambda w^T w = \lambda,$$ so we need the largest eigenvalues
-    - data compression: store projection to the largest eigenvalues: $$Y_n = v_n^T (x-\mu),$$ where $\dfrac{\lambda_n}{\lambda_{max}}>r$
+    - linear data compression: store projection to the largest eigenvalues: $$Y_n = v_n^T (x-\mu),$$ where $\dfrac{\lambda_n}{\lambda_{max}}>r$
     - restore data (without noise) $$ x\to \sum_n Y_n v_n + \mu,$$ because the exact representation $x=\sum_n (v_n\otimes v_n^T) (x-\mu) + \mu$

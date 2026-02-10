@@ -26,7 +26,6 @@
 - **sample context**: collect data belonging to the same class
   - formally $\mathcal C_{sample} =\{ \{x_a \mid c_a=c\} \mid c \in\mathcal C\}$
 
-<a id="context-change"></a>
 - **data model**: $\mathcal M :(C,Q)\to B$, where $Q$ are the parameters, $B$ is the target (label) set
   - names:
     - if $B$ is a finite set: **classification**
@@ -47,7 +46,6 @@
     - distribution estimation methods
     - feature finding methods
 
-<a id="model-optimization"></a>
 - **optimization** of a model: (context, model) $\mapsto$ model, resulting a better model of the context
     - definition:
       finding optimal parameter values for given sample data
@@ -87,7 +85,8 @@
     - loss function: $L(q) = \sum_{x\in\mathcal S} \ell(p_i(x), I(x\in c_i))$, where $I$ is the indicator function
       - smallest if $p_i(x)=1$ for the correct class
       - $\ell$ preferrably cross-entropy loss
-    - for a given input choose the class with the highest probability
+    - prediction: class $(x)= \argmax_i p_i(x,q_{opt})\;\Rightarrow\;$ induced context
+    - classifies every element of the base class
     - technical implementation:
       - preceptron
       - support vector machine
@@ -204,8 +203,8 @@
 
 - **underfitting**
     - **definition:**
-      poor approximation already on \(X_{\text{sample}}\),
-      therefore also on \(X \setminus X_{\text{sample}}\)
+      poor approximation already on $X_{\text{sample}}$,
+      therefore also on $X \setminus X_{\text{sample}}$
     - **symptom:**
       high training error and high validation / test error
     - **intuition:**
@@ -242,8 +241,8 @@
 
 - **overfitting**
     - **definition:**
-      good approximation on \(X_{\text{sample}}\) but poor generalization on  
-      \(X \setminus X_{\text{sample}}\)
+      good approximation on $X_{\text{sample}}$ but poor generalization on  
+      $X \setminus X_{\text{sample}}$
     - **symptom:**
       low training error, high validation / test error
     - **intuition:**
@@ -265,8 +264,8 @@
       - unstable predictions under resampling (e.g. cross-validation)
     - **solution:**
       - **regularization**
-        - \(L_2\) (ridge, weight decay)
-        - \(L_1\) (lasso, sparsity)
+        - $L_2$ (ridge, weight decay)
+        - $L_1$ (lasso, sparsity)
       - **data-related**
         - more training data
         - data augmentation

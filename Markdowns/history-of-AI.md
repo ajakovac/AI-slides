@@ -279,7 +279,7 @@ Artificial Intelligence, from its mathematical foundations to the first AI winte
   These systems:
   - were linear classifiers,
   - implemented as electrical circuits,
-  - typically had on the order of \(10^3\) parameters.
+  - typically had on the order of $10^3$ parameters.
 
   Their limited expressive power
   constrained practical applicability.
@@ -363,9 +363,9 @@ Artificial Intelligence, from its mathematical foundations to the first AI winte
   Many AI methods were computationally infeasible
   with available hardware.
   Estimates suggested that meaningful AI
-  required \(\sim 1\) GFLOP,
+  required $\sim 1$ GFLOP,
   while even the most powerful machines of the time
-  achieved only \(\sim 100\) MFLOPS.
+  achieved only $\sim 100$ MFLOPS.
 
 ---
 
@@ -854,6 +854,12 @@ Artificial Intelligence, from its mathematical foundations to the first AI winte
 
   Generation became a central capability,
   not a side effect of modeling.
+
+  - milestones:
+    - 2013: VAE
+    - 2014: GANs $\to$ sharp images
+    - 2017: transformer $\to$ generation by prompts
+    - 2021: diffusion models
 
 ---
 

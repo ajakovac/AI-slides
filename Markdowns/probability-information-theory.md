@@ -27,7 +27,42 @@
     - expected values factorize $\mathbb E(f(\xi_1)g(\xi_2))=\mathbb E(f(\xi_1))\mathbb E(g(\xi_2))$
 
 - **Stirling formula**
-    - approximation of the factorial $$\ln n! = n\ln n - n + \frac12 \ln(2\pi n) + \mathcal o(1)$$
+    - approximation of the factorial $$\ln n! = n\ln n - n + \frac12 \ln(2\pi n) + \mathcal o(1),$$ or $$n! = \sqrt{2\pi n} \left(\frac n e\right)^n$$
+    
+
+- **Gaussian distribution**
+    - $\text{pdf}(x) = \dfrac1{(2\pi)^{d/2}|C|^{1/2}}e^{-\frac{1}{2}\,(x-\mu)^{\mathsf T} C^{-1}(x-\mu)}$
+    - expected values:
+        - $\mathbb{E}(y)=\mu$
+        - $\mathbb{E}(\xi^{2n+1})=0$ for $n\in\mathbb{N}$
+        - $\mathbb{E}(\xi_i\xi_j)=C_{ij}$
+        - $\mathbb{E}(\xi_i\xi_j\xi_k\xi_\ell)=C_{ij}C_{k\ell} + C_{ik}C_{j\ell} + C_{i\ell}C_{jk}$
+        - higher correlators from pairing
+
+- **$\mathbf\chi^2$ distribution**
+    - $\text{pdf}(x) = \dfrac{1}{2^{d/2}\,\Gamma\!\left(\frac{d}{2}\right)} x^{\frac{d}{2}-1}e^{-x/2}$
+    - expected values: $\mathbb{E}(\chi^2)=d$
+
+- **binomial distributions**
+    - event probability is $p$, no-event probability is $q=1-p$
+    - the probability that after $N$ trials we observe $k$ evens: $P_N(k) = {N \choose k} p^k q^{N-k}$
+    - sum rule: $\sum_{k=0}^N P_N(k) =1$
+
+- **Poisson distribution**
+    - in the continuous limit of binomial distribution $\lambda=Np$ and $N\to\infty$
+    - with Stirling formula $${N\choose k}p^k q^{N-k} = \dfrac{N!p^k q^{N-k}}{(N-k)!k!} \approx \left(\frac N e\right)^N \left(\frac{N-k}e\right)^{k-N}\frac{p^k (1-p)^{N-k}}{k!} = \left(\frac{(N-k)p}q\right)^k e^{-k} \left(1-\frac k N\right)^{-N}(1-p)^N$$
+    - in the $N\to\infty$ limit $$P_\lambda(k) = \frac{\lambda^k}{k!}e^{-\lambda}$$
+    - expected values
+        - $\mathbb E[k] = \lambda$
+        - $\mathbb E[(k-\lambda)^2]=\lambda$
+
+- **$\mathbf\gamma$ distribution**
+    - events occur in time independently
+    - probability that an event occur in time $dt$ is $\gamma\,dt$
+    - probability that the $k$-th event occurs in $[t,t+dt]$ is $P_t(k) = p_t(k)dt$
+    - probability that first event occurs in $[t,t+dt]$: no event occurs until time $t=n\,dt$ is $P_t(1) =(1-\gamma\, dt)^n \gamma dt$, i.e. $$p_t(1) = \gamma e^{-\gamma t}$$
+    - $k$-th event occurs at $t$ is that $k-1$ events occur at time $t'\in[0,t]$, and one event exatly after $t-t'$ time $$p_k(t) = \int\limits_0^t dt' p_{k-1}(t') p_1(t-t')$$
+    - results: $$p_t(k)=\gamma \frac{(\gamma t)^{k-1}}{(k-1)!}e^{-\gamma t}$$
 
 - **information theory**
     - assume lot of measurements both total and in each bin
@@ -108,7 +143,7 @@
     - Shannon entropy $H(X,Y)=-\sum_{x\in X, y\in Y} p(x,y)\log p(x,y)$
     - for independent variables $p(x,y)=p(x)p(y)$, and so $H(X,Y) = H(X) + H(Y)$ where $H(X)=-\sum_{x\in X} p(x)\log p(x)$
     - non-independence measure: mutual information
-    $$ I(X,Y)= H(X,Y)-H(X)-H(Y) = -\sum_{x,y} p(x,y) \ln\frac{p(x,y)}{p(x)p(y)}
+    $$ I(X,Y)= H(X,Y)-H(X)-H(Y) = -\sum_{x,y} p(x,y) \ln\frac{p(x,y)}{p(x)p(y)}$$
 
 - **probability of the observed sample**
     - the probabilities of bins is $q_i$

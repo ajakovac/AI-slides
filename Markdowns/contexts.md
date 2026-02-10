@@ -21,10 +21,11 @@ It is difficult to determine where to start the whole descritpion. In human thin
     - observer dependent
     - time is an additive label of the spatial hypersurface: for the times between spacial instances $a$, $b$ and $c$ we have $$t_{ab}+t_{bc}=t_{ac}$$
 
-- **states**: the possible configurations of the Univers óe on a spacial instance
+- **states**: the possible configurations of the Universe on a spacial instance
     - contains all information to be able to predict the future
     - can be the complete world's state in a hyper (Cauchy) surface
-    - a theoretical construct assuming that the future is deterministic if we fully fix a state.
+    - a theoretical construct assuming that the future is deterministic if we fully fix a state
+    - all decision of an agent in the world must depend on the states of the world
 
 - **observed world**: full description is not possible/necessary
     - a single observer has finite observation capabilities
@@ -43,8 +44,6 @@ It is difficult to determine where to start the whole descritpion. In human thin
         - images where a given pixel is red
         - all living beings in the animal kingdom
     - we can speak about **subclasses**, **nested classes**, etc. just like in case of sets
-
-- **independent objects**: $C_1\cap C_2=\emptyset$
 
 
 ## Contexts
@@ -123,7 +122,7 @@ We can define a bunch of functions operating on the context.
     - **parallelizable**:  because of the small effort for the evaluation, different System-1 applications can run parallel in the same time (e.g. walking and chewing gum).
     - **accurate**: the context can be refined for the actual task
 
-- **advantages of the direct representation**
+- **disadvantages of the direct representation**
     - **error conctrol**: the action is done without any double check if the concept is activated. But there can be tricky or complicated situations where a superficial decision is not correct.
     - **unawareness**: System-1 concepts do not know, if they make a mistake. They do not know, what they know, or what they don't know. They do an instinctive reaction, the concept of "thinking" is not sensible in this approach.
     - **analyticity**: in numerical implementation all concepts are results of analytic calculation. This requires that the probability of performing a possible action is approximately the same (balanced classes). For example, this approach is not useful for tell apart cat images and non-cat images, because non cat images form a vastly larger set. In such a space, distinguishing one element from all others by direct enumeration is combinatorially prohibitive.

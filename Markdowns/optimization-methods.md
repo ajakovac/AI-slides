@@ -220,6 +220,7 @@
     - theory:
         - $r_i^T r_j=0$ for $i\neq j$ orthogonal
         - $p_i^TAp_j=0$ for $i\neq j$: $A$-conjugate
+![alt text](../Images/conjugate-gradient.png)
 
 - **Newton-Raphson method**
     - minimize a function $f:\mathbb R^N\to\mathbb R$
