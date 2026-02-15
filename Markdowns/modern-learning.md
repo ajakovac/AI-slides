@@ -1,5 +1,3 @@
-# Knowledge graphs and learning in the AI era
-
 - **Learning in the AI era**
     > In the emerging AI era, it is no longer obvious how teaching and learning should be organized most effectively.
     - **traditional learning materials**
@@ -13,9 +11,11 @@
         - hard __skills__ vs. soft __skills__
         - __structured vs. exploratory learning__
         - __facts vs. connections__
-    - **__knowledge graphs__**
+    - **knowledge graphs**
+        - __knowledge graphs__
         - organizing knowledge beyond linear narratives
-    - **__proposal of this course__**
+    - **proposal of this course**
+        - __proposal of this course__
         - a hybrid, graph-based learning approach
 
 - **Learning from books and podcasts**
@@ -74,9 +74,11 @@
         - require experience and reflection
 
 - **Structured vs. exploratory learning**
-    - structured learning provides stability, terminology, and shared reference points  
+    - **structured learning**
+        - provides stability, terminology, and shared reference points  
         - *what should I learn next?*
-    - exploratory learning enables adaptation, transfer, and deeper understanding  
+    - **exploratory learning**
+        -  enables adaptation, transfer, and deeper understanding  
         - *why does this matter here?*
     - AI tools support exploration; knowledge graphs provide structure
 
@@ -98,9 +100,9 @@
         - explicit connections between concepts
         - form a knowledge graph rather than a linear syllabus
     - **usage**
-        - *during lectures*: explore and circle around a topic
-        - *offline*: identify relevant nodes and ask LLMs targeted questions
-        - *exploration*: use core material to dig deeper
-        - *feedback*: clarify unclear points with human experts
+        - during lectures: explore and circle around a topic
+        - offline: identify relevant nodes and ask LLMs targeted questions
+        - exploration: use core material to dig deeper
+        - feedback: clarify unclear points with human experts
+    > feedback of all kinds is very welcome!
 
-> feedback of all kinds is very welcome!

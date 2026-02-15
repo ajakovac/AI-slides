@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatically Generated Notes</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']]
+    }
+  };
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<body>
+  <main class="page">
+    <section class="card">
+<a id="attention-mechanisms-and-transformers"></a>
+<h2>Attention mechanisms and transformers</h2>
+<div class="topic">
+<h3>motivation</h3>
+<ul>
+<li>classical sequence models (e.g. RNNs) process text sequentially</li>
+<li>long-range dependencies are difficult to capture</li>
+<li>information from distant tokens tends to vanish or blur</li>
+</ul>
+</div>
+<div class="topic">
+<h3>need for a mechanism that</h3>
+<ul>
+<li>accesses all tokens directly</li>
+<li>adapts dynamically to the task</li>
+<li>scales efficiently to long sequences</li>
+</ul>
+</div>
+<div class="topic">
+<h3>continue</h3>
+<ul>
+<li><a id="link-0"></a><a class="inline-link" href="#attention-mechanism">attention mechanism</a></li>
+</ul>
+</div>
+</section><section class="card">
+<a id="attention-mechanism"></a>
+<h2>attention mechanism</h2>
+<div class="topic">
+<h3>core idea</h3>
+<ul>
+<li>each element of a sequence selectively focuses on other elements</li>
+<li>relevance between tokens is learned, not predefined</li>
+<li>context is computed as a weighted combination of all tokens</li>
+</ul>
+</div>
+<div class="topic">
+<h3>steps</h3>
+<ul>
+<li>attention mechanism steps</li>
+</ul>
+</div>
+<div class="topic">
+<h3>multi-head attention</h3>
+<ul>
+<li>use several $Q_i,K_i,V_i$ matrices $\text{head}_i=\text{attention}(Q_i,K_i,V_i)$, and $\text{head} = \text{Concat}(\text{head}_i,\dots,\text{head}_H)$</li>
+<li>train a weight of these heads $W_O\in \mathbb R^{(Hd_k)\times d_{model} }$</li>
+<li>mix information of the attention heads</li>
+<li>map it into the embedding dimension of the model</li>
+<li>formally: $$\text{Multihead}(Q,K,V) = \text{head} W_O$$</li>
+</ul>
+</div>
+<div class="topic">
+<h3>each head specializes to different things</h3>
+<ul>
+<li>syntax</li>
+<li>agreement</li>
+<li>semantic roles</li>
+<li>long-range coreference</li>
+<li>together, they form a rich contextual representation.</li>
+</ul>
+</div>
+<div class="topic">
+<h3>interpretation</h3>
+<ul>
+<li>attention builds a soft, learned dependency graph over tokens</li>
+<li>each token dynamically decides which others matter</li>
+<li>context is global and adaptive</li>
+</ul>
+</div>
+<div class="topic">
+<h3>computational cost</h3>
+<ul>
+<li>$\mathcal O(T^2d_k)$</li>
+<li>all token-token interaction</li>
+<li>sequence length is limited (e.g. 512 in BERT, 8k-1M+ in modern LLMs )</li>
+<li>long-context variants are actively researched</li>
+<li>parallelizable (GPUs)</li>
+</ul>
+</div>
+<div class="references">
+<h3>Referenced by</h3>
+<ul>
+<li><a class="back-link" href="#link-0">attention-mechanism</a> in section "attention-mechanisms-and-transformers"</li>
+<li><a class="back-link" href="#link-1">attention-mechanism</a> in section "transformer"</li>
+</ul>
+</div>
+</section><section class="card">
+<a id="attention-mechanism-steps"></a>
+<h2>attention mechanism steps</h2>
+<div class="topic">
+<h3>1. Inputs</h3>
+<ul>
+<li>we start with a sequence of token representations $$\mathbf{x}_1,\dots,\mathbf{x}_T,\quad \mathbf{x}_t\in \mathbb R^{d_{model}},$$ including</li>
+<li>token embedding</li>
+<li>positional embedding</li>
+</ul>
+</div>
+<div class="topic">
+<h3>2. Queries, Keys, Values</h3>
+<ul>
+<li>(linear projections): Each token is mapped into three different spaces: $$\mathbf{q}_t = W_Q \mathbf{x}_t,\; \mathbf{k}_t = W_K \mathbf{x}_t,\; \mathbf{v}_t=W_V \mathbf{x}_t,$$</li>
+<li>where $W_Q, W_K, W_V\in \mathbb R^{d_k\times d_{model}}$ matrices (typically $d_k&lt;d_{model}$)</li>
+<li>query: what this token is looking for</li>
+<li>key: what this token offers</li>
+<li>value: the information to pass along</li>
+<li>Crucial: relevance (Q·K) is computed separately from content (V).</li>
+</ul>
+</div>
+<div class="topic">
+<h3>3. Simliarity scores</h3>
+<ul>
+<li>Each token $t$ compares itself to every other token $s$: $$
+          \text{score}(t,s) = \dfrac{\mathbf{q}_t^\top \mathbf{k}_s}{\sqrt{d_k}}
+          $$</li>
+<li>full symmetric matrix $S\in \mathbb R^T\times \mathbb R^T$</li>
+<li>information content: how relevant is every token to token $t$?</li>
+<li>normalization</li>
+</ul>
+</div>
+<div class="topic">
+<h3>4. attention weights</h3>
+<ul>
+<li>apply softmax transformation $$
+          \alpha_{t,s} = \frac{\exp(\text{score}(t,s))}{\sum_{s&#x27;} \exp(\text{score}(t,s&#x27;))}
+          $$</li>
+</ul>
+</div>
+<div class="topic">
+<h3>5. context aggregation</h3>
+<ul>
+<li>weighted sum of the token values $$\mathbf{h}_t = \sum_s \alpha_{t,s} \mathbf{v}_t$$</li>
+<li>provides contextual embedding</li>
+<li>not selects tokens, but blends them</li>
+</ul>
+</div>
+<div class="topic">
+<h3>compact matrix form</h3>
+<ul>
+<li>$Q, K, V \in \mathbb R^{T\times d_k}$, and then $$ \text{attention}(Q,K,V) = \text{softmax}\left(\dfrac{Q^TK}{\sqrt{d_k}}\right) V$$</li>
+</ul>
+</div>
+</section><section class="card">
+<a id="embedding-in-transformers"></a>
+<h2>embedding in transformers</h2>
+<div class="topic">
+<h3>notes</h3>
+<ul>
+<li>take into account tokens (e.g. &quot;unbelievable movie&quot; $\to$ [&quot;un&quot;, &quot;##believable&quot;, &quot;movie&quot;])</li>
+<li>also delimiter tokens (like beginning-of-sentence, end-of-sentence, etc.)</li>
+</ul>
+</div>
+<div class="topic">
+<h3>token embedding</h3>
+<ul>
+<li>token $t\mapsto \mathbf{e}_t^{token}\in \mathbb R^{d_{model}}$</li>
+<li>learned during training</li>
+<li>context independent (static)</li>
+</ul>
+</div>
+<div class="topic">
+<h3>positional embedding</h3>
+<ul>
+<li>$t\mapsto i$ position index (e.g. “dog bites man” vs “man bites dog”) use pre-trained $\mathbf{e}_i^{pos}$</li>
+<li>represents order</li>
+<li>originally a fixed formula</li>
+<li>trainable version is better</li>
+</ul>
+</div>
+<div class="topic">
+<h3>final embedding</h3>
+<ul>
+<li>$$\mathbf{x}_t=\mathbf{e}_t^{token} + \mathbf{e}_i^{pos}$$</li>
+</ul>
+</div>
+<div class="references">
+<h3>Referenced by</h3>
+<ul>
+<li><a class="back-link" href="#link-2">embedding-in-transformers</a> in section "transformer"</li>
+</ul>
+</div>
+</section><section class="card">
+<a id="self-attention"></a>
+<h2>self-attention</h2>
+<div class="topic">
+<h3>notes</h3>
+<ul>
+<li>queries, keys, and values all come from the same sequence</li>
+<li>each token attends to all other tokens (including itself)</li>
+</ul>
+</div>
+<div class="topic">
+<h3>properties</h3>
+<ul>
+<li>captures long-range dependencies</li>
+<li>independent of token distance</li>
+<li>fully parallelizable</li>
+</ul>
+</div>
+</section><section class="card">
+<a id="transformer"></a>
+<h2>transformer</h2>
+<div class="topic">
+<h3>notes</h3>
+<ul>
+<li>a neural architecture built entirely on self-attention</li>
+<li>eliminates recurrence and convolution</li>
+<li>processes sequences in parallel</li>
+</ul>
+</div>
+<div class="topic">
+<h3>Transformer components</h3>
+<ul>
+<li>multi-head attention → <a id="link-1"></a><a class="inline-link" href="#attention-mechanism">attention mechanism</a></li>
+<li>position-wise feed-forward networks</li>
+<li>residual connections (identity shortcut paths)</li>
+<li>layer normalization</li>
+<li>positional encoding → <a id="link-2"></a><a class="inline-link" href="#embedding-in-transformers">embedding in transformers</a></li>
+<li>stacking of layers</li>
+</ul>
+</div>
+<div class="topic">
+<h3>LLM system components</h3>
+<ul>
+<li>tokenizer</li>
+<li>input embedding</li>
+<li>transformer blocks</li>
+<li>output projection (linear + softmax)</li>
+</ul>
+</div>
+<div class="topic">
+<h3>advantages</h3>
+<ul>
+<li>global context modeling</li>
+<li>efficient parallel training</li>
+<li>flexible representation learning</li>
+<li>strong scaling with data and model size</li>
+</ul>
+</div>
+<div class="topic">
+<h3>conceptual shift</h3>
+<ul>
+<li>from fixed context windows → learned relevance</li>
+<li>from sequential processing → global interaction</li>
+<li>from hand-designed structure → data-driven structure</li>
+</ul>
+</div>
+<div class="topic">
+<h3>transformers provide</h3>
+<ul>
+<li>context-sensitive token representations</li>
+<li>a unified architecture for many NLP tasks</li>
+</ul>
+</div>
+<div class="topic">
+<h3>they form the foundation of</h3>
+<ul>
+<li>contextual word embeddings</li>
+<li>modern language models</li>
+<li>large-scale pretrained models</li>
+</ul>
+</div>
+</section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,261 @@
+{
+    "$system": {
+        "link_separator": "\u001e",
+        "item_separator": "\u001f"
+    },
+    "learning-in-the-ai-era": {
+        "$links": [],
+        "$keyword_name": "Learning in the AI era",
+        "$remark": [
+            "$remark",
+            "In the emerging AI era, it is no longer obvious how teaching and learning should be organized most effectively."
+        ],
+        "traditional-learning-materials": [
+            "traditional learning materials",
+            "\u001econtact lectures\u001fcontact-lectures\u001e",
+            "\u001eexercises\u001fexercises\u001e",
+            "\u001ebooks\u001flearning-from-books-and-podcasts\u001e"
+        ],
+        "modern-learning-materials": [
+            "modern learning materials",
+            "videos, \u001epodcasts\u001flearning-from-books-and-podcasts\u001e",
+            "\u001echatbots\u001flearning-with-chatbots-(llms)\u001e (LLMs)"
+        ],
+        "learning-dimensions": [
+            "learning dimensions",
+            "hard \u001eskills\u001fskills\u001e vs. soft \u001eskills\u001fskills\u001e",
+            "\u001estructured vs. exploratory learning\u001fstructured-vs.-exploratory-learning\u001e",
+            "\u001efacts vs. connections\u001ffacts-vs.-connections\u001e"
+        ],
+        "knowledge-graphs": [
+            "knowledge graphs",
+            "\u001eknowledge graphs\u001fknowledge-graphs\u001e",
+            "organizing knowledge beyond linear narratives"
+        ],
+        "proposal-of-this-course": [
+            "proposal of this course",
+            "\u001eproposal of this course\u001fproposal-of-this-course\u001e",
+            "a hybrid, graph-based learning approach"
+        ]
+    },
+    "learning-from-books-and-podcasts": {
+        "$links": [
+            [
+                "Learning in the AI era",
+                "learning-in-the-ai-era",
+                "books"
+            ],
+            [
+                "Learning in the AI era",
+                "learning-in-the-ai-era",
+                "podcasts"
+            ]
+        ],
+        "$keyword_name": "Learning from books and podcasts",
+        "pros": [
+            "pros",
+            "self-paced, adaptable consumption",
+            "rewindable and revisitable",
+            "typically well structured"
+        ],
+        "cons": [
+            "cons",
+            "information density can be too low (sometimes too high)",
+            "no direct possibility to ask follow-up questions"
+        ]
+    },
+    "contact-lectures": {
+        "$links": [
+            [
+                "Learning in the AI era",
+                "learning-in-the-ai-era",
+                "contact-lectures"
+            ]
+        ],
+        "$keyword_name": "Contact lectures",
+        "$remark": [
+            "$remark",
+            "the traditional way of transferring knowledge; the goal is to acquire understanding through explanation"
+        ],
+        "pros": [
+            "pros",
+            "usually well structured",
+            "the lecturer can answer questions (in principle)"
+        ],
+        "cons": [
+            "cons",
+            "large amount (often overwhelming) of information in a short time",
+            "fixed pace, difficult to adapt to individual needs",
+            "missing a lecture makes catching up hard",
+            "often academically focused information",
+            "evaluation can be tedious (tests vs. oral exams)"
+        ]
+    },
+    "exercises": {
+        "$links": [
+            [
+                "Learning in the AI era",
+                "learning-in-the-ai-era",
+                "exercises"
+            ]
+        ],
+        "$keyword_name": "Exercises",
+        "$remark": [
+            "$remark",
+            "high-school-like teaching practice; the goal is to gain knowledge through practice"
+        ],
+        "pros": [
+            "pros",
+            "aim at usable knowledge and improved application skills"
+        ],
+        "cons": [
+            "cons",
+            "assume prior understanding of basic concepts (little time for deeper explanation)",
+            "often simplified, artificial problems",
+            "limited exposure to real-life complexity",
+            "time-consuming and repetitive"
+        ]
+    },
+    "learning-with-chatbots-(llms)": {
+        "$links": [
+            [
+                "Learning in the AI era",
+                "learning-in-the-ai-era",
+                "chatbots"
+            ]
+        ],
+        "$keyword_name": "Learning with chatbots (LLMs)",
+        "$remark": [
+            "$remark",
+            "a characteristic opportunity of the AI era"
+        ],
+        "pros": [
+            "pros",
+            "access to an enormous body of knowledge",
+            "adaptive and interactive explanations"
+        ],
+        "cons": [
+            "cons",
+            "LLMs do not know what they do not know (may hallucinate)",
+            "LLMs do not know what they know (knowledge is not inherently structured)",
+            "answers can drift without clear guidance or goals",
+            "may make exercises superficial"
+        ]
+    },
+    "skills": {
+        "$links": [
+            [
+                "Learning in the AI era",
+                "learning-in-the-ai-era",
+                "skills"
+            ],
+            [
+                "Learning in the AI era",
+                "learning-in-the-ai-era",
+                "skills"
+            ]
+        ],
+        "$keyword_name": "Skills",
+        "hard-skills": [
+            "hard skills",
+            "well-defined, precise knowledge",
+            "mostly predictive",
+            "systematically learnable",
+            "typical domain: science and engineering"
+        ],
+        "soft-skills": [
+            "soft skills",
+            "context-dependent, non-unique solutions",
+            "not fully predictive",
+            "only partially teachable",
+            "require experience and reflection"
+        ]
+    },
+    "structured-vs.-exploratory-learning": {
+        "$links": [
+            [
+                "Learning in the AI era",
+                "learning-in-the-ai-era",
+                "structured-vs.-exploratory-learning"
+            ]
+        ],
+        "$keyword_name": "Structured vs. exploratory learning",
+        "structured-learning": [
+            "structured learning",
+            "provides stability, terminology, and shared reference points",
+            "*what should I learn next?*"
+        ],
+        "exploratory-learning": [
+            "exploratory learning",
+            "enables adaptation, transfer, and deeper understanding",
+            "*why does this matter here?*"
+        ],
+        "notes": [
+            "notes",
+            "AI tools support exploration; knowledge graphs provide structure"
+        ]
+    },
+    "facts-vs.-connections": {
+        "$links": [
+            [
+                "Learning in the AI era",
+                "learning-in-the-ai-era",
+                "facts-vs.-connections"
+            ]
+        ],
+        "$keyword_name": "Facts vs. connections",
+        "notes": [
+            "notes",
+            "facts are abundant and easily accessible via AI",
+            "connections must be constructed by the learner",
+            "knowledge graphs externalize and support this process"
+        ]
+    },
+    "knowledge-graphs": {
+        "$links": [
+            [
+                "Learning in the AI era",
+                "learning-in-the-ai-era",
+                "knowledge-graphs"
+            ]
+        ],
+        "$keyword_name": "Knowledge graphs",
+        "notes": [
+            "notes",
+            "knowledge is partially hierarchical but not strictly linear",
+            "concepts are connected across contexts and depths",
+            "emphasis on relations rather than isolated facts",
+            "support navigation, revisiting, and recombination of ideas"
+        ]
+    },
+    "proposal-of-this-course": {
+        "$links": [
+            [
+                "Learning in the AI era",
+                "learning-in-the-ai-era",
+                "proposal-of-this-course"
+            ]
+        ],
+        "$keyword_name": "proposal of this course",
+        "bits-of-knowledge": [
+            "bits of knowledge",
+            "short, focused descriptions of narrow topics"
+        ],
+        "links": [
+            "links",
+            "explicit connections between concepts",
+            "form a knowledge graph rather than a linear syllabus"
+        ],
+        "usage": [
+            "usage",
+            "during lectures: explore and circle around a topic",
+            "offline: identify relevant nodes and ask LLMs targeted questions",
+            "exploration: use core material to dig deeper",
+            "feedback: clarify unclear points with human experts"
+        ],
+        "$remark": [
+            "$remark",
+            "feedback of all kinds is very welcome!"
+        ]
+    }
+}

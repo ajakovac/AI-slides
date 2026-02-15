@@ -1,15 +1,15 @@
-# Attention mechanisms and transformers
-
 - **Attention mechanisms and transformers**
 
     - **motivation**
         - classical sequence models (e.g. RNNs) process text sequentially
         - long-range dependencies are difficult to capture
         - information from distant tokens tends to vanish or blur
-        - need for a mechanism that:
-            - accesses all tokens directly
-            - adapts dynamically to the task
-            - scales efficiently to long sequences
+    - **need for a mechanism that**
+        - accesses all tokens directly
+        - adapts dynamically to the task
+        - scales efficiently to long sequences
+    - **continue**
+        - __attention mechanism__
 
 
 - **attention mechanism**
@@ -17,21 +17,43 @@
         - each element of a sequence selectively focuses on other elements
         - relevance between tokens is learned, not predefined
         - context is computed as a weighted combination of all tokens
+    - **steps**
+        - attention mechanism steps
+    - **multi-head attention**: 
+        - use several $Q_i,K_i,V_i$ matrices $\text{head}_i=\text{attention}(Q_i,K_i,V_i)$, and $\text{head} = \text{Concat}(\text{head}_i,\dots,\text{head}_H)$
+        - train a weight of these heads $W_O\in \mathbb R^{(Hd_k)\times d_{model} }$
+        - mix information of the attention heads
+        - map it into the embedding dimension of the model
+        - formally: $$\text{Multihead}(Q,K,V) = \text{head} W_O$$
+    - **each head specializes to different things**:
+        - syntax
+        - agreement
+        - semantic roles
+        - long-range coreference
+        - together, they form a rich contextual representation.
+    - **interpretation**
+        - attention builds a soft, learned dependency graph over tokens
+        - each token dynamically decides which others matter
+        - context is global and adaptive
+    - **computational cost**: $\mathcal O(T^2d_k)$
+        - all token-token interaction
+        - sequence length is limited (e.g. 512 in BERT, 8k-1M+ in modern LLMs )
+        - long-context variants are actively researched
+        - parallelizable (GPUs)
+
+- **attention mechanism steps**
     1. **Inputs**: we start with a sequence of token representations $$\mathbf{x}_1,\dots,\mathbf{x}_T,\quad \mathbf{x}_t\in \mathbb R^{d_{model}},$$ including
         - token embedding
         - positional embedding
     1. **Queries, Keys, Values** (linear projections): Each token is mapped into three different spaces: $$\mathbf{q}_t = W_Q \mathbf{x}_t,\; \mathbf{k}_t = W_K \mathbf{x}_t,\; \mathbf{v}_t=W_V \mathbf{x}_t,$$ 
-        - where
-            - $W_Q, W_K, W_V\in \mathbb R^{d_k\times d_{model}}$
-            - typically $d_k<d_{model}$
-        - Intuition
-            - query: what this token is looking for
-            - key: what this token offers
-            - value: the information to pass along
-            This separation is crucial: relevance (Q·K) is computed separately from content (V).
+        - where $W_Q, W_K, W_V\in \mathbb R^{d_k\times d_{model}}$ matrices (typically $d_k<d_{model}$)
+        - query: what this token is looking for
+        - key: what this token offers
+        - value: the information to pass along
+        - Crucial: relevance (Q·K) is computed separately from content (V).
     1. **Simliarity scores**
         - Each token $t$ compares itself to every other token $s$: 
-        $$
+            $$
           \text{score}(t,s) = \dfrac{\mathbf{q}_t^\top \mathbf{k}_s}{\sqrt{d_k}}
           $$
         - full symmetric matrix $S\in \mathbb R^T\times \mathbb R^T$
@@ -47,40 +69,23 @@
         - provides contextual embedding
         - not selects tokens, but blends them
     - **compact matrix form**
-        $Q, K, V \in \mathbb R^{T\times d_k}$, and then
+        - $Q, K, V \in \mathbb R^{T\times d_k}$, and then
         $$ \text{attention}(Q,K,V) = \text{softmax}\left(\dfrac{Q^TK}{\sqrt{d_k}}\right) V$$
-    - **multi-head attention**: 
-        - use several $Q_i,K_i,V_i$ matrices $\text{head}_i=\text{attention}(Q_i,K_i,V_i)$, and $\text{head} = \text{Concat}(\text{head}_i,\dots,\text{head}_H)$
-        - train a weight of these heads $W_O\in \mathbb R^{(Hd_k)\times d_{model} }$
-        - mix information of the attention heads
-        - map it into the embedding dimension of the model
-        - formally: $$\text{Multihead}(Q,K,V) = \text{head} W_O$$
-        - each head specializes to different things:
-            - syntax
-            - agreement
-            - semantic roles
-            - long-range coreference
-            - together, they form a rich contextual representation.
-    - **interpretation**
-        - attention builds a soft, learned dependency graph over tokens
-        - each token dynamically decides which others matter
-        - context is global and adaptive
-    - **computational cost**: $\mathcal O(T^2d_k)$
-        - all token-token interaction
-        - sequence length is limited (e.g. 512 in BERT, 8k-1M+ in modern LLMs )
-        - long-context variants are actively researched
-        - parallelizable (GPUs)
 
-- **tokenization in transformers**
+
+
+- **embedding in transformers**
     - take into account tokens (e.g. "unbelievable movie" $\to$ ["un", "##believable", "movie"])
     - also delimiter tokens (like beginning-of-sentence, end-of-sentence, etc.)
-    - token embedding: token $t\mapsto \mathbf{e}_t^{token}\in \mathbb R^{d_{model}}$
+    - **token embedding**: token $t\mapsto \mathbf{e}_t^{token}\in \mathbb R^{d_{model}}$
         - learned during training
         - context independent (static)
-    - positional embedding: $t\mapsto i$ position index (e.g. “dog bites man” vs “man bites dog”) use pre-trained $\mathbf{e}_i^{pos}$
+    - **positional embedding**: $t\mapsto i$ position index (e.g. “dog bites man” vs “man bites dog”) use pre-trained $\mathbf{e}_i^{pos}$
+        - represents order
         - originally a fixed formula
         - trainable version is better
-    - final embedding: $$\mathbf{x}_t=\mathbf{e}_t^{token} + \mathbf{e}_i^{pos}$$
+    - **final embedding**: 
+        - $$\mathbf{x}_t=\mathbf{e}_t^{token} + \mathbf{e}_i^{pos}$$
 
 - **self-attention**
     - queries, keys, and values all come from the same sequence
@@ -94,21 +99,18 @@
     - a neural architecture built entirely on self-attention
     - eliminates recurrence and convolution
     - processes sequences in parallel
-    - **main components**
-        - input embedding:
-            - token embeddings
-            - positional encodings (to represent order)
-        - stacked attention blocks:
-            - multi-head self-attention
-            - position-wise feedforward networks
-        - residual connections and normalization
-    - **multi-head attention**
-        - attention is computed multiple times in parallel
-        - each head focuses on different relations:
-            - syntactic dependencies
-            - semantic similarity
-            - positional structure
-        - results are concatenated and projected
+    - **Transformer components**
+        - multi-head attention → __attention mechanism__
+        - position-wise feed-forward networks
+        - residual connections (identity shortcut paths)
+        - layer normalization
+        - positional encoding → __embedding in transformers__
+        - stacking of layers
+    - **LLM system components**
+        - tokenizer
+        - input embedding
+        - transformer blocks
+        - output projection (linear + softmax)
     - **advantages**
         - global context modeling
         - efficient parallel training
@@ -118,14 +120,16 @@
         - from fixed context windows → learned relevance
         - from sequential processing → global interaction
         - from hand-designed structure → data-driven structure
-    - Role in NLP
-        - transformers provide:
-            - context-sensitive token representations
-            - a unified architecture for many NLP tasks
-        - they form the foundation of:
-            - contextual word embeddings
-            - modern language models
-            - large-scale pretrained models
+    - **transformers provide**:
+        - context-sensitive token representations
+        - a unified architecture for many NLP tasks
+    - **they form the foundation of**:
+        - contextual word embeddings
+        - modern language models
+        - large-scale pretrained models
+
+__END__
+
 
 ![alt text](../Images/encoder-in-transformer.png)
 ![alt text](../Images/attention-mechanism.png)

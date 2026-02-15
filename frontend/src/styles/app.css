@@ -1,3 +1,7 @@
+/* ===============================
+   Base & Layout
+   =============================== */
+
 :root {
   font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
   color: #0f1012;
@@ -21,6 +25,10 @@ html, body, #root {
     radial-gradient(circle at 20% 10%, rgba(255,255,255,0.6), transparent 40%),
     linear-gradient(135deg, #f0f3f6 0%, #c7cbd2 45%, #9aa2ad 100%);
 }
+
+/* ===============================
+   Header
+   =============================== */
 
 .header {
   background: linear-gradient(180deg, #f5f6f8 0%, #cfd4dc 100%);
@@ -51,10 +59,22 @@ html, body, #root {
   color: #4b5663;
 }
 
+/* ===============================
+   Body Layout
+   =============================== */
+
 .body {
   display: flex;
   height: 100%;
   overflow: hidden;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #e7eaf0 0%, #c0c6cf 100%);
+  padding: 18px;
+  border-left: 1px solid #aeb4bf;
+  height: 100%;
+  min-width: 220px;
 }
 
 .main-area {
@@ -64,18 +84,12 @@ html, body, #root {
   border-right: 1px solid #b8bec8;
 }
 
-.sidebar {
-  background: linear-gradient(180deg, #e7eaf0 0%, #c0c6cf 100%);
-  padding: 18px;
-  border-left: 1px solid #aeb4bf;
-  height: 100%;
-}
-
 .pane {
   padding: 24px;
   height: 100%;
   overflow: auto;
   color: #1d2128;
+  transition: opacity 160ms ease, transform 160ms ease;
 }
 
 .pane.left {
@@ -87,12 +101,26 @@ html, body, #root {
   border-left: 1px solid #b8bec8;
 }
 
+/* Fade animation */
+
+.pane.is-fading,
+.doc-pane.is-fading {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* ===============================
+   Splitters
+   =============================== */
+
 .splitter {
   background: linear-gradient(180deg, #f5f7fa 0%, #a1a8b2 100%);
   opacity: 0.9;
   transition: opacity 0.2s ease;
   z-index: 5;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), inset 0 -1px 0 rgba(0,0,0,0.12);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.7),
+    inset 0 -1px 0 rgba(0,0,0,0.12);
 }
 
 .splitter:hover {
@@ -108,6 +136,53 @@ html, body, #root {
   width: 6px;
   cursor: col-resize;
 }
+
+/* ===============================
+   Sidebar buttons
+   =============================== */
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.nav-btn {
+  background: linear-gradient(180deg, #ffffff 0%, #d6dce5 100%);
+  border: 1px solid #b8bec8;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.nav-btn:hover {
+  background: linear-gradient(180deg, #fdfefe 0%, #c9d1dc 100%);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* ===============================
+   Scrollbars
+   =============================== */
+
+.pane::-webkit-scrollbar {
+  width: 8px;
+}
+
+.pane::-webkit-scrollbar-thumb {
+  background: #b5bcc8;
+  border-radius: 4px;
+}
+
+.pane::-webkit-scrollbar-thumb:hover {
+  background: #8f97a3;
+}
+
+/* ===============================
+   Responsive
+   =============================== */
 
 @media (max-width: 900px) {
   .header-content {
