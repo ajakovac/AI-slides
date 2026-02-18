@@ -24,7 +24,7 @@ def extract_keyword(line) -> tuple[str | None, str, int, bool]:
     elif stripped_line.startswith('- '):
         return "notes", stripped_line[2:], starting_spaces, False
     elif stripped_line.startswith('> '):
-        return "$remark", stripped_line[2:], starting_spaces, False
+        return ">remark", stripped_line[2:], starting_spaces, False
     else:
         return None, stripped_line, starting_spaces, False
 

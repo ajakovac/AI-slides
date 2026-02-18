@@ -92,7 +92,31 @@ async def get_keys():
     async with _data_lock:
         return list(data_store.keys())
 
-@app.get("/image/{key}")
+# Directory where images live (relative to this file)
+IMAGES_DIR = (Path(__file__).resolve().parent / "../Images").resolve()
+
+@app.get("/image/{image_name}")
+def get_image(image_name: str):
+    # Basic path safety: forbid slashes/backslashes and ".."
+    if "/" in image_name or "\\" in image_name or ".." in image_name:
+        raise HTTPException(status_code=400, detail="Invalid image name")
+
+    path = (IMAGES_DIR / image_name).resolve()
+
+    # Ensure the resolved path is still inside IMAGES_DIR (prevents traversal)
+    try:
+        path.relative_to(IMAGES_DIR)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid image path")
+
+    if not path.exists() or not path.is_file():
+        raise HTTPException(status_code=404, detail="Image not found")
+
+    # FileResponse will set Content-Type based on filename extension
+    return FileResponse(path)
+
+
+@app.get("/image_show/{key}")
 async def get_image(key: str):
     async with _data_lock:
         directory = Path("../Images")

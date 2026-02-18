@@ -6,7 +6,7 @@
         - __books__
     - **modern learning materials**
         - videos, __podcasts__
-        - __chatbots__ (LLMs)
+        - __learning with chatbots__ (LLMs)
     - **learning dimensions**
         - hard __skills__ vs. soft __skills__
         - __structured vs. exploratory learning__
@@ -16,7 +16,8 @@
         - organizing knowledge beyond linear narratives
     - **proposal of this course**
         - __proposal of this course__
-        - a hybrid, graph-based learning approach
+        - a hybrid, graph-based learning approach ![learning](../Images/cateared-witch-studying-library_798031-817.png)
+[modern learning](https://www.teachthought.com/the-future-of-learning-posts/principles-modern-learning/)
 
 - **Learning from books and podcasts**
     - **pros**
@@ -52,13 +53,38 @@
 - **Learning with chatbots (LLMs)**
     > a characteristic opportunity of the AI era
     - **pros**
-        - access to an enormous body of knowledge
-        - adaptive and interactive explanations
+        - access to an enormous body of knowledge ![illustration](../Images/learn_with_chatbots.png)
+        - provide on-demand explanations at varying levels of difficulty
+        - act as personalized tutors adapting to a learner’s pace and background
+        - support language learning, writing, and code comprehension
+        - assist teachers in preparing materials, exercises, and feedback
+
     - **cons**
         - LLMs do not know what they do not know (may hallucinate)
         - LLMs do not know what they know (knowledge is not inherently structured)
         - answers can drift without clear guidance or goals
-        - may make exercises superficial
+        - students may outsource thinking rather than develop it
+        - overreliance can weaken problem-solving and writing skills
+        - generated answers may be fluent but incorrect
+        - assessment and academic integrity become harder to enforce.
+
+    - **AI Tutor vs Traditional Active Learning** 
+        - paper: [Nature](https://www.nature.com/articles/s41598-025-97652-6)
+        - randomized controlled experiment comparing wtudents learning with an AI-powered tutor and (control group) students in in-class active learning
+        - Students using the AI tutor learned significantly more in less time than those in the traditional active learning group.
+        - AI-tutored students had higher post-test scores relative to pre-test baselines.
+        - The effect sizes were large enough to show statistically meaningful learning gains with AI assistance.
+    
+    - **Generative AI Usage and Exam Performance**
+        - paper in arXiV [General Economics](https://arxiv.org/abs/2404.19699)
+        - Students who used generative AI tools such as ChatGPT scored on average lower on exam performance than non-users.
+        - The negative correlation was particularly evident for students with higher learning potential, suggesting that reliance on AI could hinder deeper understanding and retention
+
+    - **AI Meets the Classroom: When Do Large Language Models Harm Learning?**
+        - paper in arXiV [Computers and Society](https://arxiv.org/abs/2409.09047)
+        - AI access alone does not guarantee learning; how students use it matters
+        - Students who used LLMs as direct problem-solvers without engaging with material had poorer learning outcomes.
+        - Those who conversed with the model for explanations often benefited — but excessive reliance diminished actual learning.
 
 - **Skills**
     - **hard skills**

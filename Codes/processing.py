@@ -24,7 +24,7 @@ def extract_keyword(line) -> tuple[str | None, str, int, bool]:
     elif stripped_line.startswith('- '):
         return "notes", stripped_line[2:], starting_spaces, False
     elif stripped_line.startswith('> '):
-        return "$remark", stripped_line[2:], starting_spaces, False
+        return ">remark", stripped_line[2:], starting_spaces, False
     else:
         return None, stripped_line, starting_spaces, False
 
@@ -174,8 +174,8 @@ class Processor:
             for property, property_list in self.database[k].items():
                 if property in ['$links', '$keyword_name']:
                     continue
-                if property == '$remark':
-                    final.append(f'> {",".join(self.database[k]["$remark"][1:])}')
+                if property == '>remark':
+                    final.append(f'> {",".join(self.database[k][">remark"][1:])}')
                     continue
                 final.append(f'- {property_list[0]}')
                 for line in property_list[1:]:
@@ -223,7 +223,7 @@ class Processor:
                 if property in ['$links', '$keyword_name']:
                     continue
 
-                if property == '$remark':
+                if property == '>remark':
                     remark = ", ".join(escape(text) for text in property_list[1:])
                     section.append(f'<blockquote>{remark}</blockquote>')
                     continue

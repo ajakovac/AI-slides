@@ -1,224 +1,136 @@
----
-
 - **Social and ethical aspects of artificial intelligence**
+  > Artificial intelligence systems (especially large language models, LLMs) become deeply integrated into everyday life.
+  Their impact extends far beyond technical performance, raising a broad range of social, ethical, and political questions.
 
-  As artificial intelligence systems—and especially **large language models (LLMs)**—
-  become deeply integrated into everyday life,
-  their impact extends far beyond technical performance.
-  AI systems increasingly shape communication, labor, governance,
-  and the production of knowledge itself,
-  raising a broad range of social, ethical, and political questions.
+  - **Conceptual perspective**
+    - AI is a socio-technical system, a combination of algorithms, data, institutions, incentives,
+    and human behavior. 
+    - responsible development requires not only better models,
+    but also informed public discourse,
+    interdisciplinary collaboration,
+    and continuous ethical reflection.
+    - __AI risks__
+    - __advantages of AI__
+    - __Ethical issues and AI regulations__
 
----
+- **AI risks**
+  - **Privacy and surveillance**
+    > Modern AI systems rely heavily on large-scale data collection.
+    - personal privacy
+    - mass surveillance
+    - secondary use of data beyond its original purpose
+    - models do not store personal data explicitly, still,
+    their training processes may reflect sensitive information
+    - what to do with sensible data? -- regulations
 
-- **Privacy and surveillance**
+  - **Copyright and intellectual property**
+    > The training of LLMs on vast corpora of text and images challenges traditional notions of copyright.
 
-  Modern AI systems rely heavily on large-scale data collection.
-  This raises concerns about:
-  - personal privacy,
-  - mass surveillance,
-  - secondary use of data beyond its original purpose.
-
-  Even when models do not store personal data explicitly,
-  their training processes may reflect sensitive information,
-  creating tension between technological capability
-  and fundamental rights.
-
----
-
-- **Copyright and intellectual property**
-
-  The training of LLMs on vast corpora of text and images
-  challenges traditional notions of copyright.
-
-  Key questions include:
-  - whether training constitutes fair use,
-  - how original creators should be compensated,
-  - who owns AI-generated content.
-
-  These issues remain legally unresolved in many jurisdictions
+    - whether training constitutes fair use
+    - how original creators should be compensated
+    - who owns AI-generated content
+    - These issues remain legally unresolved in many jurisdictions
   and are evolving rapidly.
 
----
+  - **Misinformation and epistemic risk**
+    > LLMs can generate fluent, persuasive, and coherent text
+    regardless of its truth value.
+    - misinformation,
+    - conspiracy theories,
+    - automated production of fake news.
+    - Because outputs often appear authoritative,
+    users may over-trust incorrect or fabricated content.
 
-- **Misinformation and epistemic risk**
-
-  LLMs can generate fluent, persuasive, and coherent text
-  regardless of its truth value.
-  This amplifies risks related to:
-  - misinformation,
-  - conspiracy theories,
-  - automated production of fake news.
-
-  Because outputs often appear authoritative,
-  users may over-trust incorrect or fabricated content,
-  especially when System I–style reasoning dominates.
-
----
-
-- **Legal responsibility and unexpected failures**
-
-  AI systems can fail in **unpredictable and non-transparent ways**.
-  This raises difficult legal questions:
-  - Who is responsible for harm caused by an AI system?
-  - The developer, deployer, user, or data provider?
-
-  Traditional liability frameworks are often ill-suited
+  - **Legal responsibility and unexpected failures**
+    > AI systems can fail in unpredictable and non-transparent ways
+    - Who is responsible for harm caused by an AI system? (e.g. autonomous driving, legal advices or medical diagnosis)
+    - The developer, deployer, user, or data provider?
+    - Traditional liability frameworks are often ill-suited
   to systems that learn from data
   and adapt their behavior over time.
 
----
-
-- **Algorithmic bias and fairness**
-
-  AI systems inherit statistical patterns from their training data,
+  - **Algorithmic bias and fairness**
+    > AI systems inherit statistical patterns from their training data,
   including historical biases and social inequalities.
-
-  This can result in:
-  - discriminatory outcomes,
-  - unequal error rates across groups,
-  - reinforcement of existing power structures.
-
-  Attempts to correct bias may also lead to **overcompensation**,
+    - discriminatory outcomes,
+    - unequal error rates across groups,
+    - reinforcement of existing power structures.
+    - Attempts to correct bias may also lead to overcompensation,
   where fairness constraints distort outputs in unintended ways,
   illustrating the difficulty of defining neutrality in complex social contexts.
 
----
+  - **Transparency and explainability**
+    > Many high-performing AI systems operate as black boxes,
+    offering limited insight into how decisions are produced.
+    - open versus closed-source models,
+    - proprietary advantage versus public accountability,
+    - performance versus explainability.
+    - The demand for explainable AI reflects the need
+    for trust, auditability, and informed human oversight.
 
-- **Transparency and explainability**
+  - **Societal Destabilization**
+    > AI disrupts institutions faster than society can adapt.
+    - massive job displacement
+    - economic inequality amplification
+    - political manipulation via misinformation
+    - Deepfakes undermining trust
 
-  Many high-performing AI systems operate as **black boxes**,
-  offering limited insight into how decisions are produced.
+  - **Existential risk and doomsday narratives**
+    > Some discussions frame advanced AI
+    as a potential existential threat to humanity,
+    ranging from loss of control
+    to extreme “AI doomsday” scenarios.
+    - misaligned Superintelligence: highly capable optimization without value alignment, "Paperclip maximizer"
+    - loss of human control: rapid autonomous evolution, humans are unable to intervene
+    - autonomous weapons: automatic response, escalation
+    - concentration of power: humans become obsolate, and the AI realizes it
+    - they influence public perception and policy,
+    often blending technical uncertainty with cultural fear.
 
-  Key tensions arise between:
-  - open versus closed-source models,
-  - proprietary advantage versus public accountability,
-  - performance versus explainability.
 
-  The demand for **explainable AI** reflects the need
-  for trust, auditability, and informed human oversight.
+- **Advantages of AI**
+    - illustration  ![AI image](../Images/AI_at_your_fingertips.png)
+    - **Increased efficiency and scalability**
+        - Automates repetitive and data-intensive tasks.
+        - Operates continuously without fatigue.
+        - Scales to millions of users at near-zero marginal cost.
+        - Enables real-time processing of massive datasets.
 
----
+    - **Support for scientific research and education**
+        - Assists in data analysis, hypothesis generation, and simulation.
+        - Accelerates discovery in domains such as biology, physics, and medicine.
+        - Provides personalized tutoring and adaptive learning systems.
+        - Helps summarize, structure, and explore large bodies of literature.
 
-- **Labor and employment**
+    - **Improved accessibility to information and services**
+        - Natural-language interfaces lower technical barriers.
+        - Real-time translation across languages.
+        - Assistive technologies for people with disabilities.
+        - Expands access to healthcare, legal, and educational support.
 
-  AI-driven automation threatens to displace certain categories of work,
-  particularly routine cognitive and administrative tasks.
+    - **Augmentation of human decision making**
+        - Detects patterns beyond human perceptual limits.
+        - Supports risk assessment and forecasting.
+        - Provides scenario simulation and optimization tools.
+        - Enhances evidence-based decision processes.
 
-  At the same time, AI also:
-  - increases productivity,
-  - creates new professions,
-  - augments human capabilities.
+    - **Increases productivity**
+        - Reduces time required for coding, writing, and analysis.
+        - Automates documentation and administrative tasks.
+        - Enables rapid prototyping and design iteration.
+        - Improves workflow coordination across teams.
 
-  The net effect on employment depends on economic adaptation,
-  education, and policy responses.
+    - **Creates new professions**
+        - Emergence of AI engineers, prompt engineers, and AI ethicists.
+        - New roles in AI governance, auditing, and safety.
+        - Growth of interdisciplinary fields combining AI with law, medicine, and arts.
+        - Development of new creative and technical industries.
 
----
+    - **Augments human capabilities**
+        - Enhances memory and knowledge retrieval.
+        - Assists creative processes (art, music, design).
+        - Extends cognitive reach via simulation and modeling.
+        - Acts as a collaborative partner in complex reasoning tasks.
 
-- **Existential risk and doomsday narratives**
 
-  Some discussions frame advanced AI
-  as a potential existential threat to humanity,
-  ranging from loss of control
-  to extreme “AI doomsday” scenarios.
 
-  While such risks are highly speculative,
-  they influence public perception and policy,
-  often blending technical uncertainty with cultural fear.
-
----
-
-- **Regulation and global competition**
-
-  Governments increasingly seek to regulate AI development.
-  For example, emerging regulatory frameworks in the European Union
-  emphasize:
-  - traceability of data sources,
-  - explicit data usage agreements,
-  - accountability and risk classification.
-
-  While such regulation aims to protect users and society,
-  it may also create **competitive disadvantages**
-  in a global landscape where other regions
-  impose fewer constraints.
-
-  This tension highlights a core dilemma:
-  balancing ethical safeguards and innovation
-  under conditions of international competition.
-
----
-
-- **AI in teaching and learning**
-
-  Large language models are increasingly used
-  in educational contexts,
-  both by students and educators.
-  Their impact on teaching and learning is ambivalent,
-  offering powerful opportunities alongside significant risks.
-
-  On the positive side, LLMs can:
-  - provide on-demand explanations at varying levels of difficulty,
-  - act as personalized tutors adapting to a learner’s pace and background,
-  - support language learning, writing, and code comprehension,
-  - assist teachers in preparing materials, exercises, and feedback.
-
-  These capabilities can increase accessibility,
-  reduce barriers to entry,
-  and support lifelong learning.
-
-  At the same time, serious concerns arise:
-  - students may outsource thinking rather than develop it,
-  - overreliance can weaken problem-solving and writing skills,
-  - generated answers may be fluent but incorrect,
-  - assessment and academic integrity become harder to enforce.
-
-  From a cognitive perspective,
-  excessive use of LLMs risks shifting learning
-  from **System II–driven understanding**
-  toward **System I–style consumption** of ready-made answers.
-
-  Effective educational use therefore requires:
-  - clear pedagogical goals,
-  - transparency about AI assistance,
-  - emphasis on reasoning processes rather than final answers,
-  - assessment methods that reward understanding, not output alone.
-
-  When integrated thoughtfully,
-  AI can function as a **cognitive scaffold**,
-  supporting learning without replacing it.
-  When used uncritically,
-  it may undermine the very skills education aims to cultivate.
-
----
-
-- **Advantages and disadvantages of AI**
-
-  **Advantages** include:
-  - increased efficiency and scalability,
-  - support for scientific research and education,
-  - improved accessibility to information and services,
-  - augmentation of human decision making.
-
-  **Disadvantages** include:
-  - erosion of privacy,
-  - concentration of power,
-  - amplification of bias and misinformation,
-  - dependency on opaque systems.
-
-  The societal impact of AI therefore depends less
-  on the technology itself
-  and more on how it is governed, deployed, and integrated.
-
----
-
-- **Conceptual perspective**
-
-  From a broader viewpoint,
-  AI should be understood as a **socio-technical system**:
-  a combination of algorithms, data, institutions, incentives,
-  and human behavior.
-
-  Responsible development requires not only better models,
-  but also informed public discourse,
-  interdisciplinary collaboration,
-  and continuous ethical reflection.

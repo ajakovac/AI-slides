@@ -9,36 +9,61 @@ export function escapeHtml(s) {
     .replaceAll("'", "&#039;");
 }
 
+
+function escapeRegex(str) {
+  return String(str).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function buildPayloadRegex(linkSeparator, itemSeparator) {
+  const ls = escapeRegex(linkSeparator);
+  const is = escapeRegex(itemSeparator);
+
+  // Equivalent to: linkSep (.*?) itemSep (.*?) itemSep (.*?) linkSep
+  // We use non-greedy groups like your Python.
+  return new RegExp(`${ls}(.*?)${is}(.*?)${is}(.*?)${ls}`, "g");
+}
+
 export function makeHtmlLink(line, { linkSeparator, itemSeparator }) {
-  const parts = String(line).split(linkSeparator);
-  if (parts.length % 2 === 0) {
-    throw new Error(`Unmatched linkSeparator in line: ${line}`);
-  }
+  const s = String(line);
+  const LINK_RE = buildPayloadRegex(linkSeparator, itemSeparator);
 
-  const out = [];
-  for (let i = 0; i < parts.length; i++) {
-    const part = parts[i];
+  return s.replace(LINK_RE, (full, typeRaw, nameRaw, valueRaw) => {
+    const type = String(typeRaw ?? "").trim();
+    const name = String(nameRaw ?? "").trim();
+    const value = String(valueRaw ?? "").trim();
 
-    // even indices: normal text
-    if (i % 2 === 0) {
-      out.push(escapeHtml(part));
-      continue;
+    if (!type || !name || !value) {
+      throw new Error(`Invalid link payload: ${full}`);
     }
 
-    // odd indices: link payload "TEXT<itemSep>KEY"
-    const [text, key, ...rest] = part.split(itemSeparator);
-    if (rest.length > 0 || text == null || key == null) {
-      throw new Error(`Invalid link payload: ${part}`);
+    if (type === "keyword") {
+      // Python: f'[{name}](#{value})' -> internal click handler uses data-key=value
+      return (
+        `<a class="inline-link" href="#" data-key="${escapeHtml(value)}">` +
+          `${escapeHtml(name)}` +
+        `</a>`
+      );
     }
 
-    out.push(
-      `<a class="inline-link" href="#" data-key="${escapeHtml(key.trim())}">` +
-        `${escapeHtml(text.trim())}` +
-      `</a>`
-    );
-  }
+    if (type === "image") {
+      const key = `${value}`;
+      const display = `${name}`;
+      return (
+        `<a class="inline-image" href="#" data-image="${escapeHtml(key)}" data-alt="${escapeHtml(name)}">${escapeHtml(display)}</a>`
+      );
+    }
 
-  return out.join("");
+    if (type === "external-link") {
+      // Python: f'[{name}]({value})' -> real href
+      return (
+        `<a class="external-link" href="${escapeHtml(value)}" target="_blank" rel="noopener noreferrer">` +
+          `${escapeHtml(name)}` +
+        `</a>`
+      );
+    }
+
+    throw new Error(`Unknown link type: ${type}`);
+  });
 }
 
 export function renderEntry(key, entry, system) {
@@ -54,13 +79,13 @@ export function renderEntry(key, entry, system) {
   section.push(`<h2>${escapeHtml(entry?.["$keyword_name"] ?? key)}</h2>`);
 
   for (const [property, propertyList] of Object.entries(entry ?? {})) {
-    if (property === "$links" || property === "$keyword_name") continue;
-
-    if (property === "$remark") {
+    if (property === ">remark") {
       const remark = (propertyList || []).slice(1).map(escapeHtml).join(", ");
       if (remark) section.push(`<blockquote>${remark}</blockquote>`);
       continue;
     }
+
+    if (property.startsWith("$")) continue;
 
     if (!propertyList || propertyList.length === 0) continue;
 

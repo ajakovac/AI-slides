@@ -6,7 +6,7 @@ import { useSystem } from "../context/SystemContext";
 import { fetchEntry } from "../api/database";
 import { renderEntry, escapeHtml } from "../doc/docRenderer";
 
-export default function DocPane({ initialKey, onNavigateKey }) {
+export default function DocPane({ initialKey, onNavigateKey, onImagesChange, onSelectImage }) {
   const [key, setKey] = useState(initialKey);
   const [html, setHtml] = useState("<div>Loading…</div>");
   const [isFading, setIsFading] = useState(false);
@@ -32,13 +32,17 @@ export default function DocPane({ initialKey, onNavigateKey }) {
       try {
         const entry = await fetchEntry("item", nextKey);
         setHtml(renderEntry(nextKey, entry, system));
+        
+        // 👇 Extract images here
+        const imagesFromEntry = entry?.["$images"] ?? [];
+        onImagesChange?.(imagesFromEntry);
       } catch (e) {
         setHtml(`<div class="error">Error: ${escapeHtml(String(e))}</div>`);
       } finally {
         if (animate) requestAnimationFrame(() => setIsFading(false));
       }
     },
-    [system]
+    [system, onImagesChange]
   );
 
   // Load whenever parent changes the key (clicks OR back/forward)
@@ -54,13 +58,26 @@ export default function DocPane({ initialKey, onNavigateKey }) {
   // Click delegation: tell parent to navigate (parent pushes history + updates activeKey)
   const onClick = useCallback(
     (e) => {
-      const a = e.target.closest("[data-key]");
+      const a = e.target.closest("a");
       if (!a) return;
-      e.preventDefault();
-      onNavigateKey?.(a.dataset.key);
-    },
-    [onNavigateKey]
-  );
+
+      // normal navigation
+      const key = a.dataset.key;
+      if (key) {
+        e.preventDefault();
+        onNavigateKey?.(key);
+        return;
+      }
+
+      // ✅ image focus
+      const imageName = a.dataset.image;
+      if (imageName) {
+        e.preventDefault();
+        onSelectImage?.(imageName);   // ✅ jump gallery to it
+        console.log("Selected image:", imageName);
+        return;
+      }
+    }, [onNavigateKey, onSelectImage]);
 
   // KaTeX render after HTML changes
   useEffect(() => {

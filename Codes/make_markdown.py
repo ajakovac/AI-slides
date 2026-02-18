@@ -24,8 +24,8 @@ def create_markdown(database):
         for property, property_list in database[k].items():
             if property in ['$links', '$keyword_name']:
                 continue
-            if property == '$remark':
-                final.append(f'> {",".join(database[k]["$remark"][1:])}')
+            if property == '>remark':
+                final.append(f'> {",".join(database[k][">remark"][1:])}')
                 continue
             final.append(f'- {property_list[0]}')
             for line in property_list[1:]:

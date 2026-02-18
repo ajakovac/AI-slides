@@ -42,7 +42,7 @@ def create_html(database, key=None):
             if property in ['$links', '$keyword_name']:
                 continue
 
-            if property == '$remark':
+            if property == '>remark':
                 remark = ", ".join(escape(text) for text in property_list[1:])
                 section.append(f'<blockquote>{remark}</blockquote>')
                 continue

@@ -63,7 +63,7 @@ function renderEntry(key, entry) {
   for (const [property, propertyList] of Object.entries(entry)) {
     if (property === "$links" || property === "$keyword_name") continue;
 
-    if (property === "$remark") {
+    if (property === ">remark") {
       const remark = (propertyList || []).slice(1).map(escapeHtml).join(", ");
       if (remark) section.push(`<blockquote>${remark}</blockquote>`);
       continue;

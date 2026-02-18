@@ -1,41 +1,107 @@
 {
     "$system": {
         "link_separator": "\u001e",
-        "item_separator": "\u001f"
+        "item_separator": "\u001f",
+        "unresolved_links": []
+    },
+    "content-of-the-ai-course": {
+        "$links": [],
+        "$images": [
+            [
+                "Introduction to AI",
+                "introduction_to_AI.png"
+            ]
+        ],
+        "$keyword_name": "content of the AI course",
+        "walkthrough": [
+            "walkthrough",
+            "\u001ekeyword\u001fabout the Introduction to AI course\u001fabout-the-introduction-to-ai-course\u001e  \u001eimage\u001fIntroduction to AI\u001fintroduction_to_AI.png\u001e",
+            "\u001ekeyword\u001flearning in the AI era\u001flearning-in-the-ai-era\u001e",
+            "introduction: \u001ekeyword\u001fgeneral facts about AI\u001fgeneral-facts-about-ai\u001e",
+            "\u001ekeyword\u001fsocial and ethical aspects of artificial intelligence\u001fsocial-and-ethical-aspects-of-artificial-intelligence\u001e",
+            "\u001ekeyword\u001fa brief history of Artificial Intelligence\u001fa-brief-history-of-artificial-intelligence\u001e"
+        ]
+    },
+    "about-the-introduction-to-ai-course": {
+        "$links": [
+            [
+                "content of the AI course",
+                "content-of-the-ai-course",
+                "walkthrough"
+            ]
+        ],
+        "$images": [
+            [
+                "Introduction to AI",
+                "introduction_to_AI.png"
+            ]
+        ],
+        "$keyword_name": "about the Introduction to AI course",
+        "title": [
+            "title",
+            "\"A mesters\u00e9ges intelligencia alapjai\" \u001eimage\u001fIntroduction to AI\u001fintroduction_to_AI.png\u001e"
+        ],
+        "lecturer": [
+            "lecturer",
+            "\u001eexternal-link\u001fAntal Jakovac\u001fmailto:antal.jakovac@uni-corvinus.hu\u001e"
+        ],
+        "books": [
+            "books",
+            "\u001eexternal-link\u001fhttps://www.deeplearningbook.org/\u001fhttps://www.deeplearningbook.org/\u001e",
+            "\u001eexternal-link\u001fhttps://d2l.ai/\u001fhttps://d2l.ai/\u001e"
+        ],
+        "goal-of-the-course": [
+            "goal of the course",
+            "overview of the AI world",
+            "understanding basic techniques",
+            "give help to interested readers"
+        ]
     },
     "learning-in-the-ai-era": {
-        "$links": [],
+        "$links": [
+            [
+                "content of the AI course",
+                "content-of-the-ai-course",
+                "walkthrough"
+            ]
+        ],
+        "$images": [
+            [
+                "learning",
+                "cateared-witch-studying-library_798031-817.png"
+            ]
+        ],
         "$keyword_name": "Learning in the AI era",
-        "$remark": [
-            "$remark",
+        ">remark": [
+            ">remark",
             "In the emerging AI era, it is no longer obvious how teaching and learning should be organized most effectively."
         ],
         "traditional-learning-materials": [
             "traditional learning materials",
-            "\u001econtact lectures\u001fcontact-lectures\u001e",
-            "\u001eexercises\u001fexercises\u001e",
-            "\u001ebooks\u001flearning-from-books-and-podcasts\u001e"
+            "\u001ekeyword\u001fcontact lectures\u001fcontact-lectures\u001e",
+            "\u001ekeyword\u001fexercises\u001fexercises\u001e",
+            "\u001ekeyword\u001fbooks\u001flearning-from-books-and-podcasts\u001e"
         ],
         "modern-learning-materials": [
             "modern learning materials",
-            "videos, \u001epodcasts\u001flearning-from-books-and-podcasts\u001e",
-            "\u001echatbots\u001flearning-with-chatbots-(llms)\u001e (LLMs)"
+            "videos, \u001ekeyword\u001fpodcasts\u001flearning-from-books-and-podcasts\u001e",
+            "\u001ekeyword\u001flearning with chatbots\u001flearning-with-chatbots-(llms)\u001e (LLMs)"
         ],
         "learning-dimensions": [
             "learning dimensions",
-            "hard \u001eskills\u001fskills\u001e vs. soft \u001eskills\u001fskills\u001e",
-            "\u001estructured vs. exploratory learning\u001fstructured-vs.-exploratory-learning\u001e",
-            "\u001efacts vs. connections\u001ffacts-vs.-connections\u001e"
+            "hard \u001ekeyword\u001fskills\u001fskills\u001e vs. soft \u001ekeyword\u001fskills\u001fskills\u001e",
+            "\u001ekeyword\u001fstructured vs. exploratory learning\u001fstructured-vs.-exploratory-learning\u001e",
+            "\u001ekeyword\u001ffacts vs. connections\u001ffacts-vs.-connections\u001e"
         ],
         "knowledge-graphs": [
             "knowledge graphs",
-            "\u001eknowledge graphs\u001fknowledge-graphs\u001e",
+            "\u001ekeyword\u001fknowledge graphs\u001fknowledge-graphs\u001e",
             "organizing knowledge beyond linear narratives"
         ],
         "proposal-of-this-course": [
             "proposal of this course",
-            "\u001eproposal of this course\u001fproposal-of-this-course\u001e",
-            "a hybrid, graph-based learning approach"
+            "\u001ekeyword\u001fproposal of this course\u001fproposal-of-this-course\u001e",
+            "a hybrid, graph-based learning approach \u001eimage\u001flearning\u001fcateared-witch-studying-library_798031-817.png\u001e \u001eexternal-link\u001fmodern learning\u001fhttps://www.teachthought.com/the-future-of-learning-posts/principles-modern-learning/\u001e"
         ]
     },
     "learning-from-books-and-podcasts": {
@@ -43,14 +109,15 @@
             [
                 "Learning in the AI era",
                 "learning-in-the-ai-era",
-                "books"
+                "traditional-learning-materials"
             ],
             [
                 "Learning in the AI era",
                 "learning-in-the-ai-era",
-                "podcasts"
+                "modern-learning-materials"
             ]
         ],
+        "$images": [],
         "$keyword_name": "Learning from books and podcasts",
         "pros": [
             "pros",
@@ -69,12 +136,13 @@
             [
                 "Learning in the AI era",
                 "learning-in-the-ai-era",
-                "contact-lectures"
+                "traditional-learning-materials"
             ]
         ],
+        "$images": [],
         "$keyword_name": "Contact lectures",
-        "$remark": [
-            "$remark",
+        ">remark": [
+            ">remark",
             "the traditional way of transferring knowledge; the goal is to acquire understanding through explanation"
         ],
         "pros": [
@@ -96,12 +164,13 @@
             [
                 "Learning in the AI era",
                 "learning-in-the-ai-era",
-                "exercises"
+                "traditional-learning-materials"
             ]
         ],
+        "$images": [],
         "$keyword_name": "Exercises",
-        "$remark": [
-            "$remark",
+        ">remark": [
+            ">remark",
             "high-school-like teaching practice; the goal is to gain knowledge through practice"
         ],
         "pros": [
@@ -121,25 +190,58 @@
             [
                 "Learning in the AI era",
                 "learning-in-the-ai-era",
-                "chatbots"
+                "modern-learning-materials"
+            ]
+        ],
+        "$images": [
+            [
+                "illustration",
+                "learn_with_chatbots.png"
             ]
         ],
         "$keyword_name": "Learning with chatbots (LLMs)",
-        "$remark": [
-            "$remark",
+        ">remark": [
+            ">remark",
             "a characteristic opportunity of the AI era"
         ],
         "pros": [
             "pros",
-            "access to an enormous body of knowledge",
-            "adaptive and interactive explanations"
+            "access to an enormous body of knowledge \u001eimage\u001fillustration\u001flearn_with_chatbots.png\u001e",
+            "provide on-demand explanations at varying levels of difficulty",
+            "act as personalized tutors adapting to a learner\u2019s pace and background",
+            "support language learning, writing, and code comprehension",
+            "assist teachers in preparing materials, exercises, and feedback"
         ],
         "cons": [
             "cons",
             "LLMs do not know what they do not know (may hallucinate)",
             "LLMs do not know what they know (knowledge is not inherently structured)",
             "answers can drift without clear guidance or goals",
-            "may make exercises superficial"
+            "students may outsource thinking rather than develop it",
+            "overreliance can weaken problem-solving and writing skills",
+            "generated answers may be fluent but incorrect",
+            "assessment and academic integrity become harder to enforce."
+        ],
+        "ai-tutor-vs-traditional-active-learning": [
+            "AI Tutor vs Traditional Active Learning",
+            "paper: \u001eexternal-link\u001fNature\u001fhttps://www.nature.com/articles/s41598-025-97652-6\u001e",
+            "randomized controlled experiment comparing wtudents learning with an AI-powered tutor and (control group) students in in-class active learning",
+            "Students using the AI tutor learned significantly more in less time than those in the traditional active learning group.",
+            "AI-tutored students had higher post-test scores relative to pre-test baselines.",
+            "The effect sizes were large enough to show statistically meaningful learning gains with AI assistance."
+        ],
+        "generative-ai-usage-and-exam-performance": [
+            "Generative AI Usage and Exam Performance",
+            "paper in arXiV \u001eexternal-link\u001fGeneral Economics\u001fhttps://arxiv.org/abs/2404.19699\u001e",
+            "Students who used generative AI tools such as ChatGPT scored on average lower on exam performance than non-users.",
+            "The negative correlation was particularly evident for students with higher learning potential, suggesting that reliance on AI could hinder deeper understanding and retention"
+        ],
+        "ai-meets-the-classroom:-when-do-large-language-models-harm-learning?": [
+            "AI Meets the Classroom: When Do Large Language Models Harm Learning?",
+            "paper in arXiV \u001eexternal-link\u001fComputers and Society\u001fhttps://arxiv.org/abs/2409.09047\u001e",
+            "AI access alone does not guarantee learning; how students use it matters",
+            "Students who used LLMs as direct problem-solvers without engaging with material had poorer learning outcomes.",
+            "Those who conversed with the model for explanations often benefited \u2014 but excessive reliance diminished actual learning."
         ]
     },
     "skills": {
@@ -147,14 +249,15 @@
             [
                 "Learning in the AI era",
                 "learning-in-the-ai-era",
-                "skills"
+                "learning-dimensions"
             ],
             [
                 "Learning in the AI era",
                 "learning-in-the-ai-era",
-                "skills"
+                "learning-dimensions"
             ]
         ],
+        "$images": [],
         "$keyword_name": "Skills",
         "hard-skills": [
             "hard skills",
@@ -176,9 +279,10 @@
             [
                 "Learning in the AI era",
                 "learning-in-the-ai-era",
-                "structured-vs.-exploratory-learning"
+                "learning-dimensions"
             ]
         ],
+        "$images": [],
         "$keyword_name": "Structured vs. exploratory learning",
         "structured-learning": [
             "structured learning",
@@ -200,9 +304,10 @@
             [
                 "Learning in the AI era",
                 "learning-in-the-ai-era",
-                "facts-vs.-connections"
+                "learning-dimensions"
             ]
         ],
+        "$images": [],
         "$keyword_name": "Facts vs. connections",
         "notes": [
             "notes",
@@ -219,6 +324,7 @@
                 "knowledge-graphs"
             ]
         ],
+        "$images": [],
         "$keyword_name": "Knowledge graphs",
         "notes": [
             "notes",
@@ -236,6 +342,7 @@
                 "proposal-of-this-course"
             ]
         ],
+        "$images": [],
         "$keyword_name": "proposal of this course",
         "bits-of-knowledge": [
             "bits of knowledge",
@@ -253,9 +360,1322 @@
             "exploration: use core material to dig deeper",
             "feedback: clarify unclear points with human experts"
         ],
-        "$remark": [
-            "$remark",
+        ">remark": [
+            ">remark",
             "feedback of all kinds is very welcome!"
+        ]
+    },
+    "general-facts-about-ai": {
+        "$links": [
+            [
+                "content of the AI course",
+                "content-of-the-ai-course",
+                "walkthrough"
+            ]
+        ],
+        "$images": [
+            [
+                "Global AI market growth",
+                "global-AI-market-growth.png"
+            ],
+            [
+                "AI investment",
+                "AI-investment.png"
+            ]
+        ],
+        "$keyword_name": "General facts about AI",
+        ">remark": [
+            ">remark",
+            "AI has played a crucial role for about 10 years."
+        ],
+        "market-share-and-revenue": [
+            "Market share and revenue",
+            "link: \u001eexternal-link\u001fmarket statistics\u001fhttps://blog.biocomm.ai/2024/01/03/ai-market-statistics-jan-2024/\u001e",
+            "\u001eimage\u001fGlobal AI market growth\u001fglobal-AI-market-growth.png\u001e",
+            "\u001eimage\u001fAI investment\u001fAI-investment.png\u001e"
+        ],
+        "milestones": [
+            "Milestones",
+            "\u001ekeyword\u001fAI milestones\u001fai-milestones\u001e"
+        ],
+        "challenges": [
+            "Challenges",
+            "\u001ekeyword\u001fAI challenges\u001fai-challenges\u001e"
+        ],
+        "applications": [
+            "Applications",
+            "\u001ekeyword\u001fMost popular AI chatbots\u001f\ud83d\udde3\ufe0f-most-popular-ai-chatbots-&-where-to-find-them\u001e",
+            "\u001ekeyword\u001fAI image generators\u001f\ud83d\uddbc\ufe0f-popular-ai-image-generators\u001e",
+            "\u001ekeyword\u001fAI code helper applications\u001f\ud83d\udcbb-popular-ai-code-helper-applications-&-web-links\u001e"
+        ]
+    },
+    "ai-milestones": {
+        "$links": [
+            [
+                "General facts about AI",
+                "general-facts-about-ai",
+                "milestones"
+            ]
+        ],
+        "$images": [
+            [
+                "face base points",
+                "face_base_points.png"
+            ],
+            [
+                "AlphaGo",
+                "alphago.png"
+            ],
+            [
+                "chatGPT",
+                "chatGPT_illustration.png"
+            ],
+            [
+                "AlphaFold",
+                "alphafold.png"
+            ],
+            [
+                "image",
+                "AI_generated_image_astronaut.png"
+            ],
+            [
+                "multimodal",
+                "multimodal_systems.png"
+            ]
+        ],
+        "$keyword_name": "AI milestones",
+        ">remark": [
+            ">remark",
+            "selected landmark developments"
+        ],
+        "deep-blue-(ibm)": [
+            "Deep Blue (IBM)",
+            "chess bot",
+            "1997: beats the actual world champion (G. Kasparov)"
+        ],
+        "deepface-(meta)": [
+            "DeepFace (Meta)",
+            "face recognition, CNN",
+            "achieved 97%+ accuracy on LFW (\u001eexternal-link\u001fLabeled Faces in the Wild\u001fhttps://www.kaggle.com/datasets/jessicali9530/lfw-dataset\u001e) benchmark in 2014, (80-90% was before) \u001eimage\u001fface base points\u001fface_base_points.png\u001e",
+            "image recognition, ResNet 2015"
+        ],
+        "alphago-(deepmind-google)": [
+            "AlphaGo (DeepMind-Google)",
+            "go program",
+            "Beat Lee Sedol in 2016 \u001eimage\u001fAlphaGo\u001falphago.png\u001e"
+        ],
+        "llms,-large-language-models": [
+            "LLMs, large language models",
+            "NLP",
+            "transformer 2017",
+            "GPT models 2017-2022 \u001eimage\u001fchatGPT\u001fchatGPT_illustration.png\u001e",
+            "chatGPT 2022, added reinforcement learning and human feedback"
+        ],
+        "alphafold": [
+            "AlphaFold",
+            "protein structure prediction \u001eimage\u001fAlphaFold\u001falphafold.png\u001e"
+        ],
+        "image-generation-models": [
+            "image generation models",
+            "2021: DALL-E",
+            "2023: Stable Diffusion\u001eimage\u001fimage\u001fAI_generated_image_astronaut.png\u001e",
+            "generative revolution"
+        ],
+        "multimodal-systems-and-agentic-coding": [
+            "multimodal systems and agentic coding",
+            "2024-2025: GPT-4 class multimodal systems \u001eimage\u001fmultimodal\u001fmultimodal_systems.png\u001e",
+            "RAG (retrieval-augmented generation) systems"
+        ]
+    },
+    "ai-challenges": {
+        "$links": [
+            [
+                "General facts about AI",
+                "general-facts-about-ai",
+                "challenges"
+            ]
+        ],
+        "$images": [
+            [
+                "panda vs gibbon",
+                "panda_vs_gibbon.png"
+            ],
+            [
+                "three legged woman",
+                "three-legged-woman.png"
+            ],
+            [
+                "STOP sign",
+                "stop_sign_adversarial.png"
+            ]
+        ],
+        "$keyword_name": "AI challenges",
+        ">remark": [
+            ">remark",
+            "Today, AI applications face serious challenges."
+        ],
+        "notes": [
+            "notes",
+            "What does it mean to be intelligent?",
+            "No explicit \u201cI do not know\u201d category."
+        ],
+        "failures": [
+            "Failures",
+            "Unpredictable failures  \u001eimage\u001fpanda vs gibbon\u001fpanda_vs_gibbon.png\u001e",
+            "Hallucinations  \u001eimage\u001fthree legged woman\u001fthree-legged-woman.png\u001e",
+            "Vulnerability to adversarial attacks  \u001eimage\u001fSTOP sign\u001fstop_sign_adversarial.png\u001e"
+        ]
+    },
+    "\ud83d\udde3\ufe0f-most-popular-ai-chatbots-&-where-to-find-them": {
+        "$links": [
+            [
+                "General facts about AI",
+                "general-facts-about-ai",
+                "applications"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "\ud83d\udde3\ufe0f Most Popular AI Chatbots & Where to Find Them",
+        "chatgpt-(openai)": [
+            "ChatGPT (OpenAI)",
+            "A widely used conversational AI with support for text, tasks, and plugins \u001eexternal-link\u001fhttps://chat.openai.com/\u001fhttps://chat.openai.com/\u001e"
+        ],
+        "google-gemini-(chat-by-google)": [
+            "Google Gemini (Chat by Google)",
+            "Google\u2019s advanced chatbot with deep search and reasoning capabilities \u001eexternal-link\u001fhttps://gemini.google/\u001fhttps://gemini.google/\u001e"
+        ],
+        "bard-(google-ai)": [
+            "Bard (Google AI)",
+            "Google\u2019s experimental conversational AI platform \u001eexternal-link\u001fhttps://bard.google.com/\u001fhttps://bard.google.com/\u001e"
+        ],
+        "microsoft-copilot-(ai-in-bing)": [
+            "Microsoft Copilot (AI in Bing)",
+            "AI assistant integrated into Bing search and Microsoft products \u001eexternal-link\u001fhttps://www.bing.com/chat\u001fhttps://www.bing.com/chat\u001e"
+        ],
+        "anthropic-claude": [
+            "Anthropic Claude",
+            "Conversational AI with a focus on safety and controlled responses \u001eexternal-link\u001fhttps://www.anthropic.com/claude\u001fhttps://www.anthropic.com/claude\u001e"
+        ],
+        "perplexity-ai": [
+            "Perplexity AI",
+            "Research-oriented AI assistant that cites sources and summarizes info \u001eexternal-link\u001fhttps://www.perplexity.ai/\u001fhttps://www.perplexity.ai/\u001e"
+        ],
+        "jasper-chat": [
+            "Jasper Chat",
+            "AI chatbot built into the Jasper writing platform (creative/copywriting) \u001eexternal-link\u001fhttps://www.jasper.ai/chat\u001fhttps://www.jasper.ai/chat\u001e"
+        ],
+        "youchat": [
+            "YouChat",
+            "AI assistant integrated into You.com search \u001eexternal-link\u001fhttps://you.com/chat\u001fhttps://you.com/chat\u001e"
+        ],
+        "replika": [
+            "Replika",
+            "Conversational companion AI focused on emotional interaction \u001eexternal-link\u001fhttps://replika.com/\u001fhttps://replika.com/\u001e"
+        ],
+        "character.ai": [
+            "Character.ai",
+            "Chatbot platform where users can create and interact with \u201ccharacters\u201d \u001eexternal-link\u001fhttps://beta.character.ai/\u001fhttps://beta.character.ai/\u001e"
+        ]
+    },
+    "\ud83d\uddbc\ufe0f-popular-ai-image-generators": {
+        "$links": [
+            [
+                "General facts about AI",
+                "general-facts-about-ai",
+                "applications"
+            ]
+        ],
+        "$images": [
+            [
+                "AI-generated-image",
+                "AI-generated-image.png"
+            ]
+        ],
+        "$keyword_name": "\ud83d\uddbc\ufe0f Popular AI Image Generators",
+        "dall\u00b7e-3": [
+            "DALL\u00b7E 3",
+            "Text-to-image generator by OpenAI \u001eexternal-link\u001fhttps://openai.com/dall-e-3\u001fhttps://openai.com/dall-e-3\u001e"
+        ],
+        "midjourney": [
+            "Midjourney",
+            "Artistic and stylistic AI image creation tool \u001eexternal-link\u001fhttps://www.midjourney.com/\u001fhttps://www.midjourney.com/\u001e"
+        ],
+        "adobe-firefly": [
+            "Adobe Firefly",
+            "Creative-focused AI image suite by Adobe \u001eexternal-link\u001fhttps://firefly.adobe.com/\u001fhttps://firefly.adobe.com/\u001e"
+        ],
+        "canva-ai-image-generator": [
+            "Canva AI Image Generator",
+            "Integrated into Canva for easy online use \u001eexternal-link\u001fhttps://www.canva.com/ai-image-generator/\u001fhttps://www.canva.com/ai-image-generator/\u001e"
+        ],
+        "leonardo-ai": [
+            "Leonardo AI",
+            "AI art and design tool popular with creatives \u001eexternal-link\u001fhttps://leonardo.ai/\u001fhttps://leonardo.ai/\u001e",
+            "\u001eimage\u001fAI-generated-image\u001fAI-generated-image.png\u001e"
+        ],
+        "nano-banana-(gemini-image)": [
+            "Nano Banana (Gemini Image)",
+            "Google Gemini\u2019s AI image generator \u001eexternal-link\u001fhttps://gemini.google/overview/image-generation/\u001fhttps://gemini.google/overview/image-generation/\u001e"
+        ],
+        "freepik-ai-image-generator": [
+            "Freepik AI Image Generator",
+            "Uses multiple models, user-friendly \u001eexternal-link\u001fhttps://www.freepik.com/ai/image-generator\u001fhttps://www.freepik.com/ai/image-generator\u001e"
+        ],
+        "quillbot-ai-image-generator": [
+            "QuillBot AI Image Generator",
+            "Simple online text \u2192 image tool \u001eexternal-link\u001fhttps://quillbot.com/image-tools/ai-image-generator\u001fhttps://quillbot.com/image-tools/ai-image-generator\u001e"
+        ],
+        "deepai-text-to-image": [
+            "DeepAI Text-to-Image",
+            "Basic, free AI image generator \u001eexternal-link\u001fhttps://deepai.org/machine-learning-model/text2img\u001fhttps://deepai.org/machine-learning-model/text2img\u001e"
+        ],
+        "getimg.ai": [
+            "Getimg.ai",
+            "All-in-one creative AI toolkit with image generation \u001eexternal-link\u001fhttps://getimg.ai/\u001fhttps://getimg.ai/\u001e"
+        ]
+    },
+    "\ud83d\udcbb-popular-ai-code-helper-applications-&-web-links": {
+        "$links": [
+            [
+                "General facts about AI",
+                "general-facts-about-ai",
+                "applications"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "\ud83d\udcbb Popular AI Code Helper Applications & Web Links",
+        "github-copilot": [
+            "GitHub Copilot",
+            "AI pair programmer integrated with editors like VS Code \u001eexternal-link\u001fhttps://github.com/features/copilot\u001fhttps://github.com/features/copilot\u001e"
+        ],
+        "openai-chatgpt-(code-capabilities)": [
+            "OpenAI ChatGPT (Code capabilities)",
+            "General AI chat with strong code understanding and generation \u001eexternal-link\u001fhttps://chat.openai.com/\u001fhttps://chat.openai.com/\u001e"
+        ],
+        "google-gemini-(coding-+-code-interpreter)": [
+            "Google Gemini (Coding + Code Interpreter)",
+            "AI with coding support, logic reasoning, and code generation \u001eexternal-link\u001fhttps://gemini.google/\u001fhttps://gemini.google/\u001e"
+        ],
+        "tabnine": [
+            "Tabnine",
+            "AI code completion assistant that works across many languages \u001eexternal-link\u001fhttps://www.tabnine.com/\u001fhttps://www.tabnine.com/\u001e"
+        ],
+        "replit-ghostwriter": [
+            "Replit Ghostwriter",
+            "Integrated AI assistant inside Replit for coding help \u001eexternal-link\u001fhttps://replit.com/site/ghostwriter\u001fhttps://replit.com/site/ghostwriter\u001e"
+        ],
+        "amazon-codewhisperer": [
+            "Amazon CodeWhisperer",
+            "AI coding assistant for AWS and IDEs \u001eexternal-link\u001fhttps://aws.amazon.com/codewhisperer/\u001fhttps://aws.amazon.com/codewhisperer/\u001e"
+        ],
+        "kite-(historical-reference)": [
+            "Kite (Historical reference)",
+            "AI code helper focused on completions (less active in 2025) \u001eexternal-link\u001fhttps://www.kite.com/\u001fhttps://www.kite.com/\u001e     (note: service status may vary)"
+        ],
+        "sourcegraph-cody": [
+            "Sourcegraph Cody",
+            "AI assistant for searching and understanding large codebases \u001eexternal-link\u001fhttps://sourcegraph.com/cody\u001fhttps://sourcegraph.com/cody\u001e"
+        ],
+        "mutableai-(mutable)": [
+            "MutableAI (Mutable)",
+            "AI tool for code navigation, refactoring, and understanding \u001eexternal-link\u001fhttps://mutable.ai/\u001fhttps://mutable.ai/\u001e"
+        ],
+        "codeium": [
+            "Codeium",
+            "Free AI code completion and assistant \u001eexternal-link\u001fhttps://codeium.com/\u001fhttps://codeium.com/\u001e"
+        ]
+    },
+    "social-and-ethical-aspects-of-artificial-intelligence": {
+        "$links": [
+            [
+                "content of the AI course",
+                "content-of-the-ai-course",
+                "walkthrough"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Social and ethical aspects of artificial intelligence",
+        ">remark": [
+            ">remark",
+            "Artificial intelligence systems (especially large language models, LLMs) become deeply integrated into everyday life. Their impact extends far beyond technical performance, raising a broad range of social, ethical, and political questions."
+        ],
+        "conceptual-perspective": [
+            "Conceptual perspective",
+            "AI is a socio-technical system, a combination of algorithms, data, institutions, incentives, and human behavior.",
+            "responsible development requires not only better models, but also informed public discourse,    interdisciplinary collaboration,    and continuous ethical reflection.",
+            "\u001ekeyword\u001fAI risks\u001fai-risks\u001e",
+            "\u001ekeyword\u001fadvantages of AI\u001fadvantages-of-ai\u001e",
+            "\u001ekeyword\u001fEthical issues and AI regulations\u001fethical-issues-and-ai-regulations\u001e"
+        ]
+    },
+    "ai-risks": {
+        "$links": [
+            [
+                "Social and ethical aspects of artificial intelligence",
+                "social-and-ethical-aspects-of-artificial-intelligence",
+                "conceptual-perspective"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "AI risks",
+        "privacy-and-surveillance": [
+            "Privacy and surveillance",
+            "Modern AI systems rely heavily on large-scale data collection.",
+            "personal privacy",
+            "mass surveillance",
+            "secondary use of data beyond its original purpose",
+            "models do not store personal data explicitly, still, their training processes may reflect sensitive information",
+            "what to do with sensible data? -- regulations"
+        ],
+        "copyright-and-intellectual-property": [
+            "Copyright and intellectual property",
+            "The training of LLMs on vast corpora of text and images challenges traditional notions of copyright.",
+            "whether training constitutes fair use",
+            "how original creators should be compensated",
+            "who owns AI-generated content",
+            "These issues remain legally unresolved in many jurisdictions and are evolving rapidly."
+        ],
+        "misinformation-and-epistemic-risk": [
+            "Misinformation and epistemic risk",
+            "LLMs can generate fluent, persuasive, and coherent text regardless of its truth value.",
+            "misinformation,",
+            "conspiracy theories,",
+            "automated production of fake news.",
+            "Because outputs often appear authoritative, users may over-trust incorrect or fabricated content."
+        ],
+        "legal-responsibility-and-unexpected-failures": [
+            "Legal responsibility and unexpected failures",
+            "AI systems can fail in unpredictable and non-transparent ways",
+            "Who is responsible for harm caused by an AI system? (e.g. autonomous driving, legal advices or medical diagnosis)",
+            "The developer, deployer, user, or data provider?",
+            "Traditional liability frameworks are often ill-suited to systems that learn from data  and adapt their behavior over time."
+        ],
+        "algorithmic-bias-and-fairness": [
+            "Algorithmic bias and fairness",
+            "AI systems inherit statistical patterns from their training data, including historical biases and social inequalities.",
+            "discriminatory outcomes,",
+            "unequal error rates across groups,",
+            "reinforcement of existing power structures.",
+            "Attempts to correct bias may also lead to overcompensation, where fairness constraints distort outputs in unintended ways,  illustrating the difficulty of defining neutrality in complex social contexts."
+        ],
+        "transparency-and-explainability": [
+            "Transparency and explainability",
+            "Many high-performing AI systems operate as black boxes, offering limited insight into how decisions are produced.",
+            "open versus closed-source models,",
+            "proprietary advantage versus public accountability,",
+            "performance versus explainability.",
+            "The demand for explainable AI reflects the need for trust, auditability, and informed human oversight."
+        ],
+        "societal-destabilization": [
+            "Societal Destabilization",
+            "AI disrupts institutions faster than society can adapt.",
+            "massive job displacement",
+            "economic inequality amplification",
+            "political manipulation via misinformation",
+            "Deepfakes undermining trust"
+        ],
+        "existential-risk-and-doomsday-narratives": [
+            "Existential risk and doomsday narratives",
+            "Some discussions frame advanced AI as a potential existential threat to humanity,    ranging from loss of control    to extreme \u201cAI doomsday\u201d scenarios.",
+            "misaligned Superintelligence: highly capable optimization without value alignment, \"Paperclip maximizer\"",
+            "loss of human control: rapid autonomous evolution, humans are unable to intervene",
+            "autonomous weapons: automatic response, escalation",
+            "concentration of power: humans become obsolate, and the AI realizes it",
+            "they influence public perception and policy, often blending technical uncertainty with cultural fear."
+        ]
+    },
+    "advantages-of-ai": {
+        "$links": [
+            [
+                "Social and ethical aspects of artificial intelligence",
+                "social-and-ethical-aspects-of-artificial-intelligence",
+                "conceptual-perspective"
+            ]
+        ],
+        "$images": [
+            [
+                "AI image",
+                "AI_at_your_fingertips.png"
+            ]
+        ],
+        "$keyword_name": "Advantages of AI",
+        "notes": [
+            "notes",
+            "illustration  \u001eimage\u001fAI image\u001fAI_at_your_fingertips.png\u001e"
+        ],
+        "increased-efficiency-and-scalability": [
+            "Increased efficiency and scalability",
+            "Automates repetitive and data-intensive tasks.",
+            "Operates continuously without fatigue.",
+            "Scales to millions of users at near-zero marginal cost.",
+            "Enables real-time processing of massive datasets."
+        ],
+        "support-for-scientific-research-and-education": [
+            "Support for scientific research and education",
+            "Assists in data analysis, hypothesis generation, and simulation.",
+            "Accelerates discovery in domains such as biology, physics, and medicine.",
+            "Provides personalized tutoring and adaptive learning systems.",
+            "Helps summarize, structure, and explore large bodies of literature."
+        ],
+        "improved-accessibility-to-information-and-services": [
+            "Improved accessibility to information and services",
+            "Natural-language interfaces lower technical barriers.",
+            "Real-time translation across languages.",
+            "Assistive technologies for people with disabilities.",
+            "Expands access to healthcare, legal, and educational support."
+        ],
+        "augmentation-of-human-decision-making": [
+            "Augmentation of human decision making",
+            "Detects patterns beyond human perceptual limits.",
+            "Supports risk assessment and forecasting.",
+            "Provides scenario simulation and optimization tools.",
+            "Enhances evidence-based decision processes."
+        ],
+        "increases-productivity": [
+            "Increases productivity",
+            "Reduces time required for coding, writing, and analysis.",
+            "Automates documentation and administrative tasks.",
+            "Enables rapid prototyping and design iteration.",
+            "Improves workflow coordination across teams."
+        ],
+        "creates-new-professions": [
+            "Creates new professions",
+            "Emergence of AI engineers, prompt engineers, and AI ethicists.",
+            "New roles in AI governance, auditing, and safety.",
+            "Growth of interdisciplinary fields combining AI with law, medicine, and arts.",
+            "Development of new creative and technical industries."
+        ],
+        "augments-human-capabilities": [
+            "Augments human capabilities",
+            "Enhances memory and knowledge retrieval.",
+            "Assists creative processes (art, music, design).",
+            "Extends cognitive reach via simulation and modeling.",
+            "Acts as a collaborative partner in complex reasoning tasks."
+        ]
+    },
+    "ethical-issues-and-ai-regulations": {
+        "$links": [
+            [
+                "Social and ethical aspects of artificial intelligence",
+                "social-and-ethical-aspects-of-artificial-intelligence",
+                "conceptual-perspective"
+            ]
+        ],
+        "$images": [
+            [
+                "table",
+                "ai_regulation_comparison.png"
+            ]
+        ],
+        "$keyword_name": "Ethical issues and AI regulations",
+        "regulation-areas": [
+            "regulation areas",
+            "regulate AI systems (risk-based rules)",
+            "regulate sectors (health, finance)",
+            "instead binding laws jurisdictions may emphasize platform responsibilities, or publish guidelines/standards"
+        ],
+        "approaches": [
+            "approaches",
+            "The EU, US, and China are not just choosing different laws \u2014 they are choosing different values \u001eimage\u001ftable\u001fai_regulation_comparison.png\u001e",
+            "Europe: How do we protect individual rights?",
+            "United States: How do we enable innovation and competition?",
+            "China: How do we maintain social stability and state control?",
+            "\u001ekeyword\u001fWhat this means for AI developers\u001fwhat-this-means-for-ai-developers\u001e"
+        ],
+        "european-union:-gdpr": [
+            "European Union: GDPR",
+            "value: How do we protect individual rights?",
+            "General Data Protection Regulation (GDPR) since 2018, applies to any processing of personal data, including AI systems.",
+            "\u001ekeyword\u001fCore GDPR principles\u001fcore-gdpr-principles\u001e: strongly constrain AI systems in practice (e.g. medical research)",
+            "\u001ekeyword\u001fEU AI Act\u001fthe-eu-ai-act\u001e complements GDPR by regulating AI systems themselves"
+        ],
+        "united-states": [
+            "United States",
+            "The US prioritizes innovation, competition, and market leadership",
+            "Regulate outcomes and risks \u2014 not the technology itself.",
+            "\u001ekeyword\u001fUS AI regulation principles\u001fus-ai-regulation-principles\u001e"
+        ],
+        "china": [
+            "China",
+            "China treats AI as a strategic infrastructure that must support social stability, state goals, and public order.",
+            "\u001ekeyword\u001fChinese AI regulation principles\u001fchinese-ai-regulation-principles\u001e"
+        ]
+    },
+    "core-gdpr-principles": {
+        "$links": [
+            [
+                "Ethical issues and AI regulations",
+                "ethical-issues-and-ai-regulations",
+                "european-union:-gdpr"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Core GDPR principles"
+    },
+    "notes": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "notes"
+    },
+    "the-eu-ai-act": {
+        "$links": [
+            [
+                "Ethical issues and AI regulations",
+                "ethical-issues-and-ai-regulations",
+                "european-union:-gdpr"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "The EU AI Act",
+        "notes": [
+            "notes",
+            "Key ideas:",
+            "AI systems are classified by **risk**",
+            "Some uses are **prohibited**",
+            "High-risk systems require:",
+            "documentation",
+            "testing",
+            "human oversight",
+            "accountability"
+        ]
+    },
+    "us-ai-regulation-principles": {
+        "$links": [
+            [
+                "Ethical issues and AI regulations",
+                "ethical-issues-and-ai-regulations",
+                "united-states"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "US AI regulation principles",
+        "notes": [
+            "notes",
+            "No single, comprehensive AI law"
+        ],
+        "regulation-happens-through": [
+            "Regulation happens through",
+            "sector-specific laws (health, finance, education)",
+            "standards and guidelines (e.g. NIST)",
+            "executive orders"
+        ],
+        "strong-reliance-on": [
+            "Strong reliance on",
+            "self-regulation",
+            "voluntary frameworks",
+            "post-hoc enforcement: authorities intervene only after harm has occurred, rather than requiring approval or control beforehand."
+        ],
+        "implications-for-ai": [
+            "Implications for AI",
+            "Training data is less restricted",
+            "Automated decision-making is more common",
+            "Transparency requirements are weaker",
+            "Companies have more freedom \u2014 and more responsibility"
+        ],
+        "trade-off": [
+            "Trade-off",
+            "Faster innovation",
+            "Higher risk of bias, opaque systems, uneven protection of individuals"
+        ]
+    },
+    "chinese-ai-regulation-principles": {
+        "$links": [
+            [
+                "Ethical issues and AI regulations",
+                "ethical-issues-and-ai-regulations",
+                "china"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Chinese AI regulation principles",
+        "notes": [
+            "notes",
+            "Strong regulation of public-facing AI services",
+            "Data use is regulated differently for citizens and state actors",
+            "Rapid deployment is possible if aligned with policy goals"
+        ],
+        "mandatory-compliance-with": [
+            "Mandatory compliance with",
+            "content controls",
+            "security assessments",
+            "platform responsibilities"
+        ],
+        "generative-ai-systems-must": [
+            "Generative AI systems must",
+            "align with \u201ccore socialist values\u201d",
+            "prevent harmful or destabilizing outputs"
+        ],
+        "close-cooperation-between": [
+            "Close cooperation between",
+            "government",
+            "platform providers"
+        ],
+        "individual-privacy-is-secondary-to": [
+            "Individual privacy is secondary to",
+            "state security",
+            "social control"
+        ]
+    },
+    "what-this-means-for-ai-developers": {
+        "$links": [
+            [
+                "Ethical issues and AI regulations",
+                "ethical-issues-and-ai-regulations",
+                "approaches"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "What this means for AI developers",
+        "in-the-eu": [
+            "In the EU",
+            "Legal compliance must be designed from the start",
+            "Data governance is as important as model performance"
+        ],
+        "in-the-us": [
+            "In the US",
+            "Speed and scale are rewarded",
+            "Legal risks often appear after deployment"
+        ],
+        "in-china": [
+            "In China",
+            "Alignment with regulation is mandatory",
+            "Technical excellence alone is insufficient"
+        ]
+    },
+    "a-brief-history-of-artificial-intelligence": {
+        "$links": [
+            [
+                "content of the AI course",
+                "content-of-the-ai-course",
+                "walkthrough"
+            ]
+        ],
+        "$images": [
+            [
+                "history image",
+                "history_image.png"
+            ]
+        ],
+        "$keyword_name": "A Brief History of Artificial Intelligence",
+        "notes": [
+            "notes",
+            "\u001ekeyword\u001fPre-scientific origins of Artificial Intelligence\u001fpre-scientific-origins-of-artificial-intelligence\u001e",
+            "\u001ekeyword\u001fMathematical and Scientific Foundations (1930s\u20131940s)\u001fmathematical-and-scientific-foundations-(1930s\u20131940s)\u001e",
+            "\u001ekeyword\u001fThe Birth of Artificial Intelligence (1940s\u20131956)\u001fthe-birth-of-artificial-intelligence-(1940s\u20131956)\u001e",
+            "\u001ekeyword\u001fSymbolic Artificial Intelligence (GOFAI) (late 1950s\u20131960s)\u001fsymbolic-artificial-intelligence-(gofai)-(late-1950s\u20131960s)\u001e",
+            "\u001ekeyword\u001fThe First AI Boom (1956\u20131973)\u001fthe-first-ai-boom-(1956\u20131973)\u001e",
+            "\u001ekeyword\u001fThe First AI Winter (1974\u20131980)\u001fthe-first-ai-winter-(1974\u20131980)\u001e",
+            "\u001ekeyword\u001fExpert Systems and the Second AI Boom (1980\u20131987)\u001fexpert-systems-and-the-second-ai-boom-(1980\u20131987)\u001e",
+            "\u001ekeyword\u001fThe Second AI Winter (1987\u20131993)\u001fthe-second-ai-winter-(1987\u20131993)\u001e",
+            "\u001ekeyword\u001fProbabilistic AI, Statistical Learning, and the Data-Driven Revival (1993\u20132014)\u001fprobabilistic-ai,-statistical-learning,-and-the-data-driven-revival-(1993\u20132014)\u001e",
+            "\u001ekeyword\u001fDeep Learning and the Representation Revolution (2014\u2013present)\u001fdeep-learning-and-the-representation-revolution-(2014\u2013present)\u001e",
+            "summary image: \u001eimage\u001fhistory image\u001fhistory_image.png\u001e"
+        ]
+    },
+    "pre-scientific-origins-of-artificial-intelligence": {
+        "$links": [
+            [
+                "A Brief History of Artificial Intelligence",
+                "a-brief-history-of-artificial-intelligence",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Pre-scientific origins of Artificial Intelligence",
+        ">remark": [
+            ">remark",
+            "*Before AI became a science, it was already a human dream.*"
+        ],
+        "early-ideas-of-thinking-machines": [
+            "early ideas of thinking machines",
+            "mythology and literature (automatons, the golem, Frankenstein)",
+            "mechanical constructions in historical times (clockwork mechanisms)",
+            "early demonstrations of apparent intelligence, such as Kempelen Farkas\u2019s chess-playing \u201cTurk\u201d.",
+            "These constructions did not implement intelligence in a modern sense, but they externalized aspects of human cognition and agency."
+        ],
+        "programmable-machines": [
+            "programmable machines",
+            "Key milestones include:",
+            "Jacquard\u2019s loom with punched cards,",
+            "Charles Babbage\u2019s Analytical Engine,",
+            "Ada Lovelace\u2019s insight that machines could manipulate symbols, not only numbers.",
+            "This marks the transition from mechanical automation to abstract computation"
+        ],
+        "early-fear-of-machine-dominance": [
+            "early fear of machine dominance",
+            "Even at this early stage, the idea of intelligent machines was accompanied by the concern that machines might escape human control or    replace human roles.",
+            "This fear remains a recurring theme throughout the history of AI and resurfaces with every major technological breakthrough."
+        ]
+    },
+    "mathematical-and-scientific-foundations-(1930s\u20131940s)": {
+        "$links": [
+            [
+                "A Brief History of Artificial Intelligence",
+                "a-brief-history-of-artificial-intelligence",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Mathematical and Scientific Foundations (1930s\u20131940s)",
+        ">remark": [
+            ">remark",
+            "*Intelligence becomes a formal object.*"
+        ],
+        "mid-20th-century-scientific-breakthroughs": [
+            "Mid-20th century scientific breakthroughs",
+            "mathematics",
+            "neuroscience",
+            "control theory",
+            "communication theory"
+        ],
+        "alan-turing-and-the-theory-of-computation": [
+            "Alan Turing and the theory of computation",
+            "Alan Turing introduced the concept of the Turing machine providing a precise mathematical definition of computation.",
+            "reasoning can be formalized",
+            "symbols can be manipulated mechanically",
+            "a single abstract machine can implement any algorithm"
+        ],
+        "cybernetics:-control,-feedback,-and-self-regulation": [
+            "Cybernetics: control, feedback, and self-regulation",
+            "cybernetics (Wiener, McCulloch, Pitts) the study of self-regulating and goal-directed systems.",
+            "feedback loops",
+            "control mechanisms",
+            "early neuron-like models",
+            "the first scientific attempt to understand intelligence as a dynamic interaction between system and environment."
+        ],
+        "information-theory-and-entropy": [
+            "Information theory and entropy",
+            "information theory (Shannon): entropy, mutual information, and fundamental limits of communication and compression.",
+            "a quantitative measure of uncertainty",
+            "limits on representation efficiency",
+            "a bridge between probability, coding, and learning",
+            "Information theory later became central to learning theory, neural networks, and modern AI."
+        ],
+        "world-war-ii-as-a-catalyst": [
+            "World War II as a catalyst",
+            "World War II played a decisive role in accelerating these developments.",
+            "Practical needs such as cryptography, radar, and control systems demanded new mathematical tools.",
+            "landmark example is the breaking of the Enigma cipher (Turing\u2019s \"the Bombe\")"
+        ]
+    },
+    "the-birth-of-artificial-intelligence-(1940s\u20131956)": {
+        "$links": [
+            [
+                "A Brief History of Artificial Intelligence",
+                "a-brief-history-of-artificial-intelligence",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "The Birth of Artificial Intelligence (1940s\u20131956)",
+        ">remark": [
+            ">remark",
+            "*Intelligence becomes an explicit research goal.*"
+        ],
+        "post-war-electronics-and-\u201celectronic-brains\u201d": [
+            "Post-war electronics and \u201celectronic brains\u201d",
+            "Advances in electronics led to the first digital computers, often referred to as *\u201celectronic brains\u201d*.",
+            "Science fiction flourished in parallel, shaping public imagination and raising both hope and fear    about thinking machines."
+        ],
+        "alan-turing-and-the-imitation-game": [
+            "Alan Turing and the imitation game",
+            "Turing proposed an operational definition of intelligence: imitate human behavior (the imitation game) convincingly.",
+            "The *Turing Test* evaluates intelligence through indistinguishability from human conversational behavior,    shifting the focus from internal mechanisms    to observable performance."
+        ],
+        "early-neural-models:-mcculloch\u2013pitts": [
+            "Early neural models: McCulloch\u2013Pitts",
+            "McCulloch and Pitts introduced a simplified mathematical model of biological neurons,    showing that networks of such units can implement logical functions.",
+            "This work formed the first formal bridge between neuroscience and computation."
+        ],
+        "the-dartmouth-workshop-(1956)": [
+            "The Dartmouth Workshop (1956)",
+            "The Dartmouth Summer Research Project officially coined the term *Artificial Intelligence*.",
+            "This event marked the birth of AI as an independent scientific discipline, driven by the belief that every aspect of intelligence    could, in principle, be described precisely    and implemented by a machine."
+        ]
+    },
+    "symbolic-artificial-intelligence-(gofai)-(late-1950s\u20131960s)": {
+        "$links": [
+            [
+                "A Brief History of Artificial Intelligence",
+                "a-brief-history-of-artificial-intelligence",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Symbolic Artificial Intelligence (GOFAI) (late 1950s\u20131960s)",
+        ">remark": [
+            ">remark",
+            "*Intelligence as logic and symbols.*"
+        ],
+        "gofai-(good-old-fashioned-artificial-intelligence)": [
+            "GOFAI (Good Old-Fashioned Artificial Intelligence)",
+            "The first dominant AI paradigm viewed intelligence as **explicit symbol manipulation governed by formal rules**.",
+            "intelligence is reasoning,",
+            "reasoning is logical inference,",
+            "knowledge can be written down explicitly."
+        ],
+        "canonical-symbolic-systems": [
+            "Canonical symbolic systems",
+            "*Logic Theorist* (Newell & Simon),",
+            "*General Problem Solver (GPS)*,",
+            "early expert systems,",
+            "logic programming languages such as Prolog.",
+            "These systems demonstrated high-level reasoning in restricted, well-defined domains."
+        ],
+        "gofai-provided": [
+            "GOFAI provided",
+            "transparency,",
+            "interpretability,",
+            "formal correctness guarantees."
+        ],
+        "however,-it-struggled-with": [
+            "However, it struggled with",
+            "knowledge acquisition,",
+            "uncertainty and noise,",
+            "perception,",
+            "scalability.",
+            "These limits revealed that explicit reasoning alone is insufficient    for general intelligence."
+        ]
+    },
+    "the-first-ai-boom-(1956\u20131973)": {
+        "$links": [
+            [
+                "A Brief History of Artificial Intelligence",
+                "a-brief-history-of-artificial-intelligence",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "The First AI Boom (1956\u20131973)",
+        ">remark": [
+            ">remark",
+            "*Optimism, funding, and diversification.*"
+        ],
+        "institutional-and-financial-expansion": [
+            "Institutional and financial expansion",
+            "Following Dartmouth, AI research expanded rapidly.",
+            "Substantial funding\u2014especially through DARPA (Defense Advanced Research Projects Agency) \u2014 supported AI institutes in the United States and the United Kingdom.",
+            "Public discourse, influenced by science fiction, predicted human-level intelligence within decades."
+        ],
+        "reasoning-as-search": [
+            "Reasoning as search",
+            "Problem solving was framed as search in symbolic state spaces, using trial-and-error, backtracking, and heuristics.",
+            "While effective in small domains, these methods suffered from **combinatorial explosion**    in problems such as chess, planning,    and mathematical theorem proving."
+        ],
+        "early-neural-networks:-perceptrons": [
+            "Early neural networks: perceptrons",
+            "Frank Rosenblatt developed the perceptron, an electrically inspired learning machine.",
+            "were linear classifiers,",
+            "implemented as electrical circuits,",
+            "typically had on the order of $10^3$ parameters.",
+            "Their limited expressive power constrained practical applicability."
+        ],
+        "game-theory-and-strategic-reasoning": [
+            "Game theory and strategic reasoning",
+            "game theory provided a mathematical framework for reasoning about strategic interaction among multiple agents.",
+            "Developed by von Neumann and Morgenstern and formalized by Nash (1950),    it introduced concepts such as strategies, payoffs,    and Nash equilibrium.",
+            "Unlike search-based reasoning, game theory addresses intelligence    in the presence of other intelligent agents."
+        ],
+        "natural-language-and-the-eliza-effect": [
+            "Natural language and the ELIZA effect",
+            "Natural language understanding was seen as a key test of intelligence.",
+            "Joseph Weizenbaum\u2019s *ELIZA* program showed that simple pattern matching could produce    a strong *illusion of understanding*.",
+            "This phenomenon highlighted the gap between apparent and genuine intelligence."
+        ],
+        "microworlds": [
+            "Microworlds",
+            "Researchers such as Minsky and Papert advocated studying intelligence    in simplified, idealized environments (*microworlds*),    enabling controlled experimentation."
+        ],
+        "early-robotics": [
+            "Early robotics",
+            "Robotics emerged as an embodied AI application, particularly in Japan.",
+            "At Waseda University, early humanoid robots combined perception,    control, and mechanical embodiment."
+        ]
+    },
+    "the-first-ai-winter-(1974\u20131980)": {
+        "$links": [
+            [
+                "A Brief History of Artificial Intelligence",
+                "a-brief-history-of-artificial-intelligence",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "The First AI Winter (1974\u20131980)",
+        ">remark": [
+            ">remark",
+            "*Reality catches up.*"
+        ],
+        "unmet-expectations": [
+            "Unmet expectations",
+            "By the mid-1970s, AI systems had failed to meet optimistic predictions.",
+            "Funding agencies withdrew support, leading to the first *AI winter*."
+        ],
+        "limits-of-linear-neural-networks": [
+            "Limits of linear neural networks",
+            "Theoretical results exposed fundamental limitations of perceptron-based models,    which could not represent even simple nonlinear functions."
+        ],
+        "insufficient-computational-power": [
+            "Insufficient computational power",
+            "Many AI methods were computationally infeasible with available hardware.",
+            "Estimates suggested that meaningful AI required $\\sim 1$ GFLOP,",
+            "while even the most powerful machines of the time achieved only $\\sim 100$ MFLOPS."
+        ],
+        "computational-complexity": [
+            "Computational complexity",
+            "Core AI problems were shown to be NP-hard, implying exponential growth in computational requirements.",
+            "As a result, even seemingly simple problems    proved extremely difficult for machines."
+        ],
+        "conceptual-lesson-of-the-first-ai-winter": [
+            "Conceptual lesson of the first AI winter",
+            "intelligence cannot be reduced to search alone,",
+            "symbolic reasoning does not scale automatically,",
+            "learning requires expressive models, sufficient data, and adequate computation.",
+            "These insights set the stage for later probabilistic and learning-based approaches."
+        ]
+    },
+    "expert-systems-and-the-second-ai-boom-(1980\u20131987)": {
+        "$links": [
+            [
+                "A Brief History of Artificial Intelligence",
+                "a-brief-history-of-artificial-intelligence",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Expert Systems and the Second AI Boom (1980\u20131987)",
+        ">remark": [
+            ">remark",
+            "*Intelligence as encoded expertise.*"
+        ],
+        "return-of-optimism:-expert-systems": [
+            "Return of optimism: expert systems",
+            "In the early 1980s, Artificial Intelligence experienced a renewed surge, driven by the success of *expert systems*.",
+            "These systems aimed to capture the decision-making ability of human experts within narrowly defined domains.",
+            "Instead of general intelligence, the focus shifted to small, well-delimited problem areas and provided deep, domain-specific knowledge."
+        ],
+        "expert-systems-as-decision-support-tools": [
+            "Expert systems as decision-support tools",
+            "Expert systems were primarily used as **decision-support programs**.",
+            "encoding expert knowledge as rules,",
+            "applying logical inference to reach conclusions.",
+            "Their promise was practical: replacing or assisting human experts    in specialized professional contexts."
+        ],
+        "medical-applications-and-mycin": [
+            "Medical applications and MYCIN",
+            "One of the most influential expert systems was *MYCIN*, developed in the early 1970s under the leadership of    Edward Feigenbaum.",
+            "MYCIN assisted physicians in diagnosing bacterial infections    and recommending antibiotic treatments.",
+            "Although never deployed clinically, it demonstrated that AI could outperform    non-specialist humans in narrow expert tasks."
+        ],
+        "knowledge-based-systems-and-knowledge-engineering": [
+            "Knowledge-based systems and knowledge engineering",
+            "The success of expert systems led to the rise of *knowledge-based systems* and the discipline of    *knowledge engineering*.",
+            "how to extract tacit knowledge from experts?",
+            "how to formalize it into rules?",
+            "how to maintain and update large rule bases?",
+            "This bottleneck revealed that **knowledge acquisition is often harder than inference**."
+        ],
+        "ambitious-knowledge-projects:-cyc": [
+            "Ambitious knowledge projects: Cyc",
+            "The Cyc project aimed to encode large portions of common-sense human knowledge    into a formal, machine-readable form.",
+            "It represented the most ambitious attempt to overcome the knowledge bottleneck,    but also illustrated the immense difficulty    of explicitly representing everyday understanding."
+        ],
+        "high-performance-game-playing-systems": [
+            "High-performance game-playing systems",
+            "During this period, AI systems achieved master-level performance in games.",
+            "chess: *HiTech* -- Won the 1988 U.S. Open Chess Championship, *Deep Thought* (a predecessor of Deep Blue).",
+            "symbolic reasoning,",
+            "heuristics,",
+            "and increasing computational power."
+        ]
+    },
+    "renewed-investments-and-national-programs": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "Renewed investments and national programs",
+        ">remark": [
+            ">remark",
+            "The success of expert systems triggered major investments.",
+            "AI was again perceived as a strategic technology."
+        ],
+        "japan": [
+            "Japan",
+            "launched the *Fifth Generation Computer Systems* project, aiming to build massively parallel computers    based on logic programming and AI principles."
+        ],
+        "united-states": [
+            "United States",
+            "the government supported collaborative industrial research through organizations such as    MCC (Microelectronics and Computer Technology Corporation)."
+        ]
+    },
+    "theoretical-advances": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "Theoretical advances",
+        ">remark": [
+            ">remark",
+            "This era also saw important theoretical developments, including:"
+        ],
+        "notes": [
+            "notes",
+            "the Hopfield model (recurrent neural networks),",
+            "the rediscovery and popularization of backpropagation.",
+            "These advances quietly laid the groundwork for later neural network revolutions."
+        ]
+    },
+    "early-practical-successes:-ocr": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "Early practical successes: OCR",
+        "notes": [
+            "notes",
+            "Optical Character Recognition (OCR) emerged as one of the first commercially successful AI applications.",
+            "OCR systems demonstrated that pattern recognition tasks could be automated effectively,  foreshadowing the later dominance of data-driven learning."
+        ]
+    },
+    "the-second-ai-winter-(1987\u20131993)": {
+        "$links": [
+            [
+                "A Brief History of Artificial Intelligence",
+                "a-brief-history-of-artificial-intelligence",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "The Second AI Winter (1987\u20131993)",
+        ">remark": [
+            ">remark",
+            "*Engineering reality meets economic limits.*"
+        ],
+        "collapse-of-the-ai-market": [
+            "Collapse of the AI market",
+            "Between 1987 and 1993, Artificial Intelligence entered its second major downturn.",
+            "Approximately 300 AI-related companies went bankrupt, and both private and public investments sharply declined."
+        ],
+        "failure-of-specialized-ai-hardware": [
+            "Failure of specialized AI hardware",
+            "The market for specialized AI machines collapsed."
+        ],
+        "notes": [
+            "notes",
+            "Rapid advances in general-purpose personal computers (notably from IBM and Apple)    made dedicated AI hardware economically unattractive."
+        ]
+    },
+    "limits-of-expert-systems": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "Limits of expert systems",
+        "notes": [
+            "notes",
+            "extremely costly to train and maintain,",
+            "brittle behavior outside narrow domains,",
+            "unexpected and hard-to-debug failures.",
+            "Maintaining large rule bases required continuous expert involvement,    making long-term deployment unsustainable."
+        ]
+    },
+    "unfulfilled-national-ambitions": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "Unfulfilled national ambitions",
+        "notes": [
+            "notes",
+            "The Japanese *Fifth Generation Computer Systems* project failed to meet its ambitious goals.",
+            "Logic programming and symbolic AI did not deliver the expected breakthroughs    in scalability or performance."
+        ]
+    },
+    "conceptual-lesson-of-the-second-ai-winter": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "Conceptual lesson of the second AI winter",
+        "notes": [
+            "notes",
+            "hand-crafted intelligence does not scale,",
+            "knowledge cannot be exhaustively encoded,",
+            "intelligence requires learning, adaptation, and robustness to uncertainty.",
+            "These lessons directly motivated the transition toward statistical learning, probabilistic models,    and data-driven approaches in the 1990s."
+        ]
+    },
+    ">remark": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": ">remark"
+    },
+    "probabilistic-ai,-statistical-learning,-and-the-data-driven-revival-(1993\u20132014)": {
+        "$links": [
+            [
+                "A Brief History of Artificial Intelligence",
+                "a-brief-history-of-artificial-intelligence",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Probabilistic AI, Statistical Learning, and the Data-Driven Revival (1993\u20132014)",
+        ">remark": [
+            ">remark",
+            "*Intelligence as inference from data.*",
+            "Once data and computation became abundant, representation became the bottleneck. \ud83d\udd25\ud83e\udde0"
+        ],
+        "slow-recovery-after-the-second-ai-winter": [
+            "Slow recovery after the second AI winter",
+            "After 1993, Artificial Intelligence began a gradual and cautious recovery. Grand claims about human-level intelligence disappeared,    replaced by a pragmatic focus on **performance, robustness, and utility**.",
+            "The field shifted away from hand-crafted knowledge toward models that could **learn from data**."
+        ],
+        "probabilistic-ai-and-uncertainty": [
+            "Probabilistic AI and uncertainty",
+            "A central insight of this period was that real-world intelligence must operate under uncertainty.",
+            "Bayesian networks,",
+            "Hidden Markov Models,",
+            "probabilistic graphical models.",
+            "These frameworks treated intelligence as **inference**: computing the most likely explanations or decisions    given incomplete and noisy observations."
+        ],
+        "statistical-learning-theory": [
+            "Statistical learning theory",
+            "In parallel, statistical learning theory provided a mathematical foundation for learning from finite data.",
+            "generalization error,",
+            "bias\u2013variance tradeoff,",
+            "VC (Vapnik\u2013Chervonenkis) dimension to measure model capacity",
+            "regularization.",
+            "Learning was no longer judged by training performance alone, but by its ability to generalize to unseen data."
+        ],
+        "no-conceptual-revolution-\u2014-but-more-computation": [
+            "No conceptual revolution \u2014 but more computation",
+            "This era introduced **few fundamentally new paradigms**.",
+            "faster processors (Moore\u2019s law),",
+            "larger memory,",
+            "cheaper storage,",
+            "growing datasets.",
+            "The same algorithms that had existed earlier became practical at scale."
+        ],
+        "milestone:-deep-blue-defeats-kasparov-(1997)": [
+            "Milestone: Deep Blue defeats Kasparov (1997)",
+            "In 1997, IBM\u2019s *Deep Blue* defeated world chess champion",
+            "Deep Blue evaluated roughly **200 million moves per second**,",
+            "brute-force search,",
+            "expert-crafted evaluation functions,",
+            "massive computational power.",
+            "This victory demonstrated that *engineering scale* could substitute for human intuition    in narrowly defined tasks."
+        ],
+        "autonomous-vehicles-and-embodied-ai": [
+            "Autonomous vehicles and embodied AI",
+            "The DARPA Grand Challenge marked a turning point for robotics and autonomous systems.",
+            "In 2005, a Stanford robot completed a **150-mile desert course** autonomously.",
+            "In 2007, a CMU robot navigated **55 miles of urban traffic**.",
+            "probabilistic perception,",
+            "sensor fusion,",
+            "real-time decision making."
+        ],
+        "question-answering-and-watson-(2011)": [
+            "Question answering and Watson (2011)",
+            "In 2011, IBM\u2019s *Watson* defeated human champions in the quiz show *Jeopardy!*.",
+            "natural language processing,",
+            "large-scale information retrieval,",
+            "probabilistic reasoning.",
+            "The system illustrated the power of **combining many weak signals at massive scale**."
+        ],
+        "practical-ai-everywhere": [
+            "Practical AI everywhere",
+            "While \u201cgeneral AI\u201d remained elusive, AI quietly penetrated many industries:",
+            "data mining and recommendation systems,",
+            "industrial robotics,",
+            "logistics and scheduling,",
+            "speech recognition,",
+            "banking and fraud detection,",
+            "medical diagnosis,",
+            "search engines (notably Google)."
+        ],
+        "conceptual-lesson": [
+            "Conceptual lesson",
+            "learning from data beats hand-coded intelligence,",
+            "uncertainty must be modeled explicitly,",
+            "performance matters more than philosophical purity.",
+            "This period laid the **essential groundwork** for the deep learning revolution that followed."
+        ]
+    },
+    "deep-learning-and-the-representation-revolution-(2014\u2013present)": {
+        "$links": [
+            [
+                "A Brief History of Artificial Intelligence",
+                "a-brief-history-of-artificial-intelligence",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Deep Learning and the Representation Revolution (2014\u2013present)",
+        ">remark": [
+            ">remark",
+            "*Intelligence as learned representation.*"
+        ],
+        "the-deep-learning-breakthrough-(from-2014)": [
+            "The deep learning breakthrough (from 2014)",
+            "Around 2014, Artificial Intelligence entered a decisive new phase.",
+            "Advances in deep neural networks, combined with large datasets and GPU acceleration,    enabled systems to learn **hierarchical representations**    directly from raw data.",
+            "This marked a qualitative shift: features were no longer engineered by humans,    but **learned automatically** from examples."
+        ],
+        "face-recognition-milestones": [
+            "Face recognition milestones",
+            "Systems such as *DeepFace* (Facebook / Meta) and *FaceNet* (Google) achieved    near-human or superhuman performance    in face recognition benchmarks.",
+            "deep neural networks can outperform humans in well-defined perceptual tasks,",
+            "representation learning is the key limiting factor, not classification itself."
+        ],
+        "human-level-performance-in-classification": [
+            "Human-level performance in classification",
+            "Following these successes, deep neural networks (DNNs),    especially convolutional neural networks (CNNs),    became the standard solution    for classification problems in vision, speech, and perception.",
+            "In many benchmark tasks, performance reached or exceeded human accuracy."
+        ],
+        "games-and-reinforcement-learning": [
+            "Games and reinforcement learning",
+            "Deep learning combined with reinforcement learning achieved remarkable success in games:",
+            "chess and Go,",
+            "Atari games,",
+            "complex environments such as Doom.",
+            "These systems learned strategies through interaction and self-play,    without explicit human rules.",
+            "Games once again served as controlled testbeds for increasingly general intelligence."
+        ],
+        "stability-and-scalability-of-deep-learning-systems": [
+            "Stability and scalability of deep learning systems",
+            "more stable behavior,",
+            "graceful degradation,",
+            "robustness to noise and variation.",
+            "Intelligence became less brittle and more statistically grounded."
+        ],
+        "transformers-and-the-language-revolution-(2017\u2013)": [
+            "Transformers and the language revolution (2017\u2013)",
+            "The introduction of the *Transformer* architecture in 2017 triggered a revolution in natural language processing.",
+            "efficient modeling of long-range dependencies,",
+            "scalable training on massive text corpora,",
+            "unified architectures for understanding and generation.",
+            "This led to the rise of **Large Language Models (LLMs)**."
+        ],
+        "foundation-models-and-chatgpt-(2022)": [
+            "Foundation models and ChatGPT (2022)",
+            "By 2022, foundation models trained on vast datasets demonstrated unprecedented capabilities.",
+            "The public release of *ChatGPT* in November 2022 marked a turning point:    AI systems became widely accessible,    interactive, and economically transformative.",
+            "general-purpose reasoning engines,",
+            "interfaces to knowledge,",
+            "tools for creativity and programming."
+        ],
+        "generative-models-beyond-text": [
+            "Generative models beyond text",
+            "Deep generative models expanded rapidly beyond language.",
+            "Image generation systems, such as diffusion-based models,    enabled high-quality synthesis of visual content    from natural language descriptions.",
+            "Generation became a central capability, not a side effect of modeling.",
+            "2013: VAE",
+            "2014: GANs $\\to$ sharp images",
+            "2017: transformer $\\to$ generation by prompts",
+            "2021: diffusion models"
+        ],
+        "the-contemporary-ai-boom": [
+            "The contemporary AI boom",
+            "massive investments,",
+            "rapid industrial adoption,",
+            "profound societal impact.",
+            "AI shifted from a specialized technology to a **general-purpose infrastructure**."
+        ],
+        "conceptual-lesson-of-the-deep-learning-era": [
+            "Conceptual lesson of the deep learning era",
+            "representation is more important than rules,",
+            "scale transforms capability,",
+            "intelligence emerges from data, computation, and inductive bias working together.",
+            "This era reframed intelligence not as explicit reasoning,    but as **learned, contextual representation**."
         ]
     }
 }

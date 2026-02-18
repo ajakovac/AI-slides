@@ -369,7 +369,7 @@ This note is about the concept intelligence
         - the algorithm learns and solves the problem
     - characteristics:
         - solution is not explicitly known
-        - machine exhibits domain-specific intelligence
+        - machine can be smarter in specific domains!
 
 ---
 <a id="representation-of-reality"></a>

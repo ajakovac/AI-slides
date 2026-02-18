@@ -2,8 +2,8 @@
     "learning-in-the-ai-era": {
         "$links": [],
         "$keyword_name": "Learning in the AI era",
-        "$remark": [
-            "$remark",
+        ">remark": [
+            ">remark",
             "In the emerging AI era, it is no longer obvious how teaching and learning should be organized most effectively."
         ],
         "traditional-learning-materials": [
@@ -69,8 +69,8 @@
             ]
         ],
         "$keyword_name": "Contact lectures",
-        "$remark": [
-            "$remark",
+        ">remark": [
+            ">remark",
             "the traditional way of transferring knowledge; the goal is to acquire understanding through explanation"
         ],
         "pros": [
@@ -96,8 +96,8 @@
             ]
         ],
         "$keyword_name": "Exercises",
-        "$remark": [
-            "$remark",
+        ">remark": [
+            ">remark",
             "high-school-like teaching practice; the goal is to gain knowledge through practice"
         ],
         "pros": [
@@ -121,8 +121,8 @@
             ]
         ],
         "$keyword_name": "Learning with chatbots (LLMs)",
-        "$remark": [
-            "$remark",
+        ">remark": [
+            ">remark",
             "a characteristic opportunity of the AI era"
         ],
         "pros": [
@@ -249,8 +249,8 @@
             "exploration: use core material to dig deeper",
             "feedback: clarify unclear points with human experts"
         ],
-        "$remark": [
-            "$remark",
+        ">remark": [
+            ">remark",
             "feedback of all kinds is very welcome!"
         ]
     }

@@ -2,19 +2,23 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import ResizableLayout from "./components/ResizableLayout";
 import Sidebar from "./components/Sidebar";
 import DocPane from "./components/DocPane";
+import ImageGalleryPane from "./components/ImageGalleryPane";
 import { getKeyFromUrl, setUrlForKey } from "./lib/history";
 
-import "./styles/app.css";
-import "./styles/doc.css";
 
 export default function App() {
-  const defaultKey = "learning-in-the-ai-era";
+  const defaultKey = "content-of-the-ai-course";
   const [activeKey, setActiveKey] = useState(getKeyFromUrl() || defaultKey);
+  const [imagesFromEntry, setImagesFromEntry] = useState([]);
+  const [selectedImageName, setSelectedImageName] = useState(null);
 
   const keys = useMemo(() => [
-    "learning-in-the-ai-era",
-    "transformers",
-    "reinforcement-learning"
+    ["Contents", "content-of-the-ai-course"],
+    ["About the course", "about-the-introduction-to-ai-course"],
+    ["Learning in the AI era", "learning-in-the-ai-era"],
+    ["Introduction","general-facts-about-ai"],
+    ["Social aspects","social-and-ethical-aspects-of-artificial-intelligence"],
+    ["History","a-brief-history-of-artificial-intelligence"]
   ], []);
 
   // initial: ensure url matches
@@ -42,13 +46,16 @@ export default function App() {
   return (
     <ResizableLayout
       sidebar={<Sidebar keys={keys} onSelectKey={(k) => navigateKey(k, { push: true })} />}
-      left={<DocPane initialKey={activeKey} onNavigateKey={(k) => navigateKey(k, { push: true })} />}
-      right={
-        <div style={{ padding: 12 }}>
-          <h2>Tools</h2>
-          <p>Put search, tags, or editing tools here.</p>
-        </div>
-      }
+      left={<DocPane
+        initialKey={activeKey}
+        onNavigateKey={(k) => navigateKey(k, { push: true })}
+        onImagesChange={setImagesFromEntry}
+        onSelectImage={setSelectedImageName}  
+      />}
+      right={<ImageGalleryPane
+        images={imagesFromEntry}
+        selectedImageName={selectedImageName}
+      />}
     />
   );
 }
