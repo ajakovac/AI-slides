@@ -6,6 +6,8 @@
         - introduction: __general facts about AI__
         - __social and ethical aspects of artificial intelligence__
         - __a brief history of Artificial Intelligence__
+        - __Human Intelligence: A Psychological Perspective__
+
 
 
 __END__
@@ -14,7 +16,6 @@ __END__
 - [ethical-issues-and-regulations.md](ethical-issues-and-regulations.md) 
 - [risks-and-benefits-of-AI.md](risks-and-benefits-of-AI.md) 
 - [worldviews.md](worldviews.md) 
-- [intelligence-in-psychology.md](intelligence-in-psychology.md) 
 - [intelligence.md](intelligence.md) 
 - [contexts.md](contexts.md) 
 - [supervised-learning.md](supervised-learning.md) 

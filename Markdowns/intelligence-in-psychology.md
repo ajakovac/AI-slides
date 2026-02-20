@@ -1,107 +1,244 @@
-# Human Intelligence: A Psychological Perspective
+- **Human Intelligence: A Psychological Perspective**
 
-> *Before we ask whether machines are intelligent, we must ask what intelligence means for humans.*
+  > *Before we ask whether machines are intelligent, we must ask what intelligence means for humans.*
 
-## General thoughts
+  - __Spearman and the definition of intelligence__
+  - __Historical development of intelligence theory__
+  - __the Cattell–Horn–Carroll (CHC) theory of intelligence__
+  - __Kahneman and his System I and System II__
 
-- **The difficulty of definition**
-  
-  Despite its central role, intelligence is notoriously hard to define.
-  It is commonly described through abilities such as:
-  - abstraction,
-  - learning,
-  - reasoning,
-  - planning,
-  - problem solving.
 
-  No single definition captures all aspects,
-  and different psychological traditions emphasize different components.
+- **Spearman and the definition of intelligence**
+  - **Everyday experience and consensus**
+    - Everyday experience suggests that intelligence is a meaningful concept.
+    - People tend to agree, at least approximately,
+      on relative judgments of intelligence:
+      there is a broad, though imperfect,
+      consensus about who is “more” or “less” intelligent.
+    - This pragmatic agreement motivates attempts
+      to measure intelligence quantitatively.
 
----
+  - **First intelligence measurements**
+    - A. Binet's intelligence test (1905) ![A. Binet](../Images/A_Binet.png)
+    - Mental age: comparing a child’s performance to age norms.
+    - Practical goal: identify students needing educational support.
+    - Not intended as a measurement of a fixed, innate general intelligence.
 
-- **Everyday experience and consensus**
-  
-  Although difficult to define formally,
-  everyday experience suggests that intelligence is a meaningful concept.
+  - **Spearman's g-factor**
+    - ![Ch. Spearman](../Images/Spearman.png) was one of the founders of modern psychometrics.
+    - Scores on very different cognitive tests are positively correlated
+      (vocabulary and reasoning, memory and spatial ability, arithmetic and verbal skills) → **positive manifold**.
+    - Spearman (1904): intelligence has an underlying structure —
+      a **General Intelligence Factor (g)**.
+    - Factor-analytic model:
+      $X_i = \lambda_i g + \epsilon_i$
+      where $\lambda_i$ is the loading of test $i$ on $g$,
+      and $\epsilon_i$ represents test-specific variance and measurement error.
 
-  People tend to agree, at least approximately,
-  on relative judgments of intelligence:
-  there is a broad, though imperfect,
-  consensus about who is “more” or “less” intelligent.
+  - **Psychometric intelligence and IQ**
+    - Modern IQ tests are constructed using factor-analytic methods
+      to approximate general intelligence ($g$).
+    - Full Scale IQ is an estimate of general ability.
+    - Standardized: mean = 100, standard deviation = 15.
+    - Widely used batteries: Wechsler scales
+      (adult, children, preschool versions).
 
-  This pragmatic agreement motivates attempts
-  to measure intelligence quantitatively.
+  - **Law of diminishing returns**
+    - Correlations between cognitive tests tend to decrease as ability increases.
+    - The proportion of variance explained by $g$ decreases at higher ability levels.
+    - __Spearman’s Law of Diminishing Returns (SLODR)__.
 
----
+  - **Intelligence as a non-monolithic construct**
+    - Modern psychology views intelligence as hierarchically structured.
+    - A general factor ($g$) sits at the top,
+      beneath which lie broad abilities
+      (e.g., verbal, spatial, memory, processing speed).
+    - These components may develop at different rates
+      and manifest differently across individuals.
+    - A single numerical score cannot fully capture this complexity.
 
-- **Psychometric intelligence and IQ**
-  
-  In psychology, intelligence is often operationalized
-  through *psychometric IQ*:
-  the result of standardized intelligence tests.
 
-  IQ tests do not claim to measure intelligence directly,
-  but rather performance on a carefully designed set of tasks
-  assumed to reflect underlying cognitive abilities.
-
----
-
-- **Correlation with life outcomes**
-  
-  Empirical studies show that IQ scores
-  correlate with various life outcomes,
-  including:
-  - academic performance,
-  - certain aspects of professional success,
-  - problem-solving ability.
-
-  These correlations are strongest at the lower end of the IQ scale:
-  very low IQ significantly constrains
-  educational and occupational opportunities.
-
-  (See, for example, discussions in
-  Mérő László: *Az érzelmek logikája*.)
-
----
 
 - **Spearman’s Law of Diminishing Returns (SLODR)**
-  
-  The explanatory power of general intelligence decreases
-  as overall ability increases.
+  - **Core Claim**
+    - As general cognitive ability increases,
+      correlations between different cognitive tests decrease.
+    - The proportion of shared variance explained by $g$
+      declines at higher ability levels.
 
-  At low cognitive levels, performance across tasks
-  is dominated by a single general factor (*g*).
-  At higher levels, task-specific abilities,
-  motivation, and context play a larger role.
+  - **Lower ability**
+    - Stronger inter-test correlations
+    - Higher $g$-saturation → larger loadings on $g$
+    - Performance more strongly driven by general intelligence
 
-  Above a certain threshold,
-  increases in IQ yield diminishing returns:
-  higher intelligence alone does not guarantee
-  greater success, happiness, or social effectiveness.
+  - **Higher ability**
+    - Weaker inter-test correlations
+    - Lower $g$-saturation → smaller loadings on $g$
+    - Greater differentiation of specific abilities
 
-  Other factors become dominant, such as:
-  - motivation,
-  - emotional intelligence,
-  - creativity,
-  - perseverance,
-  - social skills,
-  - opportunity and environment.
+  - **Paper**
+    - Blum & Holling (2017):
+      *Spearman’s Law of Diminishing Returns. A Meta-Analysis*
+    - Plot: relation between subgroup mean IQ (x-axis)
+      and average inter-test correlation (y-axis),
+      with regression line illustrating decreasing trend.
+      ![IQ vs. correlation](../Images/blum_holling_IQ_vs_other.png)
 
-  Intelligence is therefore best understood
-  as a *necessary but not sufficient* condition
-  for success in complex human contexts.
+  - **Book in Hungarian**
+    - [Mérő László: *Az érzelmek logikája*](https://www.scribd.com/document/811514880/Mer%C5%91-Laszlo-Az-Erzelmek-Logikaja)
 
----
----
+  - **Correlation with life outcomes**
+    - IQ correlates moderately with academic performance
+      and occupational status.
+    - Very low IQ significantly constrains educational
+      and occupational opportunities.
+    - High IQ does not guarantee success;
+      non-cognitive factors (motivation, personality, environment)
+      also play substantial roles.
 
-- **Intelligence as a non-monolithic construct**
 
-  A central insight of modern psychology is that **human intelligence is not a single, unified faculty**.
-  Instead, it consists of multiple, partially independent components,
-  which may develop at different rates and manifest differently across individuals.
+- **Historical development of intelligence theory**
 
-  This perspective challenges the idea that intelligence can be fully captured
-  by a single numerical score.
+  - **Alfred Binet (1905) — Practical measurement**
+    - Developed the first modern intelligence test.
+    - Introduced the concept of *mental age*.
+    - Goal: identify children needing educational support.
+    - Did not propose a formal theory of general intelligence.
+
+  - **Charles Spearman (1904) — General intelligence (g)**
+    - Observed the *positive manifold*:
+      different cognitive tests are positively correlated.
+    - Proposed a **General Intelligence Factor (g)**.
+    - Introduced early factor analysis.
+    - Two-factor theory: $g$ (general) + $s$ (specific abilities).
+
+  - **Louis L. Thurstone (1930s) — Primary Mental Abilities**
+    - Challenged the dominance of a single general factor.
+    - Proposed several relatively independent abilities:
+      verbal, numerical, spatial, memory, reasoning, etc.
+    - Developed multiple-factor analytic methods.
+    - Emphasized differentiation of cognitive abilities.
+
+  - **Raymond Cattell (1940s–1960s) — Fluid and Crystallized Intelligence**
+    - **Fluid intelligence (Gf)**: abstract reasoning, problem solving.
+    - **Crystallized intelligence (Gc)**: acquired knowledge and skills.
+    - Integrated Spearman’s g with differentiated abilities.
+
+  - **John L. Horn — Expansion of Cattell’s model**
+    - Rejected a single dominant g-factor.
+    - Proposed multiple broad cognitive abilities.
+    - Emphasized multidimensional structure.
+
+  - **John B. Carroll (1993) — Three-Stratum Theory**
+    - Large-scale reanalysis of factor-analytic studies.
+    - Proposed hierarchical model:
+    - Stratum III: general factor (g)
+    - Stratum II: broad abilities (Gf, Gc, memory, processing speed, etc.)
+    - Stratum I: narrow specific abilities
+
+  - **Modern synthesis — CHC Theory**
+    - Cattell–Horn–Carroll (CHC) model.
+    - Hierarchical structure:
+      general intelligence at the top,
+      broad abilities beneath,
+      specific skills at the bottom.
+    - Forms the theoretical basis of most modern IQ tests.
+
+  - **Conceptual evolution**
+    - From unitary intelligence (Spearman),
+      to multifactor models (Thurstone),
+      to hierarchical integration (CHC).
+    - Modern view:
+      intelligence is structured and multidimensional,
+      yet shows a robust general factor.
+
+- **The Cattell–Horn–Carroll (CHC) theory of intelligence**
+  > *A widely influential integrative framework in contemporary psychometrics, synthesizing decades of factor-analytic research
+  into a hierarchical model of cognitive abilities.*
+  - **A three-stratum structure**
+    - The defining feature of the CHC model is its three-stratum hierarchy: ![three-stratum hierarchy](../Images/CHC-intelligence-model.png)
+    - **Stratum I – Narrow abilities**  
+    Highly specific cognitive skills measured by individual test items
+    (e.g. particular memory tasks, visual discriminations, arithmetic operations).
+    - **Stratum II – Broad abilities**  
+    General cognitive domains that organize and explain correlations
+    among narrow abilities.
+    - **Stratum III – General intelligence**  
+    A single, overarching factor (*g*),
+    capturing the shared variance across all broad abilities.
+  - **Relation to psychometric testing**
+    - The CHC framework underlies many modern standardized intelligence tests.
+    - Individual subtests are designed to measure **narrow abilities**,
+    - which aggregate into **broad ability scores**,
+    - and ultimately contribute to an estimate of **general intelligence**.
+    - As such, the CHC theory serves as a **bridge**
+  between empirical testing, cognitive structure,
+  and theoretical models of intelligence.
+
+- **Stratum II – Broad abilities**
+
+  > The core explanatory level of the CHC theory lies in **broad abilities**,
+  which represent major functional components of human intelligence:
+
+  - **Comprehension–Knowledge (Gc)**  
+    The ability to use acquired knowledge for communication, reasoning,
+    and understanding of culturally transmitted information.
+    Strongly associated with language, education, and expertise.
+
+  - **Fluid Reasoning (Gf)**  
+    Capacity for reasoning, abstraction, and concept formation
+    in novel situations where prior knowledge is insufficient.
+
+  - **Quantitative Knowledge (Gq)**  
+    Understanding of numerical concepts, quantities, and mathematical relations,
+    shaped by both schooling and practice.
+
+  - **Reading and Writing Ability (Grw)**  
+    Skills related to decoding, comprehension, and production of written language.
+
+  - **Short-Term Memory (Gsm)**  
+    Ability to maintain and manipulate information
+    over a time span of a few seconds.
+
+  - **Long-Term Storage and Retrieval (Glr)**  
+    Capacity for storing information in long-term memory
+    and retrieving it efficiently, including associative fluency and creativity.
+
+  - **Visual Processing (Gv)**  
+    Ability to perceive, analyze, and mentally manipulate visual information,
+    such as spatial relations and patterns.
+
+  - **Auditory Processing (Ga)**  
+    Sensitivity to auditory information, including speech perception,
+    phonological processing, and sound discrimination.
+
+  - **Processing Speed (Gs)**  
+    Efficiency in performing automatic or well-learned cognitive tasks,
+    particularly under time pressure,
+    typically on a scale of several minutes.
+
+  - **Decision / Reaction Time / Speed (Gt)**  
+    Speed of making simple decisions or responses,
+    operating on sub-second time scales.
+
+
+
+__END__
+  - **the difficulty of definition**  
+    - Despite its central role, intelligence is notoriously hard to define.
+    - No single definition captures all aspects,
+    and different psychological traditions emphasize different components.
+  - **common abilities representing intelligence**
+    - abstraction
+    - learning
+    - reasoning
+    - planning
+    - problem solving
+
+
+
+
+
 
 ## Piaget's works
 
@@ -328,123 +465,6 @@ New York: Basic Books.
 
 ---
 
-- **The Cattell–Horn–Carroll (CHC) theory of intelligence**
-
-> *A widely influential integrative framework in contemporary psychometrics, synthesizing decades of factor-analytic research
-  into a hierarchical model of cognitive abilities.*
-
-
-- **A three-stratum structure**
-
-  The defining feature of the CHC model is its **three-stratum hierarchy**:
-
-  - **Stratum I – Narrow abilities**  
-    Highly specific cognitive skills measured by individual test items
-    (e.g. particular memory tasks, visual discriminations, arithmetic operations).
-
-  - **Stratum II – Broad abilities**  
-    General cognitive domains that organize and explain correlations
-    among narrow abilities.
-
-  - **Stratum III – General intelligence**  
-    A single, overarching factor (*g*),
-    capturing the shared variance across all broad abilities.
-
-  This structure preserves the empirical success of general intelligence
-  while explicitly recognizing the internal differentiation of cognition.
-
-![alt text](../Images/CHC-intelligence-model.png)
----
-
-- **Broad abilities (Stratum II)**
-
-  The core explanatory level of the CHC theory lies in **broad abilities**,
-  which represent major functional components of human intelligence:
-
-  - **Comprehension–Knowledge (Gc)**  
-    The ability to use acquired knowledge for communication, reasoning,
-    and understanding of culturally transmitted information.
-    Strongly associated with language, education, and expertise.
-
-  - **Fluid Reasoning (Gf)**  
-    Capacity for reasoning, abstraction, and concept formation
-    in novel situations where prior knowledge is insufficient.
-
-  - **Quantitative Knowledge (Gq)**  
-    Understanding of numerical concepts, quantities, and mathematical relations,
-    shaped by both schooling and practice.
-
-  - **Reading and Writing Ability (Grw)**  
-    Skills related to decoding, comprehension, and production of written language.
-
-  - **Short-Term Memory (Gsm)**  
-    Ability to maintain and manipulate information
-    over a time span of a few seconds.
-
-  - **Long-Term Storage and Retrieval (Glr)**  
-    Capacity for storing information in long-term memory
-    and retrieving it efficiently, including associative fluency and creativity.
-
-  - **Visual Processing (Gv)**  
-    Ability to perceive, analyze, and mentally manipulate visual information,
-    such as spatial relations and patterns.
-
-  - **Auditory Processing (Ga)**  
-    Sensitivity to auditory information, including speech perception,
-    phonological processing, and sound discrimination.
-
-  - **Processing Speed (Gs)**  
-    Efficiency in performing automatic or well-learned cognitive tasks,
-    particularly under time pressure,
-    typically on a scale of several minutes.
-
-  - **Decision / Reaction Time / Speed (Gt)**  
-    Speed of making simple decisions or responses,
-    operating on sub-second time scales.
-
----
-
-- **Relation to psychometric testing**
-
-  The CHC framework underlies many modern standardized intelligence tests.
-  Individual subtests are designed to measure **narrow abilities**,
-  which aggregate into **broad ability scores**,
-  and ultimately contribute to an estimate of **general intelligence**.
-
-  In this sense, CHC provides a principled explanation
-  for why IQ tests can yield both:
-  - a meaningful overall score, and
-  - informative cognitive profiles.
-
----
-
-- **Conceptual position**
-
-  Compared to other theories of intelligence:
-
-  - CHC retains a **general intelligence factor**, unlike Gardner’s theory,
-    but embeds it within a richly structured cognitive architecture.
-  - Unlike Piaget’s theory, CHC is not developmental in nature,
-    but focuses on the *organization* of abilities in mature cognition.
-  - In contrast to formal definitions such as Legg–Hutter intelligence,
-    CHC is explicitly grounded in psychometric measurement and human testing.
-
-  As such, the CHC theory serves as a **bridge**
-  between empirical testing, cognitive structure,
-  and theoretical models of intelligence.
-
----
-
-- **Interpretative value**
-
-  The CHC model supports the view that intelligence is:
-  - hierarchical rather than flat,
-  - differentiated rather than monolithic,
-  - yet unified at a higher level of abstraction.
-
-  This makes it particularly suitable
-  for connecting psychological theories of intelligence
-  with modern computational and AI-inspired perspectives.
 
 ## Kahneman and his System I and System II
 

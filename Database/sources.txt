@@ -5,6 +5,7 @@ general-AI-facts.md
 risks-and-benefits-of-AI.md
 ethical-issues-and-regulations.md
 history-of-AI.md
+intelligence-in-psychology.md
 
 #RAG-systems.md
 #attention-and-transformers.md
@@ -18,7 +19,6 @@ history-of-AI.md
 #evaluation.md
 #finding-features.md
 #generative-networks.md
-#intelligence-in-psychology.md
 #intelligence.md
 #math-basics.md
 #math_tricks.md

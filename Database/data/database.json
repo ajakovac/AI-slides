@@ -2,7 +2,9 @@
     "$system": {
         "link_separator": "\u001e",
         "item_separator": "\u001f",
-        "unresolved_links": []
+        "unresolved_links": [
+            "kahneman-and-his-system-i-and-system-ii"
+        ]
     },
     "content-of-the-ai-course": {
         "$links": [],
@@ -19,7 +21,8 @@
             "\u001ekeyword\u001flearning in the AI era\u001flearning-in-the-ai-era\u001e",
             "introduction: \u001ekeyword\u001fgeneral facts about AI\u001fgeneral-facts-about-ai\u001e",
             "\u001ekeyword\u001fsocial and ethical aspects of artificial intelligence\u001fsocial-and-ethical-aspects-of-artificial-intelligence\u001e",
-            "\u001ekeyword\u001fa brief history of Artificial Intelligence\u001fa-brief-history-of-artificial-intelligence\u001e"
+            "\u001ekeyword\u001fa brief history of Artificial Intelligence\u001fa-brief-history-of-artificial-intelligence\u001e",
+            "\u001ekeyword\u001fHuman Intelligence: A Psychological Perspective\u001fhuman-intelligence:-a-psychological-perspective\u001e"
         ]
     },
     "about-the-introduction-to-ai-course": {
@@ -1676,6 +1679,273 @@
             "scale transforms capability,",
             "intelligence emerges from data, computation, and inductive bias working together.",
             "This era reframed intelligence not as explicit reasoning,    but as **learned, contextual representation**."
+        ]
+    },
+    "human-intelligence:-a-psychological-perspective": {
+        "$links": [
+            [
+                "content of the AI course",
+                "content-of-the-ai-course",
+                "walkthrough"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Human Intelligence: A Psychological Perspective",
+        ">remark": [
+            ">remark",
+            "*Before we ask whether machines are intelligent, we must ask what intelligence means for humans.*"
+        ],
+        "notes": [
+            "notes",
+            "\u001ekeyword\u001fSpearman and the definition of intelligence\u001fspearman-and-the-definition-of-intelligence\u001e",
+            "\u001ekeyword\u001fHistorical development of intelligence theory\u001fhistorical-development-of-intelligence-theory\u001e",
+            "\u001ekeyword\u001fthe Cattell\u2013Horn\u2013Carroll (CHC) theory of intelligence\u001fthe-cattell\u2013horn\u2013carroll-(chc)-theory-of-intelligence\u001e",
+            "Kahneman and his System I and System II"
+        ]
+    },
+    "spearman-and-the-definition-of-intelligence": {
+        "$links": [
+            [
+                "Human Intelligence: A Psychological Perspective",
+                "human-intelligence:-a-psychological-perspective",
+                "notes"
+            ]
+        ],
+        "$images": [
+            [
+                "A. Binet",
+                "A_Binet.png"
+            ],
+            [
+                "Ch. Spearman",
+                "Spearman.png"
+            ]
+        ],
+        "$keyword_name": "Spearman and the definition of intelligence",
+        "everyday-experience-and-consensus": [
+            "Everyday experience and consensus",
+            "Everyday experience suggests that intelligence is a meaningful concept.",
+            "People tend to agree, at least approximately, on relative judgments of intelligence:      there is a broad, though imperfect,      consensus about who is \u201cmore\u201d or \u201cless\u201d intelligent.",
+            "This pragmatic agreement motivates attempts to measure intelligence quantitatively."
+        ],
+        "first-intelligence-measurements": [
+            "First intelligence measurements",
+            "A. Binet's intelligence test (1905) \u001eimage\u001fA. Binet\u001fA_Binet.png\u001e",
+            "Mental age: comparing a child\u2019s performance to age norms.",
+            "Practical goal: identify students needing educational support.",
+            "Not intended as a measurement of a fixed, innate general intelligence."
+        ],
+        "spearman's-g-factor": [
+            "Spearman's g-factor",
+            "\u001eimage\u001fCh. Spearman\u001fSpearman.png\u001e was one of the founders of modern psychometrics.",
+            "Scores on very different cognitive tests are positively correlated (vocabulary and reasoning, memory and spatial ability, arithmetic and verbal skills) \u2192 **positive manifold**.",
+            "Spearman (1904): intelligence has an underlying structure \u2014 a **General Intelligence Factor (g)**.",
+            "Factor-analytic model: $X_i = \\lambda_i g + \\epsilon_i$      where $\\lambda_i$ is the loading of test $i$ on $g$,      and $\\epsilon_i$ represents test-specific variance and measurement error."
+        ],
+        "psychometric-intelligence-and-iq": [
+            "Psychometric intelligence and IQ",
+            "Modern IQ tests are constructed using factor-analytic methods to approximate general intelligence ($g$).",
+            "Full Scale IQ is an estimate of general ability.",
+            "Standardized: mean = 100, standard deviation = 15.",
+            "Widely used batteries: Wechsler scales (adult, children, preschool versions)."
+        ],
+        "law-of-diminishing-returns": [
+            "Law of diminishing returns",
+            "Correlations between cognitive tests tend to decrease as ability increases.",
+            "The proportion of variance explained by $g$ decreases at higher ability levels.",
+            "\u001ekeyword\u001fSpearman\u2019s Law of Diminishing Returns (SLODR)\u001fspearman\u2019s-law-of-diminishing-returns-(slodr)\u001e."
+        ],
+        "intelligence-as-a-non-monolithic-construct": [
+            "Intelligence as a non-monolithic construct",
+            "Modern psychology views intelligence as hierarchically structured.",
+            "A general factor ($g$) sits at the top, beneath which lie broad abilities      (e.g., verbal, spatial, memory, processing speed).",
+            "These components may develop at different rates and manifest differently across individuals.",
+            "A single numerical score cannot fully capture this complexity."
+        ]
+    },
+    "spearman\u2019s-law-of-diminishing-returns-(slodr)": {
+        "$links": [
+            [
+                "Spearman and the definition of intelligence",
+                "spearman-and-the-definition-of-intelligence",
+                "law-of-diminishing-returns"
+            ]
+        ],
+        "$images": [
+            [
+                "IQ vs. correlation",
+                "blum_holling_IQ_vs_other.png"
+            ]
+        ],
+        "$keyword_name": "Spearman\u2019s Law of Diminishing Returns (SLODR)",
+        "core-claim": [
+            "Core Claim",
+            "As general cognitive ability increases, correlations between different cognitive tests decrease.",
+            "The proportion of shared variance explained by $g$ declines at higher ability levels."
+        ],
+        "lower-ability": [
+            "Lower ability",
+            "Stronger inter-test correlations",
+            "Higher $g$-saturation \u2192 larger loadings on $g$",
+            "Performance more strongly driven by general intelligence"
+        ],
+        "higher-ability": [
+            "Higher ability",
+            "Weaker inter-test correlations",
+            "Lower $g$-saturation \u2192 smaller loadings on $g$",
+            "Greater differentiation of specific abilities"
+        ],
+        "paper": [
+            "Paper",
+            "Blum & Holling (2017): *Spearman\u2019s Law of Diminishing Returns. A Meta-Analysis*",
+            "Plot: relation between subgroup mean IQ (x-axis) and average inter-test correlation (y-axis),      with regression line illustrating decreasing trend.      \u001eimage\u001fIQ vs. correlation\u001fblum_holling_IQ_vs_other.png\u001e"
+        ],
+        "book-in-hungarian": [
+            "Book in Hungarian",
+            "\u001eexternal-link\u001fM\u00e9r\u0151 L\u00e1szl\u00f3: *Az \u00e9rzelmek logik\u00e1ja*\u001fhttps://www.scribd.com/document/811514880/Mer%C5%91-Laszlo-Az-Erzelmek-Logikaja\u001e"
+        ],
+        "correlation-with-life-outcomes": [
+            "Correlation with life outcomes",
+            "IQ correlates moderately with academic performance and occupational status.",
+            "Very low IQ significantly constrains educational and occupational opportunities.",
+            "High IQ does not guarantee success; non-cognitive factors (motivation, personality, environment)      also play substantial roles."
+        ]
+    },
+    "historical-development-of-intelligence-theory": {
+        "$links": [
+            [
+                "Human Intelligence: A Psychological Perspective",
+                "human-intelligence:-a-psychological-perspective",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Historical development of intelligence theory",
+        "alfred-binet-(1905)-\u2014-practical-measurement": [
+            "Alfred Binet (1905) \u2014 Practical measurement",
+            "Developed the first modern intelligence test.",
+            "Introduced the concept of *mental age*.",
+            "Goal: identify children needing educational support.",
+            "Did not propose a formal theory of general intelligence."
+        ],
+        "charles-spearman-(1904)-\u2014-general-intelligence-(g)": [
+            "Charles Spearman (1904) \u2014 General intelligence (g)",
+            "Observed the *positive manifold*: different cognitive tests are positively correlated.",
+            "Proposed a **General Intelligence Factor (g)**.",
+            "Introduced early factor analysis.",
+            "Two-factor theory: $g$ (general) + $s$ (specific abilities)."
+        ],
+        "louis-l.-thurstone-(1930s)-\u2014-primary-mental-abilities": [
+            "Louis L. Thurstone (1930s) \u2014 Primary Mental Abilities",
+            "Challenged the dominance of a single general factor.",
+            "Proposed several relatively independent abilities: verbal, numerical, spatial, memory, reasoning, etc.",
+            "Developed multiple-factor analytic methods.",
+            "Emphasized differentiation of cognitive abilities."
+        ],
+        "raymond-cattell-(1940s\u20131960s)-\u2014-fluid-and-crystallized-intelligence": [
+            "Raymond Cattell (1940s\u20131960s) \u2014 Fluid and Crystallized Intelligence",
+            "abstract reasoning, problem solving.",
+            "acquired knowledge and skills.",
+            "Integrated Spearman\u2019s g with differentiated abilities."
+        ],
+        "john-l.-horn-\u2014-expansion-of-cattell\u2019s-model": [
+            "John L. Horn \u2014 Expansion of Cattell\u2019s model",
+            "Rejected a single dominant g-factor.",
+            "Proposed multiple broad cognitive abilities.",
+            "Emphasized multidimensional structure."
+        ],
+        "john-b.-carroll-(1993)-\u2014-three-stratum-theory": [
+            "John B. Carroll (1993) \u2014 Three-Stratum Theory",
+            "Large-scale reanalysis of factor-analytic studies.",
+            "Proposed hierarchical model:",
+            "Stratum III: general factor (g)",
+            "Stratum II: broad abilities (Gf, Gc, memory, processing speed, etc.)",
+            "Stratum I: narrow specific abilities"
+        ],
+        "modern-synthesis-\u2014-chc-theory": [
+            "Modern synthesis \u2014 CHC Theory",
+            "Cattell\u2013Horn\u2013Carroll (CHC) model.",
+            "Hierarchical structure: general intelligence at the top,      broad abilities beneath,      specific skills at the bottom.",
+            "Forms the theoretical basis of most modern IQ tests."
+        ],
+        "conceptual-evolution": [
+            "Conceptual evolution",
+            "From unitary intelligence (Spearman), to multifactor models (Thurstone),      to hierarchical integration (CHC).",
+            "Modern view: intelligence is structured and multidimensional,      yet shows a robust general factor."
+        ]
+    },
+    "the-cattell\u2013horn\u2013carroll-(chc)-theory-of-intelligence": {
+        "$links": [
+            [
+                "Human Intelligence: A Psychological Perspective",
+                "human-intelligence:-a-psychological-perspective",
+                "notes"
+            ]
+        ],
+        "$images": [
+            [
+                "three-stratum hierarchy",
+                "CHC-intelligence-model.png"
+            ]
+        ],
+        "$keyword_name": "The Cattell\u2013Horn\u2013Carroll (CHC) theory of intelligence",
+        ">remark": [
+            ">remark",
+            "*A widely influential integrative framework in contemporary psychometrics, synthesizing decades of factor-analytic research into a hierarchical model of cognitive abilities.*"
+        ],
+        "a-three-stratum-structure": [
+            "A three-stratum structure",
+            "The defining feature of the CHC model is its three-stratum hierarchy: \u001eimage\u001fthree-stratum hierarchy\u001fCHC-intelligence-model.png\u001e",
+            " Highly specific cognitive skills measured by individual test items    (e.g. particular memory tasks, visual discriminations, arithmetic operations).",
+            " General cognitive domains that organize and explain correlations    among narrow abilities.",
+            " A single, overarching factor (*g*),    capturing the shared variance across all broad abilities."
+        ],
+        "relation-to-psychometric-testing": [
+            "Relation to psychometric testing",
+            "The CHC framework underlies many modern standardized intelligence tests.",
+            "Individual subtests are designed to measure **narrow abilities**,",
+            "which aggregate into **broad ability scores**,",
+            "and ultimately contribute to an estimate of **general intelligence**.",
+            "As such, the CHC theory serves as a **bridge** between empirical testing, cognitive structure,  and theoretical models of intelligence."
+        ]
+    },
+    "stratum-ii-\u2013-broad-abilities": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "Stratum II \u2013 Broad abilities",
+        ">remark": [
+            ">remark",
+            "The core explanatory level of the CHC theory lies in **broad abilities**, which represent major functional components of human intelligence:"
+        ],
+        "comprehension\u2013knowledge-(gc)": [
+            "Comprehension\u2013Knowledge (Gc) The ability to use acquired knowledge for communication, reasoning,    and understanding of culturally transmitted information.    Strongly associated with language, education, and expertise."
+        ],
+        "fluid-reasoning-(gf)": [
+            "Fluid Reasoning (Gf) Capacity for reasoning, abstraction, and concept formation    in novel situations where prior knowledge is insufficient."
+        ],
+        "quantitative-knowledge-(gq)": [
+            "Quantitative Knowledge (Gq) Understanding of numerical concepts, quantities, and mathematical relations,    shaped by both schooling and practice."
+        ],
+        "reading-and-writing-ability-(grw)": [
+            "Reading and Writing Ability (Grw) Skills related to decoding, comprehension, and production of written language."
+        ],
+        "short-term-memory-(gsm)": [
+            "Short-Term Memory (Gsm) Ability to maintain and manipulate information    over a time span of a few seconds."
+        ],
+        "long-term-storage-and-retrieval-(glr)": [
+            "Long-Term Storage and Retrieval (Glr) Capacity for storing information in long-term memory    and retrieving it efficiently, including associative fluency and creativity."
+        ],
+        "visual-processing-(gv)": [
+            "Visual Processing (Gv) Ability to perceive, analyze, and mentally manipulate visual information,    such as spatial relations and patterns."
+        ],
+        "auditory-processing-(ga)": [
+            "Auditory Processing (Ga) Sensitivity to auditory information, including speech perception,    phonological processing, and sound discrimination."
+        ],
+        "processing-speed-(gs)": [
+            "Processing Speed (Gs) Efficiency in performing automatic or well-learned cognitive tasks,    particularly under time pressure,    typically on a scale of several minutes."
+        ],
+        "decision-/-reaction-time-/-speed-(gt)": [
+            "Decision / Reaction Time / Speed (Gt) Speed of making simple decisions or responses,    operating on sub-second time scales."
         ]
     }
 }
