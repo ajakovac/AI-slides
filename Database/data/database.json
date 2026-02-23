@@ -2,9 +2,7 @@
     "$system": {
         "link_separator": "\u001e",
         "item_separator": "\u001f",
-        "unresolved_links": [
-            "kahneman-and-his-system-i-and-system-ii"
-        ]
+        "unresolved_links": []
     },
     "content-of-the-ai-course": {
         "$links": [],
@@ -1698,9 +1696,10 @@
         "notes": [
             "notes",
             "\u001ekeyword\u001fSpearman and the definition of intelligence\u001fspearman-and-the-definition-of-intelligence\u001e",
-            "\u001ekeyword\u001fHistorical development of intelligence theory\u001fhistorical-development-of-intelligence-theory\u001e",
-            "\u001ekeyword\u001fthe Cattell\u2013Horn\u2013Carroll (CHC) theory of intelligence\u001fthe-cattell\u2013horn\u2013carroll-(chc)-theory-of-intelligence\u001e",
-            "Kahneman and his System I and System II"
+            "\u001ekeyword\u001fIntelligence as a non-monolithic construct\u001fintelligence-as-a-non-monolithic-construct\u001e",
+            "\u001ekeyword\u001fThe Cattell\u2013Horn\u2013Carroll (CHC) theory of intelligence\u001fthe-cattell\u2013horn\u2013carroll-(chc)-theory-of-intelligence\u001e",
+            "\u001ekeyword\u001fLaw of Diminishing Returns\u001flaw-of-diminishing-returns\u001e",
+            "\u001ekeyword\u001fKahneman and his System I and System II\u001fkahneman-and-his-system-i-and-system-ii\u001e"
         ]
     },
     "spearman-and-the-definition-of-intelligence": {
@@ -1709,6 +1708,11 @@
                 "Human Intelligence: A Psychological Perspective",
                 "human-intelligence:-a-psychological-perspective",
                 "notes"
+            ],
+            [
+                "Intelligence as a non-monolithic construct",
+                "intelligence-as-a-non-monolithic-construct",
+                "conceptual-evolution"
             ]
         ],
         "$images": [
@@ -1748,27 +1752,135 @@
             "Full Scale IQ is an estimate of general ability.",
             "Standardized: mean = 100, standard deviation = 15.",
             "Widely used batteries: Wechsler scales (adult, children, preschool versions)."
+        ]
+    },
+    "intelligence-as-a-non-monolithic-construct": {
+        "$links": [
+            [
+                "Human Intelligence: A Psychological Perspective",
+                "human-intelligence:-a-psychological-perspective",
+                "notes"
+            ]
         ],
-        "law-of-diminishing-returns": [
-            "Law of diminishing returns",
-            "Correlations between cognitive tests tend to decrease as ability increases.",
-            "The proportion of variance explained by $g$ decreases at higher ability levels.",
-            "\u001ekeyword\u001fSpearman\u2019s Law of Diminishing Returns (SLODR)\u001fspearman\u2019s-law-of-diminishing-returns-(slodr)\u001e."
+        "$images": [],
+        "$keyword_name": "Intelligence as a non-monolithic construct",
+        "conceptual-evolution": [
+            "Conceptual evolution",
+            "From unitary intelligence (\u001ekeyword\u001fSpearman and the definition of intelligence\u001fspearman-and-the-definition-of-intelligence\u001e),",
+            "to multifactor models (Thurstone),",
+            "to the modern view"
         ],
-        "intelligence-as-a-non-monolithic-construct": [
-            "Intelligence as a non-monolithic construct",
+        "louis-l.-thurstone-(1930s)-\u2014-primary-mental-abilities": [
+            "Louis L. Thurstone (1930s) \u2014 Primary Mental Abilities",
+            "Challenged the dominance of a single general factor.",
+            "Proposed several relatively independent abilities: verbal, numerical, spatial, memory, reasoning, etc.",
+            "Developed multiple-factor analytic methods.",
+            "Emphasized differentiation of cognitive abilities."
+        ],
+        "modern-view": [
+            "Modern view",
             "Modern psychology views intelligence as hierarchically structured.",
             "A general factor ($g$) sits at the top, beneath which lie broad abilities      (e.g., verbal, spatial, memory, processing speed).",
             "These components may develop at different rates and manifest differently across individuals.",
-            "A single numerical score cannot fully capture this complexity."
+            "A single numerical score cannot fully capture this complexity. intelligence is structured and multidimensional,      yet shows a robust general factor."
         ]
     },
-    "spearman\u2019s-law-of-diminishing-returns-(slodr)": {
+    "the-cattell\u2013horn\u2013carroll-(chc)-theory-of-intelligence": {
         "$links": [
             [
-                "Spearman and the definition of intelligence",
-                "spearman-and-the-definition-of-intelligence",
-                "law-of-diminishing-returns"
+                "Human Intelligence: A Psychological Perspective",
+                "human-intelligence:-a-psychological-perspective",
+                "notes"
+            ]
+        ],
+        "$images": [
+            [
+                "three-stratum hierarchy",
+                "CHC-intelligence-model.png"
+            ]
+        ],
+        "$keyword_name": "The Cattell\u2013Horn\u2013Carroll (CHC) theory of intelligence",
+        ">remark": [
+            ">remark",
+            "*A widely influential integrative framework in contemporary psychometrics, synthesizing decades of factor-analytic research into a hierarchical model of cognitive abilities.*"
+        ],
+        "a-three-stratum-structure": [
+            "A three-stratum structure",
+            "The defining feature of the CHC model is its three-stratum hierarchy: \u001eimage\u001fthree-stratum hierarchy\u001fCHC-intelligence-model.png\u001e",
+            "Stratum I \u2013 Narrow abilities: highly specific cognitive skills measured by individual test items (e.g. particular memory tasks, visual discriminations, arithmetic operations).",
+            "\u001ekeyword\u001fStratum II \u2013 Broad abilities\u001fstratum-ii-\u2013-broad-abilities\u001e: general cognitive domains that organize and explain correlations among narrow abilities.",
+            "Stratum III \u2013 General intelligence: A single, overarching factor (*g*),    capturing the shared variance across all broad abilities."
+        ],
+        "relation-to-psychometric-testing": [
+            "Relation to psychometric testing",
+            "The CHC framework underlies many modern standardized intelligence tests.",
+            "Individual subtests are designed to measure **narrow abilities**,",
+            "which aggregate into **broad ability scores**,",
+            "and ultimately contribute to an estimate of **general intelligence**.",
+            "As such, the CHC theory serves as a **bridge** between empirical testing, cognitive structure,  and theoretical models of intelligence."
+        ]
+    },
+    "stratum-ii-\u2013-broad-abilities": {
+        "$links": [
+            [
+                "The Cattell\u2013Horn\u2013Carroll (CHC) theory of intelligence",
+                "the-cattell\u2013horn\u2013carroll-(chc)-theory-of-intelligence",
+                "a-three-stratum-structure"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Stratum II \u2013 Broad abilities",
+        ">remark": [
+            ">remark",
+            "The core explanatory level of the CHC theory lies in **broad abilities**, which represent major functional components of human intelligence:"
+        ],
+        "comprehension\u2013knowledge-(gc)": [
+            "Comprehension\u2013Knowledge (Gc)",
+            "The ability to use acquired knowledge for communication, reasoning, and understanding of culturally transmitted information.    Strongly associated with language, education, and expertise."
+        ],
+        "fluid-reasoning-(gf)": [
+            "Fluid Reasoning (Gf)",
+            "Capacity for reasoning, abstraction, and concept formation in novel situations where prior knowledge is insufficient."
+        ],
+        "quantitative-knowledge-(gq)": [
+            "Quantitative Knowledge (Gq)",
+            "Understanding of numerical concepts, quantities, and mathematical relations, shaped by both schooling and practice."
+        ],
+        "reading-and-writing-ability-(grw)": [
+            "Reading and Writing Ability (Grw)",
+            "Skills related to decoding, comprehension, and production of written language."
+        ],
+        "short-term-memory-(gsm)": [
+            "Short-Term Memory (Gsm)",
+            "Ability to maintain and manipulate information over a time span of a few seconds."
+        ],
+        "long-term-storage-and-retrieval-(glr)": [
+            "Long-Term Storage and Retrieval (Glr)",
+            "Capacity for storing information in long-term memory and retrieving it efficiently, including associative fluency and creativity."
+        ],
+        "visual-processing-(gv)": [
+            "Visual Processing (Gv)",
+            "Ability to perceive, analyze, and mentally manipulate visual information, such as spatial relations and patterns."
+        ],
+        "auditory-processing-(ga)": [
+            "Auditory Processing (Ga)",
+            "Sensitivity to auditory information, including speech perception, phonological processing, and sound discrimination."
+        ],
+        "processing-speed-(gs)": [
+            "Processing Speed (Gs)",
+            "Efficiency in performing automatic or well-learned cognitive tasks, particularly under time pressure,    typically on a scale of several minutes."
+        ],
+        "decision-/-reaction-time-/-speed-(gt)": [
+            "Decision / Reaction Time / Speed (Gt)",
+            "Speed of making simple decisions or responses, operating on sub-second time scales."
+        ]
+    },
+    "law-of-diminishing-returns": {
+        "$links": [
+            [
+                "Human Intelligence: A Psychological Perspective",
+                "human-intelligence:-a-psychological-perspective",
+                "notes"
             ]
         ],
         "$images": [
@@ -1777,7 +1889,7 @@
                 "blum_holling_IQ_vs_other.png"
             ]
         ],
-        "$keyword_name": "Spearman\u2019s Law of Diminishing Returns (SLODR)",
+        "$keyword_name": "Law of Diminishing Returns",
         "core-claim": [
             "Core Claim",
             "As general cognitive ability increases, correlations between different cognitive tests decrease.",
@@ -1804,14 +1916,45 @@
             "Book in Hungarian",
             "\u001eexternal-link\u001fM\u00e9r\u0151 L\u00e1szl\u00f3: *Az \u00e9rzelmek logik\u00e1ja*\u001fhttps://www.scribd.com/document/811514880/Mer%C5%91-Laszlo-Az-Erzelmek-Logikaja\u001e"
         ],
-        "correlation-with-life-outcomes": [
-            "Correlation with life outcomes",
-            "IQ correlates moderately with academic performance and occupational status.",
+        "goodhart's-law": [
+            "Goodhart's law",
+            "economics origin",
+            "When a measure becomes a target, it ceases to be a good measure",
+            "mechanism: actors optimize for that metric",
+            "consequence: measures corrupt systems to follow artificial goals"
+        ],
+        "campbell's-law": [
+            "Campbell's law",
+            "The more a quantitative social indicator is used for decision-making, the more it will be subject to corruption pressuresand distort the processes it is intended to monitor.",
+            "Campbell\u2019s Law is essentially the sociological formulation of Goodhart\u2019s Law."
+        ],
+        "examples-for-goodhart's-and-campbell\u2019s-law": [
+            "examples for Goodhart's and Campbell\u2019s law",
+            "University rankings",
+            "Citation metrics",
+            "Standardized exams",
+            "Academic performance factors (impact factors, h-index, performance assessment)",
+            "Hiring"
+        ],
+        "barab\u00e1si's-work": [
+            "Barab\u00e1si's work",
+            "\u001eexternal-link\u001fThe Formula: The Universal Laws of Success\u001fhttps://ia600709.us.archive.org/11/items/psicology/The%20Formula_%20The%20Universal%20Laws%20of%20Success%20-%20Albert-Laszlo%20Barabasi.pdf\u001e",
+            "Performance (result) \u2192 what you objectively produce",
+            "Success \u2192 how the network perceives and rewards that performance",
+            "Performance is individual; success is collective.",
+            "Success follows network laws.",
+            "Cumulative advantage (\u201cthe rich get richer\u201d).",
+            "Early recognition amplifies later success.",
+            "In creative fields, performance variance may be small, but success variance is huge."
+        ],
+        "take-home-message": [
+            "Take home message",
             "Very low IQ significantly constrains educational and occupational opportunities.",
-            "High IQ does not guarantee success; non-cognitive factors (motivation, personality, environment)      also play substantial roles."
+            "High IQ (or other success factor) does not measure the value of the work, and does not guarantee sensible work.",
+            "\u001eexternal-link\u001fJim Collins: Good to Great\u001fhttps://www.perlego.com/paid/book/3577811/book-review-good-to-great-by-jim-collins-learn-how-companies-achieve-excellence-pdf\u001e"
         ]
     },
-    "historical-development-of-intelligence-theory": {
+    "kahneman-and-his-system-i-and-system-ii": {
         "$links": [
             [
                 "Human Intelligence: A Psychological Perspective",
@@ -1820,132 +1963,289 @@
             ]
         ],
         "$images": [],
-        "$keyword_name": "Historical development of intelligence theory",
-        "alfred-binet-(1905)-\u2014-practical-measurement": [
-            "Alfred Binet (1905) \u2014 Practical measurement",
-            "Developed the first modern intelligence test.",
-            "Introduced the concept of *mental age*.",
-            "Goal: identify children needing educational support.",
-            "Did not propose a formal theory of general intelligence."
+        "$keyword_name": "Kahneman and his System I and System II",
+        ">remark": [
+            ">remark",
+            "*Kahneman distinguishes between two fundamentally different modes of thinking. These are not separate brain regions,  but descriptive labels for characteristic cognitive processes.*"
         ],
-        "charles-spearman-(1904)-\u2014-general-intelligence-(g)": [
-            "Charles Spearman (1904) \u2014 General intelligence (g)",
-            "Observed the *positive manifold*: different cognitive tests are positively correlated.",
-            "Proposed a **General Intelligence Factor (g)**.",
-            "Introduced early factor analysis.",
-            "Two-factor theory: $g$ (general) + $s$ (specific abilities)."
+        "d.-kahneman": [
+            "D. Kahneman",
+            "1934-2024",
+            "cognitive psychologist who fundamentally changed how we understand decision making under uncertainty.",
+            "Nobel Prize in Economics (2002) for integrating psychological insights into economic theory (behavioral economics)",
+            "\u001eexternal-link\u001fThinking, Fast and Slow (2011)\u001fhttps://drive.google.com/file/d/0B7y91D08k6X8RkRranBfd05fTEU/view?resourcekey=0-dYgxzjaJ0yMVuRZ1PMdP3A\u001e"
         ],
-        "louis-l.-thurstone-(1930s)-\u2014-primary-mental-abilities": [
-            "Louis L. Thurstone (1930s) \u2014 Primary Mental Abilities",
-            "Challenged the dominance of a single general factor.",
-            "Proposed several relatively independent abilities: verbal, numerical, spatial, memory, reasoning, etc.",
-            "Developed multiple-factor analytic methods.",
-            "Emphasized differentiation of cognitive abilities."
+        "system-i": [
+            "System I",
+            "fast, intuitive thinking",
+            "\u001ekeyword\u001fSystem I\u001fsystem-i\u001e"
         ],
-        "raymond-cattell-(1940s\u20131960s)-\u2014-fluid-and-crystallized-intelligence": [
-            "Raymond Cattell (1940s\u20131960s) \u2014 Fluid and Crystallized Intelligence",
-            "abstract reasoning, problem solving.",
-            "acquired knowledge and skills.",
-            "Integrated Spearman\u2019s g with differentiated abilities."
+        "system-ii": [
+            "System II",
+            "slow, deliberative thinking",
+            "\u001ekeyword\u001fSystem II\u001fsystem-ii\u001e"
         ],
-        "john-l.-horn-\u2014-expansion-of-cattell\u2019s-model": [
-            "John L. Horn \u2014 Expansion of Cattell\u2019s model",
-            "Rejected a single dominant g-factor.",
-            "Proposed multiple broad cognitive abilities.",
-            "Emphasized multidimensional structure."
-        ],
-        "john-b.-carroll-(1993)-\u2014-three-stratum-theory": [
-            "John B. Carroll (1993) \u2014 Three-Stratum Theory",
-            "Large-scale reanalysis of factor-analytic studies.",
-            "Proposed hierarchical model:",
-            "Stratum III: general factor (g)",
-            "Stratum II: broad abilities (Gf, Gc, memory, processing speed, etc.)",
-            "Stratum I: narrow specific abilities"
-        ],
-        "modern-synthesis-\u2014-chc-theory": [
-            "Modern synthesis \u2014 CHC Theory",
-            "Cattell\u2013Horn\u2013Carroll (CHC) model.",
-            "Hierarchical structure: general intelligence at the top,      broad abilities beneath,      specific skills at the bottom.",
-            "Forms the theoretical basis of most modern IQ tests."
-        ],
-        "conceptual-evolution": [
-            "Conceptual evolution",
-            "From unitary intelligence (Spearman), to multifactor models (Thurstone),      to hierarchical integration (CHC).",
-            "Modern view: intelligence is structured and multidimensional,      yet shows a robust general factor."
+        "interaction-between-the-systems": [
+            "Interaction between the systems",
+            "\u001ekeyword\u001fInteraction between the systems\u001finteraction-between-the-systems\u001e"
         ]
     },
-    "the-cattell\u2013horn\u2013carroll-(chc)-theory-of-intelligence": {
+    "system-i": {
         "$links": [
             [
-                "Human Intelligence: A Psychological Perspective",
-                "human-intelligence:-a-psychological-perspective",
-                "notes"
+                "Kahneman and his System I and System II",
+                "kahneman-and-his-system-i-and-system-ii",
+                "system-i"
             ]
         ],
-        "$images": [
-            [
-                "three-stratum hierarchy",
-                "CHC-intelligence-model.png"
-            ]
+        "$images": [],
+        "$keyword_name": "System I",
+        "properties": [
+            "properties",
+            "fast and automatic,",
+            "intuitive and heuristic-based,",
+            "largely unconscious,",
+            "effortless in terms of mental energy",
+            "inherently error-prone, especially in complex or unfamiliar contexts: \u001ekeyword\u001fCharacteristic errors of System I\u001fcharacteristic-errors-of-system-i\u001e"
         ],
-        "$keyword_name": "The Cattell\u2013Horn\u2013Carroll (CHC) theory of intelligence",
-        ">remark": [
-            ">remark",
-            "*A widely influential integrative framework in contemporary psychometrics, synthesizing decades of factor-analytic research into a hierarchical model of cognitive abilities.*"
+        "it-is-responsible-for": [
+            "it is responsible for",
+            "rapid judgments,",
+            "pattern recognition,",
+            "emotional reactions,",
+            "\u001ekeyword\u001fdecision making\u001fdecision-making-and-argumentation\u001e based on gut feelings"
         ],
-        "a-three-stratum-structure": [
-            "A three-stratum structure",
-            "The defining feature of the CHC model is its three-stratum hierarchy: \u001eimage\u001fthree-stratum hierarchy\u001fCHC-intelligence-model.png\u001e",
-            " Highly specific cognitive skills measured by individual test items    (e.g. particular memory tasks, visual discriminations, arithmetic operations).",
-            " General cognitive domains that organize and explain correlations    among narrow abilities.",
-            " A single, overarching factor (*g*),    capturing the shared variance across all broad abilities."
+        "resource-requirements": [
+            "resource requirements",
+            "requires few resources",
+            "allows parallel operation"
         ],
-        "relation-to-psychometric-testing": [
-            "Relation to psychometric testing",
-            "The CHC framework underlies many modern standardized intelligence tests.",
-            "Individual subtests are designed to measure **narrow abilities**,",
-            "which aggregate into **broad ability scores**,",
-            "and ultimately contribute to an estimate of **general intelligence**.",
-            "As such, the CHC theory serves as a **bridge** between empirical testing, cognitive structure,  and theoretical models of intelligence."
+        "examples": [
+            "examples",
+            "driving a car after sufficient practice,",
+            "riding a bicycle,",
+            "walking at a habitual pace"
+        ],
+        "training": [
+            "training",
+            "repetitive movements form System I (sports, martial arts, pingpong, etc)",
+            "slow training, fast action"
         ]
     },
-    "stratum-ii-\u2013-broad-abilities": {
-        "$links": [],
+    "system-ii": {
+        "$links": [
+            [
+                "Kahneman and his System I and System II",
+                "kahneman-and-his-system-i-and-system-ii",
+                "system-ii"
+            ]
+        ],
         "$images": [],
-        "$keyword_name": "Stratum II \u2013 Broad abilities",
+        "$keyword_name": "System II",
+        "properties": [
+            "properties",
+            "slow and effortful,",
+            "conscious and intentional,",
+            "capable of abstract and logical reasoning,",
+            "associated with self-control and critical evaluation."
+        ],
+        "resources": [
+            "resources",
+            "System II requires significantly more mental resources",
+            "uses model of reality",
+            "only one problem can be analized or contemplated about (self)"
+        ],
+        "this-system-is-engaged-in": [
+            "this system is engaged in",
+            "thinking",
+            "explicit problem solving,",
+            "mathematical reasoning,",
+            "careful \u001ekeyword\u001fdecision making\u001fdecision-making-and-argumentation\u001e,",
+            "consistency checking and error correction."
+        ]
+    },
+    "decision-making-and-argumentation": {
+        "$links": [
+            [
+                "System I",
+                "system-i",
+                "it-is-responsible-for"
+            ],
+            [
+                "System II",
+                "system-ii",
+                "this-system-is-engaged-in"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Decision making and argumentation",
+        "system-i": [
+            "System I",
+            "Based on intuition, heuristics",
+            "Operates effectively under time pressure and scarce information.",
+            "Dominates many real-world economic and social decisions.",
+            "Can produce systematic biases, especially in rare, high-impact events (c.f. \u001ekeyword\u001fcharacteristic errors of System I\u001fcharacteristic-errors-of-system-i\u001e, \"Black Swan\" misjudgments, \u001eexternal-link\u001fBlack Swan book\u001fhttps://dn720004.ca.archive.org/0/items/english-collections-1/Black%20Swan_%20The%20Impact%20of%20the%20Highly%20Improbable%2C%20The%20-%20Nassim%20Nicholas%20Taleb.pdf\u001e)."
+        ],
+        "system-ii": [
+            "System II",
+            "Based on analysing scenarions in mental world model (contemplation, thinking)",
+            "Operates on explicit internal representations (mental models) $\\to$ unique, personal",
+            "Often influenced by System I intuitions and may rationalize them post hoc."
+        ],
+        "negotiation": [
+            "Negotiation",
+            "Traditional view: opinions change through logical argumentation.",
+            "Empirical observation: beliefs are often resistant to change.",
+            "Reason: reasoning is strongly shaped by intuitive (System I) processes.",
+            "\u001ekeyword\u001fPost-hoc rationalization\u001fpost-hoc-rationalization\u001e: people construct explanations for decisions that were intuitively driven",
+            "Effective negotiation often involves emotional regulation, rapport, and reframing rather than purely logical persuasion \u001eexternal-link\u001fChris Voss: Never Split the Difference\u001fhttps://ia801801.us.archive.org/27/items/never-split-the-difference-negotiating-as-if-your-life-depended-on-it_202101/Never_Split_the_Difference_Negotiating_As_If_Your_Life_Depended.pdf\u001e"
+        ]
+    },
+    "post-hoc-rationalization": {
+        "$links": [
+            [
+                "Decision making and argumentation",
+                "decision-making-and-argumentation",
+                "negotiation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Post-hoc rationalization",
         ">remark": [
             ">remark",
-            "The core explanatory level of the CHC theory lies in **broad abilities**, which represent major functional components of human intelligence:"
+            "The tendency to construct explanations for decisions or actions *after* they have already been made."
         ],
-        "comprehension\u2013knowledge-(gc)": [
-            "Comprehension\u2013Knowledge (Gc) The ability to use acquired knowledge for communication, reasoning,    and understanding of culturally transmitted information.    Strongly associated with language, education, and expertise."
+        "notes": [
+            "notes",
+            "Often occurs when behavior is driven by intuitive (System I) or unconscious processes, while conscious reasoning (System II)    generates a coherent justification afterward.",
+            "The explanation feels sincere and convincing, even if it does not reflect the true causal mechanism."
         ],
-        "fluid-reasoning-(gf)": [
-            "Fluid Reasoning (Gf) Capacity for reasoning, abstraction, and concept formation    in novel situations where prior knowledge is insufficient."
+        "classic-demonstrations": [
+            "Classic demonstrations"
         ],
-        "quantitative-knowledge-(gq)": [
-            "Quantitative Knowledge (Gq) Understanding of numerical concepts, quantities, and mathematical relations,    shaped by both schooling and practice."
+        "post-hypnotic-suggestion": [
+            "Post-hypnotic suggestion",
+            "\u001eexternal-link\u001fHilgard: Divided Consciousness\u001fhttps://www.cambridge.org/core/journals/the-british-journal-of-psychiatry/article/abs/divided-consciousness-multiple-controls-in-human-thoughts-and-actions-expanded-edition-by-ernest-r-hilgard-chichester-john-wiley-sons-1986-pp-313-1850/4E828BA48D262446C537DBE61CC06192\u001e",
+            "Subjects perform an instructed action and later invent a reason for it.",
+            "A subject under hypnosis is instructed to perform an action later (e.g., open a window, move a book, cough).",
+            "After waking, the cue is given.",
+            "The subject performs the action.",
+            "When asked why, they give a plausible but false explanation (\u201cThe room felt stuffy.\u201d,   \u201cI just needed some air.\u201d)"
         ],
-        "reading-and-writing-ability-(grw)": [
-            "Reading and Writing Ability (Grw) Skills related to decoding, comprehension, and production of written language."
+        "split-brain-experiments": [
+            "Split-brain experiments",
+            "\u001eexternal-link\u001fGazzaniga, M. (1985). The Social Brain\u001fhttps://www.scribd.com/document/341262624/Michael-S-Gazzaniga-the-Social-Brain\u001e",
+            "Split brain patients act on information unavailable to conscious awareness, yet confidently explain their behavior.",
+            "The right hemisphere sees a command (\u201cWalk\u201d).",
+            "The patient stands up and walks.",
+            "When asked why, the left hemisphere (which did not see the instruction) invents an explanation (\u201cI\u2019m going to get a Coke.\u201d)"
         ],
-        "short-term-memory-(gsm)": [
-            "Short-Term Memory (Gsm) Ability to maintain and manipulate information    over a time span of a few seconds."
+        "choice-blindness": [
+            "Choice blindness",
+            "[Johansson, P. et al. (2005). Failure to detect mismatches between intention and outcome in a simple decision task.)(https://www.lucs.lu.se/fileadmin/user_upload/lucs/2011/01/Johansson-et-al.-2005-Failure-to-Detect-Mismatches-Between-Intention-and-Outcome-in-a-Simple-Decision-Task.pdf)",
+            "Participants chose which face they found more attractive.",
+            "Researchers secretly swapped the image.",
+            "Participants then explained in detail why they preferred the face they did not actually choose.",
+            "They gave elaborate reasons."
         ],
-        "long-term-storage-and-retrieval-(glr)": [
-            "Long-Term Storage and Retrieval (Glr) Capacity for storing information in long-term memory    and retrieving it efficiently, including associative fluency and creativity."
+        "psychological-mechanisms": [
+            "Psychological mechanisms",
+            "Desire for internal coherence",
+            "Cognitive dissonance reduction",
+            "Identity protection",
+            "Narrative construction of the self"
         ],
-        "visual-processing-(gv)": [
-            "Visual Processing (Gv) Ability to perceive, analyze, and mentally manipulate visual information,    such as spatial relations and patterns."
+        "implications": [
+            "Implications",
+            "Logical argumentation may often defend prior intuitions rather than generate them.",
+            "Belief revision is difficult when reasoning serves to justify, not to evaluate.",
+            "Important in politics, negotiation, moral reasoning, and everyday decision making."
+        ]
+    },
+    "interaction-between-the-systems": {
+        "$links": [
+            [
+                "Kahneman and his System I and System II",
+                "kahneman-and-his-system-i-and-system-ii",
+                "interaction-between-the-systems"
+            ]
         ],
-        "auditory-processing-(ga)": [
-            "Auditory Processing (Ga) Sensitivity to auditory information, including speech perception,    phonological processing, and sound discrimination."
+        "$images": [],
+        "$keyword_name": "Interaction between the systems",
+        "normal-cognition": [
+            "normal cognition",
+            "System I continuously generates impressions, intuitions, and tentative judgments",
+            "System II monitor, endorse, modify, or override them.",
+            "new tasks always start with System II"
         ],
-        "processing-speed-(gs)": [
-            "Processing Speed (Gs) Efficiency in performing automatic or well-learned cognitive tasks,    particularly under time pressure,    typically on a scale of several minutes."
+        "training": [
+            "training",
+            "System II $\\to$ System I",
+            "Often used tasks go to System I (car driving, riding a bike)",
+            "in fast decisions we often use System I (do no think)"
         ],
-        "decision-/-reaction-time-/-speed-(gt)": [
-            "Decision / Reaction Time / Speed (Gt) Speed of making simple decisions or responses,    operating on sub-second time scales."
+        "paralysis-by-analysis": [
+            "Paralysis by analysis",
+            "System I $\\to$ System II",
+            "Excessive conscious control can disrupt automatized performance (explicit monitoring)",
+            "But later it can lead to more conscious and more effective performance"
+        ],
+        "neuroplasticity-experiments": [
+            "Neuroplasticity experiments",
+            "\u201cFused Fingers\u201d experiment \u001eexternal-link\u001fMerzenich, M. M., & Kaas, J. H. (1983)\u001fhttps://pubmed.ncbi.nlm.nih.gov/6646426/\u001e, \u001eexternal-link\u001fMogilner et al. (1993)\u001fhttps://europepmc.org/article/pmc/pmc46347?utm_source=chatgpt.com\u001e",
+            "two fingers were fused/taped together, and after a while they were released",
+            "they observed the areas in primary somatosensory cortex (S1) corresponding to the two fingers",
+            "after fusion the two areas started to merge (neuroplasitcity, brain treats them as a single unit), the boundaries blur",
+            "after separation the there is a transient expansion of representation.",
+            "Later \u2192 pruning and refinement."
+        ]
+    },
+    "characteristic-errors-of-system-i": {
+        "$links": [
+            [
+                "System I",
+                "system-i",
+                "properties"
+            ],
+            [
+                "Decision making and argumentation",
+                "decision-making-and-argumentation",
+                "system-i"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Characteristic errors of System I",
+        ">remark": [
+            ">remark",
+            "The reliance on heuristics makes System I vulnerable to systematic cognitive biases, including:"
+        ],
+        "anchoring": [
+            "Anchoring",
+            "Judgments are unduly influenced by an initial value or reference point (e.g. estimating a quantity after being exposed to an arbitrary number)."
+        ],
+        "availability-heuristic": [
+            "Availability heuristic",
+            "Events that are easier to recall are perceived as more important or probable, a mechanism often exploited in propaganda and media framing."
+        ],
+        "conjunction-fallacy": [
+            "Conjunction fallacy",
+            "The tendency to judge a specific conjunction of events as more probable than a single general event    (e.g. the classic \u201cLinda problem\u201d)."
+        ],
+        "optimism-bias": [
+            "Optimism bias",
+            "Systematic underestimation of negative outcomes and overestimation of positive ones."
+        ],
+        "framing-effects": [
+            "Framing effects",
+            "Preferences change depending on whether outcomes are presented in terms of gains or losses    (e.g. \u201c99% survival\u201d versus \u201c1% mortality\u201d)."
+        ],
+        "sunk-cost-fallacy": [
+            "Sunk cost fallacy",
+            "Continuing an endeavor because of past investments, even when future costs outweigh expected benefits."
+        ],
+        "overconfidence": [
+            "Overconfidence",
+            "Excessive trust in one\u2019s own judgments and abilities, often leading to underestimated risks."
         ]
     }
 }

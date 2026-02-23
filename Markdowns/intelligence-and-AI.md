@@ -1,111 +1,100 @@
-# Intelligence
 
-This note is about the concept intelligence 
-
----
-<a id="intelligence"></a>
-- **intelligence**
-    - goal of a living being
+- **intelligence and AI**
+    - **why do we need intelligence?**
+        - goal of a living being
+        - why intelligence, not science?
+    - **goal of a living being**
         - survival in a complex environment
         - has to react to the environmental issues: $\text{issue}\to\text{action}$
         - changing environment $\to$ adaptation (learning)
-    - definitions:
-        - Turing intelligence definition
-        - Legg–Hutter intelligence definition
-        - DNN-based definition
-        - representation-based intelligence definition
+    - **definitions**
+        - __Turing’s intelligence definition__
+        - __Legg–Hutter intelligence definition__
+        - __classification-based intelligence definition__
+        - __representation-based intelligence definition__
 
----
-<a id="turing-intelligence"></a>
+
 - **Turing’s intelligence definition**
-    - historical context:
-      proposed in 1950, at a time when the internal mechanisms of thinking machines were unknown and difficult to formalize
-    - methodological principle:
-      intelligence should be defined operationally, by behavior, rather than by internal structure or subjective notions such as consciousness - Turing test
-    - formulation:
-      a machine is considered intelligent if, in unrestricted textual conversation, a human interrogator cannot reliably distinguish it from a human
+    - **historical context**
+      - proposed in 1950, at a time when the internal mechanisms of thinking machines were unknown and difficult to formalize
+    - **methodological principle**
+      - intelligence should be defined operationally, by behavior, rather than by internal structure or subjective notions such as consciousness 
+      - __Turing test__
+    - **formulation**
+      - a machine is considered intelligent if, in unrestricted textual conversation, a human interrogator cannot reliably distinguish it from a human
 
----
-<a id="turing-test"></a>
+
 - **Turing test**
-    - setup:
+    - **setup**
         - a human interrogator communicates via text with two hidden participants
         - one participant is human, the other is a machine
         - the interrogator may ask arbitrary questions
-    - criterion:
+    - **criterion**
       the machine passes the test if the interrogator cannot reliably distinguish it from the human
-    - criticism: 
+    - **criticism**
         - allows superficial pattern imitation to succeed: the Turing test evaluates indistinguishability of behavior, not the presence of internal understanding or goals
         - lead to tricky machines instead of real intelligence (ELIZA, Eugeen )
-    - impact:
-      became the most influential and widely discussed benchmark for machine intelligence, shaping both AI research and public perception
-    - programs:
-        - ELIZA
-        - PARRY
-        - Eugeen Goostman
+    - **impact**
+        - became the most influential and widely discussed benchmark for machine intelligence, shaping both AI research and public perception
+    - **programs**
+        - __ELIZA__
+        - __PARRY__
+        - __Eugeen Goostman__
 
 - **ELIZA**:
     - written by Joseph Weizenbaum (1966)
     - simple pattern matching, mimicking a Rogerian psychotherapist
     - Why it mattered: Some users felt understood and attributed intelligence to it
-    - Reality check:
+    - **Reality check**
         - No deception of expert interrogators
         - No unrestricted dialogue
-    - Status: Psychological effect, not a Turing Test pass
+    - **Status**: Psychological effect, not a Turing Test pass
 
 - **PARRY**
     - Creator: Kenneth Colby
     - What it did: simulated a paranoid patient
     - Notable experiment: psychiatrists judged transcripts of PARRY vs humans
     - Results: accuracy was only slightly better than chance
-    - Reality check:
+    - **Reality check**
         - Limited deception
         - Narrow persona
-    - Status: Closest early approximation, but still not a true pass
+    - **Status**: Closest early approximation, but still not a true pass
 
 - **Eugene Goostman** :
     - written by: Vladimir Veselov, Eugene Demchenko, Sergey Ulasen (2000-2014)
     - Claim: passed the Turing Test at the Royal Society
     - Trick: posed as a 13-year-old non-native English speaker
-    - Reality check:
+    - **Reality check**
         - Short conversations
         - Non-standard test setup
         - Exploited lowered expectations
-    - Status: Widely criticized claim, not accepted by experts
+    - **Status**: Widely criticized claim, not accepted by experts
 
----
-<a id="legg-hutter-intelligence"></a>
 - **Legg–Hutter intelligence definition**
-    - historical context:
-      proposed in the mid-2000s in the context of formal, universal definitions of intelligence
-    - core idea: define intelligence measure based on how an agent achieves its goals in a wide range of environments
-    - formulation: 
+    - **historical context**: proposed in the mid-2000s in the context of formal, universal definitions of intelligence
+    - **core idea**: define intelligence measure based on how an agent achieves its goals in a wide range of environments
+    - **formulation** 
         - weighted average of performances over environments $$ \text{intelligence}(\text{agent}) = \!\!\!\sum\limits_{E\in\text{environments}} 2^{-K(E)}\, \mathbb E (\text{reward from }E)$$
         - weight: $K(E)$ Kolmogorov complexity
         - simple environments are more probable than complex ones
-    - advantages:
+    - **advantages**
         - provides a precise, mathematical definition of intelligence
         - applies uniformly to humans, animals, and machines
         - explicitly captures generality across environments
         - avoids reliance on language or human imitation
-    - disadvantages:
+    - **disadvantages**
         - relies on uncomputable quantities (Kolmogorov complexity)
         - assumes a fixed reward-based notion of goals
         - offers little guidance for practical system design
         - abstracts away representation and internal structure
-    - impact:
-      established a rigorous theoretical benchmark for general intelligence and influenced research on universal agents (e.g. AIXI)
-    - note:
-      Legg–Hutter intelligence is a normative, idealized definition rather than an operational or experimentally testable criterion
+    - **impact**: established a rigorous theoretical benchmark for general intelligence and influenced research on universal agents (e.g. AIXI)
+    > Legg–Hutter intelligence is a normative, idealized definition rather than an operational or experimentally testable criterion
 
----
-<a id="classification-based-intelligence"></a>
 - **classification-based intelligence definition**
-    - historical context:
-      emerged implicitly with the success of supervised learning and deep neural networks in perception tasks
-    - core idea:
-      a machine is considered intelligent if it classifies inputs in the same way a human does
-    - formal formulation:
+    > this definition evaluates intelligence by output equivalence, not by the quality or structure of internal representations
+    - **historical context**: emerged implicitly with the success of supervised learning and deep neural networks in perception tasks
+    - **core idea**: a machine is considered intelligent if it classifies inputs in the same way a human does
+    - **formal formulation**
         - let $X$ be an input space (e.g. images, sounds, texts)
         - let $\mathcal C_{\text{human}}$ be a context (partition of $X$) induced by human labeling
         - let $\mathcal C_{\text{machine}}$ be a context induced by a trained model
@@ -113,54 +102,48 @@ This note is about the concept intelligence
           $\mathcal C_{\text{machine}} \approx \mathcal C_{\text{human}}$
           on a representative test set
         - measured by benchmarks
-    - typical applications:
+    - **typical applications**
         - image classification
         - speech recognition
         - text categorization
         - medical image diagnosis
-    - advantages:
+    - **advantages**
         - simple, operational, and experimentally testable
         - enables large-scale benchmarking and rapid technological progress
         - effective for narrow, well-defined tasks
-    - corresponds to System 1–style intelligence
+    - **corresponds to System 1–style intelligence**
         - intelligence is reduced to a single fixed context
         - no notion of goals, planning, or agency
         - no representation of uncertainty or error control
         - does not require understanding, grounding, or adaptability
         - focuses on direct pattern discrimination rather than structured representation
-    - note:
-      this definition evaluates intelligence by output equivalence, not by the quality or structure of internal representations
 
----
-<a id="representation-based-intelligence"></a>
+
 - **representation-based intelligence definition**
-    - core ideas:
+    - **core ideas**
         - environment is too complicated that an agent could react to each situations one-by-one  
         - intelligence is the ability of an agent to construct, refine, and use internal representations (model) of reality in order to act successfully within it
         - representation-based intelligence treats intelligence as a structural property of an agent’s internal world model, not merely as a pattern of outputs
-    - representation:
+    - **representation**
         - different tasks represent different contexts
         - select relevant features in the context, and ignore irrelevant details
-        - representations may be refined hierarchically (learning)
-    - advantages:
+        - representations may be refined hierarchically (__learning__)
+    - **advantages**
         - explains generalization and transfer across tasks
         - naturally incorporates uncertainty and abstraction
         - applies to humans, animals, and machines
         - unifies perception, reasoning, and action under a single framework
-    - limitations:
+    - **limitations**
         - more difficult to operationalize than behavior-only definitions
         - requires explicit modeling of representation structures
         - success depends on defining appropriate relevance and goals
 
----
-<a id="learning"></a>
 - **learning**
-    - core idea:
+    - **core idea**:
       a process that improves future performance by modifying internal structure or behavior based on experience
-    - unifying view:
+    - **unifying view**:
       learning refines representations, parameters, or selections under constraints
-    - note:
-      evolution is learning at the population level
+    > evolution is learning at the population level
 
 ---
 <a id="learning-by-selection"></a>
@@ -419,12 +402,7 @@ This note is about the concept intelligence
         - control may be simple
         - example: lossless compression
 
----
-<a id="worldview"></a>
-- **worldview**
-    - approaches:
-        - scientific worldview
-        - intelligence-based worldview
+
 
 ---
 <a id="gather-information"></a>
@@ -444,69 +422,4 @@ This note is about the concept intelligence
         - data lakes
         - relational databases
         - non-relational databases
-
-
----
-<a id="ai"></a>
-- **artificial intelligence (AI)**
-    - successes:
-        - classification
-        - text generation
-        - image generation
-        - autonomous cars
-    - business value:
-        - billion-USD-scale industry (2023: ~200 bUSD)
-    - challenges:
-        - needs balanced datasets
-        - catastrophic forgetting
-        - no error control
-        - no intrinsic goals or planning
-
----
-<a id="no-error-control"></a>
-- **no error control**
-    - issues:
-        - adversarial attacks
-        - hallucinations
-
----
-<a id="balanced-datasets"></a>
-- **AI needs balanced datasets**
-    - requirements:
-        - representative samples for all categories
-        - sufficient number of samples for all categories
-    - technologies:
-        - data augmentation
-        - synthetic data generation
-
----
-<a id="ai-classification"></a>
-- **AI classification**
-    - examples:
-        - dog breeds
-        - faces
-        - birdsong
-        - flowers
-
----
-<a id="text-generation"></a>
-- **text generation**
-    - examples:
-        - ChatGPT
-        - Bing
-        - DeepSeek
-
----
-<a id="image-generation"></a>
-- **image generation**
-    - examples:
-        - Midjourney
-        - DALL·E
-        - DreamStudio
-
----
-<a id="autonomous-cars"></a>
-- **autonomous cars**
-    - examples:
-        - AI driving assistants
 

@@ -3,8 +3,9 @@
   > *Before we ask whether machines are intelligent, we must ask what intelligence means for humans.*
 
   - __Spearman and the definition of intelligence__
-  - __Historical development of intelligence theory__
-  - __the Cattell–Horn–Carroll (CHC) theory of intelligence__
+  - __Intelligence as a non-monolithic construct__
+  - __The Cattell–Horn–Carroll (CHC) theory of intelligence__
+  - __Law of Diminishing Returns__
   - __Kahneman and his System I and System II__
 
 
@@ -43,12 +44,21 @@
     - Widely used batteries: Wechsler scales
       (adult, children, preschool versions).
 
-  - **Law of diminishing returns**
-    - Correlations between cognitive tests tend to decrease as ability increases.
-    - The proportion of variance explained by $g$ decreases at higher ability levels.
-    - __Spearman’s Law of Diminishing Returns (SLODR)__.
+- **Intelligence as a non-monolithic construct**
 
-  - **Intelligence as a non-monolithic construct**
+  - **Conceptual evolution**
+    - From unitary intelligence (__Spearman and the definition of intelligence__),
+    - to multifactor models (Thurstone),
+    - to the modern view
+
+  - **Louis L. Thurstone (1930s) — Primary Mental Abilities**
+    - Challenged the dominance of a single general factor.
+    - Proposed several relatively independent abilities:
+      verbal, numerical, spatial, memory, reasoning, etc.
+    - Developed multiple-factor analytic methods.
+    - Emphasized differentiation of cognitive abilities.
+
+  - **Modern view**
     - Modern psychology views intelligence as hierarchically structured.
     - A general factor ($g$) sits at the top,
       beneath which lie broad abilities
@@ -56,10 +66,78 @@
     - These components may develop at different rates
       and manifest differently across individuals.
     - A single numerical score cannot fully capture this complexity.
+      intelligence is structured and multidimensional,
+      yet shows a robust general factor.
+
+- **The Cattell–Horn–Carroll (CHC) theory of intelligence**
+  > *A widely influential integrative framework in contemporary psychometrics, synthesizing decades of factor-analytic research
+  into a hierarchical model of cognitive abilities.*
+  - **A three-stratum structure**
+    - The defining feature of the CHC model is its three-stratum hierarchy: ![three-stratum hierarchy](../Images/CHC-intelligence-model.png)
+    - Stratum I – Narrow abilities: highly specific cognitive skills measured by individual test items
+    (e.g. particular memory tasks, visual discriminations, arithmetic operations).
+    - __Stratum II – Broad abilities__: general cognitive domains that organize and explain correlations
+    among narrow abilities.
+    - Stratum III – General intelligence: 
+    A single, overarching factor (*g*),
+    capturing the shared variance across all broad abilities.
+  - **Relation to psychometric testing**
+    - The CHC framework underlies many modern standardized intelligence tests.
+    - Individual subtests are designed to measure **narrow abilities**,
+    - which aggregate into **broad ability scores**,
+    - and ultimately contribute to an estimate of **general intelligence**.
+    - As such, the CHC theory serves as a **bridge**
+  between empirical testing, cognitive structure,
+  and theoretical models of intelligence.
+
+- **Stratum II – Broad abilities**
+
+  > The core explanatory level of the CHC theory lies in **broad abilities**,
+  which represent major functional components of human intelligence:
+
+  - **Comprehension–Knowledge (Gc)**  
+    - The ability to use acquired knowledge for communication, reasoning,
+    and understanding of culturally transmitted information.
+    Strongly associated with language, education, and expertise.
+
+  - **Fluid Reasoning (Gf)**  
+    - Capacity for reasoning, abstraction, and concept formation
+    in novel situations where prior knowledge is insufficient.
+
+  - **Quantitative Knowledge (Gq)**  
+    - Understanding of numerical concepts, quantities, and mathematical relations,
+    shaped by both schooling and practice.
+
+  - **Reading and Writing Ability (Grw)**  
+    - Skills related to decoding, comprehension, and production of written language.
+
+  - **Short-Term Memory (Gsm)**  
+    - Ability to maintain and manipulate information
+    over a time span of a few seconds.
+
+  - **Long-Term Storage and Retrieval (Glr)**  
+    - Capacity for storing information in long-term memory
+    and retrieving it efficiently, including associative fluency and creativity.
+
+  - **Visual Processing (Gv)**  
+    - Ability to perceive, analyze, and mentally manipulate visual information,
+    such as spatial relations and patterns.
+
+  - **Auditory Processing (Ga)**  
+    - Sensitivity to auditory information, including speech perception,
+    phonological processing, and sound discrimination.
+
+  - **Processing Speed (Gs)**  
+    - Efficiency in performing automatic or well-learned cognitive tasks,
+    particularly under time pressure,
+    typically on a scale of several minutes.
+
+  - **Decision / Reaction Time / Speed (Gt)**  
+    - Speed of making simple decisions or responses,
+    operating on sub-second time scales.
 
 
-
-- **Spearman’s Law of Diminishing Returns (SLODR)**
+- **Law of Diminishing Returns**
   - **Core Claim**
     - As general cognitive ability increases,
       correlations between different cognitive tests decrease.
@@ -87,157 +165,249 @@
   - **Book in Hungarian**
     - [Mérő László: *Az érzelmek logikája*](https://www.scribd.com/document/811514880/Mer%C5%91-Laszlo-Az-Erzelmek-Logikaja)
 
-  - **Correlation with life outcomes**
-    - IQ correlates moderately with academic performance
-      and occupational status.
+  - **Goodhart's law**
+    - economics origin
+    - When a measure becomes a target, it ceases to be a good measure
+    - mechanism: actors optimize for that metric
+    - consequence: measures corrupt systems to follow artificial goals
+  
+  - **Campbell's law**
+    - The more a quantitative social indicator is used for decision-making,
+the more it will be subject to corruption pressures
+and distort the processes it is intended to monitor.
+    - Campbell’s Law is essentially the sociological formulation of Goodhart’s Law.
+
+  - **examples for Goodhart's and Campbell’s law**
+    - University rankings
+    - Citation metrics
+    - Standardized exams
+    - Academic performance factors (impact factors, h-index, performance assessment)
+    - Hiring
+
+  - **Barabási's work**
+    - [The Formula: The Universal Laws of Success](https://ia600709.us.archive.org/11/items/psicology/The%20Formula_%20The%20Universal%20Laws%20of%20Success%20-%20Albert-Laszlo%20Barabasi.pdf)
+    - Performance (result) → what you objectively produce
+    - Success → how the network perceives and rewards that performance
+    - Performance is individual; success is collective.
+    - Success follows network laws.
+    - Cumulative advantage (“the rich get richer”).
+    - Early recognition amplifies later success.
+    - In creative fields, performance variance may be small, but success variance is huge.
+
+  - **Take home message**
     - Very low IQ significantly constrains educational
       and occupational opportunities.
-    - High IQ does not guarantee success;
-      non-cognitive factors (motivation, personality, environment)
-      also play substantial roles.
+    - High IQ (or other success factor) does not measure the value of the work, and does not guarantee sensible work.
+    - [Jim Collins: Good to Great](https://www.perlego.com/paid/book/3577811/book-review-good-to-great-by-jim-collins-learn-how-companies-achieve-excellence-pdf)
 
 
-- **Historical development of intelligence theory**
+- **Kahneman and his System I and System II**
 
-  - **Alfred Binet (1905) — Practical measurement**
-    - Developed the first modern intelligence test.
-    - Introduced the concept of *mental age*.
-    - Goal: identify children needing educational support.
-    - Did not propose a formal theory of general intelligence.
+  > *Kahneman distinguishes between two fundamentally different
+  modes of thinking. These are not separate brain regions,
+  but descriptive labels for characteristic cognitive processes.*
 
-  - **Charles Spearman (1904) — General intelligence (g)**
-    - Observed the *positive manifold*:
-      different cognitive tests are positively correlated.
-    - Proposed a **General Intelligence Factor (g)**.
-    - Introduced early factor analysis.
-    - Two-factor theory: $g$ (general) + $s$ (specific abilities).
+  - **D. Kahneman**
+    - 1934-2024
+    - cognitive psychologist who fundamentally changed how we understand decision making under uncertainty.
+    - Nobel Prize in Economics (2002) for integrating psychological insights into economic theory (behavioral economics)
+    - [Thinking, Fast and Slow (2011)](https://drive.google.com/file/d/0B7y91D08k6X8RkRranBfd05fTEU/view?resourcekey=0-dYgxzjaJ0yMVuRZ1PMdP3A)
 
-  - **Louis L. Thurstone (1930s) — Primary Mental Abilities**
-    - Challenged the dominance of a single general factor.
-    - Proposed several relatively independent abilities:
-      verbal, numerical, spatial, memory, reasoning, etc.
-    - Developed multiple-factor analytic methods.
-    - Emphasized differentiation of cognitive abilities.
+  - **System I**
+    - fast, intuitive thinking
+    - __System I__
+  - **System II**
+    - slow, deliberative thinking
+    - __System II__
+  - **Interaction between the systems**:
+    - __Interaction between the systems__
 
-  - **Raymond Cattell (1940s–1960s) — Fluid and Crystallized Intelligence**
-    - **Fluid intelligence (Gf)**: abstract reasoning, problem solving.
-    - **Crystallized intelligence (Gc)**: acquired knowledge and skills.
-    - Integrated Spearman’s g with differentiated abilities.
+- **System I**
+  - **properties**
+    - fast and automatic,
+    - intuitive and heuristic-based,
+    - largely unconscious,
+    - effortless in terms of mental energy
+    - inherently error-prone, especially in complex or unfamiliar contexts: __Characteristic errors of System I__
+  - **it is responsible for**
+    - rapid judgments,
+    - pattern recognition,
+    - emotional reactions,
+    - __decision making__ based on gut feelings
+  - **resource requirements**
+    - requires few resources
+    - allows parallel operation
+  - **examples**
+    - driving a car after sufficient practice,
+    - riding a bicycle,
+    - walking at a habitual pace
+  - **training**
+    - repetitive movements form System I (sports, martial arts, pingpong, etc)
+    - slow training, fast action
 
-  - **John L. Horn — Expansion of Cattell’s model**
-    - Rejected a single dominant g-factor.
-    - Proposed multiple broad cognitive abilities.
-    - Emphasized multidimensional structure.
+- **System II**
+  - **properties**
+    - slow and effortful,
+    - conscious and intentional,
+    - capable of abstract and logical reasoning,
+    - associated with self-control and critical evaluation.
+  - **resources**
+    - System II requires significantly more mental resources
+    - uses model of reality
+    - only one problem can be analized or contemplated about (self)
+  - **this system is engaged in**
+    - thinking
+    - explicit problem solving,
+    - mathematical reasoning,
+    - careful __decision making__,
+    - consistency checking and error correction.
 
-  - **John B. Carroll (1993) — Three-Stratum Theory**
-    - Large-scale reanalysis of factor-analytic studies.
-    - Proposed hierarchical model:
-    - Stratum III: general factor (g)
-    - Stratum II: broad abilities (Gf, Gc, memory, processing speed, etc.)
-    - Stratum I: narrow specific abilities
+- **Decision making and argumentation**
 
-  - **Modern synthesis — CHC Theory**
-    - Cattell–Horn–Carroll (CHC) model.
-    - Hierarchical structure:
-      general intelligence at the top,
-      broad abilities beneath,
-      specific skills at the bottom.
-    - Forms the theoretical basis of most modern IQ tests.
+  - **System I**
+    - Based on intuition, heuristics
+    - Operates effectively under time pressure and scarce information.
+    - Dominates many real-world economic and social decisions.
+    - Can produce systematic biases, especially in rare, high-impact events
+      (c.f. __characteristic errors of System I__, "Black Swan" misjudgments, [Black Swan book](https://dn720004.ca.archive.org/0/items/english-collections-1/Black%20Swan_%20The%20Impact%20of%20the%20Highly%20Improbable%2C%20The%20-%20Nassim%20Nicholas%20Taleb.pdf)).
 
-  - **Conceptual evolution**
-    - From unitary intelligence (Spearman),
-      to multifactor models (Thurstone),
-      to hierarchical integration (CHC).
-    - Modern view:
-      intelligence is structured and multidimensional,
-      yet shows a robust general factor.
+  - **System II**
+    - Based on analysing scenarions in mental world model (contemplation, thinking)
+    - Operates on explicit internal representations (mental models) $\to$ unique, personal
+    - Often influenced by System I intuitions and may rationalize them post hoc.
 
-- **The Cattell–Horn–Carroll (CHC) theory of intelligence**
-  > *A widely influential integrative framework in contemporary psychometrics, synthesizing decades of factor-analytic research
-  into a hierarchical model of cognitive abilities.*
-  - **A three-stratum structure**
-    - The defining feature of the CHC model is its three-stratum hierarchy: ![three-stratum hierarchy](../Images/CHC-intelligence-model.png)
-    - **Stratum I – Narrow abilities**  
-    Highly specific cognitive skills measured by individual test items
-    (e.g. particular memory tasks, visual discriminations, arithmetic operations).
-    - **Stratum II – Broad abilities**  
-    General cognitive domains that organize and explain correlations
-    among narrow abilities.
-    - **Stratum III – General intelligence**  
-    A single, overarching factor (*g*),
-    capturing the shared variance across all broad abilities.
-  - **Relation to psychometric testing**
-    - The CHC framework underlies many modern standardized intelligence tests.
-    - Individual subtests are designed to measure **narrow abilities**,
-    - which aggregate into **broad ability scores**,
-    - and ultimately contribute to an estimate of **general intelligence**.
-    - As such, the CHC theory serves as a **bridge**
-  between empirical testing, cognitive structure,
-  and theoretical models of intelligence.
+  - **Negotiation**
+    - Traditional view: opinions change through logical argumentation.
+    - Empirical observation: beliefs are often resistant to change.
+    - Reason: reasoning is strongly shaped by intuitive (System I) processes.
+    - __Post-hoc rationalization__: people construct explanations for decisions
+      that were intuitively driven
+    - Effective negotiation often involves emotional regulation,
+      rapport, and reframing rather than purely logical persuasion [Chris Voss: Never Split the Difference](https://ia801801.us.archive.org/27/items/never-split-the-difference-negotiating-as-if-your-life-depended-on-it_202101/Never_Split_the_Difference_Negotiating_As_If_Your_Life_Depended.pdf)
 
-- **Stratum II – Broad abilities**
 
-  > The core explanatory level of the CHC theory lies in **broad abilities**,
-  which represent major functional components of human intelligence:
+- **Post-hoc rationalization**
+  >  The tendency to construct explanations for decisions or actions
+    *after* they have already been made.
+  - Often occurs when behavior is driven by intuitive (System I)
+    or unconscious processes, while conscious reasoning (System II)
+    generates a coherent justification afterward.
+  - The explanation feels sincere and convincing,
+    even if it does not reflect the true causal mechanism.
 
-  - **Comprehension–Knowledge (Gc)**  
-    The ability to use acquired knowledge for communication, reasoning,
-    and understanding of culturally transmitted information.
-    Strongly associated with language, education, and expertise.
+  - **Classic demonstrations**
 
-  - **Fluid Reasoning (Gf)**  
-    Capacity for reasoning, abstraction, and concept formation
-    in novel situations where prior knowledge is insufficient.
+  - **Post-hypnotic suggestion** 
+    - [Hilgard: Divided Consciousness](https://www.cambridge.org/core/journals/the-british-journal-of-psychiatry/article/abs/divided-consciousness-multiple-controls-in-human-thoughts-and-actions-expanded-edition-by-ernest-r-hilgard-chichester-john-wiley-sons-1986-pp-313-1850/4E828BA48D262446C537DBE61CC06192)
+    - Subjects perform an instructed action and later invent a reason for it.
+    - A subject under hypnosis is instructed to perform an action later (e.g., open a window, move a book, cough).
+    - After waking, the cue is given.
+    - The subject performs the action.
+    - When asked why, they give a plausible but false explanation (“The room felt stuffy.”,   “I just needed some air.”)
 
-  - **Quantitative Knowledge (Gq)**  
-    Understanding of numerical concepts, quantities, and mathematical relations,
-    shaped by both schooling and practice.
+  - **Split-brain experiments** 
+    - [Gazzaniga, M. (1985). The Social Brain](https://www.scribd.com/document/341262624/Michael-S-Gazzaniga-the-Social-Brain)
+    - Split brain patients act on information unavailable to conscious awareness, yet confidently explain their behavior.
+    - The right hemisphere sees a command (“Walk”).
+    - The patient stands up and walks.
+    - When asked why, the left hemisphere (which did not see the instruction) invents an explanation (“I’m going to get a Coke.”)
+  
+  - **Choice blindness** 
+    - [Johansson, P. et al. (2005). Failure to detect mismatches between intention and outcome in a simple decision task.)(https://www.lucs.lu.se/fileadmin/user_upload/lucs/2011/01/Johansson-et-al.-2005-Failure-to-Detect-Mismatches-Between-Intention-and-Outcome-in-a-Simple-Decision-Task.pdf)
+    - Participants chose which face they found more attractive.
+    - Researchers secretly swapped the image.
+    - Participants then explained in detail why they preferred the face they did not actually choose.
+    - They gave elaborate reasons.
 
-  - **Reading and Writing Ability (Grw)**  
-    Skills related to decoding, comprehension, and production of written language.
+  - **Psychological mechanisms**
+    - Desire for internal coherence
+    - Cognitive dissonance reduction
+    - Identity protection
+    - Narrative construction of the self
 
-  - **Short-Term Memory (Gsm)**  
-    Ability to maintain and manipulate information
-    over a time span of a few seconds.
+  - **Implications**
+    - Logical argumentation may often defend prior intuitions
+      rather than generate them.
+    - Belief revision is difficult when reasoning serves
+      to justify, not to evaluate.
+    - Important in politics, negotiation, moral reasoning,
+      and everyday decision making.
 
-  - **Long-Term Storage and Retrieval (Glr)**  
-    Capacity for storing information in long-term memory
-    and retrieving it efficiently, including associative fluency and creativity.
+- **Interaction between the systems**
+  - **normal cognition**
+    - System I continuously generates impressions, intuitions, and tentative judgments
+    - System II monitor, endorse, modify, or override them.
+    - new tasks always start with System II
+  - **training**
+    - System II $\to$ System I
+    - Often used tasks go to System I (car driving, riding a bike)
+    - in fast decisions we often use System I (do no think)
+  - **Paralysis by analysis**
+    - System I $\to$ System II
+    - Excessive conscious control can disrupt automatized performance (explicit monitoring)
+    - But later it can lead to more conscious and more effective performance
+  - **Neuroplasticity experiments**
+    - “Fused Fingers” experiment [Merzenich, M. M., & Kaas, J. H. (1983)](https://pubmed.ncbi.nlm.nih.gov/6646426/), [Mogilner et al. (1993)](https://europepmc.org/article/pmc/pmc46347?utm_source=chatgpt.com)
+    - two fingers were fused/taped together, and after a while they were released
+    - they observed the areas in primary somatosensory cortex (S1) corresponding to the two fingers
+    - after fusion the two areas started to merge (neuroplasitcity, brain treats them as a single unit), the boundaries blur
+    - after separation the there is a transient expansion of representation.
+    - Later → pruning and refinement.
 
-  - **Visual Processing (Gv)**  
-    Ability to perceive, analyze, and mentally manipulate visual information,
-    such as spatial relations and patterns.
+- **Characteristic errors of System I**
 
-  - **Auditory Processing (Ga)**  
-    Sensitivity to auditory information, including speech perception,
-    phonological processing, and sound discrimination.
+  > The reliance on heuristics makes System I vulnerable
+  to systematic cognitive biases, including:
 
-  - **Processing Speed (Gs)**  
-    Efficiency in performing automatic or well-learned cognitive tasks,
-    particularly under time pressure,
-    typically on a scale of several minutes.
+  - **Anchoring**  
+    - Judgments are unduly influenced by an initial value or reference point  
+    (e.g. estimating a quantity after being exposed to an arbitrary number).
 
-  - **Decision / Reaction Time / Speed (Gt)**  
-    Speed of making simple decisions or responses,
-    operating on sub-second time scales.
+  - **Availability heuristic**  
+    - Events that are easier to recall are perceived as more important or probable,
+    a mechanism often exploited in propaganda and media framing.
+
+  - **Conjunction fallacy**  
+    - The tendency to judge a specific conjunction of events
+    as more probable than a single general event
+    (e.g. the classic “Linda problem”).
+
+  - **Optimism bias**  
+    - Systematic underestimation of negative outcomes
+    and overestimation of positive ones.
+
+  - **Framing effects**  
+    - Preferences change depending on whether outcomes
+    are presented in terms of gains or losses
+    (e.g. “99% survival” versus “1% mortality”).
+
+  - **Sunk cost fallacy**  
+    - Continuing an endeavor because of past investments,
+    even when future costs outweigh expected benefits.
+
+  - **Overconfidence**  
+    - Excessive trust in one’s own judgments and abilities,
+    often leading to underestimated risks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 __END__
-  - **the difficulty of definition**  
-    - Despite its central role, intelligence is notoriously hard to define.
-    - No single definition captures all aspects,
-    and different psychological traditions emphasize different components.
-  - **common abilities representing intelligence**
-    - abstraction
-    - learning
-    - reasoning
-    - planning
-    - problem solving
-
-
-
-
 
 
 ## Piaget's works
@@ -466,137 +636,3 @@ New York: Basic Books.
 ---
 
 
-## Kahneman and his System I and System II
-
-> *Kahneman distinguishes between two fundamentally different
-  modes of thinking. These are not separate brain regions,
-  but descriptive labels for characteristic cognitive processes.*
-
-
-- **System I: fast, intuitive thinking**
-
-  **System I** is:
-  - fast and automatic,
-  - intuitive and heuristic-based,
-  - largely unconscious,
-  - effortless in terms of mental energy.
-
-  It is responsible for:
-  - rapid judgments,
-  - pattern recognition,
-  - emotional reactions,
-  - so-called *gut feelings*.
-
-  System I enables efficient functioning in everyday situations,
-  but it is inherently **error-prone**,
-  especially in complex or unfamiliar contexts.
-
-  Many routine activities rely predominantly on System I,
-  such as:
-  - driving a car after sufficient practice,
-  - riding a bicycle,
-  - walking at a habitual pace.
-
----
-
-- **System II: slow, deliberative thinking**
-
-  **System II** is:
-  - slow and effortful,
-  - conscious and intentional,
-  - capable of abstract and logical reasoning,
-  - associated with self-control and critical evaluation.
-
-  This system is engaged in:
-  - explicit problem solving,
-  - mathematical reasoning,
-  - careful decision making,
-  - consistency checking and error correction.
-
-  System II requires significantly more mental energy
-  and attentional resources,
-  and is therefore used sparingly.
-
----
-
-- **Interaction between the systems**
-
-  In normal cognition, System I continuously generates impressions,
-  intuitions, and tentative judgments,
-  while System II may monitor, endorse, modify, or override them.
-
-  However, System II is often *lazy*:
-  it tends to accept System I outputs
-  unless there is a clear reason to intervene.
-  As a result, many judgments are effectively made by System I,
-  even when they concern complex or high-stakes decisions.
-
----
-
-- **Characteristic errors of System I**
-
-  The reliance on heuristics makes System I vulnerable
-  to systematic cognitive biases, including:
-
-  - **Anchoring**  
-    Judgments are unduly influenced by an initial value or reference point  
-    (e.g. estimating a quantity after being exposed to an arbitrary number).
-
-  - **Availability heuristic**  
-    Events that are easier to recall are perceived as more important or probable,
-    a mechanism often exploited in propaganda and media framing.
-
-  - **Conjunction fallacy**  
-    The tendency to judge a specific conjunction of events
-    as more probable than a single general event
-    (e.g. the classic “Linda problem”).
-
-  - **Optimism bias**  
-    Systematic underestimation of negative outcomes
-    and overestimation of positive ones.
-
-  - **Framing effects**  
-    Preferences change depending on whether outcomes
-    are presented in terms of gains or losses
-    (e.g. “99% survival” versus “1% mortality”).
-
-  - **Sunk cost fallacy**  
-    Continuing an endeavor because of past investments,
-    even when future costs outweigh expected benefits.
-
-  - **Overconfidence**  
-    Excessive trust in one’s own judgments and abilities,
-    often leading to underestimated risks.
-
----
-
-- **Economic decision making**
-
-  Kahneman’s framework has profound implications
-  for economic and financial behavior.
-  Contrary to classical rational-agent models,
-  real-world economic decisions are often dominated by **System I processes**.
-
-  This insight aligns with observations in behavioral economics
-  and risk theory, including those discussed by  
-  :contentReference[oaicite:2]{index=2},
-  particularly in relation to rare, high-impact events
-  (*Black Swan* phenomena).
-
----
-
-- **Conceptual position**
-
-  Within the broader landscape of intelligence theories:
-
-  - System I and System II describe **modes of operation**,
-    not abilities or developmental stages.
-  - They complement the CHC framework
-    by characterizing *how* cognitive resources are deployed,
-    rather than *what* abilities exist.
-  - They bridge psychological theory and real-world behavior,
-    highlighting why intelligent agents may nonetheless act irrationally.
-
-  The dual-process model thus provides a crucial link
-  between cognitive structure, decision making,
-  and observed limitations of human rationality.
