@@ -1,64 +1,59 @@
-# Conceptual foundations
+- **Conceptual foundations**
+    > This section introduces the basic definitions that serve as the foundational layer for the development of the cognitive algebra. It is difficult to determine where to start the whole descritpion. In human thinking the roots go deep into the unconscious. We adopt a deliberately physical viewpoint, centered on the states of the world and their evolution in time. As will become clear later, this choice is not restrictive: the resulting formalism is sufficiently general to support a wide range of cognitive and representational interpretations.
 
-This section introduces the basic definitions that serve as the foundational layer for the development of the cognitive algebra. 
+    - **Universe**: scene of all actions, containing all information
 
-## Universe, states and object classes
+    - **observer** (agent): intelligent agent describing the world
+        - can be a living being, a human, AI
+        - splits Universe into space (hypersurface) and time
 
-It is difficult to determine where to start the whole descritpion. In human thinking the roots go deep into the unconscious. We adopt a deliberately physical viewpoint, centered on the states of the world and their evolution in time. As will become clear later, this choice is not restrictive: the resulting formalism is sufficiently general to support a wide range of cognitive and representational interpretations.
+    - **space**: hypersurface of the Universe
+        - observer dependent
+        - in general relativity: Cauchy surfaces, positive definite spatial metric tensor
 
-- **Universe**: scene of all actions, containing all information
+    - **time**: the label of the space instances
+        - arrow of time: goes ahaed
+        - observer dependent
+        - time is an additive label of the spatial hypersurface: for the times between spacial instances $a$, $b$ and $c$ we have $$t_{ab}+t_{bc}=t_{ac}$$
 
-- **observer** (agent): intelligent agent describing the world
-    - can be a living being, a human, AI
-    - splits Universe into space (hypersurface) and time
+    - **states**: the possible configurations of the Universe on a spacial instance
+        - contains all information to be able to predict the future
+        - can be the complete world's state in a hyper (Cauchy) surface
+        - a theoretical construct assuming that the future is deterministic if we fully fix a state
+        - all decision of an agent in the world must depend on the states of the world
 
-- **space**: hypersurface of the Universe
-    - observer dependent
-    - in general relativity: Cauchy surfaces, positive definite spatial metric tensor
+    - **observed world**: full description is not possible/necessary
+        - a single observer has finite observation capabilities
+        - can not process the information
+        - many details don't play role for the agent' purpose (maintain life, or other goals)
+        - example: to describe the fate of a book, the position of Mars is irrelevant
+        - a collection of states, differing in irrelevant details, are the real object that matter for an observer
+    
+    - **representation**: 
+        - __(object) class__
+        - __context__
 
-- **time**: the label of the space instances
-    - arrow of time: goes ahaed
-    - observer dependent
-    - time is an additive label of the spatial hypersurface: for the times between spacial instances $a$, $b$ and $c$ we have $$t_{ab}+t_{bc}=t_{ac}$$
-
-- **states**: the possible configurations of the Universe on a spacial instance
-    - contains all information to be able to predict the future
-    - can be the complete world's state in a hyper (Cauchy) surface
-    - a theoretical construct assuming that the future is deterministic if we fully fix a state
-    - all decision of an agent in the world must depend on the states of the world
-
-- **observed world**: full description is not possible/necessary
-    - a single observer has finite observation capabilities
-    - can not process the information
-    - many details don't play role for the agent' purpose (maintain life, or other goals)
-    - example: to describe the fate of a book, the position of Mars is irrelevant
-    - a collection of states, differing in irrelevant details, are the real object that matter for an observer
-
-- **(object) class** : $C \subset \Omega$
-    - interpretation:
+- **(object) class**
+    - **definition**: $C \subset \Omega$
+    - **interpretation**
         - collects states differing only in irrelevant details
         - corresponds to a concept (e.g. pen, red color, living being)
-    - examples:
+    - **examples**
         - a book is collection of states where for example Mars has different position, and the exact matter content of the book itself is different
         - computer images
         - images where a given pixel is red
         - all living beings in the animal kingdom
     - we can speak about **subclasses**, **nested classes**, etc. just like in case of sets
 
-
-## Contexts
-
-An object class in itself is the simplest element of the description of the world. But we also want to speak about finer details, like for example dog breeds in the large class of dogs.
-
-We can divide a class in different ways into subclasses, and it then denotes a different set of concepts in the thinking. For example the world of books are divided into different subclasses by a book shop, a book collector, a reader, or a mover. An actual division of a class is called context.
-
-- **context**: ${\cal C} = {\cal P}(C)$
-    - partition of the underlying class
+- **context**
+    - partition of the underlying class: ${\cal C} = {\cal P}(C)$
     - elements are called **classes of the context** or **cells of the context**
     - examples:
         - dog breeds in the class of dogs
         - a bookshop owner, a reader, a book collector and a mover uses different contexts of the class of books.
         - people groupped by their living place
+
+__END__
 
 ### Contexts instead of states
 

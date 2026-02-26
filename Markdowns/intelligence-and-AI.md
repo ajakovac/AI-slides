@@ -29,17 +29,16 @@
         - a human interrogator communicates via text with two hidden participants
         - one participant is human, the other is a machine
         - the interrogator may ask arbitrary questions
-    - **criterion**
-      the machine passes the test if the interrogator cannot reliably distinguish it from the human
+    - **criterion**: the machine passes the test if the interrogator cannot reliably distinguish it from the human
     - **criticism**
         - allows superficial pattern imitation to succeed: the Turing test evaluates indistinguishability of behavior, not the presence of internal understanding or goals
-        - lead to tricky machines instead of real intelligence (ELIZA, Eugeen )
+        - lead to tricky machines instead of real intelligence (__ELIZA__, __Eugene Goostman__)
     - **impact**
         - became the most influential and widely discussed benchmark for machine intelligence, shaping both AI research and public perception
     - **programs**
         - __ELIZA__
         - __PARRY__
-        - __Eugeen Goostman__
+        - __Eugene Goostman__
 
 - **ELIZA**:
     - written by Joseph Weizenbaum (1966)
@@ -145,280 +144,101 @@
       learning refines representations, parameters, or selections under constraints
     > evolution is learning at the population level
 
----
-<a id="learning-by-selection"></a>
-- **learning by selection**
-    - principle:
-      generate variants and retain those with higher success
-    - mechanisms:
-        - biological evolution
-        - cultural evolution
-        - genetic algorithms
-        - model and feature selection
-    - characteristic:
-      population-level learning across generations
+- **changes in problem solving**
+    - **historic times problem solving**
+        - observation made by: human
+        - modelling done by: human
+        - computation done by: human
+        - action taken by: human
+    - **machines and measurement instruments**
+        - observation made by: machine
+        - modelling done by: human
+        - computation done by: human
+        - action taken by: human
+    - **XX. century and computers**
+        - observation made by: machine
+        - modelling done by: human
+        - computation done by: machine
+        - action taken by: human
+    - **XXI. century and artificial intelligence**
+        - observation made by: machine
+        - modelling done by: machine
+        - computation done by: machine
+        - action taken by: human
+    - **methods**
+        - __traditional algorithms__
+        - __artificial intelligence based problem solving__
 
----
-<a id="learning-by-optimization"></a>
-- **learning by optimization**
-    - principle:
-      improve parameters to minimize or maximize an objective function
-    - mechanisms:
-        - gradient descent
-        - maximum likelihood estimation
-        - backpropagation
-        - convex optimization
-    - characteristic:
-      assumes a parameterized representation and a loss function
-
----
-<a id="learning-by-association"></a>
-- **learning by association**
-    - principle:
-      strengthen connections between co-occurring events
-    - mechanisms:
-        - Hebbian learning
-        - correlation-based learning
-        - self-organizing maps
-        - contrastive learning
-    - characteristic:
-      local, often unsupervised representation formation
-
----
-<a id="learning-by-reinforcement"></a>
-- **learning by reinforcement**
-    - principle:
-      learn actions through reward and punishment
-    - mechanisms:
-        - reinforcement learning
-        - operant conditioning
-        - trial-and-error learning
-    - characteristic:
-      delayed feedback and exploration–exploitation tradeoff
-
----
-<a id="learning-by-abstraction"></a>
-- **learning by abstraction**
-    - principle:
-      discover relevant distinctions and invariants
-    - mechanisms:
-        - representation learning
-        - feature learning
-        - context formation
-        - refinement trees
-    - characteristic:
-      changes how the world is represented
-
----
-<a id="learning-by-compression"></a>
-- **learning by compression**
-    - principle:
-      remove redundancy while preserving relevant information
-    - mechanisms:
-        - minimum description length
-        - information bottleneck
-        - PCA and dimensionality reduction
-        - lossy compression
-    - characteristic:
-      compact representations enable generalization
-
----
-<a id="learning-by-imitation"></a>
-- **learning by imitation**
-    - principle:
-      acquire behavior by copying others
-    - mechanisms:
-        - imitation learning
-        - behavior cloning
-        - social learning
-    - characteristic:
-      transfers knowledge without explicit optimization
-
----
-<a id="learning-by-reasoning"></a>
-- **learning by reasoning**
-    - principle:
-      derive new knowledge through inference and symbol manipulation
-    - mechanisms:
-        - logical deduction
-        - theorem proving
-        - planning
-        - program synthesis
-    - characteristic:
-      discrete, compositional, System-2–style learning
-
----
-<a id="learning-by-interaction"></a>
-- **learning by interaction**
-    - principle:
-      learn by actively querying and experimenting with the environment
-    - mechanisms:
-        - active learning
-        - exploration
-        - curiosity-driven learning
-    - characteristic:
-      agent controls data acquisition
-
----
-<a id="learning-by-coordination"></a>
-- **learning by coordination**
-    - principle:
-      integrate multiple partial or coarse representations into a coherent whole
-    - mechanisms:
-        - multi-view learning
-        - sensor fusion
-        - multimodal learning
-        - common refinement of contexts
-    - characteristic:
-      intelligence emerges from combining representations
-
----
-<a id="unifying-perspective"></a>
-- **unifying perspective of learning methods**
-    - insight:
-      all learning methods differ mainly in *what they modify*
-    - table:
-        - selection → populations
-        - optimization → parameters
-        - association → connections
-        - reinforcement → policies
-        - abstraction → representations
-        - coordination → contexts
-    - note:
-      representation quality ultimately determines learning success
-
-
----
-<a id="problem-solving"></a>
-- **problem solving**
-    - approaches:
-        - historic times problem solving
-        - problem solving with machines
-        - problem solving with computers
-        - problem solving with artificial intelligence
-    - methods:
-        - traditional algorithms
-        - AI-based problem solving
-
----
-<a id="historic-problem-solving"></a>
-- **historic times problem solving**
-    - observation made by: human
-    - modelling done by: human
-    - computation done by: human
-    - action taken by: human
-
----
-<a id="machine-problem-solving"></a>
-- **problem solving with machines**
-    - observation made by: machine
-    - modelling done by: human
-    - computation done by: human
-    - action taken by: human
-
----
-<a id="computer-problem-solving"></a>
-- **problem solving with computers**
-    - observation made by: machine
-    - modelling done by: human
-    - computation done by: machine
-    - action taken by: human
-
----
-<a id="ai-problem-solving"></a>
-- **problem solving with artificial intelligence**
-    - observation made by: machine
-    - modelling done by: machine
-    - computation done by: machine
-    - action taken by: human
-
----
-<a id="traditional-algorithms"></a>
 - **traditional algorithms**
-    - workflow:
+    - **workflow**
         - understand the problem
         - write a code
         - run the code
-    - characteristics:
+    - **characteristics**
         - machine does the same task humans would do, only faster
         - machine is not smarter, only faster
 
----
-<a id="ai-based-problem-solving"></a>
 - **artificial intelligence based problem solving**
-    - workflow:
+    - **workflow**
         - understand learning
         - write a learning algorithm
         - the algorithm learns and solves the problem
-    - characteristics:
+    - **characteristics**
         - solution is not explicitly known
         - machine can be smarter in specific domains!
 
----
-<a id="representation-of-reality"></a>
 - **representation of reality**
-    - aspects:
-        - general reality
-        - actual reality
-    - mainstream AI representation:
-      general reality is represented much more deeply than actual reality
-    - methods:
-        - gathering information
+    - **aspects**
+        - __general reality__
+        - __actual reality__
+    - **mainstream AI representation**: general reality is represented much more deeply than actual reality
+    - **methods**
+        - __gather information__
         - extracting relevant features
 
----
-<a id="general-reality"></a>
 - **general reality**
-    - description:
-      laws and generic mechanisms describing how the world works
-    - examples:
+    > laws and generic mechanisms describing how the world works
+    - **examples**
         - maps of streets
         - internal structure of LLMs predicting token sequences
         - sports equipment and physical abilities
-    - improvement methods:
+    - **improvement methods**
         - better tools
         - training
-    - in AI:
-      encoded in trained hardware and parameters (millions to ~100 billion parameters)
+    - **in AI**: encoded in trained hardware and parameters (millions to ~100 billion parameters)
 
----
-<a id="actual-reality"></a>
 - **actual reality**
-    - description:
-      the currently active environment, objects, persons, and phenomena
-    - examples:
+    > the currently active environment, objects, persons, and phenomena
+    - **examples**
         - traffic conditions on a map
         - prompts defining tasks for LLMs
         - current physical state of an athlete
-    - in AI:
-      represented by input data (up to millions of tokens)
-    - initial conditions:
+    - **in AI**:  represented by input data (up to millions of tokens)
+    - **using initial conditions**
         - represent the current state
         - exact prediction possible only in ideal systems
         - real systems have limited validity ranges
         - hallucination radius in LLMs
-    - maintaining precision:
+    - **how can we maintain precision**
         - continual projection onto actual reality
         - control may be simple
         - example: lossless compression
 
 
 
----
-<a id="gather-information"></a>
 - **gather information**
-    - characteristics:
+    - **characteristics**
         - factual
         - interpretation-agnostic
-    - in IT:
+    - **in IT**
         - big data approaches
         - avoidance of information loss
         - very large datasets
-    - examples:
+    - **examples**
         - pixel colors
         - logs
         - wave amplitudes
-    - storage methods:
+    - **storage methods**
         - data lakes
         - relational databases
         - non-relational databases

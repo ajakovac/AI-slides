@@ -1,12 +1,26 @@
+- **contents**
+    - **Lecture 1**: lecture-1
+    - **Lecture 2**: lecture-2
+    - **Lecture 3**: lecture-3
 
-- **content of the AI course**
-    - **walkthrough**
+
+- **Lecture 1**
+    - **topics**
         - __about the Introduction to AI course__  ![Introduction to AI](../Images/introduction_to_AI.png)
         - __learning in the AI era__
         - introduction: __general facts about AI__
         - __social and ethical aspects of artificial intelligence__
         - __a brief history of Artificial Intelligence__
-        - __Human Intelligence: A Psychological Perspective__
+
+- **Lecture 2**
+    - **topics**
+        - __changes in problem solving__
+        - __human intelligence: a psychological perspective__
+
+- **Lecture 3**
+    - **topics**
+        - __intelligence and AI__
+        - __Conceptual foundations__
 
 
 

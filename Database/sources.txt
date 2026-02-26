@@ -6,13 +6,14 @@ risks-and-benefits-of-AI.md
 ethical-issues-and-regulations.md
 history-of-AI.md
 intelligence-in-psychology.md
+intelligence-and-AI.md
+contexts.md
 
 #RAG-systems.md
 #attention-and-transformers.md
 #classification-models.md
 #compression.md
 #content_of_the_AI_course.md
-#contexts.md
 #data-driven-approach.md
 #databases.md
 #deep-neural-networks.md

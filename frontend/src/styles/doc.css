@@ -42,7 +42,7 @@
 
 /* ===============================
    Lists
-   =============================== */
+   =============================== 
 
 .topic ul,
 .references ul {
@@ -66,6 +66,32 @@
   left: 0;
   color: #5f6b7a;
   font-size: 14px;
+}
+*/
+.references ul,
+.topic ul {
+  list-style: none;      /* remove default bullets */
+  padding-left: 1.5rem;
+}
+
+.references ul li,
+.topic ul li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.references ul li::before,
+.topic ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: #2ecc71;
+  border-radius: 50%;    /* makes it a blob */
 }
 
 /* ===============================
@@ -135,8 +161,6 @@ blockquote {
   padding-right: 1.1em;
   transition: color 0.18s ease;
 }
-
-
 
 .external-link::after {
   content: "↗";

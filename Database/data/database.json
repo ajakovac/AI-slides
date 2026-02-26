@@ -4,7 +4,24 @@
         "item_separator": "\u001f",
         "unresolved_links": []
     },
-    "content-of-the-ai-course": {
+    "contents": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "contents",
+        "lecture-1": [
+            "Lecture 1",
+            "lecture-1"
+        ],
+        "lecture-2": [
+            "Lecture 2",
+            "lecture-2"
+        ],
+        "lecture-3": [
+            "Lecture 3",
+            "lecture-3"
+        ]
+    },
+    "lecture-1": {
         "$links": [],
         "$images": [
             [
@@ -12,23 +29,42 @@
                 "introduction_to_AI.png"
             ]
         ],
-        "$keyword_name": "content of the AI course",
-        "walkthrough": [
-            "walkthrough",
+        "$keyword_name": "Lecture 1",
+        "topics": [
+            "topics",
             "\u001ekeyword\u001fabout the Introduction to AI course\u001fabout-the-introduction-to-ai-course\u001e  \u001eimage\u001fIntroduction to AI\u001fintroduction_to_AI.png\u001e",
             "\u001ekeyword\u001flearning in the AI era\u001flearning-in-the-ai-era\u001e",
             "introduction: \u001ekeyword\u001fgeneral facts about AI\u001fgeneral-facts-about-ai\u001e",
             "\u001ekeyword\u001fsocial and ethical aspects of artificial intelligence\u001fsocial-and-ethical-aspects-of-artificial-intelligence\u001e",
-            "\u001ekeyword\u001fa brief history of Artificial Intelligence\u001fa-brief-history-of-artificial-intelligence\u001e",
-            "\u001ekeyword\u001fHuman Intelligence: A Psychological Perspective\u001fhuman-intelligence:-a-psychological-perspective\u001e"
+            "\u001ekeyword\u001fa brief history of Artificial Intelligence\u001fa-brief-history-of-artificial-intelligence\u001e"
+        ]
+    },
+    "lecture-2": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "Lecture 2",
+        "topics": [
+            "topics",
+            "\u001ekeyword\u001fchanges in problem solving\u001fchanges-in-problem-solving\u001e",
+            "\u001ekeyword\u001fhuman intelligence: a psychological perspective\u001fhuman-intelligence:-a-psychological-perspective\u001e"
+        ]
+    },
+    "lecture-3": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "Lecture 3",
+        "topics": [
+            "topics",
+            "\u001ekeyword\u001fintelligence and AI\u001fintelligence-and-ai\u001e",
+            "\u001ekeyword\u001fConceptual foundations\u001fconceptual-foundations\u001e"
         ]
     },
     "about-the-introduction-to-ai-course": {
         "$links": [
             [
-                "content of the AI course",
-                "content-of-the-ai-course",
-                "walkthrough"
+                "Lecture 1",
+                "lecture-1",
+                "topics"
             ]
         ],
         "$images": [
@@ -61,9 +97,9 @@
     "learning-in-the-ai-era": {
         "$links": [
             [
-                "content of the AI course",
-                "content-of-the-ai-course",
-                "walkthrough"
+                "Lecture 1",
+                "lecture-1",
+                "topics"
             ]
         ],
         "$images": [
@@ -369,9 +405,9 @@
     "general-facts-about-ai": {
         "$links": [
             [
-                "content of the AI course",
-                "content-of-the-ai-course",
-                "walkthrough"
+                "Lecture 1",
+                "lecture-1",
+                "topics"
             ]
         ],
         "$images": [
@@ -689,9 +725,9 @@
     "social-and-ethical-aspects-of-artificial-intelligence": {
         "$links": [
             [
-                "content of the AI course",
-                "content-of-the-ai-course",
-                "walkthrough"
+                "Lecture 1",
+                "lecture-1",
+                "topics"
             ]
         ],
         "$images": [],
@@ -1046,9 +1082,9 @@
     "a-brief-history-of-artificial-intelligence": {
         "$links": [
             [
-                "content of the AI course",
-                "content-of-the-ai-course",
-                "walkthrough"
+                "Lecture 1",
+                "lecture-1",
+                "topics"
             ]
         ],
         "$images": [
@@ -1682,9 +1718,9 @@
     "human-intelligence:-a-psychological-perspective": {
         "$links": [
             [
-                "content of the AI course",
-                "content-of-the-ai-course",
-                "walkthrough"
+                "Lecture 2",
+                "lecture-2",
+                "topics"
             ]
         ],
         "$images": [],
@@ -1998,8 +2034,18 @@
                 "system-i"
             ]
         ],
-        "$images": [],
+        "$images": [
+            [
+                "mental model",
+                "mental-model-System-I.png"
+            ]
+        ],
         "$keyword_name": "System I",
+        "mental-model": [
+            "mental model",
+            "action focused: change in environment $\\to$ immediate action",
+            "\u001eimage\u001fmental model\u001fmental-model-System-I.png\u001e"
+        ],
         "properties": [
             "properties",
             "fast and automatic,",
@@ -2040,8 +2086,27 @@
                 "system-ii"
             ]
         ],
-        "$images": [],
+        "$images": [
+            [
+                "mental model",
+                "mental-model-System-II.png"
+            ],
+            [
+                "detailed mental model",
+                "mental-model-System-II-detailed.png"
+            ]
+        ],
         "$keyword_name": "System II",
+        "mental-model": [
+            "mental model",
+            "environment is too complex to react to each change",
+            "\u001ekeyword\u001frepresentation of reality\u001frepresentation-of-reality\u001e (model) is needed",
+            "sensory information updates the model",
+            "scenarios are evaluated",
+            "decision",
+            "\u001eimage\u001fmental model\u001fmental-model-System-II.png\u001e",
+            "\u001eimage\u001fdetailed mental model\u001fmental-model-System-II-detailed.png\u001e"
+        ],
         "properties": [
             "properties",
             "slow and effortful,",
@@ -2170,28 +2235,39 @@
                 "interaction-between-the-systems"
             ]
         ],
-        "$images": [],
+        "$images": [
+            [
+                "mental model",
+                "mental-model-together.png"
+            ]
+        ],
         "$keyword_name": "Interaction between the systems",
         "normal-cognition": [
             "normal cognition",
             "System I continuously generates impressions, intuitions, and tentative judgments",
             "System II monitor, endorse, modify, or override them.",
-            "new tasks always start with System II"
+            "thw two systems can change to each other (Explicitation and Implicitization)",
+            "new tasks always start with System II",
+            "\u001eimage\u001fmental model\u001fmental-model-together.png\u001e"
         ],
-        "training": [
-            "training",
-            "System II $\\to$ System I",
-            "Often used tasks go to System I (car driving, riding a bike)",
-            "in fast decisions we often use System I (do no think)"
-        ],
-        "paralysis-by-analysis": [
-            "Paralysis by analysis",
+        "understanding-and-bringing-to-awareness": [
+            "Understanding and Bringing to Awareness",
+            "the same method we understand our environment or the world as a whole, we can understand our internal mechanisms",
             "System I $\\to$ System II",
-            "Excessive conscious control can disrupt automatized performance (explicit monitoring)",
+            "Paralysis by analysis: excessive conscious control can disrupt automatized performance (explicit monitoring)",
             "But later it can lead to more conscious and more effective performance"
+        ],
+        "internalization-and-automatization": [
+            "Internalization and Automatization",
+            "building effective but complex concepts while releasing less imporant details",
+            "rely more and more the relevant concepts $\\to$ decrease mental effort",
+            "System II $\\to$ System I",
+            "other names: Habitualization, Proceduralization",
+            "training: conscious process to build effective concepts (excersizing car driving, riding a bike, making sports, etc.)"
         ],
         "neuroplasticity-experiments": [
             "Neuroplasticity experiments",
+            "what happens in the brain during these processes?",
             "\u201cFused Fingers\u201d experiment \u001eexternal-link\u001fMerzenich, M. M., & Kaas, J. H. (1983)\u001fhttps://pubmed.ncbi.nlm.nih.gov/6646426/\u001e, \u001eexternal-link\u001fMogilner et al. (1993)\u001fhttps://europepmc.org/article/pmc/pmc46347?utm_source=chatgpt.com\u001e",
             "two fingers were fused/taped together, and after a while they were released",
             "they observed the areas in primary somatosensory cortex (S1) corresponding to the two fingers",
@@ -2246,6 +2322,667 @@
         "overconfidence": [
             "Overconfidence",
             "Excessive trust in one\u2019s own judgments and abilities, often leading to underestimated risks."
+        ]
+    },
+    "intelligence-and-ai": {
+        "$links": [
+            [
+                "Lecture 3",
+                "lecture-3",
+                "topics"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "intelligence and AI",
+        "why-do-we-need-intelligence?": [
+            "why do we need intelligence?",
+            "goal of a living being",
+            "why intelligence, not science?"
+        ],
+        "goal-of-a-living-being": [
+            "goal of a living being",
+            "survival in a complex environment",
+            "has to react to the environmental issues: $\\text{issue}\\to\\text{action}$",
+            "changing environment $\\to$ adaptation (learning)"
+        ],
+        "definitions": [
+            "definitions",
+            "\u001ekeyword\u001fTuring\u2019s intelligence definition\u001fturing\u2019s-intelligence-definition\u001e",
+            "\u001ekeyword\u001fLegg\u2013Hutter intelligence definition\u001flegg\u2013hutter-intelligence-definition\u001e",
+            "\u001ekeyword\u001fclassification-based intelligence definition\u001fclassification-based-intelligence-definition\u001e",
+            "\u001ekeyword\u001frepresentation-based intelligence definition\u001frepresentation-based-intelligence-definition\u001e"
+        ]
+    },
+    "turing\u2019s-intelligence-definition": {
+        "$links": [
+            [
+                "intelligence and AI",
+                "intelligence-and-ai",
+                "definitions"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Turing\u2019s intelligence definition",
+        "historical-context": [
+            "historical context",
+            "proposed in 1950, at a time when the internal mechanisms of thinking machines were unknown and difficult to formalize"
+        ],
+        "methodological-principle": [
+            "methodological principle",
+            "intelligence should be defined operationally, by behavior, rather than by internal structure or subjective notions such as consciousness",
+            "\u001ekeyword\u001fTuring test\u001fturing-test\u001e"
+        ],
+        "formulation": [
+            "formulation",
+            "a machine is considered intelligent if, in unrestricted textual conversation, a human interrogator cannot reliably distinguish it from a human"
+        ]
+    },
+    "turing-test": {
+        "$links": [
+            [
+                "Turing\u2019s intelligence definition",
+                "turing\u2019s-intelligence-definition",
+                "methodological-principle"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Turing test",
+        "setup": [
+            "setup",
+            "a human interrogator communicates via text with two hidden participants",
+            "one participant is human, the other is a machine",
+            "the interrogator may ask arbitrary questions"
+        ],
+        "criterion": [
+            "criterion",
+            "the machine passes the test if the interrogator cannot reliably distinguish it from the human"
+        ],
+        "criticism": [
+            "criticism",
+            "allows superficial pattern imitation to succeed: the Turing test evaluates indistinguishability of behavior, not the presence of internal understanding or goals",
+            "lead to tricky machines instead of real intelligence (\u001ekeyword\u001fELIZA\u001feliza\u001e, \u001ekeyword\u001fEugene Goostman\u001feugene-goostman\u001e)"
+        ],
+        "impact": [
+            "impact",
+            "became the most influential and widely discussed benchmark for machine intelligence, shaping both AI research and public perception"
+        ],
+        "programs": [
+            "programs",
+            "\u001ekeyword\u001fELIZA\u001feliza\u001e",
+            "\u001ekeyword\u001fPARRY\u001fparry\u001e",
+            "\u001ekeyword\u001fEugene Goostman\u001feugene-goostman\u001e"
+        ]
+    },
+    "eliza": {
+        "$links": [
+            [
+                "Turing test",
+                "turing-test",
+                "criticism"
+            ],
+            [
+                "Turing test",
+                "turing-test",
+                "programs"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "ELIZA",
+        "notes": [
+            "notes",
+            "written by Joseph Weizenbaum (1966)",
+            "simple pattern matching, mimicking a Rogerian psychotherapist",
+            "Why it mattered: Some users felt understood and attributed intelligence to it"
+        ],
+        "reality-check": [
+            "Reality check",
+            "No deception of expert interrogators",
+            "No unrestricted dialogue"
+        ],
+        "status": [
+            "Status",
+            "Psychological effect, not a Turing Test pass"
+        ]
+    },
+    "parry": {
+        "$links": [
+            [
+                "Turing test",
+                "turing-test",
+                "programs"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "PARRY",
+        "notes": [
+            "notes",
+            "Creator: Kenneth Colby",
+            "What it did: simulated a paranoid patient",
+            "Notable experiment: psychiatrists judged transcripts of PARRY vs humans",
+            "Results: accuracy was only slightly better than chance"
+        ],
+        "reality-check": [
+            "Reality check",
+            "Limited deception",
+            "Narrow persona"
+        ],
+        "status": [
+            "Status",
+            "Closest early approximation, but still not a true pass"
+        ]
+    },
+    "eugene-goostman": {
+        "$links": [
+            [
+                "Turing test",
+                "turing-test",
+                "criticism"
+            ],
+            [
+                "Turing test",
+                "turing-test",
+                "programs"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Eugene Goostman",
+        "notes": [
+            "notes",
+            "written by: Vladimir Veselov, Eugene Demchenko, Sergey Ulasen (2000-2014)",
+            "Claim: passed the Turing Test at the Royal Society",
+            "Trick: posed as a 13-year-old non-native English speaker"
+        ],
+        "reality-check": [
+            "Reality check",
+            "Short conversations",
+            "Non-standard test setup",
+            "Exploited lowered expectations"
+        ],
+        "status": [
+            "Status",
+            "Widely criticized claim, not accepted by experts"
+        ]
+    },
+    "legg\u2013hutter-intelligence-definition": {
+        "$links": [
+            [
+                "intelligence and AI",
+                "intelligence-and-ai",
+                "definitions"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Legg\u2013Hutter intelligence definition",
+        "historical-context": [
+            "historical context",
+            "proposed in the mid-2000s in the context of formal, universal definitions of intelligence"
+        ],
+        "core-idea": [
+            "core idea",
+            "define intelligence measure based on how an agent achieves its goals in a wide range of environments"
+        ],
+        "formulation": [
+            "formulation",
+            "weighted average of performances over environments $$ \\text{intelligence}(\\text{agent}) = \\!\\!\\!\\sum\\limits_{E\\in\\text{environments}} 2^{-K(E)}\\, \\mathbb E (\\text{reward from }E)$$",
+            "weight: $K(E)$ Kolmogorov complexity",
+            "simple environments are more probable than complex ones"
+        ],
+        "advantages": [
+            "advantages",
+            "provides a precise, mathematical definition of intelligence",
+            "applies uniformly to humans, animals, and machines",
+            "explicitly captures generality across environments",
+            "avoids reliance on language or human imitation"
+        ],
+        "disadvantages": [
+            "disadvantages",
+            "relies on uncomputable quantities (Kolmogorov complexity)",
+            "assumes a fixed reward-based notion of goals",
+            "offers little guidance for practical system design",
+            "abstracts away representation and internal structure"
+        ],
+        "impact": [
+            "impact",
+            "established a rigorous theoretical benchmark for general intelligence and influenced research on universal agents (e.g. AIXI)"
+        ],
+        ">remark": [
+            ">remark",
+            "Legg\u2013Hutter intelligence is a normative, idealized definition rather than an operational or experimentally testable criterion"
+        ]
+    },
+    "classification-based-intelligence-definition": {
+        "$links": [
+            [
+                "intelligence and AI",
+                "intelligence-and-ai",
+                "definitions"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "classification-based intelligence definition",
+        ">remark": [
+            ">remark",
+            "this definition evaluates intelligence by output equivalence, not by the quality or structure of internal representations"
+        ],
+        "historical-context": [
+            "historical context",
+            "emerged implicitly with the success of supervised learning and deep neural networks in perception tasks"
+        ],
+        "core-idea": [
+            "core idea",
+            "a machine is considered intelligent if it classifies inputs in the same way a human does"
+        ],
+        "formal-formulation": [
+            "formal formulation",
+            "let $X$ be an input space (e.g. images, sounds, texts)",
+            "let $\\mathcal C_{\\text{human}}$ be a context (partition of $X$) induced by human labeling",
+            "let $\\mathcal C_{\\text{machine}}$ be a context induced by a trained model",
+            "the machine is intelligent on $X$ if $\\mathcal C_{\\text{machine}} \\approx \\mathcal C_{\\text{human}}$          on a representative test set",
+            "measured by benchmarks"
+        ],
+        "typical-applications": [
+            "typical applications",
+            "image classification",
+            "speech recognition",
+            "text categorization",
+            "medical image diagnosis"
+        ],
+        "advantages": [
+            "advantages",
+            "simple, operational, and experimentally testable",
+            "enables large-scale benchmarking and rapid technological progress",
+            "effective for narrow, well-defined tasks"
+        ],
+        "corresponds-to-system-1\u2013style-intelligence": [
+            "corresponds to System 1\u2013style intelligence",
+            "intelligence is reduced to a single fixed context",
+            "no notion of goals, planning, or agency",
+            "no representation of uncertainty or error control",
+            "does not require understanding, grounding, or adaptability",
+            "focuses on direct pattern discrimination rather than structured representation"
+        ]
+    },
+    "representation-based-intelligence-definition": {
+        "$links": [
+            [
+                "intelligence and AI",
+                "intelligence-and-ai",
+                "definitions"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "representation-based intelligence definition",
+        "core-ideas": [
+            "core ideas",
+            "environment is too complicated that an agent could react to each situations one-by-one",
+            "intelligence is the ability of an agent to construct, refine, and use internal representations (model) of reality in order to act successfully within it",
+            "representation-based intelligence treats intelligence as a structural property of an agent\u2019s internal world model, not merely as a pattern of outputs"
+        ],
+        "representation": [
+            "representation",
+            "different tasks represent different contexts",
+            "select relevant features in the context, and ignore irrelevant details",
+            "representations may be refined hierarchically (\u001ekeyword\u001flearning\u001flearning\u001e)"
+        ],
+        "advantages": [
+            "advantages",
+            "explains generalization and transfer across tasks",
+            "naturally incorporates uncertainty and abstraction",
+            "applies to humans, animals, and machines",
+            "unifies perception, reasoning, and action under a single framework"
+        ],
+        "limitations": [
+            "limitations",
+            "more difficult to operationalize than behavior-only definitions",
+            "requires explicit modeling of representation structures",
+            "success depends on defining appropriate relevance and goals"
+        ]
+    },
+    "learning": {
+        "$links": [
+            [
+                "representation-based intelligence definition",
+                "representation-based-intelligence-definition",
+                "representation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "learning",
+        "core-idea": [
+            "core idea a process that improves future performance by modifying internal structure or behavior based on experience"
+        ],
+        "unifying-view": [
+            "unifying view learning refines representations, parameters, or selections under constraints"
+        ],
+        ">remark": [
+            ">remark",
+            "evolution is learning at the population level"
+        ]
+    },
+    "changes-in-problem-solving": {
+        "$links": [
+            [
+                "Lecture 2",
+                "lecture-2",
+                "topics"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "changes in problem solving",
+        "historic-times-problem-solving": [
+            "historic times problem solving",
+            "observation made by: human",
+            "modelling done by: human",
+            "computation done by: human",
+            "action taken by: human"
+        ],
+        "machines-and-measurement-instruments": [
+            "machines and measurement instruments",
+            "observation made by: machine",
+            "modelling done by: human",
+            "computation done by: human",
+            "action taken by: human"
+        ],
+        "xx.-century-and-computers": [
+            "XX. century and computers",
+            "observation made by: machine",
+            "modelling done by: human",
+            "computation done by: machine",
+            "action taken by: human"
+        ],
+        "xxi.-century-and-artificial-intelligence": [
+            "XXI. century and artificial intelligence",
+            "observation made by: machine",
+            "modelling done by: machine",
+            "computation done by: machine",
+            "action taken by: human"
+        ],
+        "methods": [
+            "methods",
+            "\u001ekeyword\u001ftraditional algorithms\u001ftraditional-algorithms\u001e",
+            "\u001ekeyword\u001fartificial intelligence based problem solving\u001fartificial-intelligence-based-problem-solving\u001e"
+        ]
+    },
+    "traditional-algorithms": {
+        "$links": [
+            [
+                "changes in problem solving",
+                "changes-in-problem-solving",
+                "methods"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "traditional algorithms",
+        "workflow": [
+            "workflow",
+            "understand the problem",
+            "write a code",
+            "run the code"
+        ],
+        "characteristics": [
+            "characteristics",
+            "machine does the same task humans would do, only faster",
+            "machine is not smarter, only faster"
+        ]
+    },
+    "artificial-intelligence-based-problem-solving": {
+        "$links": [
+            [
+                "changes in problem solving",
+                "changes-in-problem-solving",
+                "methods"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "artificial intelligence based problem solving",
+        "workflow": [
+            "workflow",
+            "understand learning",
+            "write a learning algorithm",
+            "the algorithm learns and solves the problem"
+        ],
+        "characteristics": [
+            "characteristics",
+            "solution is not explicitly known",
+            "machine can be smarter in specific domains!"
+        ]
+    },
+    "representation-of-reality": {
+        "$links": [
+            [
+                "System II",
+                "system-ii",
+                "mental-model"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "representation of reality",
+        "aspects": [
+            "aspects",
+            "\u001ekeyword\u001fgeneral reality\u001fgeneral-reality\u001e",
+            "\u001ekeyword\u001factual reality\u001factual-reality\u001e"
+        ],
+        "mainstream-ai-representation": [
+            "mainstream AI representation",
+            "general reality is represented much more deeply than actual reality"
+        ],
+        "methods": [
+            "methods",
+            "\u001ekeyword\u001fgather information\u001fgather-information\u001e",
+            "extracting relevant features"
+        ]
+    },
+    "general-reality": {
+        "$links": [
+            [
+                "representation of reality",
+                "representation-of-reality",
+                "aspects"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "general reality",
+        ">remark": [
+            ">remark",
+            "laws and generic mechanisms describing how the world works"
+        ],
+        "examples": [
+            "examples",
+            "maps of streets",
+            "internal structure of LLMs predicting token sequences",
+            "sports equipment and physical abilities"
+        ],
+        "improvement-methods": [
+            "improvement methods",
+            "better tools",
+            "training"
+        ],
+        "in-ai": [
+            "in AI",
+            "encoded in trained hardware and parameters (millions to ~100 billion parameters)"
+        ]
+    },
+    "actual-reality": {
+        "$links": [
+            [
+                "representation of reality",
+                "representation-of-reality",
+                "aspects"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "actual reality",
+        ">remark": [
+            ">remark",
+            "the currently active environment, objects, persons, and phenomena"
+        ],
+        "examples": [
+            "examples",
+            "traffic conditions on a map",
+            "prompts defining tasks for LLMs",
+            "current physical state of an athlete"
+        ],
+        "in-ai": [
+            "in AI",
+            "represented by input data (up to millions of tokens)"
+        ],
+        "using-initial-conditions": [
+            "using initial conditions",
+            "represent the current state",
+            "exact prediction possible only in ideal systems",
+            "real systems have limited validity ranges",
+            "hallucination radius in LLMs"
+        ],
+        "how-can-we-maintain-precision": [
+            "how can we maintain precision",
+            "continual projection onto actual reality",
+            "control may be simple",
+            "example: lossless compression"
+        ]
+    },
+    "gather-information": {
+        "$links": [
+            [
+                "representation of reality",
+                "representation-of-reality",
+                "methods"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "gather information",
+        "characteristics": [
+            "characteristics",
+            "factual",
+            "interpretation-agnostic"
+        ],
+        "in-it": [
+            "in IT",
+            "big data approaches",
+            "avoidance of information loss",
+            "very large datasets"
+        ],
+        "examples": [
+            "examples",
+            "pixel colors",
+            "logs",
+            "wave amplitudes"
+        ],
+        "storage-methods": [
+            "storage methods",
+            "data lakes",
+            "relational databases",
+            "non-relational databases"
+        ]
+    },
+    "conceptual-foundations": {
+        "$links": [
+            [
+                "Lecture 3",
+                "lecture-3",
+                "topics"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Conceptual foundations",
+        ">remark": [
+            ">remark",
+            "This section introduces the basic definitions that serve as the foundational layer for the development of the cognitive algebra. It is difficult to determine where to start the whole descritpion. In human thinking the roots go deep into the unconscious. We adopt a deliberately physical viewpoint, centered on the states of the world and their evolution in time. As will become clear later, this choice is not restrictive: the resulting formalism is sufficiently general to support a wide range of cognitive and representational interpretations."
+        ],
+        "universe": [
+            "Universe",
+            "scene of all actions, containing all information"
+        ],
+        "observer": [
+            "observer",
+            "(agent): intelligent agent describing the world",
+            "can be a living being, a human, AI",
+            "splits Universe into space (hypersurface) and time"
+        ],
+        "space": [
+            "space",
+            "hypersurface of the Universe",
+            "observer dependent",
+            "in general relativity: Cauchy surfaces, positive definite spatial metric tensor"
+        ],
+        "time": [
+            "time",
+            "the label of the space instances",
+            "arrow of time: goes ahaed",
+            "observer dependent",
+            "time is an additive label of the spatial hypersurface: for the times between spacial instances $a$, $b$ and $c$ we have $$t_{ab}+t_{bc}=t_{ac}$$"
+        ],
+        "states": [
+            "states",
+            "the possible configurations of the Universe on a spacial instance",
+            "contains all information to be able to predict the future",
+            "can be the complete world's state in a hyper (Cauchy) surface",
+            "a theoretical construct assuming that the future is deterministic if we fully fix a state",
+            "all decision of an agent in the world must depend on the states of the world"
+        ],
+        "observed-world": [
+            "observed world",
+            "full description is not possible/necessary",
+            "a single observer has finite observation capabilities",
+            "can not process the information",
+            "many details don't play role for the agent' purpose (maintain life, or other goals)",
+            "example: to describe the fate of a book, the position of Mars is irrelevant",
+            "a collection of states, differing in irrelevant details, are the real object that matter for an observer"
+        ],
+        "representation": [
+            "representation",
+            "\u001ekeyword\u001f(object) class\u001f(object)-class\u001e",
+            "\u001ekeyword\u001fcontext\u001fcontext\u001e"
+        ]
+    },
+    "(object)-class": {
+        "$links": [
+            [
+                "Conceptual foundations",
+                "conceptual-foundations",
+                "representation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "(object) class",
+        "definition": [
+            "definition",
+            "$C \\subset \\Omega$"
+        ],
+        "interpretation": [
+            "interpretation",
+            "collects states differing only in irrelevant details",
+            "corresponds to a concept (e.g. pen, red color, living being)"
+        ],
+        "examples": [
+            "examples",
+            "a book is collection of states where for example Mars has different position, and the exact matter content of the book itself is different",
+            "computer images",
+            "images where a given pixel is red",
+            "all living beings in the animal kingdom"
+        ],
+        "notes": [
+            "notes",
+            "we can speak about **subclasses**, **nested classes**, etc. just like in case of sets"
+        ]
+    },
+    "context": {
+        "$links": [
+            [
+                "Conceptual foundations",
+                "conceptual-foundations",
+                "representation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "context",
+        "notes": [
+            "notes",
+            "partition of the underlying class: ${\\cal C} = {\\cal P}(C)$",
+            "elements are called **classes of the context** or **cells of the context**",
+            "examples:",
+            "dog breeds in the class of dogs",
+            "a bookshop owner, a reader, a book collector and a mover uses different contexts of the class of books.",
+            "people groupped by their living place"
         ]
     }
 }

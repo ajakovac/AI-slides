@@ -223,6 +223,9 @@ and distort the processes it is intended to monitor.
     - __Interaction between the systems__
 
 - **System I**
+  - **mental model**
+    - action focused: change in environment $\to$ immediate action
+    - ![mental model](../Images/mental-model-System-I.png)
   - **properties**
     - fast and automatic,
     - intuitive and heuristic-based,
@@ -246,6 +249,14 @@ and distort the processes it is intended to monitor.
     - slow training, fast action
 
 - **System II**
+  - **mental model**
+    - environment is too complex to react to each change
+    - __representation of reality__ (model) is needed
+    - sensory information updates the model
+    - scenarios are evaluated
+    - decision
+    - ![mental model](../Images/mental-model-System-II.png)
+    - ![detailed mental model](../Images/mental-model-System-II-detailed.png)
   - **properties**
     - slow and effortful,
     - conscious and intentional,
@@ -337,16 +348,23 @@ and distort the processes it is intended to monitor.
   - **normal cognition**
     - System I continuously generates impressions, intuitions, and tentative judgments
     - System II monitor, endorse, modify, or override them.
+    - thw two systems can change to each other (Explicitation and Implicitization)
     - new tasks always start with System II
-  - **training**
-    - System II $\to$ System I
-    - Often used tasks go to System I (car driving, riding a bike)
-    - in fast decisions we often use System I (do no think)
-  - **Paralysis by analysis**
+    - ![mental model](../Images/mental-model-together.png)
+  - **Understanding and Bringing to Awareness**
+    - the same method we understand our environment or the world as a whole, we can understand our internal mechanisms
     - System I $\to$ System II
-    - Excessive conscious control can disrupt automatized performance (explicit monitoring)
+    - Paralysis by analysis: excessive conscious control can disrupt automatized performance (explicit monitoring)
     - But later it can lead to more conscious and more effective performance
+  - **Internalization and Automatization**
+    - building effective but complex concepts while releasing less imporant details
+    - rely more and more the relevant concepts $\to$ decrease mental effort
+    - System II $\to$ System I
+    - other names: Habitualization, Proceduralization
+    - training: conscious process to build effective concepts (excersizing car driving, riding a bike, making sports, etc.)
+
   - **Neuroplasticity experiments**
+    - what happens in the brain during these processes?
     - “Fused Fingers” experiment [Merzenich, M. M., & Kaas, J. H. (1983)](https://pubmed.ncbi.nlm.nih.gov/6646426/), [Mogilner et al. (1993)](https://europepmc.org/article/pmc/pmc46347?utm_source=chatgpt.com)
     - two fingers were fused/taped together, and after a while they were released
     - they observed the areas in primary somatosensory cortex (S1) corresponding to the two fingers
