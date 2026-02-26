@@ -31,12 +31,7 @@ export default function App() {
 
   // Fallback keys (your current hard-coded list)
   const fallbackKeys = useMemo(() => [
-    ["Contents", "content-of-the-ai-course"],
-    ["About the course", "about-the-introduction-to-ai-course"],
-    ["Learning in the AI era", "learning-in-the-ai-era"],
-    ["Introduction","general-facts-about-ai"],
-    ["Social aspects","social-and-ethical-aspects-of-artificial-intelligence"],
-    ["History","a-brief-history-of-artificial-intelligence"]
+    ["Contents", "contents"],
   ], []);
 
   // Which item to fetch from `/item/<name>`

@@ -2978,11 +2978,267 @@
         "notes": [
             "notes",
             "partition of the underlying class: ${\\cal C} = {\\cal P}(C)$",
-            "elements are called **classes of the context** or **cells of the context**",
-            "examples:",
+            "elements are called **classes of the context** or **cells of the context**"
+        ],
+        "examples": [
+            "examples",
             "dog breeds in the class of dogs",
             "a bookshop owner, a reader, a book collector and a mover uses different contexts of the class of books.",
             "people groupped by their living place"
+        ],
+        "contexts-instead-of-states": [
+            "Contexts instead of states",
+            "The states of the world is an abstraction, an assumption that the time evolution can be ultimately completely casual. However, all systems we get in connection are just contexts, whose elements are sets of states.",
+            "no ultimate description of the world! but any refinement is possible",
+            "From now on we will forget about the states of the world, and we speak exclusively about contexts.",
+            "There is usually a fine context that serves as a basis of different subcontexts.",
+            "For example to the set of images we can define a fine partition where two images are in different class if at least one pixel is different."
+        ],
+        "properties": [
+            "properties",
+            "We can define a bunch of functions operating on the context.",
+            "\u001ekeyword\u001fdefinitions in a context\u001fdefinitions-in-a-context\u001e",
+            "\u001ekeyword\u001fsubcontext\u001fsubcontext\u001e",
+            "\u001ekeyword\u001flocal refinement\u001flocal-refinement\u001e",
+            "\u001ekeyword\u001fglobal refinement\u001fglobal-refinement\u001e",
+            "\u001ekeyword\u001fcommon refinement\u001fcommon-refinement\u001e"
+        ],
+        "representation": [
+            "representation",
+            "\u001ekeyword\u001fdirect representation\u001fdirect-representation\u001e"
+        ]
+    },
+    "definitions-in-a-context": {
+        "$links": [
+            [
+                "context",
+                "context",
+                "properties"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "definitions in a context",
+        "underlying-class": [
+            "underlying class",
+            "$\\mathcal C\\mapsto C$"
+        ],
+        "class-(cell)-of-the-context": [
+            "class (cell) of the context",
+            "$(\\mathcal C, c\\subseteq \\Omega) \\mapsto$ true, if $c\\in \\mathcal C$"
+        ],
+        "projector-onto-a-context": [
+            "projector onto a context",
+            "$\\Pi: \\mathcal C\\mapsto \\omega \\mapsto c\\in{\\cal C}$ where $\\omega\\in c$ or $\\Pi_\\mathcal{C}(\\omega)=\\emptyset$"
+        ],
+        "disjunct-contexts": [
+            "disjunct contexts",
+            "$(\\mathcal C, \\mathcal C')\\mapsto $ true, if $\\mathrm{UnderlyingClass}(\\mathcal C)\\cap \\mathrm{UnderlyingClass}(\\mathcal C')=\\emptyset$"
+        ],
+        "sum": [
+            "sum",
+            "if $\\mathrm{DisjunctContexts}(\\mathcal C, \\mathcal C')$: $(\\mathcal C, \\mathcal C')\\mapsto \\mathcal C\\cup\\mathcal C'$"
+        ]
+    },
+    "subcontext": {
+        "$links": [
+            [
+                "context",
+                "context",
+                "properties"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "subcontext",
+        ">remark": [
+            ">remark",
+            "a coarser resolution of the world"
+        ],
+        "notes": [
+            "notes",
+            "$\\mathcal C'\\preceq \\mathcal C$ if $\\forall c\\in\\mathcal C \\exists c'\\in C': c\\subset c'$",
+            "partial ordering"
+        ],
+        "examples": [
+            "examples",
+            "cat images as collection of images",
+            "genus is subcontext of species"
+        ]
+    },
+    "local-refinement": {
+        "$links": [
+            [
+                "context",
+                "context",
+                "properties"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "local refinement",
+        ">remark": [
+            ">remark",
+            "refining of an element of a context"
+        ],
+        "definition": [
+            "definition",
+            "$(\\mathcal C, \\mathcal C') \\mapsto \\text{true}$ iff $\\exists c \\in \\mathcal C:\\;\\mathcal C'$ is a partition of $c$"
+        ],
+        "examples": [
+            "examples",
+            "dogs and dog breeds",
+            "basic colors and shades of blue"
+        ]
+    },
+    "global-refinement": {
+        "$links": [
+            [
+                "context",
+                "context",
+                "properties"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "global refinement",
+        ">remark": [
+            ">remark",
+            "a context where one of the context of the parent is refined locally"
+        ],
+        "definition": [
+            "definition",
+            "$\\mathcal C^+ = (\\mathcal C\\setminus \\{c\\}) \\cup \\mathcal C'$, where $\\mathcal C'$ is a local refinement of $c$"
+        ],
+        "note": [
+            "note",
+            "$\\mathcal C \\preceq C^+$"
+        ]
+    },
+    "common-refinement": {
+        "$links": [
+            [
+                "context",
+                "context",
+                "properties"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "common refinement",
+        ">remark": [
+            ">remark",
+            "all classes of the domain contexts are union of the elements of the common refinement context"
+        ],
+        "definition": [
+            "definition",
+            "$\\mathcal C_1\\vee \\mathcal C_2 = \\{ c_1 \\cap c_2 \\mid c_1 \\in \\mathcal C_1,\\; c_2 \\in \\mathcal C_2,\\; c_1 \\cap c_2 \\neq \\emptyset \\}$"
+        ],
+        "note": [
+            "note",
+            "several coarse contexts can lead to a fine description of the world."
+        ]
+    },
+    "direct-representation": {
+        "$links": [
+            [
+                "context",
+                "context",
+                "representation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "direct representation",
+        ">remark": [
+            ">remark",
+            "all relevant, independent object classes are collected to a common context"
+        ],
+        "notes": [
+            "notes",
+            "alternative name: **System-1** representation, or one-hot-encoding",
+            "the class can result in an action in case of a living being"
+        ],
+        "properties": [
+            "properties",
+            "\u001ekeyword\u001fadvantages of the direct representation\u001fadvantages-of-the-direct-representation\u001e",
+            "\u001ekeyword\u001fdisadvantages of the direct representation\u001fdisadvantages-of-the-direct-representation\u001e",
+            "\u001ekeyword\u001fusage scope\u001fusage-scope\u001e"
+        ]
+    },
+    "advantages-of-the-direct-representation": {
+        "$links": [
+            [
+                "direct representation",
+                "direct-representation",
+                "properties"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "advantages of the direct representation",
+        "natural": [
+            "natural",
+            "this is the most natural approach for a living being"
+        ],
+        "fast,-cheap": [
+            "fast, cheap",
+            "it requires a single, albeit complicated context evaluation"
+        ],
+        "parallelizable": [
+            "parallelizable",
+            "because of the small effort for the evaluation, different System-1 applications can run parallel in the same time (e.g. walking and chewing gum)."
+        ],
+        "accurate": [
+            "accurate",
+            "the context can be refined for the actual task"
+        ]
+    },
+    "disadvantages-of-the-direct-representation": {
+        "$links": [
+            [
+                "direct representation",
+                "direct-representation",
+                "properties"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "disadvantages of the direct representation",
+        "storage-efficiency": [
+            "storage efficiency",
+            "all cells are named one-by-one (c.f. one-hot encoding)"
+        ],
+        "analyticity": [
+            "analyticity",
+            "in numerical implementation all concepts are results of analytic calculation. This requires that the probability of performing a possible action is approximately the same (balanced classes). For example, this approach is not useful for tell apart cat images and non-cat images, because non cat images form a vastly larger set. In such a space, distinguishing one element from all others by direct enumeration is combinatorially prohibitive."
+        ],
+        "specific": [
+            "specific",
+            "these concepts are very special, and so the the generalizability is very tedious. For example the concept that separates dog and cat images can not be used for other purposes. For a different task a different specific concept has to be created (catastrophic forgetting). For the same reason, System-1 concepts are hard to train, we need a lot of sepcific examples to do that."
+        ],
+        "fragile": [
+            "fragile",
+            "if we forget the concept, there is no way to recreate is from other knowledge. We have to restart the creation of it, and we can just hope that we arrive to the same good result. Professional athletes can have the experience that suddenly they \"forget\" how to do the given sport effectively."
+        ]
+    },
+    "usage-scope": {
+        "$links": [
+            [
+                "direct representation",
+                "direct-representation",
+                "properties"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "usage scope",
+        "frequently-used-tasks": [
+            "frequently used tasks",
+            "if a task is very important, then we can set up a context exclusively for doing it"
+        ],
+        "limited-number-of-classes": [
+            "limited number of classes",
+            "it cannot be used to tell apart an astronomical number of classes"
+        ],
+        "balanced-classes": [
+            "balanced classes",
+            "the classes must be comparable in size"
+        ],
+        "main-stream-applications-in-ai": [
+            "main stream applications in AI",
+            "present day AI applications set up a single context to represent the classes."
         ]
     }
 }

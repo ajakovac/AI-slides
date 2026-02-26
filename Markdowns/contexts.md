@@ -48,68 +48,72 @@
 - **context**
     - partition of the underlying class: ${\cal C} = {\cal P}(C)$
     - elements are called **classes of the context** or **cells of the context**
-    - examples:
+    - **examples**
         - dog breeds in the class of dogs
         - a bookshop owner, a reader, a book collector and a mover uses different contexts of the class of books.
         - people groupped by their living place
+    - **Contexts instead of states**
+        - The states of the world is an abstraction, an assumption that the time evolution can be ultimately completely casual. However, all systems we get in connection are just contexts, whose elements are sets of states.
+        - no ultimate description of the world! but any refinement is possible
+        - From now on we will forget about the states of the world, and we speak exclusively about contexts. 
+        - There is usually a fine context that serves as a basis of different subcontexts.
+        - For example to the set of images we can define a fine partition where two images are in different class if at least one pixel is different.
+    - **properties**: We can define a bunch of functions operating on the context.
+        - __definitions in a context__
+        - __subcontext__
+        - __local refinement__
+        - __global refinement__
+        - __common refinement__
+    - **representation**
+        - __direct representation__
 
-__END__
+- **definitions in a context**
 
-### Contexts instead of states
+    - **underlying class**: $\mathcal C\mapsto C$
 
-The states of the world is an abstraction, an assumption that the time evolution can be ultimately completely casual. However, all systems we get in connection are just contexts, whose elements are sets of states.
-no ultimate description of the world! but any refinement is possible
+    - **class (cell) of the context** : $(\mathcal C, c\subseteq \Omega) \mapsto$ true, if $c\in \mathcal C$
 
-From now on we will forget about the states of the world, and we speak exclusively about contexts. There is usually a fine context that serves as a basis of different subcontexts. For example to the set of images we can define a fine partition where two images are in different class if at least one pixel is different.
+    - **projector onto a context**: $\Pi: \mathcal C\mapsto \omega \mapsto c\in{\cal C}$ where $\omega\in c$ or $\Pi_\mathcal{C}(\omega)=\emptyset$
 
-### Properties of the contexts
+    - **disjunct contexts**: $(\mathcal C, \mathcal C')\mapsto $ true, if $\mathrm{UnderlyingClass}(\mathcal C)\cap \mathrm{UnderlyingClass}(\mathcal C')=\emptyset$
 
-We can define a bunch of functions operating on the context.
+    - **sum**: if $\mathrm{DisjunctContexts}(\mathcal C, \mathcal C')$: $(\mathcal C, \mathcal C')\mapsto \mathcal C\cup\mathcal C'$
 
-- **underlying class**: $\mathcal C\mapsto C$
-
-- **class (cell) of the context** : $(\mathcal C, c\subseteq \Omega) \mapsto$ true, if $c\in \mathcal C$
-
-- **projector onto a context**: $\Pi: \mathcal C\mapsto \omega \mapsto c\in{\cal C}$ where $\omega\in c$ or $\Pi_\mathcal{C}(\omega)=\emptyset$
-
-- **disjunct contexts**: $(\mathcal C, \mathcal C')\mapsto $ true, if $\mathrm{UnderlyingClass}(\mathcal C)\cap \mathrm{UnderlyingClass}(\mathcal C')=\emptyset$
-
-- **sum**: if $\mathrm{DisjunctContexts}(\mathcal C, \mathcal C')$: $(\mathcal C, \mathcal C')\mapsto \mathcal C\cup\mathcal C'$
-
-- **subcontext**: $\hookleftarrow$ [context](#context): $\mathcal C'\preceq \mathcal C$ if $\forall c\in\mathcal C \exists c'\in C': c\subset c'$
-    - notes: 
-        - partial ordering
-        - the subcontext means a coarser resolution of the world
-    - examples:
+- **subcontext**
+    > a coarser resolution of the world
+    - $\mathcal C'\preceq \mathcal C$ if $\forall c\in\mathcal C \exists c'\in C': c\subset c'$
+    - partial ordering
+    - **examples**
         - cat images as collection of images
         - genus is subcontext of species
 
 - **local refinement**:
-  $(\mathcal C, \mathcal C') \mapsto \text{true}$
-  iff
-  $\exists c \in \mathcal C:\;
-  \mathcal C'$ is a partition of $c$
-    - notes: 
-        - a refining of an element of a context
-    - examples:
+    > refining of an element of a context
+    - **definition**: $(\mathcal C, \mathcal C') \mapsto \text{true}$
+        iff $\exists c \in \mathcal C:\;\mathcal C'$ is a partition of $c$
+    - **examples**
         - dogs and dog breeds
         - basic colors and shades of blue
 
-- **global refinement**: $\mathcal C^+ = (\mathcal C\setminus \{c\}) \cup \mathcal C'$
-    - note: $\mathcal C \preceq C^+$
+- **global refinement**
+    > a context where one of the context of the parent is refined locally
+    - **definition**: $\mathcal C^+ = (\mathcal C\setminus \{c\}) \cup \mathcal C'$, where $\mathcal C'$ is a local refinement of $c$
+    - **note**: $\mathcal C \preceq C^+$
 
-- **common refinement**: $\mathcal C_1\vee \mathcal C_2 = \{ c_1 \cap c_2 \mid c_1 \in \mathcal C_1,\; c_2 \in \mathcal C_2,\; c_1 \cap c_2 \neq \emptyset \}$
-    - notes:
-        - all classes of the domain contexts are union of the elements of the common refinement context
-        - several coarse contexts can lead to a fine description of the world.
+- **common refinement**
+    > all classes of the domain contexts are union of the elements of the common refinement context
+    - **definition**: $\mathcal C_1\vee \mathcal C_2 = \{ c_1 \cap c_2 \mid c_1 \in \mathcal C_1,\; c_2 \in \mathcal C_2,\; c_1 \cap c_2 \neq \emptyset \}$
+    - **note**: several coarse contexts can lead to a fine description of the world.
 
-## Characterization of contexts
 
-### Direct representation
-
-- **direct representation**: all relevant, independent object classes are collected to a common context
-    - alternative name: **System-1** representation
+- **direct representation**: 
+    > all relevant, independent object classes are collected to a common context
+    - alternative name: **System-1** representation, or one-hot-encoding
     - the class can result in an action in case of a living being
+    - **properties**
+        - __advantages of the direct representation__
+        - __disadvantages of the direct representation__
+        - __usage scope__
 
 - **advantages of the direct representation**
     - **natural**: this is the most natural approach for a living being
@@ -118,8 +122,7 @@ We can define a bunch of functions operating on the context.
     - **accurate**: the context can be refined for the actual task
 
 - **disadvantages of the direct representation**
-    - **error conctrol**: the action is done without any double check if the concept is activated. But there can be tricky or complicated situations where a superficial decision is not correct.
-    - **unawareness**: System-1 concepts do not know, if they make a mistake. They do not know, what they know, or what they don't know. They do an instinctive reaction, the concept of "thinking" is not sensible in this approach.
+    - **storage efficiency**: all cells are named one-by-one (c.f. one-hot encoding)
     - **analyticity**: in numerical implementation all concepts are results of analytic calculation. This requires that the probability of performing a possible action is approximately the same (balanced classes). For example, this approach is not useful for tell apart cat images and non-cat images, because non cat images form a vastly larger set. In such a space, distinguishing one element from all others by direct enumeration is combinatorially prohibitive.
     - **specific**: these concepts are very special, and so the the generalizability is very tedious. For example the concept that separates dog and cat images can not be used for other purposes. For a different task a different specific concept has to be created (catastrophic forgetting). For the same reason, System-1 concepts are hard to train, we need a lot of sepcific examples to do that.
     - **fragile**: if we forget the concept, there is no way to recreate is from other knowledge. We have to restart the creation of it, and we can just hope that we arrive to the same good result. Professional athletes can have the experience that suddenly they "forget" how to do the given sport effectively.
@@ -129,6 +132,13 @@ We can define a bunch of functions operating on the context.
     - **limited number of classes**: it cannot be used to tell apart an astronomical number of classes
     - **balanced classes**: the classes must be comparable in size
     - **main stream applications in AI**: present day AI applications set up a single context to represent the classes.
+
+__END__
+
+
+## Characterization of contexts
+
+### Direct representation
 
 
 ### Global coordinates
