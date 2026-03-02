@@ -138,10 +138,8 @@
         - success depends on defining appropriate relevance and goals
 
 - **learning**
-    - **core idea**:
-      a process that improves future performance by modifying internal structure or behavior based on experience
-    - **unifying view**:
-      learning refines representations, parameters, or selections under constraints
+    - **core idea**: a process that improves future performance by modifying internal structure or behavior based on experience
+    - **unifying view**: learning refines representations, parameters, or selections under constraints
     > evolution is learning at the population level
 
 - **changes in problem solving**

@@ -31,15 +31,15 @@ export default function App() {
 
   // Fallback keys (your current hard-coded list)
   const fallbackKeys = useMemo(() => [
-    ["Contents", "contents"],
+    ["Contents", "lecture-contents"],
   ], []);
 
   // Which item to fetch from `/item/<name>`
   // default: "contents"
   const contentsItemName =
     import.meta.env.VITE_CONTENTS_ITEM ||
-    new URLSearchParams(window.location.search).get("contents") ||
-    "contents";
+    new URLSearchParams(window.location.search).get("lecture-contents") ||
+    "lecture-contents";
 
   const [keys, setKeys] = useState(fallbackKeys);
   const [activeKey, setActiveKey] = useState(urlKey || null);
@@ -103,7 +103,8 @@ export default function App() {
   }, []);
 
   // If activeKey is still null for some reason, avoid rendering DocPane with null
-  const safeActiveKey = activeKey || keys?.[0]?.[1] || fallbackKeys?.[0]?.[1];
+  // const safeActiveKey = activeKey || keys?.[0]?.[1] || fallbackKeys?.[0]?.[1];
+  const safeActiveKey = activeKey || fallbackKeys?.[0]?.[1];
 
   return (
     <ResizableLayout

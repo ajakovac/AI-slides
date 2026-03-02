@@ -155,7 +155,7 @@
     - Greater differentiation of specific abilities
 
   - **Paper**
-    - Blum & Holling (2017):
+    - Blum \& Holling (2017):
       *Spearman’s Law of Diminishing Returns. A Meta-Analysis*
     - Plot: relation between subgroup mean IQ (x-axis)
       and average inter-test correlation (y-axis),
@@ -306,7 +306,7 @@ and distort the processes it is intended to monitor.
   - The explanation feels sincere and convincing,
     even if it does not reflect the true causal mechanism.
 
-  - **Classic demonstrations**
+  - **Classic demonstrations**: in the following some experimental evidence is shown for post-hoc rationalization
 
   - **Post-hypnotic suggestion** 
     - [Hilgard: Divided Consciousness](https://www.cambridge.org/core/journals/the-british-journal-of-psychiatry/article/abs/divided-consciousness-multiple-controls-in-human-thoughts-and-actions-expanded-edition-by-ernest-r-hilgard-chichester-john-wiley-sons-1986-pp-313-1850/4E828BA48D262446C537DBE61CC06192)
@@ -324,7 +324,7 @@ and distort the processes it is intended to monitor.
     - When asked why, the left hemisphere (which did not see the instruction) invents an explanation (“I’m going to get a Coke.”)
   
   - **Choice blindness** 
-    - [Johansson, P. et al. (2005). Failure to detect mismatches between intention and outcome in a simple decision task.)(https://www.lucs.lu.se/fileadmin/user_upload/lucs/2011/01/Johansson-et-al.-2005-Failure-to-Detect-Mismatches-Between-Intention-and-Outcome-in-a-Simple-Decision-Task.pdf)
+    - [Johansson, P. et al. (2005). Failure to detect mismatches between intention and outcome in a simple decision task.](https://www.lucs.lu.se/fileadmin/user_upload/lucs/2011/01/Johansson-et-al.-2005-Failure-to-Detect-Mismatches-Between-Intention-and-Outcome-in-a-Simple-Decision-Task.pdf)
     - Participants chose which face they found more attractive.
     - Researchers secretly swapped the image.
     - Participants then explained in detail why they preferred the face they did not actually choose.

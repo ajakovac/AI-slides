@@ -2,27 +2,35 @@
     "$system": {
         "link_separator": "\u001e",
         "item_separator": "\u001f",
-        "unresolved_links": []
+        "unresolved_links": [
+            "huffman-coding"
+        ]
     },
-    "contents": {
+    "lecture-contents": {
         "$links": [],
         "$images": [],
-        "$keyword_name": "contents",
+        "$keyword_name": "Lecture Contents",
         "lecture-1": [
             "Lecture 1",
-            "lecture-1"
+            "\u001ekeyword\u001fLecture 1\u001flecture-1\u001e"
         ],
         "lecture-2": [
             "Lecture 2",
-            "lecture-2"
+            "\u001ekeyword\u001fLecture 2\u001flecture-2\u001e"
         ],
         "lecture-3": [
             "Lecture 3",
-            "lecture-3"
+            "\u001ekeyword\u001fLecture 3\u001flecture-3\u001e"
         ]
     },
     "lecture-1": {
-        "$links": [],
+        "$links": [
+            [
+                "Lecture Contents",
+                "lecture-contents",
+                "lecture-1"
+            ]
+        ],
         "$images": [
             [
                 "Introduction to AI",
@@ -40,7 +48,13 @@
         ]
     },
     "lecture-2": {
-        "$links": [],
+        "$links": [
+            [
+                "Lecture Contents",
+                "lecture-contents",
+                "lecture-2"
+            ]
+        ],
         "$images": [],
         "$keyword_name": "Lecture 2",
         "topics": [
@@ -50,13 +64,19 @@
         ]
     },
     "lecture-3": {
-        "$links": [],
+        "$links": [
+            [
+                "Lecture Contents",
+                "lecture-contents",
+                "lecture-3"
+            ]
+        ],
         "$images": [],
         "$keyword_name": "Lecture 3",
         "topics": [
             "topics",
             "\u001ekeyword\u001fintelligence and AI\u001fintelligence-and-ai\u001e",
-            "\u001ekeyword\u001fConceptual foundations\u001fconceptual-foundations\u001e"
+            "\u001ekeyword\u001fconceptual foundations\u001fconceptual-foundations\u001e"
         ]
     },
     "about-the-introduction-to-ai-course": {
@@ -1253,7 +1273,7 @@
         ],
         "canonical-symbolic-systems": [
             "Canonical symbolic systems",
-            "*Logic Theorist* (Newell & Simon),",
+            "*Logic Theorist* (Newell \\& Simon),",
             "*General Problem Solver (GPS)*,",
             "early expert systems,",
             "logic programming languages such as Prolog.",
@@ -1945,7 +1965,7 @@
         ],
         "paper": [
             "Paper",
-            "Blum & Holling (2017): *Spearman\u2019s Law of Diminishing Returns. A Meta-Analysis*",
+            "Blum \\& Holling (2017): *Spearman\u2019s Law of Diminishing Returns. A Meta-Analysis*",
             "Plot: relation between subgroup mean IQ (x-axis) and average inter-test correlation (y-axis),      with regression line illustrating decreasing trend.      \u001eimage\u001fIQ vs. correlation\u001fblum_holling_IQ_vs_other.png\u001e"
         ],
         "book-in-hungarian": [
@@ -2186,7 +2206,8 @@
             "The explanation feels sincere and convincing, even if it does not reflect the true causal mechanism."
         ],
         "classic-demonstrations": [
-            "Classic demonstrations"
+            "Classic demonstrations",
+            "in the following some experimental evidence is shown for post-hoc rationalization"
         ],
         "post-hypnotic-suggestion": [
             "Post-hypnotic suggestion",
@@ -2207,7 +2228,7 @@
         ],
         "choice-blindness": [
             "Choice blindness",
-            "[Johansson, P. et al. (2005). Failure to detect mismatches between intention and outcome in a simple decision task.)(https://www.lucs.lu.se/fileadmin/user_upload/lucs/2011/01/Johansson-et-al.-2005-Failure-to-Detect-Mismatches-Between-Intention-and-Outcome-in-a-Simple-Decision-Task.pdf)",
+            "\u001eexternal-link\u001fJohansson, P. et al. (2005). Failure to detect mismatches between intention and outcome in a simple decision task.\u001fhttps://www.lucs.lu.se/fileadmin/user_upload/lucs/2011/01/Johansson-et-al.-2005-Failure-to-Detect-Mismatches-Between-Intention-and-Outcome-in-a-Simple-Decision-Task.pdf\u001e",
             "Participants chose which face they found more attractive.",
             "Researchers secretly swapped the image.",
             "Participants then explained in detail why they preferred the face they did not actually choose.",
@@ -2649,10 +2670,12 @@
         "$images": [],
         "$keyword_name": "learning",
         "core-idea": [
-            "core idea a process that improves future performance by modifying internal structure or behavior based on experience"
+            "core idea",
+            "a process that improves future performance by modifying internal structure or behavior based on experience"
         ],
         "unifying-view": [
-            "unifying view learning refines representations, parameters, or selections under constraints"
+            "unifying view",
+            "learning refines representations, parameters, or selections under constraints"
         ],
         ">remark": [
             ">remark",
@@ -2942,7 +2965,12 @@
                 "representation"
             ]
         ],
-        "$images": [],
+        "$images": [
+            [
+                "the books and Mars",
+                "book-and-Mars.png"
+            ]
+        ],
         "$keyword_name": "(object) class",
         "definition": [
             "definition",
@@ -2955,7 +2983,7 @@
         ],
         "examples": [
             "examples",
-            "a book is collection of states where for example Mars has different position, and the exact matter content of the book itself is different",
+            "a book is collection of states where for example Mars has different position, and the exact matter content of the book itself is different: \u001eimage\u001fthe books and Mars\u001fbook-and-Mars.png\u001e",
             "computer images",
             "images where a given pixel is red",
             "all living beings in the animal kingdom"
@@ -2973,7 +3001,12 @@
                 "representation"
             ]
         ],
-        "$images": [],
+        "$images": [
+            [
+                "partition of books by authors",
+                "partition-of-books-by-authors.png"
+            ]
+        ],
         "$keyword_name": "context",
         "notes": [
             "notes",
@@ -2983,7 +3016,7 @@
         "examples": [
             "examples",
             "dog breeds in the class of dogs",
-            "a bookshop owner, a reader, a book collector and a mover uses different contexts of the class of books.",
+            "a bookshop owner, a reader, a book collector and a mover uses different contexts of the class of books.\u001eimage\u001fpartition of books by authors\u001fpartition-of-books-by-authors.png\u001e",
             "people groupped by their living place"
         ],
         "contexts-instead-of-states": [
@@ -3003,9 +3036,9 @@
             "\u001ekeyword\u001fglobal refinement\u001fglobal-refinement\u001e",
             "\u001ekeyword\u001fcommon refinement\u001fcommon-refinement\u001e"
         ],
-        "representation": [
-            "representation",
-            "\u001ekeyword\u001fdirect representation\u001fdirect-representation\u001e"
+        "characterization-of-contexts": [
+            "Characterization of contexts",
+            "\u001ekeyword\u001fcharacterization of contexts\u001fcharacterization-of-contexts\u001e"
         ]
     },
     "definitions-in-a-context": {
@@ -3070,6 +3103,11 @@
                 "context",
                 "context",
                 "properties"
+            ],
+            [
+                "local coordinates",
+                "local-coordinates",
+                "hierarchical-approach"
             ]
         ],
         "$images": [],
@@ -3134,12 +3172,35 @@
             "several coarse contexts can lead to a fine description of the world."
         ]
     },
-    "direct-representation": {
+    "characterization-of-contexts": {
         "$links": [
             [
                 "context",
                 "context",
-                "representation"
+                "characterization-of-contexts"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Characterization of contexts",
+        "approaches": [
+            "approaches",
+            "\u001ekeyword\u001fdirect representation\u001fdirect-representation\u001e",
+            "\u001ekeyword\u001fglobal coordinates\u001fglobal-coordinates\u001e",
+            "\u001ekeyword\u001flocal coordinates\u001flocal-coordinates\u001e"
+        ],
+        "numerical-representation": [
+            "numerical representation",
+            "\u001ekeyword\u001fproperty\u001fproperty\u001e (or measurement, observation)",
+            "\u001ekeyword\u001ffeature\u001ffeature\u001e (selective property)",
+            "\u001ekeyword\u001firrelevant feature\u001firrelevant-feature\u001e (descriptive property)"
+        ]
+    },
+    "direct-representation": {
+        "$links": [
+            [
+                "Characterization of contexts",
+                "characterization-of-contexts",
+                "approaches"
             ]
         ],
         "$images": [],
@@ -3239,6 +3300,234 @@
         "main-stream-applications-in-ai": [
             "main stream applications in AI",
             "present day AI applications set up a single context to represent the classes."
+        ]
+    },
+    "global-coordinates": {
+        "$links": [
+            [
+                "Characterization of contexts",
+                "characterization-of-contexts",
+                "approaches"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "global coordinates",
+        ">remark": [
+            ">remark",
+            "the elementary object classes are approached by the intersection of cells of several coarse contexts"
+        ],
+        "coordination": [
+            "coordination",
+            "$(\\mathcal C_1,\\dots,\\mathcal C_n) \\blacktriangleright \\mathcal C$, iff $\\mathcal C_1\\vee \\dots \\vee \\mathcal C_n = \\mathcal C$",
+            "the contexts $\\mathcal C_i$ are coarse views whose joint distinctions fully characterize $\\mathcal C$"
+        ],
+        "examples": [
+            "examples",
+            "coordination of a vector space: $\\mathcal C = V$, the $\\mathcal C_i = \\{ c^{(i)}_s \\mid s \\in \\mathbb R\\}$ where $c^{(i)}_s = \\{ x\\in \\mathbb{R}^d \\mid e_i\\cdot x = s\\}$ are collections of hyperplanes with fixed orientation",
+            "pixelize images: $\\mathcal C=$ images, $\\mathcal C_i = \\{$ images with $i$-th pixel fixed $\\}$",
+            "token embeddings in LLMs: $\\mathcal C =$ partition of embedding space by semantic equivalence, $\\mathcal C_i =$ partitions induced by coordinate projections (or low-dimensional feature functions), with similarity measured by cosine distance"
+        ]
+    },
+    "local-coordinates": {
+        "$links": [
+            [
+                "Characterization of contexts",
+                "characterization-of-contexts",
+                "approaches"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "local coordinates",
+        ">remark": [
+            ">remark",
+            "the domains of the characterizing contexts is not the complete basic object class"
+        ],
+        "hierarchical-approach": [
+            "hierarchical approach",
+            "start with a simple coarsening",
+            "apply \u001ekeyword\u001flocal refinement\u001flocal-refinement\u001e",
+            "repeating this process yields a hierarchical structure, called a \u001ekeyword\u001frefinement tree\u001frefinement-tree\u001e, whose leaves are exactly the classes of the fine context."
+        ],
+        "properties": [
+            "properties",
+            "a refinement tree represents a context by **successive, conditional partitions**",
+            "can lead to \u001ekeyword\u001foptimal coding\u001foptimal-coding\u001e"
+        ],
+        "examples": [
+            "examples",
+            "barchoba (twenty questions)",
+            "taxonomy",
+            "this is the way we represent the world in our mental models"
+        ]
+    },
+    "refinement-tree": {
+        "$links": [
+            [
+                "local coordinates",
+                "local-coordinates",
+                "hierarchical-approach"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "refinement tree",
+        ">remark": [
+            ">remark",
+            "hierarchical structure for represent elements of a set"
+        ],
+        "definition": [
+            "definition",
+            "a mapping $\\mathcal C \\mapsto \\mathcal T$,  where $\\mathcal T$ is a rooted tree whose nodes are labeled by subsets of $\\mathcal C$, satisfying conditions"
+        ],
+        "conditions": [
+            "conditions",
+            "the root is labeled by the full context $\\mathcal C$",
+            "for each internal node labeled by $C' \\subseteq \\mathcal C$, its children form a context (partition) of $C'$",
+            "the leaves (nodes with no children) are singleton sets $\\{c\\}$ with $c \\in \\mathcal C$"
+        ],
+        "notes": [
+            "notes",
+            "every refinement tree induces a unique fine context (its leaves)",
+            "different refinement trees may induce the same context",
+            "generic coordination is a special case, where all local refinements are identical at every node",
+            "System 1 corresponds to a refinement tree of depth 1",
+            "local coordinates correspond to paths from the root to a leaf"
+        ],
+        "examples": [
+            "examples",
+            "using *display size* to refine the class of displays and *fat content* to refine the class of foods, even though these refinements are not meaningful outside their respective domains"
+        ],
+        "prefix-code": [
+            "prefix code",
+            "path from the root to a leaf uniquely identifies an element by a sequence of refinement choices."
+        ]
+    },
+    "optimal-coding": {
+        "$links": [
+            [
+                "local coordinates",
+                "local-coordinates",
+                "properties"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "optimal coding",
+        ">remark": [
+            ">remark",
+            "assign a code to each element of a set that allows to get to them with a shortest line of questions"
+        ],
+        "theoretical-result": [
+            "theoretical result",
+            "if the relevance (or probability of occurrence) of the elements is known, one can construct an optimal refinement tree that minimizes the expected path length, in direct analogy with Huffman coding"
+        ]
+    },
+    "property": {
+        "$links": [
+            [
+                "Characterization of contexts",
+                "characterization-of-contexts",
+                "numerical-representation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "property",
+        ">remark": [
+            ">remark",
+            "a numerical value assigned to an element of a set"
+        ],
+        "definition": [
+            "definition",
+            "$\\Omega \\to B$ function"
+        ],
+        "alternative-names": [
+            "alternative names",
+            "measurement, observation"
+        ],
+        "probability-theory": [
+            "probability theory",
+            "random variable"
+        ],
+        "examples": [
+            "examples",
+            "measuring temperature with a thermometer",
+            "recording the color of a pixel with a camera"
+        ]
+    },
+    "feature": {
+        "$links": [
+            [
+                "Characterization of contexts",
+                "characterization-of-contexts",
+                "numerical-representation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "feature",
+        ">remark": [
+            ">remark",
+            "a numerical value assigned to a class"
+        ],
+        "definition": [
+            "definition",
+            "$(f:\\Omega\\to B, \\mathcal C) \\mapsto\\text{true}$, if $f(\\omega)=f(\\omega')$ if $\\omega,\\omega'\\in c\\in \\mathcal C$"
+        ],
+        "measure-theory": [
+            "measure theory",
+            "$f$ is measurable with respect to $(\\Omega,\\sigma({\\cal C)})$"
+        ],
+        "properties": [
+            "properties",
+            "domain of $f$ is the underlying class of $\\mathcal C$",
+            "function defined on the elements of a context",
+            "range can be a finite set or real numbers"
+        ],
+        "alternative-names": [
+            "alternative names",
+            "random variable in the context",
+            "relevant property (with respect to a class)",
+            "selective property (of a class)"
+        ],
+        "examples": [
+            "examples",
+            "features of a cat: furry, four legged, cat-eye animal, etc.",
+            "features of a laptop: producer, vendor, type of CPU, type of GPU, display size, etc"
+        ]
+    },
+    "induced-context": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "induced context",
+        ">remark": [
+            ">remark",
+            "a context defined by given vallues of a function (feature)"
+        ],
+        "definition": [
+            "definition",
+            "$f\\mapsto \\mathcal \\{ f^{-1}(\\{y\\}) \\mid y \\in \\operatorname{Ran}(f) \\}$"
+        ]
+    },
+    "irrelevant-feature": {
+        "$links": [
+            [
+                "Characterization of contexts",
+                "characterization-of-contexts",
+                "numerical-representation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "irrelevant feature",
+        ">remark": [
+            ">remark",
+            "a feature that is relevant for the underlying context, but not relevant for the present one"
+        ],
+        "example": [
+            "example",
+            "color is not a relevant feature of a car brand",
+            "identity of the expermineter is not relevant with respect of the outcome of the experiemnt",
+            "position of Mars with respect to the outcome of a computer game"
+        ],
+        "alternative-name": [
+            "alternative name",
+            "descriptive function"
         ]
     }
 }

@@ -131,7 +131,7 @@
 
 
   - **Canonical symbolic systems**
-    - *Logic Theorist* (Newell & Simon),
+    - *Logic Theorist* (Newell \& Simon),
     - *General Problem Solver (GPS)*,
     - early expert systems,
     - logic programming languages such as Prolog.

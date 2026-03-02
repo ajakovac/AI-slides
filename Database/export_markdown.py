@@ -1,6 +1,7 @@
 import json
 import re
 import argparse
+import os
 
 def make_markdown_link_0(line):
     segments = line.split(link_separator)
@@ -95,6 +96,6 @@ link_separator = database['$system']['link_separator']
 item_separator = database['$system']['item_separator']
 LINK_RE = re.compile(link_separator  + r'(.*?)' + item_separator + r'(.*?)' + item_separator + r'(.*?)' + link_separator)
 
-with open(args.output, 'w') as f:
+with open(os.path.join(os.path.dirname(__file__), '../Rendered Content', args.output), 'w') as f:
     print(create_markdown(database), file=f)
 print(f"Markdown file created at {args.output}")

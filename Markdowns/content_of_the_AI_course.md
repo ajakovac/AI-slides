@@ -1,7 +1,7 @@
-- **contents**
-    - **Lecture 1**: lecture-1
-    - **Lecture 2**: lecture-2
-    - **Lecture 3**: lecture-3
+- **Lecture Contents**
+    - **Lecture 1**: __Lecture 1__
+    - **Lecture 2**: __Lecture 2__
+    - **Lecture 3**: __Lecture 3__
 
 
 - **Lecture 1**
@@ -20,7 +20,7 @@
 - **Lecture 3**
     - **topics**
         - __intelligence and AI__
-        - __Conceptual foundations__
+        - __conceptual foundations__
 
 
 
