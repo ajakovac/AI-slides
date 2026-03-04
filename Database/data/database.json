@@ -2041,9 +2041,10 @@
             "slow, deliberative thinking",
             "\u001ekeyword\u001fSystem II\u001fsystem-ii\u001e"
         ],
-        "interaction-between-the-systems": [
-            "Interaction between the systems",
-            "\u001ekeyword\u001fInteraction between the systems\u001finteraction-between-the-systems\u001e"
+        "working-together": [
+            "working together",
+            "\u001ekeyword\u001finteraction between the systems\u001finteraction-between-the-systems\u001e",
+            "\u001ekeyword\u001fdecision making\u001fdecision-making-and-argumentation\u001e"
         ]
     },
     "system-i": {
@@ -2152,6 +2153,11 @@
     "decision-making-and-argumentation": {
         "$links": [
             [
+                "Kahneman and his System I and System II",
+                "kahneman-and-his-system-i-and-system-ii",
+                "working-together"
+            ],
+            [
                 "System I",
                 "system-i",
                 "it-is-responsible-for"
@@ -2253,7 +2259,7 @@
             [
                 "Kahneman and his System I and System II",
                 "kahneman-and-his-system-i-and-system-ii",
-                "interaction-between-the-systems"
+                "working-together"
             ]
         ],
         "$images": [
@@ -2267,13 +2273,13 @@
             "normal cognition",
             "System I continuously generates impressions, intuitions, and tentative judgments",
             "System II monitor, endorse, modify, or override them.",
-            "thw two systems can change to each other (Explicitation and Implicitization)",
+            "the two systems can change to each other (see below)",
             "new tasks always start with System II",
             "\u001eimage\u001fmental model\u001fmental-model-together.png\u001e"
         ],
         "understanding-and-bringing-to-awareness": [
             "Understanding and Bringing to Awareness",
-            "the same method we understand our environment or the world as a whole, we can understand our internal mechanisms",
+            "the same method we understand our environment or the world as a whole, we can analyze and understand our internal mechanisms",
             "System I $\\to$ System II",
             "Paralysis by analysis: excessive conscious control can disrupt automatized performance (explicit monitoring)",
             "But later it can lead to more conscious and more effective performance"
@@ -2318,31 +2324,38 @@
         ],
         "anchoring": [
             "Anchoring",
-            "Judgments are unduly influenced by an initial value or reference point (e.g. estimating a quantity after being exposed to an arbitrary number)."
+            "Judgments are unduly influenced by an initial value or reference point (e.g. estimating a quantity after being exposed to an arbitrary number).",
+            "*Example:* After seeing a jacket originally priced at \u20ac400 \u201cdiscounted\u201d to \u20ac180, people tend to perceive \u20ac180 as a bargain\u2014even if the true market value is only around \u20ac150."
         ],
         "availability-heuristic": [
             "Availability heuristic",
-            "Events that are easier to recall are perceived as more important or probable, a mechanism often exploited in propaganda and media framing."
+            "Events that are easier to recall are perceived as more important or probable, a mechanism often exploited in propaganda and media framing.",
+            "*Example:* After watching several news reports about airplane accidents, a person may overestimate the danger of flying, despite statistical evidence that air travel is safer than driving."
         ],
         "conjunction-fallacy": [
             "Conjunction fallacy",
-            "The tendency to judge a specific conjunction of events as more probable than a single general event    (e.g. the classic \u201cLinda problem\u201d)."
+            "The tendency to judge a specific conjunction of events as more probable than a single general event        (e.g. the classic \u201cLinda problem\u201d).",
+            "*Example:* People may judge \u201cLinda is a bank teller and active in the feminist movement\u201d as more probable than \u201cLinda is a bank teller,\u201d even though logically the conjunction cannot be more likely than one of its parts."
         ],
         "optimism-bias": [
             "Optimism bias",
-            "Systematic underestimation of negative outcomes and overestimation of positive ones."
+            "Systematic underestimation of negative outcomes and overestimation of positive ones.",
+            "*Example:* A startup founder may believe their company is far less likely to fail than other similar startups, despite knowing that most new businesses do not survive beyond a few years."
         ],
         "framing-effects": [
             "Framing effects",
-            "Preferences change depending on whether outcomes are presented in terms of gains or losses    (e.g. \u201c99% survival\u201d versus \u201c1% mortality\u201d)."
+            "Preferences change depending on whether outcomes are presented in terms of gains or losses        (e.g. \u201c99% survival\u201d versus \u201c1% mortality\u201d).",
+            "*Example:* Patients are more likely to choose a medical treatment described as having a \u201c90% survival rate\u201d than one described as having a \u201c10% mortality rate,\u201d even though the information is statistically identical."
         ],
         "sunk-cost-fallacy": [
             "Sunk cost fallacy",
-            "Continuing an endeavor because of past investments, even when future costs outweigh expected benefits."
+            "Continuing an endeavor because of past investments, even when future costs outweigh expected benefits.",
+            "*Example:* Someone continues watching a long, boring movie simply because they already paid for the ticket, even though leaving would maximize their remaining time and satisfaction."
         ],
         "overconfidence": [
             "Overconfidence",
-            "Excessive trust in one\u2019s own judgments and abilities, often leading to underestimated risks."
+            "Excessive trust in one\u2019s own judgments and abilities, often leading to underestimated risks.",
+            "*Example:* An investor may believe they can consistently \u201cbeat the market\u201d through personal intuition, ignoring statistical evidence that even professional fund managers rarely outperform index funds in the long run."
         ]
     },
     "intelligence-and-ai": {

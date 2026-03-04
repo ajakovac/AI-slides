@@ -219,8 +219,9 @@ and distort the processes it is intended to monitor.
   - **System II**
     - slow, deliberative thinking
     - __System II__
-  - **Interaction between the systems**:
-    - __Interaction between the systems__
+  - **working together**:
+    - __interaction between the systems__
+    - __decision making__
 
 - **System I**
   - **mental model**
@@ -348,11 +349,11 @@ and distort the processes it is intended to monitor.
   - **normal cognition**
     - System I continuously generates impressions, intuitions, and tentative judgments
     - System II monitor, endorse, modify, or override them.
-    - thw two systems can change to each other (Explicitation and Implicitization)
+    - the two systems can change to each other (see below)
     - new tasks always start with System II
     - ![mental model](../Images/mental-model-together.png)
   - **Understanding and Bringing to Awareness**
-    - the same method we understand our environment or the world as a whole, we can understand our internal mechanisms
+    - the same method we understand our environment or the world as a whole, we can analyze and understand our internal mechanisms
     - System I $\to$ System II
     - Paralysis by analysis: excessive conscious control can disrupt automatized performance (explicit monitoring)
     - But later it can lead to more conscious and more effective performance
@@ -374,39 +375,44 @@ and distort the processes it is intended to monitor.
 
 - **Characteristic errors of System I**
 
-  > The reliance on heuristics makes System I vulnerable
-  to systematic cognitive biases, including:
+  > The reliance on heuristics makes System I vulnerable to systematic cognitive biases, including:
 
   - **Anchoring**  
     - Judgments are unduly influenced by an initial value or reference point  
-    (e.g. estimating a quantity after being exposed to an arbitrary number).
+      (e.g. estimating a quantity after being exposed to an arbitrary number).  
+    - *Example:* After seeing a jacket originally priced at €400 “discounted” to €180, people tend to perceive €180 as a bargain—even if the true market value is only around €150.
 
   - **Availability heuristic**  
-    - Events that are easier to recall are perceived as more important or probable,
-    a mechanism often exploited in propaganda and media framing.
+    - Events that are easier to recall are perceived as more important or probable,  
+      a mechanism often exploited in propaganda and media framing.  
+    - *Example:* After watching several news reports about airplane accidents, a person may overestimate the danger of flying, despite statistical evidence that air travel is safer than driving.
 
   - **Conjunction fallacy**  
-    - The tendency to judge a specific conjunction of events
-    as more probable than a single general event
-    (e.g. the classic “Linda problem”).
+    - The tendency to judge a specific conjunction of events  
+      as more probable than a single general event  
+      (e.g. the classic “Linda problem”).  
+    - *Example:* People may judge “Linda is a bank teller and active in the feminist movement” as more probable than “Linda is a bank teller,” even though logically the conjunction cannot be more likely than one of its parts.
 
   - **Optimism bias**  
-    - Systematic underestimation of negative outcomes
-    and overestimation of positive ones.
+    - Systematic underestimation of negative outcomes  
+      and overestimation of positive ones.  
+    - *Example:* A startup founder may believe their company is far less likely to fail than other similar startups, despite knowing that most new businesses do not survive beyond a few years.
 
   - **Framing effects**  
-    - Preferences change depending on whether outcomes
-    are presented in terms of gains or losses
-    (e.g. “99% survival” versus “1% mortality”).
+    - Preferences change depending on whether outcomes  
+      are presented in terms of gains or losses  
+      (e.g. “99% survival” versus “1% mortality”).  
+    - *Example:* Patients are more likely to choose a medical treatment described as having a “90% survival rate” than one described as having a “10% mortality rate,” even though the information is statistically identical.
 
   - **Sunk cost fallacy**  
-    - Continuing an endeavor because of past investments,
-    even when future costs outweigh expected benefits.
+    - Continuing an endeavor because of past investments,  
+      even when future costs outweigh expected benefits.  
+    - *Example:* Someone continues watching a long, boring movie simply because they already paid for the ticket, even though leaving would maximize their remaining time and satisfaction.
 
   - **Overconfidence**  
-    - Excessive trust in one’s own judgments and abilities,
-    often leading to underestimated risks.
-
+    - Excessive trust in one’s own judgments and abilities,  
+      often leading to underestimated risks.  
+    - *Example:* An investor may believe they can consistently “beat the market” through personal intuition, ignoring statistical evidence that even professional fund managers rarely outperform index funds in the long run.
 
 
 
