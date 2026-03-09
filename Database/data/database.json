@@ -3,7 +3,10 @@
         "link_separator": "\u001e",
         "item_separator": "\u001f",
         "unresolved_links": [
-            "huffman-coding"
+            "reinforcement-learning",
+            "deep-neural-networks",
+            "llt",
+            "autoencoders"
         ]
     },
     "lecture-contents": {
@@ -21,6 +24,14 @@
         "lecture-3": [
             "Lecture 3",
             "\u001ekeyword\u001fLecture 3\u001flecture-3\u001e"
+        ],
+        "lecture-4": [
+            "Lecture 4",
+            "\u001ekeyword\u001fLecture 4\u001flecture-4\u001e"
+        ],
+        "technical-background": [
+            "Technical background",
+            "\u001ekeyword\u001fTechnical background\u001ftechnical-background\u001e"
         ]
     },
     "lecture-1": {
@@ -77,6 +88,36 @@
             "topics",
             "\u001ekeyword\u001fintelligence and AI\u001fintelligence-and-ai\u001e",
             "\u001ekeyword\u001fconceptual foundations\u001fconceptual-foundations\u001e"
+        ]
+    },
+    "lecture-4": {
+        "$links": [
+            [
+                "Lecture Contents",
+                "lecture-contents",
+                "lecture-4"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Lecture 4",
+        "topics": [
+            "topics",
+            "\u001ekeyword\u001fAI learning paradigms\u001fai-learning-paradigms\u001e"
+        ]
+    },
+    "technical-background": {
+        "$links": [
+            [
+                "Lecture Contents",
+                "lecture-contents",
+                "technical-background"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Technical background",
+        "topics": [
+            "topics",
+            "\u001ekeyword\u001fProbability and information theory basics\u001fprobability-and-information-theory-basics\u001e"
         ]
     },
     "about-the-introduction-to-ai-course": {
@@ -1741,6 +1782,11 @@
                 "Lecture 2",
                 "lecture-2",
                 "topics"
+            ],
+            [
+                "supervised learning",
+                "supervised-learning",
+                "unsupervised-is-not-really-meaningful"
             ]
         ],
         "$images": [],
@@ -3430,7 +3476,7 @@
         ],
         "theoretical-result": [
             "theoretical result",
-            "if the relevance (or probability of occurrence) of the elements is known, one can construct an optimal refinement tree that minimizes the expected path length, in direct analogy with Huffman coding"
+            "if the relevance (or probability of occurrence) of the elements is known, one can construct an optimal refinement tree that minimizes the expected path length, in direct analogy with \u001ekeyword\u001fHuffmann coding\u001fhuffmann-coding\u001e"
         ]
     },
     "property": {
@@ -3506,7 +3552,13 @@
         ]
     },
     "induced-context": {
-        "$links": [],
+        "$links": [
+            [
+                "data model",
+                "data-model",
+                "modelling-a-context"
+            ]
+        ],
         "$images": [],
         "$keyword_name": "induced context",
         ">remark": [
@@ -3541,6 +3593,3129 @@
         "alternative-name": [
             "alternative name",
             "descriptive function"
+        ]
+    },
+    "ai-learning-paradigms": {
+        "$links": [
+            [
+                "Lecture 4",
+                "lecture-4",
+                "topics"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "AI learning paradigms",
+        ">remark": [
+            ">remark",
+            "different ways AI systems learn from data and experience"
+        ],
+        "approaches": [
+            "approaches",
+            "\u001ekeyword\u001fsupervised learning\u001fsupervised-learning\u001e",
+            "\u001ekeyword\u001fdata driven approach\u001fdata-driven-approach\u001e",
+            "reinforcement learning"
+        ]
+    },
+    "supervised-learning": {
+        "$links": [
+            [
+                "AI learning paradigms",
+                "ai-learning-paradigms",
+                "approaches"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "supervised learning",
+        ">remark": [
+            ">remark",
+            "find the context $\\mathcal C$ that smoothly represents the provided sample data."
+        ],
+        "examples": [
+            "examples",
+            "\u001ekeyword\u001fpattern recognition\u001fpattern-recognition\u001e",
+            "\u001ekeyword\u001fdata compression\u001fdata-compression\u001e"
+        ],
+        "strategy": [
+            "strategy",
+            "collect \u001ekeyword\u001fsample data\u001fsample-data\u001e, implying \u001ekeyword\u001fsample context\u001fsample-context\u001e $\\to$ see \u001ekeyword\u001fpublicly available databases for classification\u001fpublicly-available-databases-for-classification\u001e",
+            "assume \u001ekeyword\u001fdata model\u001fdata-model\u001e",
+            "perform \u001ekeyword\u001fmodel optimization\u001fmodel-optimization\u001e"
+        ],
+        "unsupervised-is-not-really-meaningful": [
+            "unsupervised is not really meaningful",
+            "mathematically any partition is possible",
+            "depends on the \"distance\" $\\to$ data representation",
+            "easy to manipulate (c.f. university ranking, economic data)",
+            "needs a clean definition of the context (e.g. temporal-spatial closeness)",
+            "examples: university ranking, economic or individual performance evaluation, IQ tests",
+            "see also \u001ekeyword\u001fHuman Intelligence: A Psychological Perspective\u001fhuman-intelligence:-a-psychological-perspective\u001e"
+        ]
+    },
+    "publicly-available-databases-for-classification": {
+        "$links": [
+            [
+                "supervised learning",
+                "supervised-learning",
+                "strategy"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "publicly available databases for classification",
+        ">remark": [
+            ">remark",
+            "databases can be used as benchmarks or for learning"
+        ],
+        "links": [
+            "links",
+            "https://davenport.libguides.com/data/public-data",
+            "https://github.com/awesomedata/awesome-public-datasets?tab=readme-ov-file",
+            "https://docs.pytorch.org/vision/main/datasets.html"
+        ]
+    },
+    "sample-data": {
+        "$links": [
+            [
+                "supervised learning",
+                "supervised-learning",
+                "strategy"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "sample data",
+        ">remark": [
+            ">remark",
+            "for training, we need data-meaning (label) pairs"
+        ],
+        "definition": [
+            "definition",
+            "$\\{(x_a,y_a) \\mid x_a\\in C, y\\in \\mathcal C: x_a\\in y_a, a=1\\dots N_{data}\\}$, where $C=\\text{underlying class}(\\mathcal C)$"
+        ],
+        "assumption": [
+            "assumption",
+            "independent measurements"
+        ],
+        "failure-modes": [
+            "failure modes",
+            "\u001ekeyword\u001fcorrupted label\u001fcorrupted-label\u001e",
+            "\u001ekeyword\u001fnot enough information\u001fnot-enough-information\u001e"
+        ],
+        "examples": [
+            "examples",
+            "(cat-imege-1,cat), (cat-imege-2,cat), (dog-imege-1,dog), $\\dots$ (cat-imege-N,cat),",
+            "what is the word the speaker says?"
+        ]
+    },
+    "sample-context": {
+        "$links": [
+            [
+                "supervised learning",
+                "supervised-learning",
+                "strategy"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "sample context",
+        ">remark": [
+            ">remark",
+            "data belonging to the same class"
+        ],
+        "notes": [
+            "notes",
+            "formally $\\mathcal C_{sample} =\\{ \\{x_a \\mid c_a=c\\} \\mid c \\in\\mathcal C\\}$"
+        ]
+    },
+    "data-model": {
+        "$links": [
+            [
+                "supervised learning",
+                "supervised-learning",
+                "strategy"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "data model",
+        ">remark": [
+            ">remark",
+            "parametric map over a set"
+        ],
+        "definition": [
+            "definition",
+            "$\\mathcal M :(C,Q)\\to B$, where $Q$ are the parameters, $B$ is the target (label) set"
+        ],
+        "names": [
+            "names",
+            "if $B$ is a finite set: **classification models**",
+            "if $B$ is continuous: **regression**"
+        ],
+        "corresponds-to-the-direct-representation-of-the-context": [
+            "corresponds to the direct representation of the context"
+        ],
+        "modelling-a-context": [
+            "modelling a context",
+            "use the \u001ekeyword\u001finduced context\u001finduced-context\u001e $\\mathcal M^{-1}(B,q)$",
+            "example $\\mathcal M(\\text{image}, q_{opt}) = \\text{cat}$ will be true approximately for the cat images"
+        ]
+    },
+    "classification-models": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "classification models",
+        "elementary-methods": [
+            "elementary methods",
+            "\u001ekeyword\u001fone dimensional classification\u001fone-dimensional-classification\u001e",
+            "\u001ekeyword\u001fdecision tree\u001fdecision-tree\u001e",
+            "\u001ekeyword\u001fKNN\u001fknn-model\u001e ($k$-nearest neighbor) method"
+        ],
+        "ensemble-models": [
+            "ensemble models",
+            "\u001ekeyword\u001fbagging\u001fbagging\u001e",
+            "\u001ekeyword\u001frandom forest\u001frandom-forest\u001e",
+            "\u001ekeyword\u001fboost\u001fboosting\u001e (Adaboost)",
+            "other methods (extra trees, isolated forests, oblique trees)"
+        ],
+        "classification-via-regression": [
+            "classification via regression",
+            "\u001ekeyword\u001fclassification via regression\u001fclassification-via-regression\u001e"
+        ],
+        "distribution-estimation-methods": [
+            "distribution estimation methods",
+            "\u001ekeyword\u001fdistribution estimation methods\u001fdistribution-estimation-methods\u001e"
+        ],
+        "feature-finding-methods": [
+            "feature finding methods",
+            "\u001ekeyword\u001ffeature finding methods\u001ffeature-finding-methods\u001e"
+        ]
+    },
+    "model-optimization": {
+        "$links": [
+            [
+                "supervised learning",
+                "supervised-learning",
+                "strategy"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "model optimization",
+        ">remark": [
+            ">remark",
+            "find the optimal parameters that gives best results on a sample"
+        ],
+        "objective": [
+            "objective",
+            "define a \u001ekeyword\u001fsample loss\u001fsample-loss\u001e $L=\\text{loss}(\\mathcal M(C,q),\\mathcal C \\mid \\text{samples})$",
+            "minimize $L$",
+            "we need $\\partial L/\\partial q=0$",
+            "practically batch evaluation"
+        ],
+        "failure-modes": [
+            "failure modes",
+            "\u001ekeyword\u001fgradient calculation in complete database\u001fgradient-calculation-in-complete-database\u001e  is numerically inefficitent",
+            "\u001ekeyword\u001funderfitting\u001funderfitting\u001e",
+            "\u001ekeyword\u001foverfitting\u001foverfitting\u001e",
+            "\u001ekeyword\u001fbad convergence\u001fbad-convergence\u001e (divergence, stuck to local minimun)",
+            "\u001ekeyword\u001flabel noise sensitivity\u001flabel-noise-sensitivity\u001e",
+            "\u001ekeyword\u001fdataset shift\u001fdataset-shift\u001e",
+            "\u001ekeyword\u001fshortcut learning\u001fshortcut-learning\u001e"
+        ],
+        "optimization-methods": [
+            "optimization methods",
+            "\u001ekeyword\u001flinear regression\u001flinear-regression\u001e",
+            "\u001ekeyword\u001fgradient descent\u001fgradient-descent\u001e",
+            "\u001ekeyword\u001fconjugate gradient descent\u001fconjugate-gradient-descent-method\u001e",
+            "\u001ekeyword\u001frandom algorithms\u001frandom-algorithms\u001e",
+            "second-order optimization (\u001ekeyword\u001fNewton-Raphson method\u001fnewton-raphson-method\u001e)"
+        ],
+        "improvements-in-high-dimensions": [
+            "improvements in high dimensions",
+            "\u001ekeyword\u001fhigh dimensional optimization\u001fhigh-dimensional-optimization\u001e"
+        ],
+        "steps-of-optimization": [
+            "steps of optimization",
+            "data acquisition, database of samples",
+            "split into training, validation and test set",
+            "training set (60-80\\% of data) to optimize the parameters",
+            "validation set (10-20%) to optimize hyperparameters",
+            "test set (10-20%) to evaluate the results",
+            "cross validation: use different sets for validation and test set",
+            "evaluate results"
+        ]
+    },
+    "classification-via-regression": {
+        "$links": [
+            [
+                "classification models",
+                "classification-models",
+                "classification-via-regression"
+            ],
+            [
+                "one dimensional classification",
+                "one-dimensional-classification",
+                "use-loss-to-determine-separation-point"
+            ],
+            [
+                "perceptron",
+                "perceptron",
+                "method"
+            ],
+            [
+                "Support Vector Machine",
+                "support-vector-machine",
+                "method"
+            ],
+            [
+                "Extreme Learning Machine",
+                "extreme-learning-machine",
+                "method"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "classification via regression",
+        ">remark": [
+            ">remark",
+            "classes are defined by inequalities posed on a continuous function"
+        ],
+        "parametric-function": [
+            "parametric function",
+            "define a function $p_i(x, q)$",
+            "Bayesian interpretation: $p_i(x)$ is the probability that the input $x$ belongs to class $i$",
+            "$q$ are parameters to optimize",
+            "can be defined from an unconstrained $f_i(x,q)$, using \u001ekeyword\u001fsoftmax normalization\u001fsoftmax-normalization\u001e"
+        ],
+        "optimization-condition": [
+            "optimization condition",
+            "$L(q) = \\sum_{x\\in\\mathcal S} \\ell(p_i(x), I(x\\in c_i))$, where $I$ is the indicator function",
+            "smallest if $p_i(x)=1$ for the correct class",
+            "$\\ell$ preferrably cross-entropy loss"
+        ],
+        "prediction": [
+            "prediction",
+            "predicted class $(x)= \\argmax_i p_i(x,q_{opt})\\;\\Rightarrow\\;$ induced context",
+            "classifies every element of the base class"
+        ],
+        "technical-implementation": [
+            "technical implementation",
+            "\u001ekeyword\u001fperceptron\u001fperceptron\u001e",
+            "\u001ekeyword\u001fsupport vector machine\u001fsupport-vector-machine\u001e",
+            "\u001ekeyword\u001fextreme learning machine\u001fextreme-learning-machine\u001e",
+            "deep neural networks, DNN"
+        ]
+    },
+    "distribution-estimation-methods": {
+        "$links": [
+            [
+                "classification models",
+                "classification-models",
+                "distribution-estimation-methods"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "distribution estimation methods",
+        ">remark": [
+            ">remark",
+            "tries to model the data distribution of the sample data"
+        ],
+        "notes": [
+            "notes",
+            "uses one or more Gaussian per class"
+        ],
+        "techniques": [
+            "techniques",
+            "\u001ekeyword\u001fNaive Bayes models\u001fnaive-bayes-models\u001e",
+            "\u001ekeyword\u001fGaussian Mixture Model\u001fgaussian-mixture-model\u001e",
+            "\u001ekeyword\u001fPCA\u001fpca\u001e (principal component analysis)"
+        ]
+    },
+    "feature-finding-methods": {
+        "$links": [
+            [
+                "classification models",
+                "classification-models",
+                "feature-finding-methods"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "feature finding methods",
+        ">remark": [
+            ">remark",
+            "try to find features of the context, i.e. functions that are constant on the classes of the context"
+        ],
+        "binary-coding": [
+            "binary coding",
+            "$0$ for certain classes, $1$ for other"
+        ],
+        "techniques": [
+            "techniques",
+            "LLT",
+            "autoencoders"
+        ]
+    },
+    "softmax-normalization": {
+        "$links": [
+            [
+                "classification via regression",
+                "classification-via-regression",
+                "parametric-function"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "softmax normalization",
+        ">remark": [
+            ">remark",
+            "normalizes output to be interpretable as probability distribution"
+        ],
+        "definition": [
+            "definition",
+            "$(x_1,\\dots x_n)\\mapsto (p(x_1),\\dots, p(x_n))$ where $$p(x) = \\dfrac{e^{x}}{\\sum_j e^{x_j}}$$"
+        ],
+        "properties": [
+            "properties -satisfies $p(x_i)\\in [0,1]$",
+            "sum rule: $\\sum_i p(x_i)=1$",
+            "$p(x_i)$ can be interpreted as probabilities"
+        ]
+    },
+    "sample-loss": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "objective"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "sample loss",
+        ">remark": [
+            ">remark",
+            "measures the distance of the two contexts over a sample space"
+        ],
+        "notes": [
+            "notes",
+            "$L:(\\mathcal C_1, \\mathcal C_2 \\mid S) \\to \\mathbb R$",
+            "with \u001ekeyword\u001floss function\u001floss-function\u001e $\\ell$: $L = \\sum_{c\\in\\mathcal S} \\ell(\\Pi_{\\mathcal C_1}(c), \\Pi_{\\mathcal C_2}(c))$"
+        ]
+    },
+    "loss-function": {
+        "$links": [
+            [
+                "sample loss",
+                "sample-loss",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "loss function",
+        ">remark": [
+            ">remark",
+            "distance of two context elements"
+        ],
+        "definition": [
+            "definition",
+            "$\\mathcal C \\times \\mathcal C\\to \\mathbb R^+_0$",
+            "using a numerical representation for the classes $\\mathbb R^N\\times\\mathbb R^N\\to\\mathbb R^+_0$"
+        ],
+        "properties": [
+            "properties",
+            "$\\ell\\ge 0$",
+            "$\\ell(y_1,y_2)=0$ iff $y_1=y_2$"
+        ],
+        "link": [
+            "link",
+            "\u001eexternal-link\u001fPytorch loss functions\u001fhttps://docs.pytorch.org/docs/stable/nn.html#loss-functions\u001e"
+        ],
+        "examples": [
+            "examples",
+            "\u001ekeyword\u001fGaussian loss\u001fgaussian-loss\u001e",
+            "\u001ekeyword\u001fMSE loss\u001fmse-loss\u001e",
+            "\u001ekeyword\u001fp-norm loss\u001fp-norm-loss\u001e",
+            "\u001ekeyword\u001fKullback\u2013Leibler loss\u001fkullback\u2013leibler-loss\u001e",
+            "\u001ekeyword\u001fcross entropy loss\u001fcross-entropy-loss\u001e"
+        ]
+    },
+    "gaussian-loss": {
+        "$links": [
+            [
+                "loss function",
+                "loss-function",
+                "examples"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Gaussian loss",
+        "covariance-matrix": [
+            "covariance matrix",
+            "$C_x$"
+        ],
+        "chi-squared-function": [
+            "chi-squared function",
+            "$$\\chi^2(y,y') = (y-y')^T C_x^{-1} (y-y')$$"
+        ],
+        "loss-function": [
+            "loss function",
+            "$\\ell = \\chi^2$"
+        ]
+    },
+    "mse-loss": {
+        "$links": [
+            [
+                "loss function",
+                "loss-function",
+                "examples"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "MSE loss",
+        "definition": [
+            "definition",
+            "mean squared error loss"
+        ],
+        "loss-function": [
+            "loss function",
+            "$\\ell(y,y') = |y-y'|^2$"
+        ]
+    },
+    "p-norm-loss": {
+        "$links": [
+            [
+                "loss function",
+                "loss-function",
+                "examples"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "p-norm loss",
+        "definition": [
+            "definition",
+            "loss based on $L_p$ distance"
+        ],
+        "power-parameter": [
+            "power parameter",
+            "$p \\in \\mathbb{R}$"
+        ],
+        "loss-function": [
+            "loss function",
+            "$\\ell(y,y') = (|y-y'|^p)^{1/p}$"
+        ]
+    },
+    "kullback\u2013leibler-loss": {
+        "$links": [
+            [
+                "loss function",
+                "loss-function",
+                "examples"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Kullback\u2013Leibler loss",
+        "notes": [
+            "notes",
+            "conditions:",
+            "$p,q$ are probability distributions",
+            "$\\sum_i p_i = 1,\\; p_i \\in [0,1]$",
+            "$\\sum_i q_i = 1,\\; q_i \\in [0,1]$"
+        ],
+        "loss-function": [
+            "loss function",
+            "$\\ell(p,q) = \\sum_i p_i \\log(p_i/q_i)$"
+        ]
+    },
+    "cross-entropy-loss": {
+        "$links": [
+            [
+                "loss function",
+                "loss-function",
+                "examples"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "cross entropy loss",
+        "notes": [
+            "notes",
+            "conditions:",
+            "$p_i \\in \\{0,1\\}$",
+            "$q$ is a probability distribution",
+            "$\\sum_i q_i = 1,\\; q_i \\in [0,1]$"
+        ],
+        "loss-function": [
+            "loss function",
+            "$\\ell(p,q) = -\\sum_i p_i \\log(q_i)$"
+        ]
+    },
+    "not-enough-information": {
+        "$links": [
+            [
+                "sample data",
+                "sample-data",
+                "failure-modes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "not enough information",
+        "definition": [
+            "definition",
+            "a given input leads to different labels"
+        ],
+        "formulation": [
+            "formulation",
+            "labels are not measurable with respect to the input context"
+        ],
+        "cause": [
+            "cause",
+            "input contains insufficient information"
+        ],
+        "consequence": [
+            "consequence",
+            "probabilistic methods are required"
+        ]
+    },
+    "corrupted-label": {
+        "$links": [
+            [
+                "sample data",
+                "sample-data",
+                "failure-modes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "corrupted label",
+        "definition": [
+            "definition",
+            "label does not correspond to the class of the input"
+        ],
+        "causes": [
+            "causes",
+            "human mistake",
+            "systematic error"
+        ]
+    },
+    "gradient-calculation-in-complete-database": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "failure-modes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "gradient calculation in complete database",
+        ">remark": [
+            ">remark",
+            "numerically inefficient to collect all contributions of a dataset to the gradient"
+        ],
+        "solution": [
+            "solution",
+            "use batches (few number of samples) to a guess",
+            "results in not uniform convergence"
+        ]
+    },
+    "underfitting": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "failure-modes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "underfitting",
+        ">remark": [
+            ">remark",
+            "the model is too simple to capture the underlying structure of the data"
+        ],
+        "definition": [
+            "definition",
+            "poor approximation already on $X_{\\text{sample}}$, therefore also on $X \\setminus X_{\\text{sample}}$"
+        ],
+        "symptom": [
+            "symptom",
+            "high training error and high validation / test error"
+        ],
+        "problem:": [
+            "problem:",
+            "too few parameters",
+            "overly restrictive model assumptions",
+            "insufficient training or premature stopping"
+        ],
+        "bias\u2013variance-viewpoint": [
+            "bias\u2013variance viewpoint",
+            "high bias (systematic error)",
+            "low variance"
+        ],
+        "example": [
+            "example",
+            "fitting a linear model to strongly nonlinear data",
+            "low-degree polynomial fit for complex patterns",
+            "shallow neural networks with very few hidden units"
+        ],
+        "detection": [
+            "detection",
+            "training and validation losses are both high",
+            "increasing model capacity improves both errors"
+        ],
+        "solution": [
+            "solution",
+            "\u001ekeyword\u001fsolutions for underfitting\u001fsolutions-for-underfitting\u001e"
+        ]
+    },
+    "solutions-for-underfitting": {
+        "$links": [
+            [
+                "underfitting",
+                "underfitting",
+                "solution"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "solutions for underfitting",
+        "model-related": [
+            "model-related",
+            "increase model complexity",
+            "add nonlinear features or interactions",
+            "deepen or widen the network"
+        ],
+        "training-related": [
+            "training-related",
+            "train longer",
+            "improve optimization (learning rate, optimizer choice)"
+        ],
+        "feature-related": [
+            "feature-related",
+            "better feature engineering",
+            "richer representations"
+        ]
+    },
+    "overfitting": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "failure-modes"
+            ],
+            [
+                "linear regression",
+                "linear-regression",
+                "failure-modes"
+            ],
+            [
+                "interpolation",
+                "interpolation",
+                "danger"
+            ],
+            [
+                "high order polynomial fit",
+                "high-order-polynomial-fit",
+                "dangers"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "overfitting",
+        ">remark": [
+            ">remark",
+            "the model adapts to accidental patterns (noise) in the finite sample instead of the underlying structure"
+        ],
+        "definition": [
+            "definition",
+            "good approximation on $X_{\\text{sample}}$ but poor generalization on $X \\setminus X_{\\text{sample}}$"
+        ],
+        "symptom": [
+            "symptom",
+            "low training error, high validation / test error"
+        ],
+        "problem": [
+            "problem",
+            "too many parameters relative to the amount of data",
+            "learning sampling noise instead of signal",
+            "excessive model flexibility"
+        ],
+        "bias\u2013variance-viewpoint": [
+            "bias\u2013variance viewpoint",
+            "low bias",
+            "high variance (small changes in data \u2192 large changes in the model)"
+        ],
+        "example": [
+            "example",
+            "high-order polynomial fit oscillating between data points",
+            "deep neural networks with a large number of parameters trained on small datasets",
+            "decision trees grown to full depth"
+        ],
+        "detection": [
+            "detection",
+            "training loss decreases while validation loss increases",
+            "unstable predictions under resampling (e.g. cross-validation)"
+        ],
+        "solution": [
+            "solution",
+            "\u001ekeyword\u001fsolution for overfitting\u001fsolution-for-overfitting\u001e"
+        ]
+    },
+    "solution-for-overfitting": {
+        "$links": [
+            [
+                "overfitting",
+                "overfitting",
+                "solution"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "solution for overfitting",
+        "regularization": [
+            "regularization",
+            "$L_2$ (ridge, weight decay)",
+            "$L_1$ (lasso, sparsity)"
+        ],
+        "data-related": [
+            "data-related",
+            "more training data",
+            "data augmentation"
+        ],
+        "model-related": [
+            "model-related",
+            "reduce model complexity",
+            "early stopping",
+            "pruning (\u001ekeyword\u001fdecision tree\u001fdecision-tree\u001e)"
+        ],
+        "validation-techniques": [
+            "validation techniques",
+            "cross-validation",
+            "hold-out test set"
+        ]
+    },
+    "bad-convergence": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "failure-modes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "bad convergence",
+        ">remark": [
+            ">remark",
+            "algorithm does not find global minimum"
+        ],
+        "reason": [
+            "reason",
+            "lot of local minima in almost flat directions",
+            "enhanced in high dimensions"
+        ],
+        "results": [
+            "results",
+            "divergence",
+            "stuck in local minima"
+        ],
+        "solutions": [
+            "solutions",
+            "regularization, better conditioning",
+            "momentum in minimum finding (e.g. ADAM)",
+            "coordinate descend, simulated annealing, reheating"
+        ]
+    },
+    "dataset-shift": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "failure-modes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "dataset shift",
+        ">remark": [
+            ">remark",
+            "the training data are not representative of the data encountered in practice"
+        ],
+        "definition": [
+            "definition",
+            "$P_{\\text{sample}}(X) \\neq P(X)$"
+        ],
+        "solution": [
+            "solution",
+            "domain adaptation"
+        ]
+    },
+    "label-noise-sensitivity": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "failure-modes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "label noise sensitivity",
+        ">remark": [
+            ">remark",
+            "small label noise causes large performance degradation"
+        ],
+        "mitigations": [
+            "mitigations",
+            "data cleaning",
+            "robust losses",
+            "regularization",
+            "reweighting",
+            "noise-aware models"
+        ]
+    },
+    "shortcut-learning": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "failure-modes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "shortcut learning",
+        ">remark": [
+            ">remark",
+            "model learns spurious correlations instead of causal structure"
+        ],
+        "causes": [
+            "causes",
+            "dataset bias",
+            "label leakage",
+            "insufficient context variability"
+        ],
+        "mitigations": [
+            "mitigations",
+            "targeted augmentation",
+            "controlled data collection",
+            "adversarial training"
+        ],
+        "examples": [
+            "examples",
+            "background-based image classification",
+            "channel-noise-based speech recognition"
+        ]
+    },
+    "pattern-recognition": {
+        "$links": [
+            [
+                "supervised learning",
+                "supervised-learning",
+                "examples"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "pattern recognition",
+        ">remark": [
+            ">remark",
+            "finding meaningful classes from raw data"
+        ],
+        "basic-context": [
+            "basic context",
+            "pixels",
+            "audio samples",
+            "raw sensor data",
+            "$X \\sim \\mathbb{R}^N$"
+        ],
+        "target-context": [
+            "target context",
+            "object classes",
+            "$Y = \\{c_1, \\dots, c_K\\}$"
+        ],
+        "examples": [
+            "examples",
+            "image classification",
+            "speech recognition"
+        ]
+    },
+    "data-compression": {
+        "$links": [
+            [
+                "supervised learning",
+                "supervised-learning",
+                "examples"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "data compression",
+        ">remark": [
+            ">remark",
+            "represent data with fewer bits by removing irrelevant features"
+        ],
+        "basic-context": [
+            "basic context",
+            "pixels",
+            "audio samples",
+            "raw sensor data",
+            "$X \\sim \\mathbb{R}^N$"
+        ],
+        "target-context": [
+            "target context",
+            "compressed representation",
+            "$Y \\sim \\mathbb{R}^M,\\; M < N$"
+        ],
+        "examples": [
+            "examples",
+            "image compression",
+            "audio compression"
+        ]
+    },
+    "probability-and-information-theory-basics": {
+        "$links": [
+            [
+                "Technical background",
+                "technical-background",
+                "topics"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Probability and information theory basics",
+        "events": [
+            "events",
+            "$\\Omega$ set"
+        ],
+        "ensemble": [
+            "ensemble",
+            "\u001ekeyword\u001festimation of time series\u001festimation-of-time-series\u001e"
+        ],
+        "random-variable": [
+            "random variable",
+            "$\\Omega\\to V$ function, where $V$ is a vector space",
+            "\u001ekeyword\u001fprobability of a random variable\u001fprobability-of-a-random-variable\u001e"
+        ],
+        "practical-distributions": [
+            "practical distributions",
+            "\u001ekeyword\u001fbinomial distribution\u001fbinomial-distribution\u001e",
+            "\u001ekeyword\u001fPoisson distribution\u001fpoisson-distribution\u001e",
+            "\u001ekeyword\u001fGaussian distribution\u001fgaussian-distribution\u001e",
+            "\u001ekeyword\u001fchi-squared distribution\u001fchi-squared-distribution\u001e",
+            "\u001ekeyword\u001fgamma distribution\u001fgamma-distribution\u001e"
+        ],
+        "other-concepts": [
+            "other concepts",
+            "\u001ekeyword\u001fmarginal probability\u001fmarginal-probability\u001e"
+        ],
+        "information-theory": [
+            "information theory",
+            "\u001ekeyword\u001finformation theory\u001finformation-theory\u001e"
+        ]
+    },
+    "estimation-of-time-series": {
+        "$links": [
+            [
+                "Probability and information theory basics",
+                "probability-and-information-theory-basics",
+                "ensemble"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "estimation of time series",
+        ">remark": [
+            ">remark",
+            "if we do not have enough information, the dynamics is replaced by statistical correlations"
+        ],
+        "event-space": [
+            "event space",
+            "the range of the time series $\\Rightarrow \\omega_n,\\;n=1,\\dots,N_{data}$"
+        ],
+        "problem": [
+            "problem",
+            "we can not/want not predict the exact series",
+            "best is to give only statistical information",
+            "time average is replaced by ensemble average"
+        ],
+        "ensemble-and-probabilities": [
+            "ensemble and probabilities",
+            "discrete case: probability is the rate $\\omega\\in\\Omega$ element occurs in the data $$P(\\omega)=\\frac1{N_{data}}\\sum_{n=1}^{N_{data}} \\mathbb I(\\omega_n=\\omega),$$ where $\\mathbb I$ is the indicator function",
+            "continuous case: probability is the rate elments from $\\omega\\in d\\Omega(\\omega)\\subset \\Omega$ occur in the data, where $d\\Omega(\\omega)$ is a small volume around $\\omega$ $$P(\\omega)=\\frac1{N_{data}}\\sum_{n=1}^{N_{data}} \\mathbb I(\\omega_n\\in d\\Omega(\\omega)) = p(\\omega)|d\\Omega|,$$ where $p(\\omega)$ is called the probability density if $|d\\Omega|\\to0$.",
+            "technically we take the histogram"
+        ],
+        "expected-value-of-a-random-variable": [
+            "expected value of a random variable",
+            "formula $$\\mathbb E_\\omega(f(\\omega)) = \\frac1{N_{data}}\\sum_{n=1}^{N_{data}} f(\\omega_n) = \\sum_{\\omega\\in\\Omega} P(\\omega)f(\\omega)$$",
+            "$\\sum_n f(\\omega_n) = \\sum_{n,\\omega} f(\\omega_n) \\mathbb I(\\omega=\\omega_n) = \\sum_\\omega f(\\omega)\\sum_n \\mathbb I(\\omega=\\omega_n)$"
+        ]
+    },
+    "probability-of-a-random-variable": {
+        "$links": [
+            [
+                "Probability and information theory basics",
+                "probability-and-information-theory-basics",
+                "random-variable"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "probability of a random variable",
+        ">remark": [
+            ">remark",
+            "how probable to observe a given value of a random variable?"
+        ],
+        "definition": [
+            "definition",
+            "for $\\xi$ random variable, the event space $\\xi(\\Omega)$ and the probability $$P_\\xi(\\xi_0) = \\frac1{N_{data}}\\sum_{n=1}^{N_{data}} \\mathbb I(\\xi(\\omega_n)=\\xi_0) = \\mathbb E_\\omega(\\mathbb I(\\xi(\\omega)=\\xi_0))$$"
+        ],
+        "expected-values": [
+            "expected values",
+            "$\\mathbb E_\\xi(f(\\xi)) = \\mathbb E_\\omega(f\\circ \\xi(\\omega))$"
+        ]
+    },
+    "marginal-probability": {
+        "$links": [
+            [
+                "Probability and information theory basics",
+                "probability-and-information-theory-basics",
+                "other-concepts"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "marginal probability",
+        ">remark": [
+            ">remark",
+            "the probability distribution of a subset of variables obtained from a joint distribution by eliminating the remaining variables"
+        ],
+        "statement": [
+            "statement",
+            "probability of a single component $$P(\\xi) = \\sum_\\eta P(\\xi,\\eta)$$"
+        ],
+        "proof": [
+            "proof",
+            "$P(\\xi) = \\frac1N\\sum_n \\mathbb I(\\xi) = \\frac1N\\sum_n \\sum_\\eta \\mathbb I(\\xi,\\eta)$"
+        ]
+    },
+    "independence": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "independence",
+        ">remark": [
+            ">remark",
+            "two random variable are independent if the valus of the one of them does not influence the values of the other"
+        ],
+        "definition": [
+            "definition",
+            "a two components of a random variable are independent if $P(\\xi_1,\\xi_2) = P(\\xi_1)P(\\xi_2)$"
+        ],
+        "expected-values": [
+            "expected values",
+            "factorize $\\mathbb E(f(\\xi_1)g(\\xi_2))=\\mathbb E(f(\\xi_1))\\mathbb E(g(\\xi_2))$"
+        ]
+    },
+    "gaussian-distribution": {
+        "$links": [
+            [
+                "Probability and information theory basics",
+                "probability-and-information-theory-basics",
+                "practical-distributions"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Gaussian distribution",
+        "pdf": [
+            "pdf",
+            "$\\text{pdf}(x) = \\dfrac1{(2\\pi)^{d/2}|C|^{1/2}}e^{-\\frac{1}{2}\\,(x-\\mu)^{\\mathsf T} C^{-1}(x-\\mu)}$"
+        ],
+        "expected-values": [
+            "expected values",
+            "$\\mathbb{E}(y)=\\mu$",
+            "$\\mathbb{E}(\\xi^{2n+1})=0$ for $n\\in\\mathbb{N}$",
+            "$\\mathbb{E}(\\xi_i\\xi_j)=C_{ij}$",
+            "$\\mathbb{E}(\\xi_i\\xi_j\\xi_k\\xi_\\ell)=C_{ij}C_{k\\ell} + C_{ik}C_{j\\ell} + C_{i\\ell}C_{jk}$",
+            "higher correlators from pairing"
+        ]
+    },
+    "chi-squared-distribution": {
+        "$links": [
+            [
+                "Probability and information theory basics",
+                "probability-and-information-theory-basics",
+                "practical-distributions"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "chi-squared distribution",
+        "definition": [
+            "definition",
+            "$\\chi^2 = \\sum_{i=1}^d \\xi_i^2$, where $\\xi_i$ are i.i.d. normal random variables"
+        ],
+        "pdf": [
+            "pdf",
+            "$\\text{pdf}(x) = \\dfrac{1}{2^{d/2}\\,\\Gamma\\!\\left(\\frac{d}{2}\\right)} x^{\\frac{d}{2}-1}e^{-x/2}$"
+        ],
+        "expected-values": [
+            "expected values",
+            "$\\mathbb{E}(\\chi^2)=d$"
+        ]
+    },
+    "binomial-distribution": {
+        "$links": [
+            [
+                "Probability and information theory basics",
+                "probability-and-information-theory-basics",
+                "practical-distributions"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "binomial distribution",
+        "single-event-probability": [
+            "single event probability",
+            "$p$, no-event probability is $q=1-p$"
+        ],
+        "probability-of-a-series": [
+            "probability of a series",
+            "the probability that after $N$ trials we observe $k$ evens: $$P_N(k) = {N \\choose k} p^k q^{N-k}$$"
+        ],
+        "sum-rule": [
+            "sum rule",
+            "$\\sum_{k=0}^N P_N(k) =1$"
+        ]
+    },
+    "poisson-distribution": {
+        "$links": [
+            [
+                "Probability and information theory basics",
+                "probability-and-information-theory-basics",
+                "practical-distributions"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Poisson distribution",
+        ">remark": [
+            ">remark",
+            "probability that $k$ independent event occurs during time $t$"
+        ],
+        "derivation": [
+            "derivation",
+            "probability of an event during time $dt$ is $p=\\gamma dt$",
+            "interval $t$ is divided by $n$ parts: $dt=t/N$",
+            "probability that no event occurs until time $t$ $$ P_t(0) = \\lim_{N\\to\\infty}(1-p)^N = \\lim_{N\\to\\infty}(1-\\dfrac tN)^N = e^{-\\gamma t}$$",
+            "recursion: last event occurs at $t' = i\\,dt$ $$P_t(k) = \\sum_{i=0}^N P_{t'}(k-1)\\,\\gamma dt\\, P_{t-t'}(0)$$",
+            "in $N\\to\\infty$ limit integral equation $$P_t(k) = \\int\\limits_0^t\\!\\gamma dt\\, P_{t'}(k-1) e^{-\\gamma(t-t')}$$",
+            "solution: $$P_t(k) = \\frac{(\\gamma t)^k}{k!} e^{-\\gamma t}$$"
+        ],
+        "remark": [
+            "remark",
+            "$t=N\\,dt$, we shall choose $k$ event out of $N$ $\\Rightarrow$ binomial distribution",
+            "with \u001ekeyword\u001fStirling formula\u001fstirling-formula\u001e we arrive at the same reuslt"
+        ],
+        "sum-rule": [
+            "sum rule",
+            "$\\sum_{k=0}^\\infty P_t(k)=1$"
+        ],
+        "expected-values": [
+            "expected values",
+            "$\\mathbb E[k] = \\gamma t$",
+            "$\\mathbb E[(k-\\gamma t)^2]=\\gamma t$"
+        ]
+    },
+    "gamma-distribution": {
+        "$links": [
+            [
+                "Probability and information theory basics",
+                "probability-and-information-theory-basics",
+                "practical-distributions"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "gamma distribution",
+        ">remark": [
+            ">remark",
+            "probability denstiy for the $k$-th event occurs at time $t$"
+        ],
+        "notation": [
+            "notation",
+            "$p_k(t)$"
+        ],
+        "derivation": [
+            "derivation",
+            "probability that $k-1$ event occurs during $t-dt$ and one event during $dt$ is $p_k(t)dt = P_t(k-1) \\gamma dt$"
+        ],
+        "pdf": [
+            "pdf",
+            "$$p_k(t)=\\gamma \\frac{(\\gamma t)^{k-1}}{(k-1)!}e^{-\\gamma t}$$"
+        ]
+    },
+    "information-theory": {
+        "$links": [
+            [
+                "Probability and information theory basics",
+                "probability-and-information-theory-basics",
+                "information-theory"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "information theory",
+        ">remark": [
+            ">remark",
+            "probability theory in case of lot of measurements both total and in each bin"
+        ],
+        "technique": [
+            "technique",
+            "use probability theory results with \u001ekeyword\u001fStirling formula\u001fstirling-formula\u001e leading order"
+        ],
+        "concepts": [
+            "concepts",
+            "entropy (impurity) $\\to$ \u001ekeyword\u001fShannon entropy\u001fshannon-entropy\u001e",
+            "\u001ekeyword\u001fBoltzmann distribution\u001fboltzmann-distribution\u001e",
+            "\u001ekeyword\u001fother entropy formulea\u001fother-entropy-formulea\u001e",
+            "\u001ekeyword\u001fmutual information\u001fmutual-information\u001e",
+            "\u001ekeyword\u001fKullback-Leibler divergence\u001fkullback-leibler-divergence\u001e and \u001ekeyword\u001fcross entropy\u001fcross-entropy\u001e"
+        ],
+        "bit-of-information": [
+            "bit of information",
+            "one Y/N question, binary representation"
+        ],
+        "information-content": [
+            "information content",
+            "\u001ekeyword\u001fShannon entropy\u001fshannon-entropy\u001e"
+        ]
+    },
+    "stirling-formula": {
+        "$links": [
+            [
+                "Poisson distribution",
+                "poisson-distribution",
+                "remark"
+            ],
+            [
+                "information theory",
+                "information-theory",
+                "technique"
+            ],
+            [
+                "Shannon entropy",
+                "shannon-entropy",
+                "shannon-entropy"
+            ],
+            [
+                "Kullback-Leibler divergence",
+                "kullback-leibler-divergence",
+                "construction"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Stirling formula",
+        ">remark": [
+            ">remark",
+            "approximation of the factorial for large $n$"
+        ],
+        "result": [
+            "result",
+            "$$\\ln n! = n\\ln n - n + \\frac12 \\ln(2\\pi n) + \\mathcal o(1),$$ or $$n! = \\sqrt{2\\pi n} \\left(\\frac n e\\right)^n$$"
+        ]
+    },
+    "shannon-entropy": {
+        "$links": [
+            [
+                "information theory",
+                "information-theory",
+                "concepts"
+            ],
+            [
+                "information theory",
+                "information-theory",
+                "information-content"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Shannon entropy",
+        ">remark": [
+            ">remark",
+            "information content of a state corresponds to the number of microstates that realize that state"
+        ],
+        "notation": [
+            "notation",
+            "$H$"
+        ],
+        "meaning": [
+            "meaning",
+            "$e^{N_{all}H}$ counts how many microstates can make up a macrostate"
+        ],
+        "microstates": [
+            "microstates",
+            "elementary events, all with the same probability, number of all microstates is $N_{all}$"
+        ],
+        "macrostates": [
+            "macrostates",
+            "collect $N_n$ microstates in bin $n$, a given macrostate corresponds to fixed $N_n$; sum rule $\\sum_{n=1}^N N_n=N_{all}$"
+        ],
+        "number-of-states-realizing-the-macrostate": [
+            "number of states realizing the macrostate",
+            "$$ e^{N_{all}H} = \\binom {N_{all}}{N_1}\\binom{N_{all}-N_1}{N_2}\\dots \\binom{N_{all}-\\sum_{i=1}^{k-1}N_i}{N_k}\\dots = \\dfrac{N_{all}!}{\\prod_k N_k!}.$$"
+        ],
+        "shannon-entropy": [
+            "Shannon entropy",
+            "comes after applying \u001ekeyword\u001fStirling formula\u001fstirling-formula\u001e $$ H(p) = -\\sum_k p_n \\ln p_n,\\quad p=(p_1,\\dots,p_N),\\;p_n=\\frac{N_n}{N_{all}}$$"
+        ],
+        "properties": [
+            "properties",
+            "$H\\ge 0$",
+            "minimal for pure sample $p_n=1,\\, p_{m\\neq n}=0$",
+            "maximal for uniform distribution $p_i=\\dfrac1{N}$, there $H=\\ln N$",
+            "concave, i.e. mixing increases entropy: $$H(\\lambda p + (1-\\lambda)q) \\ge  \\lambda H(p) + (1-\\lambda)H(q)$$"
+        ],
+        "other-interpretation": [
+            "other interpretation",
+            "provides the minimal \u001ekeyword\u001faverage length of the prefix-free codes\u001faverage-length-of-the-prefix-free-codes\u001e (c.f. twenty questions, barchoba)"
+        ]
+    },
+    "prefix-free-coding": {
+        "$links": [
+            [
+                "average length of the prefix-free codes",
+                "average-length-of-the-prefix-free-codes",
+                "premises"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "prefix-free coding",
+        ">remark": [
+            ">remark",
+            "assign a unique binary code for each of the elements in a set, where a code can not be the starting code of another one"
+        ],
+        "considerations": [
+            "considerations",
+            "let the code length associated to the $i$th element $\\ell_i$",
+            "at depth $d$ at most $2^d$ code can be distributed",
+            "the descendants of a code of length $\\ell$ with depth $N>\\ell$ is $2^{N-\\ell}$ (this is the number of free bits)",
+            "the descendants of different length are different (prefix-free)",
+            "the sum of descendants of $\\ell_1$, $\\ell_2$, \\dots to depth $N$ is at most $2^N$, i.e. $\\sum_i 2^{N-\\ell_i} \\le 2^N$.",
+            "follows the \u001ekeyword\u001fKraft inequality\u001fkraft-inequality\u001e"
+        ]
+    },
+    "kraft-inequality": {
+        "$links": [
+            [
+                "prefix-free coding",
+                "prefix-free-coding",
+                "considerations"
+            ],
+            [
+                "average length of the prefix-free codes",
+                "average-length-of-the-prefix-free-codes",
+                "proof"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Kraft inequality",
+        "statement": [
+            "statement",
+            "in prefix-free coding with code length $\\ell_i$ we have  $$\\sum_i 2^{-\\ell_i}\\le 1.$$"
+        ]
+    },
+    "average-length-of-the-prefix-free-codes": {
+        "$links": [
+            [
+                "Shannon entropy",
+                "shannon-entropy",
+                "other-interpretation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "average length of the prefix-free codes",
+        ">remark": [
+            ">remark",
+            "number of questions needed to find out a result"
+        ],
+        "premises": [
+            "premises",
+            "assign a \u001ekeyword\u001fprefix-free coding\u001fprefix-free-coding\u001e for elements of a set, the code length are $\\ell_i$",
+            "the probability of each element is $p_i$"
+        ],
+        "average-code-length-satisfies": [
+            "average code length satisfies",
+            "$$\\sum_i p_i\\ell_i \\le -\\sum_i p_i\\log_2 p_i$$"
+        ],
+        "proof": [
+            "proof",
+            "the code length set satisfies \u001ekeyword\u001fKraft inequality\u001fkraft-inequality\u001e",
+            "in the smallest case it is an equality",
+            "insert Kraft's formula with $\\lambda$ Langrange multiplicator, and find the minimum of $\\sum_i p_i\\ell_i + \\lambda \\sum_i 2^{-\\ell_i}$",
+            "results in $\\ell_i = \\ln(\\lambda \\ln 2) - \\log_2 p_i$",
+            "from $\\sum_i p_i=1$ and Kraft's equation follows $\\lambda\\ln2=1$, so the prefactor is zero"
+        ],
+        "construction-for-minimal-code-length": [
+            "construction for minimal code length",
+            "\u001ekeyword\u001fHuffmann coding\u001fhuffmann-coding\u001e"
+        ]
+    },
+    "huffmann-coding": {
+        "$links": [
+            [
+                "optimal coding",
+                "optimal-coding",
+                "theoretical-result"
+            ],
+            [
+                "average length of the prefix-free codes",
+                "average-length-of-the-prefix-free-codes",
+                "construction-for-minimal-code-length"
+            ]
+        ],
+        "$images": [
+            [
+                "Huffmann coding",
+                "Huffmann_coding.png"
+            ]
+        ],
+        "$keyword_name": "Huffmann coding",
+        ">remark": [
+            ">remark",
+            "construction to achieve minimal code length"
+        ],
+        "construction": [
+            "construction",
+            "have $m$ elements with $p_i$ probabilities",
+            "merge the two smallest probability event to a single one, with probability $p_1+p_2$",
+            "we obtained an $m-1$ long system",
+            "repeat the above procedure until no elements remain",
+            "the prefix codes are the choices in the tree"
+        ],
+        "illustration": [
+            "illustration",
+            "\u001eimage\u001fHuffmann coding\u001fHuffmann_coding.png\u001e"
+        ]
+    },
+    "boltzmann-distribution": {
+        "$links": [
+            [
+                "information theory",
+                "information-theory",
+                "concepts"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Boltzmann distribution",
+        ">remark": [
+            ">remark",
+            "distribution maximizing the entropy with a constraint"
+        ],
+        "constraint": [
+            "constraint",
+            "$E=\\sum_iE_ip_i$ (energy conservation)"
+        ],
+        "maximum-of-the-shannon-entropy": [
+            "maximum of the Shannon entropy",
+            "results in the Boltzmann distribution: $$p_i \\sim e^{-\\beta E_i}$$"
+        ],
+        "proof": [
+            "proof",
+            "Langrange multiplicator $\\beta$ implies: $\\min(\\sum_i p_i(\\beta E_i-\\log p_i)$)",
+            "results in $p_i\\sim e^{-\\beta E_i}$"
+        ]
+    },
+    "other-entropy-formulea": {
+        "$links": [
+            [
+                "information theory",
+                "information-theory",
+                "concepts"
+            ]
+        ],
+        "$images": [
+            [
+                "alternative entropy formulae",
+                "alternative-entropies.png"
+            ]
+        ],
+        "$keyword_name": "other entropy formulea",
+        ">remark": [
+            ">remark",
+            "non-additive, but extensive etropy formulae"
+        ],
+        "conditions": [
+            "conditions",
+            "positive, convex"
+        ],
+        "r\u00e9nyi-tsallis-entropy": [
+            "R\u00e9nyi-Tsallis entropy",
+            "$$ H_\\alpha = \\frac1{1-\\alpha}\\log(\\sum_i p_i^\\alpha)$$"
+        ],
+        "gini-impurity": [
+            "Gini impurity",
+            "$$ G = 1-\\sum_ip_i^2$$"
+        ],
+        "picture": [
+            "picture",
+            "\u001eimage\u001falternative entropy formulae\u001falternative-entropies.png\u001e"
+        ]
+    },
+    "mutual-information": {
+        "$links": [
+            [
+                "information theory",
+                "information-theory",
+                "concepts"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "mutual information",
+        ">remark": [
+            ">remark",
+            "measure of independence of two random variables"
+        ],
+        "construction": [
+            "construction",
+            "two random variables $x\\in X$ and $y\\in Y$",
+            "Shannon entropy $H(X,Y)=-\\sum_{x\\in X, y\\in Y} p(x,y)\\log p(x,y)$",
+            "for independent variables $p(x,y)=p(x)p(y)$, and so $H(X,Y) = H(X) + H(Y)$ where $H(X)=-\\sum_{x\\in X} p(x)\\log p(x)$",
+            "non-independence measure: mutual information $$ I(X,Y)= H(X,Y)-H(X)-H(Y) = -\\sum_{x,y} p(x,y) \\ln\\frac{p(x,y)}{p(x)p(y)}$$"
+        ]
+    },
+    "probability-of-the-observed-sample": {
+        "$links": [
+            [
+                "Kullback-Leibler divergence",
+                "kullback-leibler-divergence",
+                "construction"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "probability of the observed sample",
+        ">remark": [
+            ">remark",
+            "what is the probability of a given distribution, if the probabilities of the macrostates are given?"
+        ],
+        "construction": [
+            "construction",
+            "probability of arriving to the $i$-th macrostate is $q_i$",
+            "we draw $N$ elements",
+            "what is the probability that we observe $N_i$ in the bins?"
+        ],
+        "proof": [
+            "proof",
+            "the first $N_1$ element goes to bin 1, then $N_2$ goes to bin 2, etc.: $P = \\prod_i q_i^{N_i}$",
+            "number of such configurations $N!/\\prod_i N_i!$"
+        ],
+        "probability-of-the-sample": [
+            "probability of the sample $$ P = N! \\prod_i \\frac{q_i^{N_i}}{N_i!}$$"
+        ]
+    },
+    "kullback-leibler-divergence": {
+        "$links": [
+            [
+                "information theory",
+                "information-theory",
+                "concepts"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Kullback-Leibler divergence",
+        ">remark": [
+            ">remark",
+            "measure of the distance of two probability distributions"
+        ],
+        "definition": [
+            "definition",
+            "$$ \\log P= N D(p\\mid\\mid q),$$ where $P$ is the probability of observing a sample with observed ratios $p_i=N_i/N$ while the probabilities are $q_i$"
+        ],
+        "construction": [
+            "construction",
+            "use \u001ekeyword\u001fprobability of the observed sample\u001fprobability-of-the-observed-sample\u001e, and apply \u001ekeyword\u001fStirling formula\u001fstirling-formula\u001e"
+        ],
+        "result": [
+            "result $$ D(p\\mid\\mid q) = -\\sum_i p_i \\ln \\frac{p_i}{q_i}$$"
+        ]
+    },
+    "cross-entropy": {
+        "$links": [
+            [
+                "information theory",
+                "information-theory",
+                "concepts"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "cross-entropy",
+        ">remark": [
+            ">remark",
+            "Kullback-Leibler dicergence in case where the observed sample contains none or all elements"
+        ],
+        "result": [
+            "result",
+            "for $p_i=0$ or $1$ it reduces to the cross entropy $$ D_{cross-entropy}(p\\mid\\mid q) = \\sum_i p_i \\ln q_i$$"
+        ]
+    },
+    "data-driven-approach": {
+        "$links": [
+            [
+                "AI learning paradigms",
+                "ai-learning-paradigms",
+                "approaches"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "data driven approach",
+        ">remark": [
+            ">remark",
+            "definition: learning a model from raw data without explicit labels"
+        ],
+        "context-definition": [
+            "context definition",
+            "implicit patterns",
+            "temporal subsequences",
+            "symmetries",
+            "distances"
+        ],
+        "goal": [
+            "goal",
+            "find features of the target context"
+        ],
+        "data": [
+            "data",
+            "$X_{\\text{sample}} \\subset X$"
+        ],
+        "examples": [
+            "examples",
+            "image clustering",
+            "discovering physical laws",
+            "dimensionality reduction"
+        ],
+        "methods": [
+            "methods",
+            "autoencoders",
+            "generative models",
+            "principal component analysis",
+            "linear laws discovery",
+            "contrastive learning"
+        ]
+    },
+    "linear-regression": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "optimization-methods"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "linear regression",
+        ">remark": [
+            ">remark",
+            "fit a linear data model to the data"
+        ],
+        "data": [
+            "data",
+            "sample data with $C\\sim\\mathbb R^N$, $\\mathcal C\\sim\\mathbb R^M$"
+        ],
+        "basis-functions": [
+            "basis functions",
+            "$g_\\alpha:C\\to\\mathcal C$ for $\\alpha=1,\\dots,N_{basis}$"
+        ],
+        "data-model": [
+            "data model",
+            "$\\mathcal M(x; q) = \\sum_\\alpha q_\\alpha g_\\alpha(x_a)$"
+        ],
+        "matrix-notation": [
+            "matrix notation",
+            "$X_{a\\alpha} = g_\\alpha(x_a)$"
+        ],
+        "loss": [
+            "loss",
+            "Gaussian loss $$L(q) = \\sum_{a=1}^{N_{data}} \\dfrac{|\\mathcal M(x_a; q)-y_a|^2} {\\sigma_a^2} = (X\\cdot q-y)^T C^{-1}(X\\cdot q-y),$$ where $\\sigma_a$ weights the importance of the given data and $C={\\text{diag}}(\\sigma^2)$."
+        ],
+        "parameter-distribution": [
+            "parameter distribution",
+            "$$L(q) = (q-\\mu_q)^T C_q^{-1}(q-\\mu_q)$$ Gaussian with  $$\\begin{align} & C_q = (X^T C^{-1}X)^{-1}\\\\     & \\mu_q = (X^T C^{-1}X)^{-1}X^T C^{-1}y.\\\\    \\end{align}$$"
+        ],
+        "goal": [
+            "goal",
+            "find the optimal value of the parameter $q=\\mu_q$"
+        ],
+        "distribution-of-the-variables-in-the-target-space": [
+            "distribution of the variables in the target space",
+            "in vector notation $y = q\\cdot g(x)$, thus it is also Gaussian with $$ \\mu_y=\\mu_q\\cdot g(x),\\quad C_y = g^T(x) C_q g(x) $$"
+        ],
+        "examples": [
+            "examples",
+            "\u001ekeyword\u001fline fitting\u001fline-fitting\u001e",
+            "\u001ekeyword\u001ffunction fitting in functional basis\u001ffunction-fitting-in-functional-basis\u001e",
+            "\u001ekeyword\u001frole of the weights\u001frole-of-the-weights\u001e"
+        ],
+        "failure-modes": [
+            "failure modes",
+            "\u001ekeyword\u001faccuracy drop\u001faccuracy-drop\u001e",
+            "\u001ekeyword\u001foverfitting\u001foverfitting\u001e",
+            "\u001ekeyword\u001fextrapolation\u001fextrapolation\u001e"
+        ],
+        "improvements": [
+            "improvements",
+            "\u001ekeyword\u001fpseudoinverse\u001fpseudoinverse\u001e",
+            "\u001ekeyword\u001fregulators\u001fregulators\u001e (\u001ekeyword\u001fLASSO\u001flasso\u001e, \u001ekeyword\u001fL2 regulator\u001fl2-regulator\u001e, MEM)"
+        ]
+    },
+    "function-fitting-in-functional-basis": {
+        "$links": [
+            [
+                "linear regression",
+                "linear-regression",
+                "examples"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "function fitting in functional basis",
+        ">remark": [
+            ">remark",
+            "we try to best approximate a function in a designated basis"
+        ],
+        "data-model": [
+            "data model",
+            "$F = \\sum_{i=1}^N \\omega_i g_i$"
+        ],
+        "optimal-parameters": [
+            "optimal parameters",
+            "$\\omega_{\\text{opt}} = (G^T C_x^{-1} G)^{-1} G^T C_x^{-1} y$"
+        ],
+        "role-of-covariance-matrix": [
+            "role of covariance matrix",
+            "\u001ekeyword\u001frole of the weights\u001frole-of-the-weights\u001e"
+        ],
+        "examples": [
+            "examples",
+            "\u001ekeyword\u001fline fitting\u001fline-fitting\u001e",
+            "\u001ekeyword\u001fapproximation of a random function\u001fapproximation-of-a-random-function\u001e",
+            "\u001ekeyword\u001fhigh order polynomial fit\u001fhigh-order-polynomial-fit\u001e"
+        ]
+    },
+    "line-fitting": {
+        "$links": [
+            [
+                "linear regression",
+                "linear-regression",
+                "examples"
+            ],
+            [
+                "function fitting in functional basis",
+                "function-fitting-in-functional-basis",
+                "examples"
+            ]
+        ],
+        "$images": [
+            [
+                "line fitting example",
+                "line-fitting.png"
+            ]
+        ],
+        "$keyword_name": "line fitting",
+        ">remark": [
+            ">remark",
+            "given the data points, fit a line (or a hyperplane) on them"
+        ],
+        "data-model": [
+            "data model",
+            "linear regression with $M=1$ (one dimensional output) and $g_0=1,\\;g_1=x$"
+        ],
+        "notation": [
+            "notation",
+            "$\\langle u\\rangle = \\dfrac{\\sum_n u_n/\\sigma_n^2}{\\sum_n 1/\\sigma_n^2}$ and $\\dfrac1{\\sigma^2} = \\sum_n\\dfrac1{\\sigma_n^2}$"
+        ],
+        "better-representation": [
+            "better representation",
+            "$\\xi = x-\\langle x\\rangle, \\eta = y-\\langle y\\rangle \\Rightarrow \\xi = a\\eta +b$"
+        ],
+        "from-the-general-formula": [
+            "from the general formula",
+            "$$C_q^{-1} = X^T C^{-1} X =  \\dfrac 1{\\sigma^2}\\left( \\begin{matrix}1 & 0 \\cr 0 & \\langle \\xi\\xi\\rangle\\cr \\end{matrix}\\right),\\quad X^TC^{-1}y = \\dfrac 1{\\sigma^2}\\left( \\begin{matrix}\\langle \\xi\\eta \\rangle \\cr \\langle \\eta\\eta\\rangle \\cr\\end{matrix}\\right)$$"
+        ],
+        "relevant-parameters": [
+            "relevant parameters",
+            "$a_* = {\\langle \\xi\\xi\\rangle}^{-1}{\\langle \\eta\\eta\\rangle},\\; b_* = \\langle \\xi\\eta\\rangle,\\; C_y = \\sigma^2(1 + \\xi{\\langle \\xi\\xi\\rangle}^{-1}\\xi)$"
+        ],
+        "example": [
+            "example",
+            "\u001eimage\u001fline fitting example\u001fline-fitting.png\u001e"
+        ]
+    },
+    "role-of-the-weights": {
+        "$links": [
+            [
+                "linear regression",
+                "linear-regression",
+                "examples"
+            ],
+            [
+                "function fitting in functional basis",
+                "function-fitting-in-functional-basis",
+                "role-of-covariance-matrix"
+            ]
+        ],
+        "$images": [
+            [
+                "line fitting for uniform and variable weights",
+                "role-of-weight.png"
+            ]
+        ],
+        "$keyword_name": "role of the weights",
+        ">remark": [
+            ">remark",
+            "the weights (in general the covariance matrix) sets the importance of the individual data points"
+        ],
+        "example": [
+            "example",
+            "\u001eimage\u001fline fitting for uniform and variable weights\u001frole-of-weight.png\u001e"
+        ]
+    },
+    "approximation-of-a-random-function": {
+        "$links": [
+            [
+                "function fitting in functional basis",
+                "function-fitting-in-functional-basis",
+                "examples"
+            ]
+        ],
+        "$images": [
+            [
+                "random function",
+                "random-function.png"
+            ],
+            [
+                "fitting with different number of basis elements",
+                "fitting-bad-convergence.png"
+            ],
+            [
+                "accuracy drop in fitting",
+                "accuracy-drop.png"
+            ],
+            [
+                "pseudoinverse regulated fit",
+                "random-function-fit-pinv.png"
+            ],
+            [
+                "fit coefficients",
+                "fit-coefficients-regulator.png"
+            ]
+        ],
+        "$keyword_name": "approximation of a random function",
+        ">remark": [
+            ">remark",
+            "example for function fitting"
+        ],
+        "construction": [
+            "construction",
+            "create random function, e.g. with recursion $x_{n+1} = K(2x_n-x_{n-1}+\\sigma\\xi)$ with $\\xi$ uniform normal random variable. With $K=0.9, \\sigma=0.1$ $\\to$ \u001eimage\u001frandom function\u001frandom-function.png\u001e",
+            "choose a functional basis, for example $g_\\alpha(t)=(\\sin \\alpha t, \\cos\\alpha t)$",
+            "use fit formulae from linear regression"
+        ],
+        "lessons": [
+            "lessons",
+            "observe \u001ekeyword\u001faccuracy drop\u001faccuracy-drop\u001e $\\to$ \u001eimage\u001ffitting with different number of basis elements\u001ffitting-bad-convergence.png\u001e and \u001eimage\u001faccuracy drop in fitting\u001faccuracy-drop.png\u001e",
+            "apply \u001ekeyword\u001fregulators\u001fregulators\u001e or \u001ekeyword\u001fpseudoinverse\u001fpseudoinverse\u001e $\\to$ \u001eimage\u001fpseudoinverse regulated fit\u001frandom-function-fit-pinv.png\u001e"
+        ],
+        "coefficients-with-different-regulator": [
+            "coefficients with different regulator",
+            "\u001eimage\u001ffit coefficients\u001ffit-coefficients-regulator.png\u001e"
+        ]
+    },
+    "accuracy-drop": {
+        "$links": [
+            [
+                "linear regression",
+                "linear-regression",
+                "failure-modes"
+            ],
+            [
+                "approximation of a random function",
+                "approximation-of-a-random-function",
+                "lessons"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "accuracy drop",
+        ">remark": [
+            ">remark",
+            "symptom: while increasing the number of basis elements, accuracy drops"
+        ],
+        "reason": [
+            "reason",
+            "\u001ekeyword\u001fill-conditioned matrix\u001fill-conditioned-matrix\u001e in the solution"
+        ],
+        "solution": [
+            "solution",
+            "\u001ekeyword\u001fpseudoinverse\u001fpseudoinverse\u001e",
+            "\u001ekeyword\u001fregulators\u001fregulators\u001e"
+        ]
+    },
+    "ill-conditioned-matrix": {
+        "$links": [
+            [
+                "accuracy drop",
+                "accuracy-drop",
+                "reason"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "ill-conditioned matrix",
+        ">remark": [
+            ">remark",
+            "symptom: matrix inverse is numerically inaccurate"
+        ],
+        "reason": [
+            "reason",
+            "near zero modes (flat direction) of the linear coefficient matrix",
+            "formally $A\\cdot v_{min}=\\lambda_{min} v_{min}$ for $\\lambda_{min}$ (relatively) small"
+        ],
+        "explanation": [
+            "explanation",
+            "if the exact solution is $A\\cdot x=y$, then $$A\\cdot(x + cv_{min}) = y + c\\lambda_{min} v_{min}.$$",
+            "for $c\\lambda_{min}<\\varepsilon$, where $\\varepsilon$ is the numerical resolution, the difference is not observable."
+        ],
+        "example": [
+            "example",
+            "numerical precision $\\varepsilon =10^{-16}$, smallest eigenvalue $\\lambda_{min}\\sim 10^{-16}$, then solution is uncertain $x+cv_{min}$ with $|c|\\sim1$."
+        ]
+    },
+    "pseudoinverse": {
+        "$links": [
+            [
+                "linear regression",
+                "linear-regression",
+                "improvements"
+            ],
+            [
+                "approximation of a random function",
+                "approximation-of-a-random-function",
+                "lessons"
+            ],
+            [
+                "accuracy drop",
+                "accuracy-drop",
+                "solution"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "pseudoinverse",
+        ">remark": [
+            ">remark",
+            "change the matrix inversion process to avoid numerical instabilities"
+        ],
+        "notes": [
+            "notes",
+            "works for positive definite hermitian matrices"
+        ],
+        "formula": [
+            "formula",
+            "$\\text{pinv}(A) = V \\text{reg-inv}(\\Lambda)V^{-1}$",
+            "$AV=V\\Lambda$ is the eigenequation",
+            "$\\text{reg-inv}(\\Lambda) = \\text{diag}\\left(\\Theta(\\lambda_i>\\varepsilon\\lambda_{max}) \\dfrac1{\\lambda_i}\\right)$, we keep only those eigenvalues that are larger than $\\varepsilon$ times the largest eigenvalue"
+        ],
+        "background": [
+            "background",
+            "for small eigenvalue $\\lambda_{small}$ the result of $Ax=y$ can be modified by $x\\to x+cv_{small}$",
+            "seek $c$ where the length of the result is smallest $\\Rightarrow c=0$",
+            "results in leaving out the contribution of $v_{small}$"
+        ]
+    },
+    "regulators": {
+        "$links": [
+            [
+                "linear regression",
+                "linear-regression",
+                "improvements"
+            ],
+            [
+                "approximation of a random function",
+                "approximation-of-a-random-function",
+                "lessons"
+            ],
+            [
+                "accuracy drop",
+                "accuracy-drop",
+                "solution"
+            ],
+            [
+                "interpolation",
+                "interpolation",
+                "solution"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "regulators",
+        ">remark": [
+            ">remark",
+            "add terms to the loss function to avoid numerical difficulties at the minimum"
+        ],
+        "problem": [
+            "problem",
+            "minimum of the loss function is numerically problematic"
+        ],
+        "solution": [
+            "solution",
+            "modify the loss by adding a regulator function of the parameter with some coefficient: $$L_{reg}(q) = L(q) + \\lambda_{reg} R(q)$$",
+            "$\\lambda_{reg}=0$ falls back to unregulated case",
+            "$\\lambda_{reg}\\to\\infty$ regulator dominates",
+            "optimal $\\lambda_{reg}$ does not spoil accuracy too much"
+        ],
+        "result": [
+            "result",
+            "resolves (nearly) flat directions in $q$s, makes solution unique"
+        ],
+        "tradeoff": [
+            "tradeoff",
+            "the minimum is not exact, but numerically stable"
+        ],
+        "types": [
+            "types",
+            "\u001ekeyword\u001fLASSO\u001flasso\u001e, \u001ekeyword\u001fL2 regulator\u001fl2-regulator\u001e, MEM"
+        ]
+    },
+    "lasso": {
+        "$links": [
+            [
+                "linear regression",
+                "linear-regression",
+                "improvements"
+            ],
+            [
+                "regulators",
+                "regulators",
+                "types"
+            ]
+        ],
+        "$images": [
+            [
+                "fit coefficients",
+                "fit-coefficients-regulator.png"
+            ],
+            [
+                "minimum value",
+                "LASSO_preference.png"
+            ]
+        ],
+        "$keyword_name": "LASSO",
+        ">remark": [
+            ">remark",
+            "L1 regulator"
+        ],
+        "regulator-term": [
+            "regulator term",
+            "$R(q) = \\sum_q|q|$"
+        ],
+        "properties": [
+            "properties",
+            "prefers $q=0$",
+            "prefers the possibly most number of small parameters (for at least quadratic losses) $\\to$ \u001eimage\u001ffit coefficients\u001ffit-coefficients-regulator.png\u001e",
+            "reason: for 2d: $(q^2-1)^2 + \\lambda_{reg}(|q_1|+|q_2|)$ has a minimum at $q=(\\pm 1,0)$ or $q=(0,\\pm1)$ \u001eimage\u001fminimum value\u001fLASSO_preference.png\u001e"
+        ]
+    },
+    "l2-regulator": {
+        "$links": [
+            [
+                "linear regression",
+                "linear-regression",
+                "improvements"
+            ],
+            [
+                "regulators",
+                "regulators",
+                "types"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "L2 regulator",
+        ">remark": [
+            ">remark",
+            "L2 regulator"
+        ],
+        "regulator-term": [
+            "regulator term",
+            "$R(q) = \\sum_q q^2$ quadratic distance"
+        ],
+        "properties": [
+            "properties",
+            "prefers $q=0$",
+            "in linear regression exactly solvable $$q = (X^T C^{-1}X+\\lambda_{reg})^{-1}X^T C^{-1}y$$"
+        ]
+    },
+    "interpolation": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "interpolation",
+        ">remark": [
+            ">remark",
+            "approximate a function based on points inside the volume where the points reside"
+        ],
+        "description": [
+            "description",
+            "sample pairs are given inside a volume (interval) $D$",
+            "fit a function on $D$",
+            "predict values at $x\\in D$ $\\to$ interpolation"
+        ],
+        "danger": [
+            "danger",
+            "\u001ekeyword\u001foverfitting\u001foverfitting\u001e, learn the noise as data"
+        ],
+        "solution": [
+            "solution",
+            "regularization $\\to$ \u001ekeyword\u001fregulators\u001fregulators\u001e"
+        ]
+    },
+    "high-order-polynomial-fit": {
+        "$links": [
+            [
+                "function fitting in functional basis",
+                "function-fitting-in-functional-basis",
+                "examples"
+            ]
+        ],
+        "$images": [
+            [
+                "interpolation overfitting",
+                "interpolation-overfitting.png"
+            ]
+        ],
+        "$keyword_name": "high order polynomial fit",
+        ">remark": [
+            ">remark",
+            "use polynomials to fit a function"
+        ],
+        "construction": [
+            "construction",
+            "fit high order polynomial fit to a function"
+        ],
+        "dangers": [
+            "dangers",
+            "interpolation can produce large amplitudes, not smooth $\\to$ \u001ekeyword\u001foverfitting\u001foverfitting\u001e",
+            "example: original model $y=1-x^2+\\text{noise}$, fit for $N_{data}=11$ a 10th order polynomial, or regularize with L2 \u001eimage\u001finterpolation overfitting\u001finterpolation-overfitting.png\u001e",
+            "problem with \u001ekeyword\u001fextrapolation\u001fextrapolation\u001e"
+        ],
+        "lesson": [
+            "lesson",
+            "avoid polynomial fits!"
+        ]
+    },
+    "extrapolation": {
+        "$links": [
+            [
+                "linear regression",
+                "linear-regression",
+                "failure-modes"
+            ],
+            [
+                "high order polynomial fit",
+                "high-order-polynomial-fit",
+                "dangers"
+            ]
+        ],
+        "$images": [
+            [
+                "fit different order polynomials with L2 regularization",
+                "extrapolation-example.png"
+            ]
+        ],
+        "$keyword_name": "extrapolation",
+        ">remark": [
+            ">remark",
+            "approximate a function based on points outside the volume where the points reside"
+        ],
+        "dangers": [
+            "dangers",
+            "good interpolation, but outside the data domain function value grows large $\\to$ bad asymptotic behaviour",
+            "example: original model $y=1-x^2+\\text{noise}$ \u001eimage\u001ffit different order polynomials with L2 regularization\u001fextrapolation-example.png\u001e"
+        ],
+        "solution": [
+            "solution",
+            "regulation does not help",
+            "control asymptotic behaviour"
+        ]
+    },
+    "gradient-descent": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "optimization-methods"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "gradient descent",
+        ">remark": [
+            ">remark",
+            "method to find minimum of a function: go downhill!"
+        ],
+        "notes": [
+            "notes",
+            "recursive process to find minimum of $f(x)$"
+        ],
+        "algorithm": [
+            "algorithm",
+            "recursion: start from an appropriate $x_0$, and perform recursion $$x_{n+1} = x_n - r\\nabla f,$$ where $r$ is the step size (learning rate)",
+            "stop if $|\\nabla f|$ is small, or $r$ is small (if it is changed)"
+        ],
+        "proof": [
+            "proof",
+            "$f(x_{n+1})= f(x_n- r\\nabla f) = f(x_n)-r|\\nabla f|^2 +\\text{higher order terms}$",
+            "as long as linear approximation applies, the value decreases"
+        ],
+        "advantages": [
+            "advantages",
+            "simple",
+            "robust",
+            "scalable"
+        ],
+        "disadvantages": [
+            "disadvantages",
+            "can stuck in local minima in nearly flat directions",
+            "can overstep minimum",
+            "can be slow for strongly non-isotropic functions"
+        ],
+        "improvements": [
+            "improvements",
+            "use \u001ekeyword\u001fmomentum methods\u001fmomentum-methods\u001e (Nesteron momentum, ADAM)",
+            "\u001ekeyword\u001fchange learning rate\u001fchange-learning-rate\u001e",
+            "\u001ekeyword\u001fconjugate gradient descent method\u001fconjugate-gradient-descent-method\u001e",
+            "second-order methods $\\to$ \u001ekeyword\u001fNewton-Raphson method\u001fnewton-raphson-method\u001e"
+        ]
+    },
+    "change-learning-rate": {
+        "$links": [
+            [
+                "gradient descent",
+                "gradient-descent",
+                "improvements"
+            ]
+        ],
+        "$images": [
+            [
+                "adaptive step iteration",
+                "adaptive-step-iteratio.png"
+            ]
+        ],
+        "$keyword_name": "change learning rate",
+        ">remark": [
+            ">remark",
+            "decrease step size near the minimum"
+        ],
+        "algorithm": [
+            "algorithm",
+            "use a recursion with $x_{n+1}=x_n + r\\delta x_n$ to find minimum of $f(x)$, $r$ is learning rate",
+            "systematic change: $r\\to \\alpha r$ where $\\alpha<1$"
+        ],
+        "adaptive-change": [
+            "adaptive change",
+            "if $f_{n+1}<f_n: \\; r\\to \\alpha_{grow}r$, $\\alpha_{grow}>1$, for example 1.2",
+            "if $f_{n+1}>f_n: \\; r\\to \\alpha_{decr}r$, $\\alpha_{decr}<1$, for example 0.5"
+        ],
+        "stopping": [
+            "stopping",
+            "propose stopping recursion if $r<r_{min}$"
+        ],
+        "example": [
+            "example",
+            "$f(x,y) =(x-2)^2+(y+1)^2 + \\sin 3x \\sin 3y$, use adaptive step size \u001eimage\u001fadaptive step iteration\u001fadaptive-step-iteratio.png\u001e"
+        ]
+    },
+    "random-algorithms": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "optimization-methods"
+            ]
+        ],
+        "$images": [
+            [
+                "minimum finding with annealing",
+                "minimum-finding-annealing.png"
+            ]
+        ],
+        "$keyword_name": "random algorithms",
+        ">remark": [
+            ">remark",
+            "find minimum of a function locally stepping in a random direction"
+        ],
+        "methods": [
+            "methods",
+            "\u001ekeyword\u001fcoordinate descend\u001fcoordinate-descend\u001e",
+            "\u001ekeyword\u001fsimulated annealing\u001fsimulated-annealing\u001e"
+        ],
+        "advantages": [
+            "advantages",
+            "no gradient is needed",
+            "can escape local minima",
+            "parallelizable"
+        ],
+        "drawbacks": [
+            "drawbacks",
+            "slow convergence",
+            "difficult to use in batch methods $\\Rightarrow$ rarely used in DNNs"
+        ],
+        "example": [
+            "example",
+            "$f(x,y) =(x-2)^2+(y+1)^2 + \\sin 3x \\sin 3y$, simulated annealing with $\\alpha_{cooling}=0.98$: \u001eimage\u001fminimum finding with annealing\u001fminimum-finding-annealing.png\u001e"
+        ]
+    },
+    "coordinate-descend": {
+        "$links": [
+            [
+                "random algorithms",
+                "random-algorithms",
+                "methods"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "coordinate descend",
+        ">remark": [
+            ">remark",
+            "choose a random direction and minimize function there"
+        ],
+        "notes": [
+            "notes",
+            "minimize function in a random direction (line search): $$x_{n+1} = \\arg\\min_t f(x_n+td_n),$$ where $d_n$ is a random direction",
+            "optionally: only make one step towards the minimum"
+        ]
+    },
+    "simulated-annealing": {
+        "$links": [
+            [
+                "random algorithms",
+                "random-algorithms",
+                "methods"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "simulated annealing",
+        ">remark": [
+            ">remark",
+            "accept a step even if it does not decrease the function"
+        ],
+        "algorithm": [
+            "algorithm",
+            "create an ensemble according to probability distribution $P(x)\\sim e^{-\\beta f(x)}$, where $\\beta=1/T$ is the inverse \"temperature\" $\\to$ e.g. \u001ekeyword\u001fMetropolis algorithm\u001fmetropolis-algorithm\u001e",
+            "high temperature: minimum is blurred",
+            "low temperature: distribution concentrated around global minimum",
+            "decrease temperature (annealing) to get into a minimum: $T\\to \\alpha_{cooling}T$ (e.g. $\\alpha_{cooling}=0.98$)",
+            "reheat + repeat annealing for exploring minima"
+        ]
+    },
+    "metropolis-algorithm": {
+        "$links": [
+            [
+                "simulated annealing",
+                "simulated-annealing",
+                "algorithm"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Metropolis algorithm",
+        ">remark": [
+            ">remark",
+            "algorithm to create a Markov process with given statistical properties"
+        ],
+        "goal": [
+            "goal",
+            "produce an ensemble with probability distribution $P(x)\\sim e^{-\\beta f(x)}$",
+            "generate a Markov process $x_n\\to x_{n+1}$, the values will have the desired distribution"
+        ],
+        "algorithm": [
+            "algorithm",
+            "propose step $x_{n+1}=x_n+v$ where $v$ is a random vector",
+            "compute the change in the function $\\Delta f=f(x_{n+1})-f(x-n)$",
+            "accept step with probability $p_{accept}=\\min(1, e^{-\\beta\\Delta f})$",
+            "if $\\Delta f<0$ surely accept",
+            "if $\\Delta f>0$ may accept"
+        ],
+        "thermalization": [
+            "thermalization",
+            "distribution becomes stable after the first $n_{therm}$ step."
+        ]
+    },
+    "conjugate-gradient-descent-method": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "optimization-methods"
+            ],
+            [
+                "gradient descent",
+                "gradient-descent",
+                "improvements"
+            ]
+        ],
+        "$images": [
+            [
+                "conjugate gradient method",
+                "conjugate-gradient.png"
+            ]
+        ],
+        "$keyword_name": "conjugate gradient descent method",
+        ">remark": [
+            ">remark",
+            "the direction we follow is not the local gradient, but we take into accout the surroundings, too"
+        ],
+        "objectives": [
+            "objectives",
+            "planned to effectively minimize a quadratic function $$f = x^TA x - b^T x + f_0,$$ where $x\\in\\mathbb R^N$ and $A$ is positive definite",
+            "gradient descend slow, if there are nearly flat directions (valleys)"
+        ],
+        "idea": [
+            "idea",
+            "recursion $x_k$",
+            "each step occurs in conjugate directions",
+            "converges in $N$ steps (if exact)"
+        ],
+        "conjugate-directions": [
+            "conjugate directions",
+            "$p$ and $q$ are called $A$-conjugate if $p^TAq=0$."
+        ],
+        "algorithm": [
+            "algorithm",
+            "uses auxiliary quantities $r$ (residual) and $p$ (conjugate directions)"
+        ],
+        "algorithm-steps": [
+            "algorithm steps",
+            "start with $x_0$, $r_0=b-Ax_0$, $p_0=r_0$",
+            "step size: $\\alpha_k = \\dfrac{r_k^Tr_k}{p_k^TAp_k}$ (exact line minimization in direction $p_k$, using orthogonality)",
+            "update position: $x_{k+1}=x_k+\\alpha_k p_k$",
+            "update residual: $r_{k+1}=b-Ax_{k+1} = r_k - \\alpha_kAp_k$",
+            "compute conjugacy coefficient: $\\beta_k = \\dfrac{r_{k+1}^Tr_{k+1}}{r_k^Tr_k}$",
+            "update direction: $p_{k+1}=r_{k+1}+\\beta_k p_k$",
+            "if $r_{k+1}<\\varepsilon$ (in exact case after $N$ steps)",
+            "from 2."
+        ],
+        "theory": [
+            "theory",
+            "$r_i^T r_j=0$ for $i\\neq j$ orthogonal",
+            "$p_i^TAp_j=0$ for $i\\neq j$: $A$-conjugate"
+        ],
+        "exmaple": [
+            "exmaple",
+            "\u001eimage\u001fconjugate gradient method\u001fconjugate-gradient.png\u001e"
+        ]
+    },
+    "newton-raphson-method": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "optimization-methods"
+            ],
+            [
+                "gradient descent",
+                "gradient-descent",
+                "improvements"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Newton-Raphson method",
+        ">remark": [
+            ">remark",
+            "minimization algorithm taking into account second order approximation of the function"
+        ],
+        "goal": [
+            "goal",
+            "minimize a function $f:\\mathbb R^N\\to\\mathbb R$"
+        ],
+        "quadratic-approximation": [
+            "quadratic approximation",
+            "$$f(x+p) = f(x) + p\\nabla f(x)+\\frac12 p^TH(x) p+\\dots,$$ where $H(x)$ is the Hessian $H(x)=\\nabla^2f(x)$.",
+            "for exact quadratic form the minimum is at $p=-H(x)^{-1}\\nabla f(x)$"
+        ],
+        "recursion": [
+            "recursion",
+            "$x_{k+1} = x_k - \\alpha_kH(x_k)^{-1}\\nabla f(x_k)$",
+            "$\\alpha_k\\le1$ is the damping factor for numerical stability"
+        ],
+        "advantage": [
+            "advantage",
+            "fast convergence"
+        ],
+        "disadvantage": [
+            "disadvantage",
+            "needs second derivative"
+        ]
+    },
+    "high-dimensional-optimization": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "improvements-in-high-dimensions"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "high dimensional optimization",
+        ">remark": [
+            ">remark",
+            "optimization in high dimensions has special issues"
+        ],
+        "problems-in-high-dimensional-spaces": [
+            "problems in high dimensional spaces",
+            "lot of critical points"
+        ],
+        "critical-points": [
+            "critical points",
+            "saddle points (minimum in some direction, maximum in others)",
+            "flat regions with mixed curvature",
+            "wide valleys with many equivalent solutions"
+        ],
+        "solution": [
+            "solution",
+            "locally optimal direction $p(x)$ (e.g. $p(x)=-\\nabla f(x)$ in gradient descend)",
+            "actual update $x_{k+1}=x_k+v_k$, not exactly toward the optimal direction"
+        ],
+        "methods-to-find-the-actual-direction": [
+            "methods to find the actual direction",
+            "stochastic gradient: $v(x)=rp(x) + \\xi$ with some noise",
+            "\u001ekeyword\u001fmomentum methods\u001fmomentum-methods\u001e"
+        ]
+    },
+    "momentum-methods": {
+        "$links": [
+            [
+                "gradient descent",
+                "gradient-descent",
+                "improvements"
+            ],
+            [
+                "high dimensional optimization",
+                "high-dimensional-optimization",
+                "methods-to-find-the-actual-direction"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "momentum methods",
+        ">remark": [
+            ">remark",
+            "in minimum finding avoid shallow minima by overunning over them"
+        ],
+        "direction-choice": [
+            "direction choice",
+            "locally optimal direction $p(x)$, actual direction $v_k$ recursively determined"
+        ],
+        "classical-momentum-(polyak)": [
+            "classical momentum (Polyak)",
+            "$v_{k+1} = \\beta v_k + \\eta p(x_k)$",
+            "slowly takes over new direction",
+            "effective in narrow valleys"
+        ],
+        "nesterov-accelerated-gradient-(nag)": [
+            "Nesterov accelerated gradient (NAG)",
+            "$v_{k+1} = \\beta v_k + \\eta p(x_k+\\beta v_k)$",
+            "anticipates future direction"
+        ],
+        "adam": [
+            "ADAM",
+            "adaptive step size",
+            "most widely used",
+            "algorithm updates step size as well $$     \\begin{align*}     & v_{k+1} = \\beta_1 v_k + (1-\\beta_1) p(x_k)\\\\     & m_{k+1} = \\beta_2 m_k + (1-\\beta_2) p^2(x_k)\\\\     & x_{k+1} = x_k + \\eta \\dfrac{v_k}{\\sqrt{m_k}+\\varepsilon}\\\\    \\end{align*}    $$"
+        ]
+    },
+    "one-dimensional-classification": {
+        "$links": [
+            [
+                "classification models",
+                "classification-models",
+                "elementary-methods"
+            ]
+        ],
+        "$images": [
+            [
+                "using loss in 1D classification",
+                "1d_optimization_linear_data_model.png"
+            ]
+        ],
+        "$keyword_name": "one dimensional classification",
+        ">remark": [
+            ">remark",
+            "simplest case where data are one dimensional"
+        ],
+        "simplest-case": [
+            "simplest case",
+            "two sets in 1D"
+        ],
+        "data-model": [
+            "data model",
+            "$$\\mathcal M(x, x_{sep}) = \\left\\{ \\begin{align*}            \\text{A, if}\\; x> x_{sep}\\\\            \\text{B, if}\\; x\\le x_{sep}\\\\        \\end{align*}    \\right\\}$$"
+        ],
+        "hard-margin-problem": [
+            "hard margin problem",
+            "if $A$ and $B$ are well separated, i.e. $\\max A < \\min B$ or conversely, then there exist a good separation point, for example $$x_{sep} = \\dfrac{\\max A + \\min B}2$$"
+        ],
+        "soft-margin-problem": [
+            "soft margin problem",
+            "overlapping regions, not exact separation, not unique choice, result will depend on the separation condition (measure)"
+        ],
+        "use-heuristics": [
+            "use heuristics",
+            "e.g. midpoint of the overlapping regime"
+        ],
+        "use-loss-to-determine-separation-point": [
+            "use loss to determine separation point",
+            "$p$-norm loss function $L(x_{sep}) = \\sum_{x\\in\\text{overlap}} |x-x_{sep}|^p$",
+            "$p=1$ \u001ekeyword\u001fhinge loss minimum\u001fhinge-loss-minimum\u001e, minimum corresponds to median",
+            "$p=2$ \u001ekeyword\u001fquadratic loss minimum\u001fquadratic-loss-minimum\u001e corresponds to mean",
+            "\u001ekeyword\u001fclassification via regression\u001fclassification-via-regression\u001e, using softmax normalization of $f(x)=ax+b$",
+            "\u001eimage\u001fusing loss in 1D classification\u001f1d_optimization_linear_data_model.png\u001e"
+        ]
+    },
+    "hinge-loss-minimum": {
+        "$links": [
+            [
+                "one dimensional classification",
+                "one-dimensional-classification",
+                "use-loss-to-determine-separation-point"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "hinge loss minimum",
+        ">remark": [
+            ">remark",
+            "piecewise linear convex loss"
+        ],
+        "definition": [
+            "definition",
+            "$L(x_{sep}) = \\sum_{x\\in\\text{overlap}} |x-x_{sep}|$"
+        ],
+        "corresponds-to-the-median-of-the-overlapping-region": [
+            "corresponds to the median of the overlapping region",
+            "$$\\begin{align*} &\\sum_{i=1}^N |x_i-x_{sep}|= \\sum_{x_i>x_{sep}} (x_i- x_{sep}) + \\sum_{x_i<x_{sep}} (x_{sep}-x_i) =\\\\    &=(N_<-N_>) x_{ sep } + \\sum_{x_i>x_{sep}} x_i - \\sum_{x_i<x_{sep}} x_i = \\text{minimum}\\\\    & \\Rightarrow  N_<=N_>    \\end{align*}    $$"
+        ]
+    },
+    "quadratic-loss-minimum": {
+        "$links": [
+            [
+                "one dimensional classification",
+                "one-dimensional-classification",
+                "use-loss-to-determine-separation-point"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "quadratic loss minimum",
+        ">remark": [
+            ">remark",
+            "quardatic loss function"
+        ],
+        "definition": [
+            "definition",
+            "$L(x_{sep}) = \\sum_{x\\in\\text{overlap}} (x-x_{sep})^2$"
+        ],
+        "corresponds-to-the-mean-of-the-overlapping-region": [
+            "corresponds to the mean of the overlapping region",
+            "$$ 0 = \\dfrac d{dx_{sep}} \\sum_{i=1}^N ( x_i-x_{sep} )^2 = 2 \\sum_{i=1}^N ( x_{sep} - x_i)\\quad \\Rightarrow\\quad x_{ sep } = \\frac 1N \\sum_{i=1}^N x_i$$"
+        ]
+    },
+    "decision-tree": {
+        "$links": [
+            [
+                "classification models",
+                "classification-models",
+                "elementary-methods"
+            ],
+            [
+                "solution for overfitting",
+                "solution-for-overfitting",
+                "model-related"
+            ],
+            [
+                "feature importance",
+                "feature-importance",
+                "notes"
+            ],
+            [
+                "boosting",
+                "boosting",
+                "idea"
+            ]
+        ],
+        "$images": [
+            [
+                "graphical representation",
+                "decision-tree-algorithm.png"
+            ]
+        ],
+        "$keyword_name": "decision tree",
+        ">remark": [
+            ">remark",
+            "separate the classes using series of one dimensional classifications in the coordinate directions"
+        ],
+        "task": [
+            "task",
+            "base set $\\mathbb R^d$ ($d>1$)",
+            "target context $\\{c_1,c_2\\}$",
+            "data pair set $S=\\{(x_i, y_i) \\mid x_i=(x_{i1},\\dots, x_{id}), x_i\\in c_{y_i}\\}$"
+        ],
+        "algorithm": [
+            "algorithm",
+            "start with step number $n_{step}=0$",
+            "$n_{step}\\to n_{step}+1$",
+            "if $n_{step}>n_{max}$, or $|S|=1$, **END**",
+            "project data on coordinate $a$, having $s = \\{(x_a, y_a)\\mid (x,y)\\in S\\}$",
+            "use one dimensional classification of $s$ to split into $s_1$ and $s_2$",
+            "use that direction $a$, where the total entropy is the smallest",
+            "go back to point 1, using $s_1\\to S$ and $s_2\\to S$",
+            "\u001eimage\u001fgraphical representation\u001fdecision-tree-algorithm.png\u001e"
+        ],
+        "advantages": [
+            "advantages",
+            "simple",
+            "interpretable"
+        ],
+        "disdvantages": [
+            "disdvantages",
+            "prone to overfitting (especiall for deep trees)"
+        ]
+    },
+    "bagging": {
+        "$links": [
+            [
+                "classification models",
+                "classification-models",
+                "ensemble-models"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "bagging",
+        ">remark": [
+            ">remark",
+            "collect several models trained on different data to improve decision accuracy"
+        ],
+        "idea": [
+            "idea",
+            "train several models on slightly different datasets (some data missing, some munltiple times)",
+            "combine the results (average for regression, majority vote for classification)"
+        ],
+        "benefits": [
+            "benefits",
+            "lowers variance",
+            "increases robustness"
+        ]
+    },
+    "random-forest": {
+        "$links": [
+            [
+                "classification models",
+                "classification-models",
+                "ensemble-models"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "random forest",
+        ">remark": [
+            ">remark",
+            "use a lot of decision trees (forest) using different coordinates and different data"
+        ],
+        "idea": [
+            "idea",
+            "train several models with selected data (c.f. bagging) and selected parameters",
+            "combine the results (regression: average, classification: majority vote)"
+        ],
+        "benefits": [
+            "benefits",
+            "more robust than simple bagging",
+            "can be used to rank parameters by their significance, i.e. which contributed more to the final decision"
+        ],
+        "relevance-measure": [
+            "relevance measure",
+            "\u001ekeyword\u001ffeature importance\u001ffeature-importance\u001e"
+        ]
+    },
+    "feature-importance": {
+        "$links": [
+            [
+                "random forest",
+                "random-forest",
+                "relevance-measure"
+            ]
+        ],
+        "$images": [
+            [
+                "feature importance",
+                "feature-importance.png"
+            ]
+        ],
+        "$keyword_name": "feature importance",
+        ">remark": [
+            ">remark",
+            "estimates the relevance of individual features based on their role in a decision"
+        ],
+        "notes": [
+            "notes",
+            "works with \u001ekeyword\u001fdecision tree\u001fdecision-tree\u001e based methods"
+        ],
+        "in-decision-tree": [
+            "in decision tree",
+            "measure impurity (e.g. Gini-impurity) before and after a decision based on $f$ coordinate (feature)",
+            "feature importance: $$\\text{Importance}(f) = \\sum_\\text{nodes using $f$} \\text{impurity decrese of the node}$$"
+        ],
+        "in-random-forest": [
+            "in random forest",
+            "average over the trees $$\\text{Importance}_{tree}(f) = \\frac1{N_{tree}} \\sum_{t=1}^{N_{tree}} \\text{Importance}_t(f)$$"
+        ],
+        "example": [
+            "example",
+            "create a 20 dimensional dataset with 2000 elements",
+            "train a random forest classifier",
+            "evaluate the result",
+            "get feature importance",
+            "visualize it: \u001eimage\u001ffeature importance\u001ffeature-importance.png\u001e"
+        ]
+    },
+    "boosting": {
+        "$links": [
+            [
+                "classification models",
+                "classification-models",
+                "ensemble-models"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "boosting",
+        "idea": [
+            "idea",
+            "calculate a series of \u001ekeyword\u001fdecision tree\u001fdecision-tree\u001e",
+            "each focuses on the points where the previous one fails",
+            "combine weighted sum of all of these models"
+        ],
+        "adaptations": [
+            "adaptations",
+            "AdaBoost, Gradient Boosting (GBM), XGBoost, etc."
+        ]
+    },
+    "knn-model": {
+        "$links": [
+            [
+                "classification models",
+                "classification-models",
+                "elementary-methods"
+            ]
+        ],
+        "$images": [
+            [
+                "k=5 nearest neighbors",
+                "K5NN.png"
+            ]
+        ],
+        "$keyword_name": "KNN model",
+        ">remark": [
+            ">remark",
+            "assumption: points of a given class are close to each other in the coordinate space, thus it can be used to guess class"
+        ],
+        "meaning": [
+            "meaning",
+            "k-nearest-neighbor \u001eimage\u001fk=5 nearest neighbors\u001fK5NN.png\u001e"
+        ],
+        "algorithm": [
+            "algorithm",
+            "keep all points of the training set (samples)",
+            "for a new point calculate distance from all sample points",
+            "keep the $k$ smallest",
+            "the estimated class is the class appears the most among the closest points"
+        ],
+        "advantages": [
+            "advantages",
+            "simple",
+            "naturally multiclass"
+        ],
+        "cons": [
+            "cons",
+            "slow evaluation",
+            "sensitive to irrelevant features and scaling",
+            "struggles in high dimensions (curse of dimensionality)"
+        ],
+        "in-high-dimensions": [
+            "in high dimensions",
+            "nearest neighbor is not much closer than the distant neighbors!",
+            "samples are sparse (almost all points lie near the boundary)"
+        ]
+    },
+    "perceptron": {
+        "$links": [
+            [
+                "classification via regression",
+                "classification-via-regression",
+                "technical-implementation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "perceptron",
+        ">remark": [
+            ">remark",
+            "classification algorithm with a linear data model"
+        ],
+        "history": [
+            "history",
+            "Rosenblatt 1958",
+            "newspaper: \"the electronic brain that can walk, talk, see, write, reproduce itself, and be conscious of its existence\""
+        ],
+        "method": [
+            "method",
+            "\u001ekeyword\u001fclassification via regression\u001fclassification-via-regression\u001e"
+        ],
+        "data-model": [
+            "data model",
+            "linear $y=w\\cdot x+b$, two classes correspond different sign of $y$"
+        ],
+        "rosenblatt-algorithm": [
+            "Rosenblatt algorithm",
+            "reward $L=\\sum_n y_n (w\\cdot x_n+b)$",
+            "for a misclassified point update $w$ and $b$ with $\\eta$ parameter as $$w\\to w+\\eta y_n x_n, \\quad b\\to b+\\eta y_n$$ (always increases reward)"
+        ]
+    },
+    "support-vector-machine": {
+        "$links": [
+            [
+                "classification via regression",
+                "classification-via-regression",
+                "technical-implementation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Support Vector Machine",
+        ">remark": [
+            ">remark",
+            "classification algorithm with a linear or linearly parametrized data model"
+        ],
+        "alternative-name": [
+            "alternative name",
+            "SVM"
+        ],
+        "method": [
+            "method",
+            "\u001ekeyword\u001fclassification via regression\u001fclassification-via-regression\u001e"
+        ],
+        "linear-version": [
+            "linear version",
+            "data model: $y = w\\cdot x$",
+            "maps to one dimensional classification",
+            "loss function: hinge loss in the overlapping region",
+            "optimal $w$ minimize total impurity"
+        ],
+        "nonlinear-version": [
+            "nonlinear version",
+            "support vectors: $x_s$ points in the overlapping region",
+            "data model: linear combination of basis functions (kernels) $$y = \\sum_s \\alpha_s y_s K(x-x_s,\\gamma) + b,$$ where $\\gamma$ denotes paramters of the kernel",
+            "mostly used fixed width Gaussians $K(x,\\gamma) = e^{-\\gamma x^2}$",
+            "linear optimization problem with $(b,\\alpha_s)$",
+            "$\\gamma$ is fixed, or treated as meta-parameter"
+        ]
+    },
+    "extreme-learning-machine": {
+        "$links": [
+            [
+                "classification via regression",
+                "classification-via-regression",
+                "technical-implementation"
+            ]
+        ],
+        "$images": [
+            [
+                "ELM architecture",
+                "ELM-architecture.png"
+            ]
+        ],
+        "$keyword_name": "Extreme Learning Machine",
+        ">remark": [
+            ">remark",
+            "classification with a data model built from linearly parametrized random basis"
+        ],
+        "alternative-name": [
+            "alternative name",
+            "ELM"
+        ],
+        "method": [
+            "method",
+            "\u001ekeyword\u001fclassification via regression\u001fclassification-via-regression\u001e"
+        ],
+        "data-model": [
+            "data model",
+            "$y = \\sum_{n=1}^{N_{basis}} \\alpha_n \\sigma(w_n\\cdot x + b_n),$ where $\\sigma$ is a nonlinear function",
+            "$w_n, b_n$ are fixed (random) $\\Rightarrow$ random basis",
+            "$\\alpha_n$ are trained by linear regression",
+            "fitting in a random basis"
+        ],
+        "note": [
+            "note",
+            "same as one-hidden layer neural network, but only the last layer's weights are trained \u001eimage\u001fELM architecture\u001fELM-architecture.png\u001e"
+        ]
+    },
+    "naive-bayes-models": {
+        "$links": [
+            [
+                "distribution estimation methods",
+                "distribution-estimation-methods",
+                "techniques"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Naive Bayes models",
+        ">remark": [
+            ">remark",
+            "assume that the data come from a single Gaussian distribution"
+        ],
+        "assumed-distribution": [
+            "assumed distribution",
+            "Gaussian $p\\sim e^{-\\frac12 (x-\\mu)^TC^{-1}(x-\\mu)}$",
+            "then $\\mathbb E[x] =\\mu$ and $\\mathbb E[(x-\\mu)\\otimes(x-\\mu)]=C$",
+            "faithful estimators, assuming independent measurements $$\\begin{align*}             &\\mathbb E[\\frac1N \\sum_{n=1}^N x_n] = \\mu\\\\            &\\mathbb E[\\frac1{N-1}\\sum_{n=1}^N x_n\\otimes x_n] =C            \\end{align*}            $$"
+        ]
+    },
+    "gaussian-mixture-model": {
+        "$links": [
+            [
+                "distribution estimation methods",
+                "distribution-estimation-methods",
+                "techniques"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Gaussian Mixture Model",
+        ">remark": [
+            ">remark",
+            "assume that the data are coming from a sum of Gaussians"
+        ],
+        "alternative-name": [
+            "alternative name",
+            "GMM"
+        ],
+        "assumed-distribution": [
+            "assumed distribution",
+            "$$p(x) \\sim \\sum_{k=1}^K \\pi_k \\mathcal N(x; \\mu_k, C_k),\\qquad \\pi_k\\in[0,1],\\;\\sum_{k=1}^K \\pi_k=1$$",
+            "$K$ is the number of clusters, a parameter to be given"
+        ],
+        "parameter-estimation": [
+            "parameter estimation",
+            "Expectation-Maximization method"
+        ],
+        "expectation-maximization-method": [
+            "Expectation-Maximization method",
+            "start from an initial guess $\\pi,\\mu,C$",
+            "the responsibilities $$r_{ik} = \\dfrac{\\pi_k \\mathcal N(x_i;\\mu_k, C_k)}{\\sum_{k=1}^K \\pi_k \\mathcal N(x_i;\\mu_k, C_k)},$$ determine the probabilities of belonging to a cluster for each points",
+            "redefine parameters to be attracted to fit the points belonging to a given cluster the best $$ \\begin{align*}        &N_k=\\sum_i r_{ik},\\;\\pi_k = \\frac{N_k}N,\\\\        &\\mu_k = \\frac1{N_k}\\sum_i x_i r_{ik},\\\\         & C_k = \\frac1{N_k}\\sum_i (x_i-\\mu_k)\\otimes(x_i-\\mu_k) r_{ik}        \\end{align*}$$",
+            "repeat from 2. until converges"
+        ]
+    },
+    "pca": {
+        "$links": [
+            [
+                "distribution estimation methods",
+                "distribution-estimation-methods",
+                "techniques"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "PCA",
+        ">remark": [
+            ">remark",
+            "assume data come from a single Gaussian distribution, but influenced by noise"
+        ],
+        "full-name": [
+            "full name",
+            "Principal Component Analysis"
+        ],
+        "geometrically-an-ellipsoid": [
+            "geometrically an ellipsoid",
+            "large width: the real data (dimensional reduction)",
+            "small width: noise"
+        ],
+        "denoising": [
+            "denoising",
+            "represent the date without noise $\\to$ use zero instead of small width"
+        ],
+        "technically": [
+            "technically",
+            "determine the directions where data vary the most",
+            "find $w$ where $w\\cdot x_n$ has the largest variance $$\\sum_n (w\\cdot (x_n-\\mu))^2 = \\text{maximal, while } |w^2|=1$$",
+            "matrix form with $X_{ni}= (x_n)_i$, using Lagrange multiplicator $$ w^T X^T X w - \\lambda w^T w=\\text{maximal}$$",
+            "solution $$ X^T X w = \\lambda w $$",
+            "writing back $$ w^T X^T X w = \\lambda w^T w = \\lambda,$$ so we need the largest eigenvalues"
+        ],
+        "linear-data-compression": [
+            "linear data compression",
+            "store projection to the largest eigenvalues: $$Y_n = v_n^T (x-\\mu),$$ where $\\dfrac{\\lambda_n}{\\lambda_{max}}>r$"
+        ],
+        "restore-data": [
+            "restore data",
+            "(without noise) $$ x\\to \\sum_n Y_n v_n + \\mu,$$ because the exact representation $x=\\sum_n (v_n\\otimes v_n^T) (x-\\mu) + \\mu$"
         ]
     }
 }

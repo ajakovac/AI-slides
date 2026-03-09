@@ -9,7 +9,7 @@
 - **relevance measure**
     - function $f:x\to y$ not fully consistent with a context
     - how useful is this function for classification? $\to$ "overlap" or relevance measures
-        - feature importance (decision tree, random forest)
+        - __feature importance__
         - permutation importance, feature masking
         - relevance based on mutual information
         - neural networks Gradient-weighted Class Activation Mapping (Grad-CAM)

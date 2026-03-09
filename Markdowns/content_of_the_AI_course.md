@@ -2,6 +2,8 @@
     - **Lecture 1**: __Lecture 1__
     - **Lecture 2**: __Lecture 2__
     - **Lecture 3**: __Lecture 3__
+    - **Lecture 4**: __Lecture 4__
+    - **Technical background**: __Technical background__
 
 
 - **Lecture 1**
@@ -22,7 +24,13 @@
         - __intelligence and AI__
         - __conceptual foundations__
 
+- **Lecture 4**
+    - **topics**
+        - __AI learning paradigms__
 
+- **Technical background**
+    - **topics**
+        - __Probability and information theory basics__
 
 __END__
 - [general-AI-facts.md](general-AI-facts.md) 

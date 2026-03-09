@@ -5,37 +5,40 @@ import DocPane from "./components/DocPane";
 import ImageGalleryPane from "./components/ImageGalleryPane";
 import { getKeyFromUrl, setUrlForKey } from "./lib/history";
 import { fetchEntry } from "./api/database";
+import { useSystem } from "./context/SystemContext";
+import { parsePayload } from "./lib/linkPayload";
 
-function normalizeContentsToKeys(data) {
-  // Expected: { "Lecture 1": ["link-to-lecture-1"], ... }
-  // Return:   [ ["Lecture 1","link-to-lecture-1"], ... ]
+function normalizeContentsToKeys(data, system) {
   if (!data || typeof data !== "object" || Array.isArray(data)) return [];
 
+  const linkSeparator = system?.link_separator;
+  const itemSeparator = system?.item_separator;
+  if (!linkSeparator || !itemSeparator) return [];
+
   return Object.entries(data)
-    .map(([label, value]) => {
-      const v =
-        Array.isArray(value) ? value[0] :
-        typeof value === "string" ? value :
-        "";
-      return [String(v), String(label) ];
+    .map(([key, value]) => {
+      if (String(key).startsWith("$")) return null;
+      if (!Array.isArray(value) || value.length < 2) return null;
+
+      const label = String(value[0] ?? "").trim();
+      const linkInfo = String(value[1] ?? "");
+
+      const parsed = parsePayload(linkInfo, { linkSeparator, itemSeparator });
+      if (!parsed) return null;
+
+      return [label || parsed.name || key, parsed.value];
     })
-    .filter(([key, label]) =>
-      label &&
-      key &&
-      !label.startsWith("$")   // 👈 ignore system / hidden entries
-    );
+    .filter(Boolean);
 }
 
 export default function App() {
+  const system = useSystem();
   const urlKey = getKeyFromUrl();
 
-  // Fallback keys (your current hard-coded list)
   const fallbackKeys = useMemo(() => [
     ["Contents", "lecture-contents"],
   ], []);
 
-  // Which item to fetch from `/item/<name>`
-  // default: "contents"
   const contentsItemName =
     import.meta.env.VITE_CONTENTS_ITEM ||
     new URLSearchParams(window.location.search).get("lecture-contents") ||
@@ -47,31 +50,30 @@ export default function App() {
   const [imagesFromEntry, setImagesFromEntry] = useState([]);
   const [selectedImageName, setSelectedImageName] = useState(null);
 
-  // Fetch keys on mount (and whenever contentsItemName changes)
   useEffect(() => {
     let cancelled = false;
+
+    if (!system) return;
 
     (async () => {
       try {
         const data = await fetchEntry("item", contentsItemName);
-        const loadedKeys = normalizeContentsToKeys(data);
+        const loadedKeys = normalizeContentsToKeys(data, system);
 
         if (!cancelled && loadedKeys.length > 0) {
           setKeys(loadedKeys);
 
-          // choose default if no URL key was provided
           if (!urlKey) {
             const firstKey = loadedKeys[0][1];
             setActiveKey(firstKey);
             setUrlForKey(firstKey, { replace: true });
           }
         } else if (!cancelled && urlKey) {
-          // ensure URL is reflected (even if keys empty)
           setUrlForKey(urlKey, { replace: true });
         }
       } catch (e) {
         console.error("Failed to fetch contents keys:", e);
-        // fallback stays in place
+
         if (!cancelled) {
           const fallbackDefault = fallbackKeys[0]?.[1];
           if (!activeKey && fallbackDefault) {
@@ -82,11 +84,12 @@ export default function App() {
       }
     })();
 
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [contentsItemName]);
+  }, [contentsItemName, system]);
 
-  // back/forward
   useEffect(() => {
     const onPop = (event) => {
       const key = event.state?.key || getKeyFromUrl();
@@ -102,8 +105,6 @@ export default function App() {
     else setUrlForKey(key, { replace: true });
   }, []);
 
-  // If activeKey is still null for some reason, avoid rendering DocPane with null
-  // const safeActiveKey = activeKey || keys?.[0]?.[1] || fallbackKeys?.[0]?.[1];
   const safeActiveKey = activeKey || fallbackKeys?.[0]?.[1];
 
   return (

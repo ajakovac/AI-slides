@@ -191,7 +191,7 @@
 
 - **optimal coding**
     > assign a code to each element of a set that allows to get to them with a shortest line of questions
-    - **theoretical result**: if the relevance (or probability of occurrence) of the elements is known, one can construct an optimal refinement tree that minimizes the expected path length, in direct analogy with __Huffman coding__
+    - **theoretical result**: if the relevance (or probability of occurrence) of the elements is known, one can construct an optimal refinement tree that minimizes the expected path length, in direct analogy with __Huffmann coding__
 
 
 - **property**

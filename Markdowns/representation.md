@@ -143,7 +143,7 @@ while $C_0 = \{\text{inputs}\}$. The recursion stops after a given number of ste
 
 In this process each level updates the result, introduces a new, finer representation of reality.
 
-A typical example is taxonomy where a givel species is given by the more and more refined concepts. Here the concept hierarchy is a tree, and each leaf has a unique path to it (the **prefix code** of that leaf). The optimal concept tree contains the shortest average path length: if we know the probabilities of the leaves, it can be done by **Huffman coding**.
+A typical example is taxonomy where a givel species is given by the more and more refined concepts. Here the concept hierarchy is a tree, and each leaf has a unique path to it (the **prefix code** of that leaf). The optimal concept tree contains the shortest average path length: if we know the probabilities of the leaves, it can be done by **Huffmann coding**.
 
 ## Other definitions
 

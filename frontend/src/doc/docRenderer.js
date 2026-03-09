@@ -1,4 +1,5 @@
 // docRenderer.js
+import { buildPayloadRegex } from "../lib/linkPayload";
 
 export function escapeHtml(s) {
   return String(s)
@@ -9,23 +10,9 @@ export function escapeHtml(s) {
     .replaceAll("'", "&#039;");
 }
 
-
-function escapeRegex(str) {
-  return String(str).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-
-function buildPayloadRegex(linkSeparator, itemSeparator) {
-  const ls = escapeRegex(linkSeparator);
-  const is = escapeRegex(itemSeparator);
-
-  // Equivalent to: linkSep (.*?) itemSep (.*?) itemSep (.*?) linkSep
-  // We use non-greedy groups like your Python.
-  return new RegExp(`${ls}(.*?)${is}(.*?)${is}(.*?)${ls}`, "g");
-}
-
 export function makeHtmlLink(line, { linkSeparator, itemSeparator }) {
   const s = String(line);
-  const LINK_RE = buildPayloadRegex(linkSeparator, itemSeparator);
+  const LINK_RE = buildPayloadRegex(linkSeparator, itemSeparator, { global: true });
 
   return s.replace(LINK_RE, (full, typeRaw, nameRaw, valueRaw) => {
     const type = String(typeRaw ?? "").trim();
@@ -37,7 +24,6 @@ export function makeHtmlLink(line, { linkSeparator, itemSeparator }) {
     }
 
     if (type === "keyword") {
-      // Python: f'[{name}](#{value})' -> internal click handler uses data-key=value
       return (
         `<a class="inline-link" href="#" data-key="${escapeHtml(value)}">` +
           `${escapeHtml(name)}` +
@@ -46,15 +32,14 @@ export function makeHtmlLink(line, { linkSeparator, itemSeparator }) {
     }
 
     if (type === "image") {
-      const key = `${value}`;
-      const display = `${name}`;
       return (
-        `<a class="inline-image" href="#" data-image="${escapeHtml(key)}" data-alt="${escapeHtml(name)}">${escapeHtml(display)}</a>`
+        `<a class="inline-image" href="#" data-image="${escapeHtml(value)}" data-alt="${escapeHtml(name)}">` +
+          `${escapeHtml(name)}` +
+        `</a>`
       );
     }
 
     if (type === "external-link") {
-      // Python: f'[{name}]({value})' -> real href
       return (
         `<a class="external-link" href="${escapeHtml(value)}" target="_blank" rel="noopener noreferrer">` +
           `${escapeHtml(name)}` +

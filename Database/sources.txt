@@ -8,13 +8,43 @@ history-of-AI.md
 intelligence-in-psychology.md
 intelligence-and-AI.md
 contexts.md
+supervised-learning.md
+probability-information-theory.md
+data-driven-approach.md
+optimization-methods.md
+classification-models.md
+
+## Main topics
+
+# [worldviews.md](worldviews.md) 
+# [evaluation.md](evaluation.md) 
+# [deep-neural-networks.md](deep-neural-networks.md) 
+# [compression.md](compression.md) 
+# [finding-features.md](finding-features.md) 
+# [time-series.md](time-series.md)
+# [natural-language-processing.md](natural-language-processing.md) 
+# [attention-and-transformers.md](attention-and-transformers.md) 
+# [reasoning.md](reasoning.md) 
+# [generative-networks.md](generative-networks.md) 
+# [reinforcement-learning.md](reinforcement-learning.md) 
+# [RAG-systems.md](RAG-systems.md) 
+
+
+## Auxiliary material
+
+# [math_tricks.md](math_tricks.md) 
+# [math-basics.md](math-basics.md) 
+# [probability-information-theory.md](probability-information-theory.md) 
+
+## Other links
+
+# [representation.md](representation.md) 
 
 #RAG-systems.md
 #attention-and-transformers.md
 #classification-models.md
 #compression.md
 #content_of_the_AI_course.md
-#data-driven-approach.md
 #databases.md
 #deep-neural-networks.md
 #evaluation.md
@@ -25,11 +55,9 @@ contexts.md
 #math_tricks.md
 #natural-language-processing.md
 #optimization-methods.md
-#probability-information-theory.md
 #reasoning.md
 #reinforcement-learning.md
 #representation.md
-#supervised-learning.md
 #time-series.md
 #worldviews.md
 #
