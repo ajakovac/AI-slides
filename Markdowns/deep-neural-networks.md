@@ -89,11 +89,11 @@
     - known value: $$\ell^{(L+1)}_i = \dfrac{\partial\ell}{\partial x_{out,i}}$$
     - specifically if $x^{(a)}_j =f^{(a)}_j(x^{(a-1)}) = \sigma_a(\sum_i M^{(a)}_{ji} x^{(a-1)}_i + b^{(a)}_j)$ then $$ U^{(a)}_{ij} = M^{(a)}_{ji} u_a(x^{(a)}_j),\quad \text{where}\quad u_a = \sigma'_a\circ \sigma_a^{-1}$$
     - derivatives with respect to weights 
-    $$\begin{align*}
+    \begin{align*}
     \dfrac{\partial \ell}{\partial M^{(a)}_{ij}} &= \dfrac{\partial \ell}{\partial x^{(a)}_i} \dfrac{\partial x^{(a)}_i}{\partial M^{(a)}_{ij}} = \ell^{(a)}_i u_a(x^{(a)}_i) x^{(a-1)}_j\\
     \dfrac{\partial \ell}{\partial b^{(a)}_i} &= \dfrac{\partial \ell}{\partial x^{(a)}_i} \dfrac{\partial x^{(a)}_i}{\partial b^{(a)}_i} = \ell^{(a)}_i u_a(x^{(a)}_i)\\
     \end{align*}
-    $$
+    
     - recursion (backpropagation):
         - forward cycle: from $x^{(0)}$ compute all $x^{(a)}$ layer values
         - backward cycle: compute $\ell^{(L+1)}$ and use recursion to evaluate all $\ell^{(a)}$

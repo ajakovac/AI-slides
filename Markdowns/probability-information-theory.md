@@ -196,8 +196,7 @@
     - **proof**
         - the first $N_1$ element goes to bin 1, then $N_2$ goes to bin 2, etc.: $P = \prod_i q_i^{N_i}$
         - number of such configurations $N!/\prod_i N_i!$
-    - **probability of the sample**
-        $$ P = N! \prod_i \frac{q_i^{N_i}}{N_i!}$$
+    - **probability of the sample**: $$ P = N! \prod_i \frac{q_i^{N_i}}{N_i!}$$
 
 - **Kullback-Leibler divergence**
     > measure of the distance of two probability distributions
@@ -205,8 +204,7 @@
     - **construction**
         - use __probability of the observed sample__, and apply __Stirling formula__
 
-    - **result**: 
-        $$ D(p\mid\mid q) = -\sum_i p_i \ln \frac{p_i}{q_i}$$
+    - **result**: $$ D(p\mid\mid q) = -\sum_i p_i \ln \frac{p_i}{q_i}$$
 
 - **cross-entropy**
     > Kullback-Leibler dicergence in case where the observed sample contains none or all elements

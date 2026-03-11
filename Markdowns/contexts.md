@@ -58,12 +58,10 @@
         - From now on we will forget about the states of the world, and we speak exclusively about contexts. 
         - There is usually a fine context that serves as a basis of different subcontexts.
         - For example to the set of images we can define a fine partition where two images are in different class if at least one pixel is different.
-    - **properties**: We can define a bunch of functions operating on the context.
+    - **We can define a bunch of functions operating on the context**
         - __definitions in a context__
-        - __subcontext__
-        - __local refinement__
-        - __global refinement__
-        - __common refinement__
+        - corasening of a context: __subcontext__
+        - __refinement of a context__
     - **Characterization of contexts**
         - __characterization of contexts__
 
@@ -71,39 +69,36 @@
 
     - **underlying class**: $\mathcal C\mapsto C$
 
-    - **class (cell) of the context** : $(\mathcal C, c\subseteq \Omega) \mapsto$ true, if $c\in \mathcal C$
+    - **class (cell) of the context** : $c\in \mathcal C$
 
-    - **projector onto a context**: $\Pi: \mathcal C\mapsto \omega \mapsto c\in{\cal C}$ where $\omega\in c$ or $\Pi_\mathcal{C}(\omega)=\emptyset$
-
-    - **disjunct contexts**: $(\mathcal C, \mathcal C')\mapsto $ true, if $\mathrm{UnderlyingClass}(\mathcal C)\cap \mathrm{UnderlyingClass}(\mathcal C')=\emptyset$
-
-    - **sum**: if $\mathrm{DisjunctContexts}(\mathcal C, \mathcal C')$: $(\mathcal C, \mathcal C')\mapsto \mathcal C\cup\mathcal C'$
+    - **projector onto a context**: $\Pi_{\mathcal C}: \omega \mapsto c\in \mathcal C$ where $\omega\in c$ or $\Pi_\mathcal{C}(\omega)=\emptyset$
 
 - **subcontext**
     > a coarser resolution of the world
     - $\mathcal C'\preceq \mathcal C$ if $\forall c\in\mathcal C \exists c'\in C': c\subset c'$
     - partial ordering
     - **examples**
-        - cat images as collection of images
-        - genus is subcontext of species
+        - instead of detailed apple varieties (Gala, Jonathan, etc.) we refer them as apple
+        - from individual images we collect the cat images
+        - mammals, birds, reptiles, amphibians and fish are called vertebrate
 
-- **local refinement**:
-    > refining of an element of a context
-    - **definition**: $(\mathcal C, \mathcal C') \mapsto \text{true}$
-        iff $\exists c \in \mathcal C:\;\mathcal C'$ is a partition of $c$
+- **refinement of a context**
+    > provides a finer (more detailed) description of the world.
     - **examples**
-        - dogs and dog breeds
-        - basic colors and shades of blue
-
-- **global refinement**
-    > a context where one of the context of the parent is refined locally
-    - **definition**: $\mathcal C^+ = (\mathcal C\setminus \{c\}) \cup \mathcal C'$, where $\mathcal C'$ is a local refinement of $c$
-    - **note**: $\mathcal C \preceq C^+$
-
-- **common refinement**
-    > all classes of the domain contexts are union of the elements of the common refinement context
-    - **definition**: $\mathcal C_1\vee \mathcal C_2 = \{ c_1 \cap c_2 \mid c_1 \in \mathcal C_1,\; c_2 \in \mathcal C_2,\; c_1 \cap c_2 \neq \emptyset \}$
-    - **note**: several coarse contexts can lead to a fine description of the world.
+        - instead of "dogs" we specify the breed
+        - basic colors and shades and hues of blue
+    - **local refinement**:
+        - refining of an element of a context
+        - definition $(\mathcal C, \mathcal C') \mapsto \text{true}$
+        iff $\exists c \in \mathcal C:\;\mathcal C'$ is a partition of $c$
+    - **global refinement**
+        - a context where one of the context of the parent is refined locally
+        - definition $\mathcal C^+ = (\mathcal C\setminus \{c\}) \cup \mathcal C'$, where $\mathcal C'$ is a local refinement of $c$
+        - note: $\mathcal C \preceq C^+$
+    - **common refinement**
+        - all classes of the domain contexts are union of the elements of the common refinement context
+        - definition: $\mathcal C_1\vee \mathcal C_2 = \{ c_1 \cap c_2 \mid c_1 \in \mathcal C_1,\; c_2 \in \mathcal C_2,\; c_1 \cap c_2 \neq \emptyset \}$
+        - note: several coarse contexts can lead to a fine description of the world (coordination)
 
 - **Characterization of contexts**
     - **approaches**
@@ -159,7 +154,7 @@
     >  the domains of the characterizing contexts is not the complete basic object class
     - **hierarchical approach**
         - start with a simple coarsening
-        - apply __local refinement__
+        - apply local refinement (c.f. __refinement of a context__)
         - repeating this process yields a hierarchical structure, called a __refinement tree__, whose leaves are exactly the classes of the fine context.
     - **properties**
         - a refinement tree represents a context by **successive, conditional partitions**

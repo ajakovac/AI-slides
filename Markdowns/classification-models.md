@@ -3,10 +3,10 @@
     > simplest case where data are one dimensional
     - **simplest case**: two sets in 1D
     - **data model**: $$\mathcal M(x, x_{sep}) = \left\{
-        \begin{align*}
-            \text{A, if}\; x> x_{sep}\\
-            \text{B, if}\; x\le x_{sep}\\
-        \end{align*}
+        \begin{cases}
+            \text{A, if}&  x> x_{sep}\\
+            \text{B, if}&  x\le x_{sep}
+        \end{cases}
     \right\}$$
     - **hard margin problem**: if $A$ and $B$ are well separated, i.e. $\max A < \min B$ or conversely, then there exist a good separation point, for example $$x_{sep} = \dfrac{\max A + \min B}2$$
     - **soft margin problem**: overlapping regions, not exact separation, not unique choice, result will depend on the separation condition (measure)
@@ -22,12 +22,12 @@
 - **hinge loss minimum**
     > piecewise linear convex loss
     - **definition**: $L(x_{sep}) = \sum_{x\in\text{overlap}} |x-x_{sep}|$
-    - **corresponds to the median of the overlapping region**: $$\begin{align*}
+    - **corresponds to the median of the overlapping region**: \begin{align*}
     &\sum_{i=1}^N |x_i-x_{sep}|= \sum_{x_i>x_{sep}} (x_i- x_{sep}) + \sum_{x_i<x_{sep}} (x_{sep}-x_i) =\\
     &=(N_<-N_>) x_{ sep } + \sum_{x_i>x_{sep}} x_i - \sum_{x_i<x_{sep}} x_i = \text{minimum}\\
     & \Rightarrow  N_<=N_>
     \end{align*}
-    $$
+    
     
 - **quadratic loss minimum**:
     > quardatic loss function
@@ -164,11 +164,10 @@
         - Gaussian $p\sim e^{-\frac12 (x-\mu)^TC^{-1}(x-\mu)}$
         - then $\mathbb E[x] =\mu$ and $\mathbb E[(x-\mu)\otimes(x-\mu)]=C$
         - faithful estimators, assuming independent measurements
-            $$\begin{align*} 
+            \begin{align*} 
             &\mathbb E[\frac1N \sum_{n=1}^N x_n] = \mu\\
             &\mathbb E[\frac1{N-1}\sum_{n=1}^N x_n\otimes x_n] =C
             \end{align*}
-            $$
 
 - **Gaussian Mixture Model**
     > assume that the data are coming from a sum of Gaussians
@@ -182,11 +181,11 @@
         - the responsibilities $$r_{ik} = \dfrac{\pi_k \mathcal N(x_i;\mu_k, C_k)}{\sum_{k=1}^K \pi_k \mathcal N(x_i;\mu_k, C_k)},$$
         determine the probabilities of belonging to a cluster for each points
         - redefine parameters to be attracted to fit the points belonging to a given cluster the best
-        $$ \begin{align*}
+        \begin{align*}
         &N_k=\sum_i r_{ik},\;\pi_k = \frac{N_k}N,\\
         &\mu_k = \frac1{N_k}\sum_i x_i r_{ik},\\ 
         & C_k = \frac1{N_k}\sum_i (x_i-\mu_k)\otimes(x_i-\mu_k) r_{ik}
-        \end{align*}$$
+        \end{align*}
         - repeat from 2. until converges
 
 - **PCA**, 

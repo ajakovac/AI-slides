@@ -3086,14 +3086,11 @@
             "There is usually a fine context that serves as a basis of different subcontexts.",
             "For example to the set of images we can define a fine partition where two images are in different class if at least one pixel is different."
         ],
-        "properties": [
-            "properties",
-            "We can define a bunch of functions operating on the context.",
+        "we-can-define-a-bunch-of-functions-operating-on-the-context": [
+            "We can define a bunch of functions operating on the context",
             "\u001ekeyword\u001fdefinitions in a context\u001fdefinitions-in-a-context\u001e",
-            "\u001ekeyword\u001fsubcontext\u001fsubcontext\u001e",
-            "\u001ekeyword\u001flocal refinement\u001flocal-refinement\u001e",
-            "\u001ekeyword\u001fglobal refinement\u001fglobal-refinement\u001e",
-            "\u001ekeyword\u001fcommon refinement\u001fcommon-refinement\u001e"
+            "corasening of a context: \u001ekeyword\u001fsubcontext\u001fsubcontext\u001e",
+            "\u001ekeyword\u001frefinement of a context\u001frefinement-of-a-context\u001e"
         ],
         "characterization-of-contexts": [
             "Characterization of contexts",
@@ -3105,7 +3102,7 @@
             [
                 "context",
                 "context",
-                "properties"
+                "we-can-define-a-bunch-of-functions-operating-on-the-context"
             ]
         ],
         "$images": [],
@@ -3116,19 +3113,11 @@
         ],
         "class-(cell)-of-the-context": [
             "class (cell) of the context",
-            "$(\\mathcal C, c\\subseteq \\Omega) \\mapsto$ true, if $c\\in \\mathcal C$"
+            "$c\\in \\mathcal C$"
         ],
         "projector-onto-a-context": [
             "projector onto a context",
-            "$\\Pi: \\mathcal C\\mapsto \\omega \\mapsto c\\in{\\cal C}$ where $\\omega\\in c$ or $\\Pi_\\mathcal{C}(\\omega)=\\emptyset$"
-        ],
-        "disjunct-contexts": [
-            "disjunct contexts",
-            "$(\\mathcal C, \\mathcal C')\\mapsto $ true, if $\\mathrm{UnderlyingClass}(\\mathcal C)\\cap \\mathrm{UnderlyingClass}(\\mathcal C')=\\emptyset$"
-        ],
-        "sum": [
-            "sum",
-            "if $\\mathrm{DisjunctContexts}(\\mathcal C, \\mathcal C')$: $(\\mathcal C, \\mathcal C')\\mapsto \\mathcal C\\cup\\mathcal C'$"
+            "$\\Pi_{\\mathcal C}: \\omega \\mapsto c\\in \\mathcal C$ where $\\omega\\in c$ or $\\Pi_\\mathcal{C}(\\omega)=\\emptyset$"
         ]
     },
     "subcontext": {
@@ -3136,7 +3125,7 @@
             [
                 "context",
                 "context",
-                "properties"
+                "we-can-define-a-bunch-of-functions-operating-on-the-context"
             ]
         ],
         "$images": [],
@@ -3152,16 +3141,17 @@
         ],
         "examples": [
             "examples",
-            "cat images as collection of images",
-            "genus is subcontext of species"
+            "instead of detailed apple varieties (Gala, Jonathan, etc.) we refer them as apple",
+            "from individual images we collect the cat images",
+            "mammals, birds, reptiles, amphibians and fish are called vertebrate"
         ]
     },
-    "local-refinement": {
+    "refinement-of-a-context": {
         "$links": [
             [
                 "context",
                 "context",
-                "properties"
+                "we-can-define-a-bunch-of-functions-operating-on-the-context"
             ],
             [
                 "local coordinates",
@@ -3170,65 +3160,32 @@
             ]
         ],
         "$images": [],
-        "$keyword_name": "local refinement",
+        "$keyword_name": "refinement of a context",
         ">remark": [
             ">remark",
-            "refining of an element of a context"
-        ],
-        "definition": [
-            "definition",
-            "$(\\mathcal C, \\mathcal C') \\mapsto \\text{true}$ iff $\\exists c \\in \\mathcal C:\\;\\mathcal C'$ is a partition of $c$"
+            "provides a finer (more detailed) description of the world."
         ],
         "examples": [
             "examples",
-            "dogs and dog breeds",
-            "basic colors and shades of blue"
-        ]
-    },
-    "global-refinement": {
-        "$links": [
-            [
-                "context",
-                "context",
-                "properties"
-            ]
+            "instead of \"dogs\" we specify the breed",
+            "basic colors and shades and hues of blue"
         ],
-        "$images": [],
-        "$keyword_name": "global refinement",
-        ">remark": [
-            ">remark",
-            "a context where one of the context of the parent is refined locally"
+        "local-refinement": [
+            "local refinement",
+            "refining of an element of a context",
+            "definition $(\\mathcal C, \\mathcal C') \\mapsto \\text{true}$ iff $\\exists c \\in \\mathcal C:\\;\\mathcal C'$ is a partition of $c$"
         ],
-        "definition": [
-            "definition",
-            "$\\mathcal C^+ = (\\mathcal C\\setminus \\{c\\}) \\cup \\mathcal C'$, where $\\mathcal C'$ is a local refinement of $c$"
+        "global-refinement": [
+            "global refinement",
+            "a context where one of the context of the parent is refined locally",
+            "definition $\\mathcal C^+ = (\\mathcal C\\setminus \\{c\\}) \\cup \\mathcal C'$, where $\\mathcal C'$ is a local refinement of $c$",
+            "note: $\\mathcal C \\preceq C^+$"
         ],
-        "note": [
-            "note",
-            "$\\mathcal C \\preceq C^+$"
-        ]
-    },
-    "common-refinement": {
-        "$links": [
-            [
-                "context",
-                "context",
-                "properties"
-            ]
-        ],
-        "$images": [],
-        "$keyword_name": "common refinement",
-        ">remark": [
-            ">remark",
-            "all classes of the domain contexts are union of the elements of the common refinement context"
-        ],
-        "definition": [
-            "definition",
-            "$\\mathcal C_1\\vee \\mathcal C_2 = \\{ c_1 \\cap c_2 \\mid c_1 \\in \\mathcal C_1,\\; c_2 \\in \\mathcal C_2,\\; c_1 \\cap c_2 \\neq \\emptyset \\}$"
-        ],
-        "note": [
-            "note",
-            "several coarse contexts can lead to a fine description of the world."
+        "common-refinement": [
+            "common refinement",
+            "all classes of the domain contexts are union of the elements of the common refinement context",
+            "definition: $\\mathcal C_1\\vee \\mathcal C_2 = \\{ c_1 \\cap c_2 \\mid c_1 \\in \\mathcal C_1,\\; c_2 \\in \\mathcal C_2,\\; c_1 \\cap c_2 \\neq \\emptyset \\}$",
+            "note: several coarse contexts can lead to a fine description of the world (coordination)"
         ]
     },
     "characterization-of-contexts": {
@@ -3260,6 +3217,11 @@
                 "Characterization of contexts",
                 "characterization-of-contexts",
                 "approaches"
+            ],
+            [
+                "data model",
+                "data-model",
+                "representation"
             ]
         ],
         "$images": [],
@@ -3404,7 +3366,7 @@
         "hierarchical-approach": [
             "hierarchical approach",
             "start with a simple coarsening",
-            "apply \u001ekeyword\u001flocal refinement\u001flocal-refinement\u001e",
+            "apply local refinement (c.f. \u001ekeyword\u001frefinement of a context\u001frefinement-of-a-context\u001e)",
             "repeating this process yields a hierarchical structure, called a \u001ekeyword\u001frefinement tree\u001frefinement-tree\u001e, whose leaves are exactly the classes of the fine context."
         ],
         "properties": [
@@ -3609,6 +3571,10 @@
             ">remark",
             "different ways AI systems learn from data and experience"
         ],
+        "goal-of-ai": [
+            "goal of AI",
+            "provide sensible context for an underlying set"
+        ],
         "approaches": [
             "approaches",
             "\u001ekeyword\u001fsupervised learning\u001fsupervised-learning\u001e",
@@ -3630,11 +3596,6 @@
             ">remark",
             "find the context $\\mathcal C$ that smoothly represents the provided sample data."
         ],
-        "examples": [
-            "examples",
-            "\u001ekeyword\u001fpattern recognition\u001fpattern-recognition\u001e",
-            "\u001ekeyword\u001fdata compression\u001fdata-compression\u001e"
-        ],
         "strategy": [
             "strategy",
             "collect \u001ekeyword\u001fsample data\u001fsample-data\u001e, implying \u001ekeyword\u001fsample context\u001fsample-context\u001e $\\to$ see \u001ekeyword\u001fpublicly available databases for classification\u001fpublicly-available-databases-for-classification\u001e",
@@ -3649,6 +3610,11 @@
             "needs a clean definition of the context (e.g. temporal-spatial closeness)",
             "examples: university ranking, economic or individual performance evaluation, IQ tests",
             "see also \u001ekeyword\u001fHuman Intelligence: A Psychological Perspective\u001fhuman-intelligence:-a-psychological-perspective\u001e"
+        ],
+        "examples": [
+            "examples",
+            "\u001ekeyword\u001fpattern recognition\u001fpattern-recognition\u001e",
+            "\u001ekeyword\u001fdata compression\u001fdata-compression\u001e"
         ]
     },
     "publicly-available-databases-for-classification": {
@@ -3684,7 +3650,7 @@
         "$keyword_name": "sample data",
         ">remark": [
             ">remark",
-            "for training, we need data-meaning (label) pairs"
+            "for training, we need data - label (meaning) pairs"
         ],
         "definition": [
             "definition",
@@ -3747,8 +3713,9 @@
             "if $B$ is a finite set: **classification models**",
             "if $B$ is continuous: **regression**"
         ],
-        "corresponds-to-the-direct-representation-of-the-context": [
-            "corresponds to the direct representation of the context"
+        "representation": [
+            "representation",
+            "corresponds to the \u001ekeyword\u001fdirect representation\u001fdirect-representation\u001e of the context"
         ],
         "modelling-a-context": [
             "modelling a context",
@@ -3889,7 +3856,7 @@
         ],
         "prediction": [
             "prediction",
-            "predicted class $(x)= \\argmax_i p_i(x,q_{opt})\\;\\Rightarrow\\;$ induced context",
+            "predicted class $(x)= \\mathop{argmax}_i p_i(x,q_{opt})\\;\\Rightarrow\\;$ induced context",
             "classifies every element of the base class"
         ],
         "technical-implementation": [
@@ -5177,7 +5144,8 @@
             "number of such configurations $N!/\\prod_i N_i!$"
         ],
         "probability-of-the-sample": [
-            "probability of the sample $$ P = N! \\prod_i \\frac{q_i^{N_i}}{N_i!}$$"
+            "probability of the sample",
+            "$$ P = N! \\prod_i \\frac{q_i^{N_i}}{N_i!}$$"
         ]
     },
     "kullback-leibler-divergence": {
@@ -5203,7 +5171,8 @@
             "use \u001ekeyword\u001fprobability of the observed sample\u001fprobability-of-the-observed-sample\u001e, and apply \u001ekeyword\u001fStirling formula\u001fstirling-formula\u001e"
         ],
         "result": [
-            "result $$ D(p\\mid\\mid q) = -\\sum_i p_i \\ln \\frac{p_i}{q_i}$$"
+            "result",
+            "$$ D(p\\mid\\mid q) = -\\sum_i p_i \\ln \\frac{p_i}{q_i}$$"
         ]
     },
     "cross-entropy": {
@@ -5305,7 +5274,7 @@
         ],
         "parameter-distribution": [
             "parameter distribution",
-            "$$L(q) = (q-\\mu_q)^T C_q^{-1}(q-\\mu_q)$$ Gaussian with  $$\\begin{align} & C_q = (X^T C^{-1}X)^{-1}\\\\     & \\mu_q = (X^T C^{-1}X)^{-1}X^T C^{-1}y.\\\\    \\end{align}$$"
+            "$$L(q) = (q-\\mu_q)^T C_q^{-1}(q-\\mu_q)$$ Gaussian with  \\begin{align*} & C_q = (X^T C^{-1}X)^{-1}\\\\     & \\mu_q = (X^T C^{-1}X)^{-1}X^T C^{-1}y.\\\\    \\end{align*}"
         ],
         "goal": [
             "goal",
@@ -6187,7 +6156,7 @@
             "ADAM",
             "adaptive step size",
             "most widely used",
-            "algorithm updates step size as well $$     \\begin{align*}     & v_{k+1} = \\beta_1 v_k + (1-\\beta_1) p(x_k)\\\\     & m_{k+1} = \\beta_2 m_k + (1-\\beta_2) p^2(x_k)\\\\     & x_{k+1} = x_k + \\eta \\dfrac{v_k}{\\sqrt{m_k}+\\varepsilon}\\\\    \\end{align*}    $$"
+            "algorithm updates step size as well \\begin{align*}     & v_{k+1} = \\beta_1 v_k + (1-\\beta_1) p(x_k)\\\\     & m_{k+1} = \\beta_2 m_k + (1-\\beta_2) p^2(x_k)\\\\     & x_{k+1} = x_k + \\eta \\dfrac{v_k}{\\sqrt{m_k}+\\varepsilon}\\\\    \\end{align*}"
         ]
     },
     "one-dimensional-classification": {
@@ -6215,7 +6184,7 @@
         ],
         "data-model": [
             "data model",
-            "$$\\mathcal M(x, x_{sep}) = \\left\\{ \\begin{align*}            \\text{A, if}\\; x> x_{sep}\\\\            \\text{B, if}\\; x\\le x_{sep}\\\\        \\end{align*}    \\right\\}$$"
+            "$$\\mathcal M(x, x_{sep}) = \\left\\{ \\begin{cases}            \\text{A, if}&  x> x_{sep}\\\\            \\text{B, if}&  x\\le x_{sep}        \\end{cases}    \\right\\}$$"
         ],
         "hard-margin-problem": [
             "hard margin problem",
@@ -6258,7 +6227,7 @@
         ],
         "corresponds-to-the-median-of-the-overlapping-region": [
             "corresponds to the median of the overlapping region",
-            "$$\\begin{align*} &\\sum_{i=1}^N |x_i-x_{sep}|= \\sum_{x_i>x_{sep}} (x_i- x_{sep}) + \\sum_{x_i<x_{sep}} (x_{sep}-x_i) =\\\\    &=(N_<-N_>) x_{ sep } + \\sum_{x_i>x_{sep}} x_i - \\sum_{x_i<x_{sep}} x_i = \\text{minimum}\\\\    & \\Rightarrow  N_<=N_>    \\end{align*}    $$"
+            "\\begin{align*} &\\sum_{i=1}^N |x_i-x_{sep}|= \\sum_{x_i>x_{sep}} (x_i- x_{sep}) + \\sum_{x_i<x_{sep}} (x_{sep}-x_i) =\\\\    &=(N_<-N_>) x_{ sep } + \\sum_{x_i>x_{sep}} x_i - \\sum_{x_i<x_{sep}} x_i = \\text{minimum}\\\\    & \\Rightarrow  N_<=N_>    \\end{align*}"
         ]
     },
     "quadratic-loss-minimum": {
@@ -6636,7 +6605,7 @@
             "assumed distribution",
             "Gaussian $p\\sim e^{-\\frac12 (x-\\mu)^TC^{-1}(x-\\mu)}$",
             "then $\\mathbb E[x] =\\mu$ and $\\mathbb E[(x-\\mu)\\otimes(x-\\mu)]=C$",
-            "faithful estimators, assuming independent measurements $$\\begin{align*}             &\\mathbb E[\\frac1N \\sum_{n=1}^N x_n] = \\mu\\\\            &\\mathbb E[\\frac1{N-1}\\sum_{n=1}^N x_n\\otimes x_n] =C            \\end{align*}            $$"
+            "faithful estimators, assuming independent measurements \\begin{align*}             &\\mathbb E[\\frac1N \\sum_{n=1}^N x_n] = \\mu\\\\            &\\mathbb E[\\frac1{N-1}\\sum_{n=1}^N x_n\\otimes x_n] =C            \\end{align*}"
         ]
     },
     "gaussian-mixture-model": {
@@ -6670,7 +6639,7 @@
             "Expectation-Maximization method",
             "start from an initial guess $\\pi,\\mu,C$",
             "the responsibilities $$r_{ik} = \\dfrac{\\pi_k \\mathcal N(x_i;\\mu_k, C_k)}{\\sum_{k=1}^K \\pi_k \\mathcal N(x_i;\\mu_k, C_k)},$$ determine the probabilities of belonging to a cluster for each points",
-            "redefine parameters to be attracted to fit the points belonging to a given cluster the best $$ \\begin{align*}        &N_k=\\sum_i r_{ik},\\;\\pi_k = \\frac{N_k}N,\\\\        &\\mu_k = \\frac1{N_k}\\sum_i x_i r_{ik},\\\\         & C_k = \\frac1{N_k}\\sum_i (x_i-\\mu_k)\\otimes(x_i-\\mu_k) r_{ik}        \\end{align*}$$",
+            "redefine parameters to be attracted to fit the points belonging to a given cluster the best \\begin{align*}        &N_k=\\sum_i r_{ik},\\;\\pi_k = \\frac{N_k}N,\\\\        &\\mu_k = \\frac1{N_k}\\sum_i x_i r_{ik},\\\\         & C_k = \\frac1{N_k}\\sum_i (x_i-\\mu_k)\\otimes(x_i-\\mu_k) r_{ik}        \\end{align*}",
             "repeat from 2. until converges"
         ]
     },

@@ -13,11 +13,11 @@ probability-information-theory.md
 data-driven-approach.md
 optimization-methods.md
 classification-models.md
+evaluation.md
 
 ## Main topics
 
 # [worldviews.md](worldviews.md) 
-# [evaluation.md](evaluation.md) 
 # [deep-neural-networks.md](deep-neural-networks.md) 
 # [compression.md](compression.md) 
 # [finding-features.md](finding-features.md) 

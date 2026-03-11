@@ -1,6 +1,7 @@
 
 - **AI learning paradigms**
     > different ways AI systems learn from data and experience
+    - **goal of AI**: provide sensible context for an underlying set
     - **approaches**
         - __supervised learning__
         - __data driven approach__
@@ -8,13 +9,11 @@
 
 - **supervised learning**
     > find the context $\mathcal C$ that smoothly represents the provided sample data.
-    - **examples**
-        - __pattern recognition__
-        - __data compression__
     - **strategy**
         - collect __sample data__, implying __sample context__ $\to$ see __publicly available databases for classification__
         - assume __data model__
         - perform __model optimization__
+        - __evaluation of results of a classification__
     - **unsupervised is not really meaningful**
       - mathematically any partition is possible
       - depends on the "distance" $\to$ data representation
@@ -22,6 +21,9 @@
       - needs a clean definition of the context (e.g. temporal-spatial closeness)
       - examples: university ranking, economic or individual performance evaluation, IQ tests
       - see also __Human Intelligence: A Psychological Perspective__
+    - **examples**
+        - __pattern recognition__
+        - __data compression__
 
 - **publicly available databases for classification**
     > databases can be used as benchmarks or for learning
@@ -31,7 +33,7 @@
         - https://docs.pytorch.org/vision/main/datasets.html
 
 - **sample data**:
-    > for training, we need data-meaning (label) pairs
+    > for training, we need data - label (meaning) pairs
     - **definition**: $\{(x_a,y_a) \mid x_a\in C, y\in \mathcal C: x_a\in y_a, a=1\dots N_{data}\}$, where $C=\text{underlying class}(\mathcal C)$
     - **assumption**
         - independent measurements
@@ -52,7 +54,7 @@
   - **names**
     - if $B$ is a finite set: **classification models**
     - if $B$ is continuous: **regression**
-  - **corresponds to the direct representation of the context**
+  - **representation**: corresponds to the __direct representation__ of the context
   - **modelling a context**
     - use the __induced context__ $\mathcal M^{-1}(B,q)$
     - example $\mathcal M(\text{image}, q_{opt}) = \text{cat}$ will be true approximately for the cat images
@@ -118,7 +120,7 @@
       - smallest if $p_i(x)=1$ for the correct class
       - $\ell$ preferrably cross-entropy loss
     - **prediction**
-      - predicted class $(x)= \argmax_i p_i(x,q_{opt})\;\Rightarrow\;$ induced context
+      - predicted class $(x)= \mathop{argmax}_i p_i(x,q_{opt})\;\Rightarrow\;$ induced context
       - classifies every element of the base class
     - **technical implementation**
       - __perceptron__

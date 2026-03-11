@@ -112,7 +112,7 @@
   - function $E:W\to \mathbb R$ where $E(f(t))=$ constant
   - examples
     - with $v(t)=\dfrac{f(t+\Delta t)-f(t)}{\Delta t}$ we have $E = v- F_{\Delta t}(f) \equiv 0$ (equation of motion)
-    - energy of a harmonic oscillator $$\left\{\begin{align*}& \dot x= y\\ &\dot y = -\omega^2 x\\ \end{align*}\right\}\Rightarrow E = \omega^2 x^2 +y^2$$
+    - energy of a harmonic oscillator $$\left\{\begin{cases}& \dot x= y\\ &\dot y = -\omega^2 x\\ \end{cases}\right\}\Rightarrow E = \omega^2 x^2 +y^2$$
 
 - **partial differential equations**
   - spatial-temporal configurations: $f(t,x)$, where $x\in V\sim \mathbb R^d$ $d$ dimensional space
