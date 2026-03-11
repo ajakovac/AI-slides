@@ -14,11 +14,11 @@ data-driven-approach.md
 optimization-methods.md
 classification-models.md
 evaluation.md
+deep-neural-networks.md
 
 ## Main topics
 
-# [worldviews.md](worldviews.md) 
-# [deep-neural-networks.md](deep-neural-networks.md) 
+# [deep-neural-networks.md]() 
 # [compression.md](compression.md) 
 # [finding-features.md](finding-features.md) 
 # [time-series.md](time-series.md)
@@ -28,6 +28,7 @@ evaluation.md
 # [generative-networks.md](generative-networks.md) 
 # [reinforcement-learning.md](reinforcement-learning.md) 
 # [RAG-systems.md](RAG-systems.md) 
+# [worldviews.md](worldviews.md) 
 
 
 ## Auxiliary material

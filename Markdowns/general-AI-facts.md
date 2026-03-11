@@ -19,7 +19,7 @@
         - chess bot
         - 1997: beats the actual world champion (G. Kasparov)
     - **DeepFace (Meta)**
-        - face recognition, CNN
+        - face recognition, CNNs
         - achieved 97%+ accuracy on LFW ([Labeled Faces in the Wild](https://www.kaggle.com/datasets/jessicali9530/lfw-dataset)) benchmark in 2014, (80-90% was before) ![face base points](../Images/face_base_points.png)
         - image recognition, ResNet 2015
     - **AlphaGo (DeepMind-Google)**

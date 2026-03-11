@@ -91,7 +91,7 @@
 
 - **classification-based intelligence definition**
     > this definition evaluates intelligence by output equivalence, not by the quality or structure of internal representations
-    - **historical context**: emerged implicitly with the success of supervised learning and deep neural networks in perception tasks
+    - **historical context**: emerged implicitly with the success of supervised learning and __DNNs__ in perception tasks
     - **core idea**: a machine is considered intelligent if it classifies inputs in the same way a human does
     - **formal formulation**
         - let $X$ be an input space (e.g. images, sounds, texts)

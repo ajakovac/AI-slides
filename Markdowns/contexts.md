@@ -128,7 +128,7 @@
 - **disadvantages of the direct representation**
     - **storage efficiency**: all cells are named one-by-one (c.f. one-hot encoding)
     - **analyticity**: in numerical implementation all concepts are results of analytic calculation. This requires that the probability of performing a possible action is approximately the same (balanced classes). For example, this approach is not useful for tell apart cat images and non-cat images, because non cat images form a vastly larger set. In such a space, distinguishing one element from all others by direct enumeration is combinatorially prohibitive.
-    - **specific**: these concepts are very special, and so the the generalizability is very tedious. For example the concept that separates dog and cat images can not be used for other purposes. For a different task a different specific concept has to be created (catastrophic forgetting). For the same reason, System-1 concepts are hard to train, we need a lot of sepcific examples to do that.
+    - **specific**: these concepts are very special, and so the the generalizability is very tedious. For example the concept that separates dog and cat images can not be used for other purposes. For a different task a different specific concept has to be created (__catastrophic forgetting__). For the same reason, System-1 concepts are hard to train, we need a lot of sepcific examples to do that.
     - **fragile**: if we forget the concept, there is no way to recreate is from other knowledge. We have to restart the creation of it, and we can just hope that we arrive to the same good result. Professional athletes can have the experience that suddenly they "forget" how to do the given sport effectively.
 
 - **usage scope**:

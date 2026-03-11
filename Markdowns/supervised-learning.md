@@ -126,7 +126,7 @@
       - __perceptron__
       - __support vector machine__
       - __extreme learning machine__
-      - __deep neural networks__, DNN
+      - __DNNs__ (deep neural networks)
 
 - **distribution estimation methods**
     > tries to model the data distribution of the sample data
@@ -269,7 +269,7 @@
       - high variance (small changes in data → large changes in the model)
     - **example**
       - high-order polynomial fit oscillating between data points
-      - deep neural networks with a large number of parameters trained on small datasets
+      - __DNNs__ with a large number of parameters trained on small datasets
       - decision trees grown to full depth
     - **detection**
       - training loss decreases while validation loss increases

@@ -191,7 +191,7 @@
         - parallelizable
     - **drawbacks**
         - slow convergence
-        - difficult to use in batch methods $\Rightarrow$ rarely used in DNNs
+        - difficult to use in batch methods $\Rightarrow$ rarely used in __DNNs__
     - **example**: $f(x,y) =(x-2)^2+(y+1)^2 + \sin 3x \sin 3y$, simulated annealing with $\alpha_{cooling}=0.98$: ![minimum finding with annealing](../Images/minimum-finding-annealing.png)
     
 

@@ -27,7 +27,7 @@ A typical AI task is to compress data belonging to a given class. Aso known as d
 - **nonlinear compression**, **autoencoders**, **AE**
     - task: represent the data with a smaller subset of parameters
     - autoencoder logic:
-        - use deep neural networks
+        - use __DNNs__
         - encoder: less and less sites per layer
         - decoder: more and more sites per layer
         - goal: reconstruct the input

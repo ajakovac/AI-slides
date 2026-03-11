@@ -257,8 +257,8 @@
     \mathbf y_{t+1} = F(\mathbf y_t)
     $$
 
-  - **deep neural networks (DNNs)**:
-    - can approximate nonlinear evolution operators $F$
+  - **use of deep neural networks**:
+    - __DNNs__ can approximate nonlinear evolution operators $F$
     - capture complex dynamics beyond linear autoregressive models
     - applicable architectures:
         - feed-forward networks (MLP on delay vectors)

@@ -549,7 +549,7 @@
   - **The deep learning breakthrough (from 2014)**
 
     - Around 2014, Artificial Intelligence entered a decisive new phase.
-    - Advances in deep neural networks,
+    - Advances in __DNNs__,
     combined with large datasets and GPU acceleration,
     enabled systems to learn **hierarchical representations**
     directly from raw data.
@@ -575,7 +575,7 @@
   - **Human-level performance in classification**
 
     - Following these successes,
-    deep neural networks (DNNs),
+    __DNNs__ (deep neural networks),
     especially convolutional neural networks (CNNs),
     became the standard solution
     for classification problems in vision, speech, and perception.
