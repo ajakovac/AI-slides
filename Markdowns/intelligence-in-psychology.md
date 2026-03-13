@@ -225,7 +225,7 @@ and distort the processes it is intended to monitor.
 
 - **System I**
   - **mental model**
-    - action focused: change in environment $\to$ immediate action
+    - __action focused decision__: change in environment $\to$ immediate action
     - ![mental model](../Images/mental-model-System-I.png)
   - **properties**
     - fast and automatic,
@@ -246,7 +246,7 @@ and distort the processes it is intended to monitor.
     - riding a bicycle,
     - walking at a habitual pace
   - **training**
-    - repetitive movements form System I (sports, martial arts, pingpong, etc)
+    - repetitive movements form __System I__ (sports, martial arts, pingpong, etc)
     - slow training, fast action
 
 - **System II**
@@ -286,12 +286,12 @@ and distort the processes it is intended to monitor.
   - **System II**
     - Based on analysing scenarions in mental world model (contemplation, thinking)
     - Operates on explicit internal representations (mental models) $\to$ unique, personal
-    - Often influenced by System I intuitions and may rationalize them post hoc.
+    - Often influenced by __System I__ intuitions and may rationalize them post hoc.
 
   - **Negotiation**
     - Traditional view: opinions change through logical argumentation.
     - Empirical observation: beliefs are often resistant to change.
-    - Reason: reasoning is strongly shaped by intuitive (System I) processes.
+    - Reason: reasoning is strongly shaped by intuitive (__System I__) processes.
     - __Post-hoc rationalization__: people construct explanations for decisions
       that were intuitively driven
     - Effective negotiation often involves emotional regulation,
@@ -301,8 +301,8 @@ and distort the processes it is intended to monitor.
 - **Post-hoc rationalization**
   >  The tendency to construct explanations for decisions or actions
     *after* they have already been made.
-  - Often occurs when behavior is driven by intuitive (System I)
-    or unconscious processes, while conscious reasoning (System II)
+  - Often occurs when behavior is driven by intuitive (__System I__)
+    or unconscious processes, while conscious reasoning (__System II__)
     generates a coherent justification afterward.
   - The explanation feels sincere and convincing,
     even if it does not reflect the true causal mechanism.
@@ -347,20 +347,20 @@ and distort the processes it is intended to monitor.
 
 - **Interaction between the systems**
   - **normal cognition**
-    - System I continuously generates impressions, intuitions, and tentative judgments
-    - System II monitor, endorse, modify, or override them.
+    - __System I__ continuously generates impressions, intuitions, and tentative judgments
+    - __System II__ monitor, endorse, modify, or override them.
     - the two systems can change to each other (see below)
-    - new tasks always start with System II
+    - new tasks always start with __System II__
     - ![mental model](../Images/mental-model-together.png)
   - **Understanding and Bringing to Awareness**
     - the same method we understand our environment or the world as a whole, we can analyze and understand our internal mechanisms
-    - System I $\to$ System II
+    - __System I__ $\to$ __System II__
     - Paralysis by analysis: excessive conscious control can disrupt automatized performance (explicit monitoring)
     - But later it can lead to more conscious and more effective performance
   - **Internalization and Automatization**
     - building effective but complex concepts while releasing less imporant details
     - rely more and more the relevant concepts $\to$ decrease mental effort
-    - System II $\to$ System I
+    - __System II__ $\to$ __System I__
     - other names: Habitualization, Proceduralization
     - training: conscious process to build effective concepts (excersizing car driving, riding a bike, making sports, etc.)
 
@@ -375,7 +375,7 @@ and distort the processes it is intended to monitor.
 
 - **Characteristic errors of System I**
 
-  > The reliance on heuristics makes System I vulnerable to systematic cognitive biases, including:
+  > The reliance on heuristics makes __System I__ vulnerable to systematic cognitive biases, including:
 
   - **Anchoring**  
     - Judgments are unduly influenced by an initial value or reference point  

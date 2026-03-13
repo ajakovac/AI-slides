@@ -6,6 +6,7 @@
         - __supervised learning__
         - __data driven approach__
         - __reinforcement learning__
+        - __time series analysis__
 
 - **supervised learning**
     > find the context $\mathcal C$ that smoothly represents the provided sample data.
@@ -83,6 +84,7 @@
       - minimize $L$
       - we need $\partial L/\partial q=0$
       - practically batch evaluation
+      - optimization $\to$ __optimization methods__
     - **failure modes**
         - __gradient calculation in complete database__  is numerically inefficitent
         - __underfitting__
@@ -91,7 +93,9 @@
         - __label noise sensitivity__
         - __dataset shift__
         - __shortcut learning__
-    - **optimization methods**
+
+- **optimization methods**
+    - **algorithms**
         - __linear regression__
         - __gradient descent__
         - __conjugate gradient descent__
@@ -106,7 +110,7 @@
       - validation set (10-20%) to optimize hyperparameters
       - test set (10-20%) to evaluate the results
       - cross validation: use different sets for validation and test set
-      - evaluate results
+      - __evaluation of results of a classification__
 
 - **classification via regression**
     > classes are defined by inequalities posed on a continuous function

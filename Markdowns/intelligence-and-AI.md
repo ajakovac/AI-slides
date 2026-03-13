@@ -1,12 +1,8 @@
 
 - **intelligence and AI**
     - **why do we need intelligence?**
-        - goal of a living being
+        - __goal of living beings__
         - why intelligence, not science?
-    - **goal of a living being**
-        - survival in a complex environment
-        - has to react to the environmental issues: $\text{issue}\to\text{action}$
-        - changing environment $\to$ adaptation (learning)
     - **definitions**
         - __Turing’s intelligence definition__
         - __Legg–Hutter intelligence definition__

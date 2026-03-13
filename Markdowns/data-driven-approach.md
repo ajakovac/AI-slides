@@ -17,3 +17,4 @@
         - principal component analysis
         - linear laws discovery
         - contrastive learning
+        - __feature finding problem__

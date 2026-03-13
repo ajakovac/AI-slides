@@ -16,7 +16,7 @@
         - image classification: $a=0$ layer is the image in pixel representation, $a=L+1$ layer is the layer of classes
         - bird song recognition: $a=0$ layer is the wav file, $a=L+1$ layer is the bird species
     - **universal approximation theorem**: any function can be realized in this way
-    - **contextual correspondence**: implements a System I approach, with all of its advantages and disadvantages
+    - **contextual correspondence**: implements a __System I__ approach, with all of its advantages and disadvantages
     - **training**
         - usually high dimensional optimization
         - needs gradient, now of composite functions $\to$ __backpropagation__

@@ -15,15 +15,15 @@ optimization-methods.md
 classification-models.md
 evaluation.md
 deep-neural-networks.md
+compression.md
+finding-features.md
+time-series.md
+natural-language-processing.md
+attention-and-transformers.md
 
 ## Main topics
 
-# [deep-neural-networks.md]() 
-# [compression.md](compression.md) 
-# [finding-features.md](finding-features.md) 
-# [time-series.md](time-series.md)
-# [natural-language-processing.md](natural-language-processing.md) 
-# [attention-and-transformers.md](attention-and-transformers.md) 
+# [attention-and-transformers.md]() 
 # [reasoning.md](reasoning.md) 
 # [generative-networks.md](generative-networks.md) 
 # [reinforcement-learning.md](reinforcement-learning.md) 

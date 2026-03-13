@@ -112,7 +112,7 @@
 
 - **direct representation**: 
     > all relevant, independent object classes are collected to a common context
-    - alternative name: **System-1** representation, or one-hot-encoding
+    - alternative name: __System I__ representation, or one-hot-encoding
     - the class can result in an action in case of a living being
     - **properties**
         - __advantages of the direct representation__
@@ -122,13 +122,13 @@
 - **advantages of the direct representation**
     - **natural**: this is the most natural approach for a living being
     - **fast, cheap**: it requires a single, albeit complicated context evaluation
-    - **parallelizable**:  because of the small effort for the evaluation, different System-1 applications can run parallel in the same time (e.g. walking and chewing gum).
+    - **parallelizable**:  because of the small effort for the evaluation, different __System I__ applications can run parallel in the same time (e.g. walking and chewing gum).
     - **accurate**: the context can be refined for the actual task
 
 - **disadvantages of the direct representation**
     - **storage efficiency**: all cells are named one-by-one (c.f. one-hot encoding)
     - **analyticity**: in numerical implementation all concepts are results of analytic calculation. This requires that the probability of performing a possible action is approximately the same (balanced classes). For example, this approach is not useful for tell apart cat images and non-cat images, because non cat images form a vastly larger set. In such a space, distinguishing one element from all others by direct enumeration is combinatorially prohibitive.
-    - **specific**: these concepts are very special, and so the the generalizability is very tedious. For example the concept that separates dog and cat images can not be used for other purposes. For a different task a different specific concept has to be created (__catastrophic forgetting__). For the same reason, System-1 concepts are hard to train, we need a lot of sepcific examples to do that.
+    - **specific**: these concepts are very special, and so the the generalizability is very tedious. For example the concept that separates dog and cat images can not be used for other purposes. For a different task a different specific concept has to be created (__catastrophic forgetting__). For the same reason, __System I__ concepts are hard to train, we need a lot of sepcific examples to do that.
     - **fragile**: if we forget the concept, there is no way to recreate is from other knowledge. We have to restart the creation of it, and we can just hope that we arrive to the same good result. Professional athletes can have the experience that suddenly they "forget" how to do the given sport effectively.
 
 - **usage scope**:
@@ -176,7 +176,7 @@
         - every refinement tree induces a unique fine context (its leaves)
         - different refinement trees may induce the same context
         - generic coordination is a special case, where all local refinements are identical at every node
-        - System 1 corresponds to a refinement tree of depth 1
+        - __System I__ corresponds to a refinement tree of depth 1
         - local coordinates correspond to paths from the root to a leaf
 
     - **examples**

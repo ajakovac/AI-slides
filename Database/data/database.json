@@ -4,8 +4,8 @@
         "item_separator": "\u001f",
         "unresolved_links": [
             "reinforcement-learning",
-            "llt",
-            "autoencoders"
+            "stochastic-evolution",
+            "transformers"
         ]
     },
     "lecture-contents": {
@@ -27,6 +27,10 @@
         "lecture-4": [
             "Lecture 4",
             "\u001ekeyword\u001fLecture 4\u001flecture-4\u001e"
+        ],
+        "lecture-5": [
+            "Lecture 5",
+            "\u001ekeyword\u001fLecture 5\u001flecture-5\u001e"
         ],
         "technical-background": [
             "Technical background",
@@ -102,6 +106,21 @@
         "topics": [
             "topics",
             "\u001ekeyword\u001fAI learning paradigms\u001fai-learning-paradigms\u001e"
+        ]
+    },
+    "lecture-5": {
+        "$links": [
+            [
+                "Lecture Contents",
+                "lecture-contents",
+                "lecture-5"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Lecture 5",
+        "topics": [
+            "topics",
+            "\u001ekeyword\u001fnatural language processing\u001fnatural-language-processing\u001e"
         ]
     },
     "technical-background": {
@@ -2098,6 +2117,76 @@
                 "Kahneman and his System I and System II",
                 "kahneman-and-his-system-i-and-system-ii",
                 "system-i"
+            ],
+            [
+                "System I",
+                "system-i",
+                "training"
+            ],
+            [
+                "Decision making and argumentation",
+                "decision-making-and-argumentation",
+                "system-ii"
+            ],
+            [
+                "Decision making and argumentation",
+                "decision-making-and-argumentation",
+                "negotiation"
+            ],
+            [
+                "Post-hoc rationalization",
+                "post-hoc-rationalization",
+                "notes"
+            ],
+            [
+                "Interaction between the systems",
+                "interaction-between-the-systems",
+                "normal-cognition"
+            ],
+            [
+                "Interaction between the systems",
+                "interaction-between-the-systems",
+                "understanding-and-bringing-to-awareness"
+            ],
+            [
+                "Interaction between the systems",
+                "interaction-between-the-systems",
+                "internalization-and-automatization"
+            ],
+            [
+                "Characteristic errors of System I",
+                "characteristic-errors-of-system-i",
+                ">remark"
+            ],
+            [
+                "direct representation",
+                "direct-representation",
+                "notes"
+            ],
+            [
+                "advantages of the direct representation",
+                "advantages-of-the-direct-representation",
+                "parallelizable"
+            ],
+            [
+                "disadvantages of the direct representation",
+                "disadvantages-of-the-direct-representation",
+                "specific"
+            ],
+            [
+                "refinement tree",
+                "refinement-tree",
+                "notes"
+            ],
+            [
+                "DNNs",
+                "dnns",
+                "contextual-correspondence"
+            ],
+            [
+                "action focused decision",
+                "action-focused-decision",
+                "corresponds-to"
             ]
         ],
         "$images": [
@@ -2109,7 +2198,7 @@
         "$keyword_name": "System I",
         "mental-model": [
             "mental model",
-            "action focused: change in environment $\\to$ immediate action",
+            "\u001ekeyword\u001faction focused decision\u001faction-focused-decision\u001e: change in environment $\\to$ immediate action",
             "\u001eimage\u001fmental model\u001fmental-model-System-I.png\u001e"
         ],
         "properties": [
@@ -2140,7 +2229,7 @@
         ],
         "training": [
             "training",
-            "repetitive movements form System I (sports, martial arts, pingpong, etc)",
+            "repetitive movements form \u001ekeyword\u001fSystem I\u001fsystem-i\u001e (sports, martial arts, pingpong, etc)",
             "slow training, fast action"
         ]
     },
@@ -2150,6 +2239,36 @@
                 "Kahneman and his System I and System II",
                 "kahneman-and-his-system-i-and-system-ii",
                 "system-ii"
+            ],
+            [
+                "Post-hoc rationalization",
+                "post-hoc-rationalization",
+                "notes"
+            ],
+            [
+                "Interaction between the systems",
+                "interaction-between-the-systems",
+                "normal-cognition"
+            ],
+            [
+                "Interaction between the systems",
+                "interaction-between-the-systems",
+                "normal-cognition"
+            ],
+            [
+                "Interaction between the systems",
+                "interaction-between-the-systems",
+                "understanding-and-bringing-to-awareness"
+            ],
+            [
+                "Interaction between the systems",
+                "interaction-between-the-systems",
+                "internalization-and-automatization"
+            ],
+            [
+                "model based decision",
+                "model-based-decision",
+                "corresponds-to"
             ]
         ],
         "$images": [
@@ -2226,13 +2345,13 @@
             "System II",
             "Based on analysing scenarions in mental world model (contemplation, thinking)",
             "Operates on explicit internal representations (mental models) $\\to$ unique, personal",
-            "Often influenced by System I intuitions and may rationalize them post hoc."
+            "Often influenced by \u001ekeyword\u001fSystem I\u001fsystem-i\u001e intuitions and may rationalize them post hoc."
         ],
         "negotiation": [
             "Negotiation",
             "Traditional view: opinions change through logical argumentation.",
             "Empirical observation: beliefs are often resistant to change.",
-            "Reason: reasoning is strongly shaped by intuitive (System I) processes.",
+            "Reason: reasoning is strongly shaped by intuitive (\u001ekeyword\u001fSystem I\u001fsystem-i\u001e) processes.",
             "\u001ekeyword\u001fPost-hoc rationalization\u001fpost-hoc-rationalization\u001e: people construct explanations for decisions that were intuitively driven",
             "Effective negotiation often involves emotional regulation, rapport, and reframing rather than purely logical persuasion \u001eexternal-link\u001fChris Voss: Never Split the Difference\u001fhttps://ia801801.us.archive.org/27/items/never-split-the-difference-negotiating-as-if-your-life-depended-on-it_202101/Never_Split_the_Difference_Negotiating_As_If_Your_Life_Depended.pdf\u001e"
         ]
@@ -2253,7 +2372,7 @@
         ],
         "notes": [
             "notes",
-            "Often occurs when behavior is driven by intuitive (System I) or unconscious processes, while conscious reasoning (System II)    generates a coherent justification afterward.",
+            "Often occurs when behavior is driven by intuitive (\u001ekeyword\u001fSystem I\u001fsystem-i\u001e) or unconscious processes, while conscious reasoning (\u001ekeyword\u001fSystem II\u001fsystem-ii\u001e)    generates a coherent justification afterward.",
             "The explanation feels sincere and convincing, even if it does not reflect the true causal mechanism."
         ],
         "classic-demonstrations": [
@@ -2316,16 +2435,16 @@
         "$keyword_name": "Interaction between the systems",
         "normal-cognition": [
             "normal cognition",
-            "System I continuously generates impressions, intuitions, and tentative judgments",
-            "System II monitor, endorse, modify, or override them.",
+            "\u001ekeyword\u001fSystem I\u001fsystem-i\u001e continuously generates impressions, intuitions, and tentative judgments",
+            "\u001ekeyword\u001fSystem II\u001fsystem-ii\u001e monitor, endorse, modify, or override them.",
             "the two systems can change to each other (see below)",
-            "new tasks always start with System II",
+            "new tasks always start with \u001ekeyword\u001fSystem II\u001fsystem-ii\u001e",
             "\u001eimage\u001fmental model\u001fmental-model-together.png\u001e"
         ],
         "understanding-and-bringing-to-awareness": [
             "Understanding and Bringing to Awareness",
             "the same method we understand our environment or the world as a whole, we can analyze and understand our internal mechanisms",
-            "System I $\\to$ System II",
+            "\u001ekeyword\u001fSystem I\u001fsystem-i\u001e $\\to$ \u001ekeyword\u001fSystem II\u001fsystem-ii\u001e",
             "Paralysis by analysis: excessive conscious control can disrupt automatized performance (explicit monitoring)",
             "But later it can lead to more conscious and more effective performance"
         ],
@@ -2333,7 +2452,7 @@
             "Internalization and Automatization",
             "building effective but complex concepts while releasing less imporant details",
             "rely more and more the relevant concepts $\\to$ decrease mental effort",
-            "System II $\\to$ System I",
+            "\u001ekeyword\u001fSystem II\u001fsystem-ii\u001e $\\to$ \u001ekeyword\u001fSystem I\u001fsystem-i\u001e",
             "other names: Habitualization, Proceduralization",
             "training: conscious process to build effective concepts (excersizing car driving, riding a bike, making sports, etc.)"
         ],
@@ -2365,7 +2484,7 @@
         "$keyword_name": "Characteristic errors of System I",
         ">remark": [
             ">remark",
-            "The reliance on heuristics makes System I vulnerable to systematic cognitive biases, including:"
+            "The reliance on heuristics makes \u001ekeyword\u001fSystem I\u001fsystem-i\u001e vulnerable to systematic cognitive biases, including:"
         ],
         "anchoring": [
             "Anchoring",
@@ -2415,14 +2534,8 @@
         "$keyword_name": "intelligence and AI",
         "why-do-we-need-intelligence?": [
             "why do we need intelligence?",
-            "goal of a living being",
+            "\u001ekeyword\u001fgoal of living beings\u001fgoal-of-living-beings\u001e",
             "why intelligence, not science?"
-        ],
-        "goal-of-a-living-being": [
-            "goal of a living being",
-            "survival in a complex environment",
-            "has to react to the environmental issues: $\\text{issue}\\to\\text{action}$",
-            "changing environment $\\to$ adaptation (learning)"
         ],
         "definitions": [
             "definitions",
@@ -2961,6 +3074,11 @@
                 "Lecture 3",
                 "lecture-3",
                 "topics"
+            ],
+            [
+                "goal of living beings",
+                "goal-of-living-beings",
+                "tools"
             ]
         ],
         "$images": [],
@@ -3221,6 +3339,11 @@
                 "data model",
                 "data-model",
                 "representation"
+            ],
+            [
+                "action focused decision",
+                "action-focused-decision",
+                "corresponds-to"
             ]
         ],
         "$images": [],
@@ -3231,7 +3354,7 @@
         ],
         "notes": [
             "notes",
-            "alternative name: **System-1** representation, or one-hot-encoding",
+            "alternative name: \u001ekeyword\u001fSystem I\u001fsystem-i\u001e representation, or one-hot-encoding",
             "the class can result in an action in case of a living being"
         ],
         "properties": [
@@ -3261,7 +3384,7 @@
         ],
         "parallelizable": [
             "parallelizable",
-            "because of the small effort for the evaluation, different System-1 applications can run parallel in the same time (e.g. walking and chewing gum)."
+            "because of the small effort for the evaluation, different \u001ekeyword\u001fSystem I\u001fsystem-i\u001e applications can run parallel in the same time (e.g. walking and chewing gum)."
         ],
         "accurate": [
             "accurate",
@@ -3288,7 +3411,7 @@
         ],
         "specific": [
             "specific",
-            "these concepts are very special, and so the the generalizability is very tedious. For example the concept that separates dog and cat images can not be used for other purposes. For a different task a different specific concept has to be created (\u001ekeyword\u001fcatastrophic forgetting\u001fcatastrophic-forgetting\u001e). For the same reason, System-1 concepts are hard to train, we need a lot of sepcific examples to do that."
+            "these concepts are very special, and so the the generalizability is very tedious. For example the concept that separates dog and cat images can not be used for other purposes. For a different task a different specific concept has to be created (\u001ekeyword\u001fcatastrophic forgetting\u001fcatastrophic-forgetting\u001e). For the same reason, \u001ekeyword\u001fSystem I\u001fsystem-i\u001e concepts are hard to train, we need a lot of sepcific examples to do that."
         ],
         "fragile": [
             "fragile",
@@ -3409,7 +3532,7 @@
             "every refinement tree induces a unique fine context (its leaves)",
             "different refinement trees may induce the same context",
             "generic coordination is a special case, where all local refinements are identical at every node",
-            "System 1 corresponds to a refinement tree of depth 1",
+            "\u001ekeyword\u001fSystem I\u001fsystem-i\u001e corresponds to a refinement tree of depth 1",
             "local coordinates correspond to paths from the root to a leaf"
         ],
         "examples": [
@@ -3478,6 +3601,11 @@
                 "Characterization of contexts",
                 "characterization-of-contexts",
                 "numerical-representation"
+            ],
+            [
+                "Compression",
+                "compression",
+                "crossover-from-a-fine-context-to-a-coarser-one"
             ]
         ],
         "$images": [],
@@ -3578,7 +3706,8 @@
             "approaches",
             "\u001ekeyword\u001fsupervised learning\u001fsupervised-learning\u001e",
             "\u001ekeyword\u001fdata driven approach\u001fdata-driven-approach\u001e",
-            "reinforcement learning"
+            "reinforcement learning",
+            "\u001ekeyword\u001ftime series analysis\u001ftime-series-analysis\u001e"
         ]
     },
     "supervised-learning": {
@@ -3644,6 +3773,11 @@
                 "supervised learning",
                 "supervised-learning",
                 "strategy"
+            ],
+            [
+                "feature finding problem",
+                "feature-finding-problem",
+                "strategy"
             ]
         ],
         "$images": [],
@@ -3677,6 +3811,11 @@
                 "supervised learning",
                 "supervised-learning",
                 "strategy"
+            ],
+            [
+                "feature finding problem",
+                "feature-finding-problem",
+                "strategy"
             ]
         ],
         "$images": [],
@@ -3696,6 +3835,11 @@
                 "supervised learning",
                 "supervised-learning",
                 "strategy"
+            ],
+            [
+                "deterministic evolution",
+                "deterministic-evolution",
+                "construction"
             ]
         ],
         "$images": [],
@@ -3772,7 +3916,8 @@
             "define a \u001ekeyword\u001fsample loss\u001fsample-loss\u001e $L=\\text{loss}(\\mathcal M(C,q),\\mathcal C \\mid \\text{samples})$",
             "minimize $L$",
             "we need $\\partial L/\\partial q=0$",
-            "practically batch evaluation"
+            "practically batch evaluation",
+            "optimization $\\to$ \u001ekeyword\u001foptimization methods\u001foptimization-methods\u001e"
         ],
         "failure-modes": [
             "failure modes",
@@ -3783,9 +3928,20 @@
             "\u001ekeyword\u001flabel noise sensitivity\u001flabel-noise-sensitivity\u001e",
             "\u001ekeyword\u001fdataset shift\u001fdataset-shift\u001e",
             "\u001ekeyword\u001fshortcut learning\u001fshortcut-learning\u001e"
+        ]
+    },
+    "optimization-methods": {
+        "$links": [
+            [
+                "model optimization",
+                "model-optimization",
+                "objective"
+            ]
         ],
-        "optimization-methods": [
-            "optimization methods",
+        "$images": [],
+        "$keyword_name": "optimization methods",
+        "algorithms": [
+            "algorithms",
             "\u001ekeyword\u001flinear regression\u001flinear-regression\u001e",
             "\u001ekeyword\u001fgradient descent\u001fgradient-descent\u001e",
             "\u001ekeyword\u001fconjugate gradient descent\u001fconjugate-gradient-descent-method\u001e",
@@ -3804,7 +3960,7 @@
             "validation set (10-20%) to optimize hyperparameters",
             "test set (10-20%) to evaluate the results",
             "cross validation: use different sets for validation and test set",
-            "evaluate results"
+            "\u001ekeyword\u001fevaluation of results of a classification\u001fevaluation-of-results-of-a-classification\u001e"
         ]
     },
     "classification-via-regression": {
@@ -3912,8 +4068,8 @@
         ],
         "techniques": [
             "techniques",
-            "LLT",
-            "autoencoders"
+            "\u001ekeyword\u001fLLT\u001fllt\u001e",
+            "\u001ekeyword\u001fautoencoders\u001fautoencoders\u001e"
         ]
     },
     "softmax-normalization": {
@@ -5240,15 +5396,16 @@
             "generative models",
             "principal component analysis",
             "linear laws discovery",
-            "contrastive learning"
+            "contrastive learning",
+            "\u001ekeyword\u001ffeature finding problem\u001ffeature-finding-problem\u001e"
         ]
     },
     "linear-regression": {
         "$links": [
             [
-                "model optimization",
-                "model-optimization",
-                "optimization-methods"
+                "optimization methods",
+                "optimization-methods",
+                "algorithms"
             ]
         ],
         "$images": [],
@@ -5784,9 +5941,9 @@
     "gradient-descent": {
         "$links": [
             [
-                "model optimization",
-                "model-optimization",
-                "optimization-methods"
+                "optimization methods",
+                "optimization-methods",
+                "algorithms"
             ]
         ],
         "$images": [],
@@ -5870,9 +6027,9 @@
     "random-algorithms": {
         "$links": [
             [
-                "model optimization",
-                "model-optimization",
-                "optimization-methods"
+                "optimization methods",
+                "optimization-methods",
+                "algorithms"
             ]
         ],
         "$images": [
@@ -5985,9 +6142,9 @@
     "conjugate-gradient-descent-method": {
         "$links": [
             [
-                "model optimization",
-                "model-optimization",
-                "optimization-methods"
+                "optimization methods",
+                "optimization-methods",
+                "algorithms"
             ],
             [
                 "gradient descent",
@@ -6049,9 +6206,9 @@
     "newton-raphson-method": {
         "$links": [
             [
-                "model optimization",
-                "model-optimization",
-                "optimization-methods"
+                "optimization methods",
+                "optimization-methods",
+                "algorithms"
             ],
             [
                 "gradient descent",
@@ -6091,8 +6248,8 @@
     "high-dimensional-optimization": {
         "$links": [
             [
-                "model optimization",
-                "model-optimization",
+                "optimization methods",
+                "optimization-methods",
                 "improvements-in-high-dimensions"
             ],
             [
@@ -6384,6 +6541,11 @@
                 "random forest",
                 "random-forest",
                 "relevance-measure"
+            ],
+            [
+                "relevance measure",
+                "relevance-measure",
+                "overlap-or-relevance-measures"
             ]
         ],
         "$images": [
@@ -6659,6 +6821,21 @@
                 "distribution estimation methods",
                 "distribution-estimation-methods",
                 "techniques"
+            ],
+            [
+                "descriptive coordinates",
+                "descriptive-coordinates",
+                "examples"
+            ],
+            [
+                "linear data compression",
+                "linear-data-compression",
+                "task"
+            ],
+            [
+                "linear data compression",
+                "linear-data-compression",
+                "compression-data"
             ]
         ],
         "$images": [],
@@ -6703,6 +6880,11 @@
                 "supervised learning",
                 "supervised-learning",
                 "strategy"
+            ],
+            [
+                "optimization methods",
+                "optimization-methods",
+                "steps-of-optimization"
             ]
         ],
         "$images": [],
@@ -6907,6 +7089,16 @@
                 "error-prone behavior",
                 "error-prone-behavior",
                 "examples"
+            ],
+            [
+                "autoencoders",
+                "autoencoders",
+                "autoencoder-logic"
+            ],
+            [
+                "time series representation via embedding and prediction",
+                "time-series-representation-via-embedding-and-prediction",
+                "construction"
             ]
         ],
         "$images": [],
@@ -6947,7 +7139,7 @@
         ],
         "contextual-correspondence": [
             "contextual correspondence",
-            "implements a System I approach, with all of its advantages and disadvantages"
+            "implements a \u001ekeyword\u001fSystem I\u001fsystem-i\u001e approach, with all of its advantages and disadvantages"
         ],
         "training": [
             "training",
@@ -7141,6 +7333,11 @@
                 "DNNs",
                 "dnns",
                 "problems-with-deep-networks"
+            ],
+            [
+                "RNN",
+                "rnn",
+                "problems"
             ]
         ],
         "$images": [],
@@ -7180,6 +7377,11 @@
                 "DNNs",
                 "dnns",
                 "problems-with-deep-networks"
+            ],
+            [
+                "RNN",
+                "rnn",
+                "problems"
             ]
         ],
         "$images": [],
@@ -7674,6 +7876,1710 @@
         "see": [
             "see",
             "\u001ekeyword\u001ferror-prone behavior\u001ferror-prone-behavior\u001e"
+        ]
+    },
+    "compression": {
+        "$links": [],
+        "$images": [],
+        "$keyword_name": "Compression",
+        ">remark": [
+            ">remark",
+            "A typical AI task is to compress data belonging to a given class. Aso known as dimensional reduction"
+        ],
+        "crossover-from-a-fine-context-to-a-coarser-one": [
+            "crossover from a fine context to a coarser one",
+            "take $C$ class, and a fine context $\\mathcal C_0=\\{ \\{c\\} \\mid c\\in C\\}$",
+            "single out a $\\mathcal C$ subcontext $\\to$ numerically defined by its \u001ekeyword\u001ffeature\u001ffeature\u001es",
+            "create a coordination of $\\mathcal C_0$ in the form $\\mathcal C\\wedge \\mathcal D$",
+            "$\\mathcal D$ are the \u001ekeyword\u001fdescriptive coordinates\u001fdescriptive-coordinates\u001e"
+        ]
+    },
+    "descriptive-coordinates": {
+        "$links": [
+            [
+                "Compression",
+                "compression",
+                "crossover-from-a-fine-context-to-a-coarser-one"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "descriptive coordinates",
+        ">remark": [
+            ">remark",
+            "these can tell apart elements of a context"
+        ],
+        "notes": [
+            "notes",
+            "the context $\\mathcal D$ is the descriptive context, its values tell apart the elements of $\\mathcal C$"
+        ],
+        "examples": [
+            "examples",
+            "\u001ekeyword\u001fx=0 hyperplane\u001fx=0-hyperplane\u001e",
+            "\u001ekeyword\u001flinear data compression\u001flinear-data-compression\u001e, \u001ekeyword\u001fPCA\u001fpca\u001e",
+            "nonlinear compression, \u001ekeyword\u001fautoencoders\u001fautoencoders\u001e",
+            "\u001ekeyword\u001fsmile vector\u001fsmile-vector\u001e"
+        ]
+    },
+    "x=0-hyperplane": {
+        "$links": [
+            [
+                "descriptive coordinates",
+                "descriptive-coordinates",
+                "examples"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "x=0 hyperplane",
+        ">remark": [
+            ">remark",
+            "these coordaintes tell apart the $y$ coordinates"
+        ],
+        "notes": [
+            "notes",
+            "$C=\\mathbb R^2$",
+            "$C_{data}=\\{x=0\\;\\text{plane}\\}$, $\\mathcal C = \\{C_{data}, \\bar C_{data}\\}$",
+            "$\\mathcal D=\\bigwedge_Y \\{ y=Y \\text{plane}\\}$",
+            "coordinates are the $(x=0,Y) \\to Y$ values"
+        ]
+    },
+    "linear-data-compression": {
+        "$links": [
+            [
+                "descriptive coordinates",
+                "descriptive-coordinates",
+                "examples"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "linear data compression",
+        ">remark": [
+            ">remark",
+            "assume data are in an ellipsoid, describe data without noise"
+        ],
+        "notes": [
+            "notes",
+            "$C = \\mathbb R^N$",
+            "$C_{data}=$ plane, $\\mathcal C = \\{C_{data}, \\bar C_{data}\\}$"
+        ],
+        "task": [
+            "task",
+            "find the vectors that span the hyperplane $\\to$ \u001ekeyword\u001fPCA\u001fpca\u001e"
+        ],
+        "compression-data": [
+            "compression data",
+            "principal components of \u001ekeyword\u001fPCA\u001fpca\u001e"
+        ]
+    },
+    "autoencoders": {
+        "$links": [
+            [
+                "feature finding methods",
+                "feature-finding-methods",
+                "techniques"
+            ],
+            [
+                "descriptive coordinates",
+                "descriptive-coordinates",
+                "examples"
+            ]
+        ],
+        "$images": [
+            [
+                "autoencoder",
+                "autoencoder.png"
+            ]
+        ],
+        "$keyword_name": "autoencoders",
+        ">remark": [
+            ">remark",
+            "represent the data with a smaller number of parameters"
+        ],
+        "alternative-names": [
+            "alternative names",
+            "nonlinear compression, dimensional reduction, AE"
+        ],
+        "task": [
+            "task",
+            "represent the data with a smaller subset of parameters"
+        ],
+        "autoencoder-logic": [
+            "autoencoder logic",
+            "use \u001ekeyword\u001fDNNs\u001fdnns\u001e",
+            "encoder: less and less sites per layer",
+            "decoder: more and more sites per layer",
+            "goal: reconstruct the input",
+            "loss: distance of input and output"
+        ],
+        "variants": [
+            "variants",
+            "\u001ekeyword\u001fdenoising autoencoders\u001fdenoising-autoencoders\u001e",
+            "variational autoencoders, \u001ekeyword\u001fVAE\u001fvae\u001e"
+        ],
+        "notes": [
+            "notes",
+            "image: \u001eimage\u001fautoencoder\u001fautoencoder.png\u001e"
+        ]
+    },
+    "denoising-autoencoders": {
+        "$links": [
+            [
+                "autoencoders",
+                "autoencoders",
+                "variants"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "denoising autoencoders",
+        ">remark": [
+            ">remark",
+            "learn what is noise and omit it"
+        ],
+        "strategy": [
+            "strategy",
+            "for more robust result add noise to the first layer (input) and train to recover the clean input",
+            "benefit: learns features stable to corruption and small perturbations",
+            "benefit: acts as regularization, reducing overfitting to exact inputs"
+        ],
+        "loss": [
+            "loss",
+            "reconstruction of clean input from noisy input (often MSE or cross-entropy)",
+            "optional noise/weight regularization terms (dropout, weight decay)"
+        ]
+    },
+    "vae": {
+        "$links": [
+            [
+                "autoencoders",
+                "autoencoders",
+                "variants"
+            ]
+        ],
+        "$images": [
+            [
+                "alt text",
+                "VAE-vs-AE.png"
+            ]
+        ],
+        "$keyword_name": "VAE",
+        "alternative-name": [
+            "alternative name",
+            "variational autoencoders"
+        ],
+        "idea": [
+            "idea",
+            "instead of mapping an input to a single latent vector, the encoder outputs a *distribution* over latent variables      $$      q_\\phi(z \\mid x) = \\mathcal N\\!\\big(z \\mid \\mu_\\phi(x), \\operatorname{diag}(\\sigma_\\phi^2(x))\\big)      $$"
+        ],
+        "benefit": [
+            "benefit",
+            "smooth, continuous latent space that supports sampling and interpolation",
+            "that can synthesize new data by sampling $$      z \\sim p(z), \\quad x \\sim p_\\theta(x \\mid z)      $$"
+        ],
+        "loss-function-(negative-elbo)": [
+            "loss function (negative ELBO)",
+            "$$ \\mathcal L(x)      = \\underbrace{\\mathbb E_{q_\\phi(z \\mid x)}\\!\\left[-\\log p_\\theta(x \\mid z)\\right]}_{\\text{reconstruction loss}}      \\;+\\;      \\underbrace{\\mathrm{KL}\\!\\left(q_\\phi(z \\mid x)\\,\\|\\,p(z)\\right)}_{\\text{regularization term}}      $$"
+        ],
+        "reconstruction-term": [
+            "reconstruction term",
+            "encourages the decoder to accurately reconstruct the input",
+            "corresponds to maximum likelihood under the assumed data model",
+            "typical choices are binary cross-entropy (Bernoulli likelihood) or mean squared error (Gaussian likelihood)"
+        ],
+        "kl-divergence-term": [
+            "KL divergence term",
+            "measures how far the learned latent distribution deviates from the prior",
+            "for a standard normal prior $ p(z) = \\mathcal N(0, I) $: $$          \\mathrm{KL}\\big(\\mathcal N(\\mu,\\sigma^2)\\,\\|\\,\\mathcal N(0,1)\\big)          = \\tfrac12 \\sum_i \\big(\\mu_i^2 + \\sigma_i^2 - \\log \\sigma_i^2 - 1\\big)          $$",
+            "enforces a well-structured, compact latent space"
+        ],
+        "\u03b2-vae-variant": [
+            "\u03b2-VAE variant",
+            "$$ \\mathcal L_\\beta      = \\mathbb E_{q_\\phi(z \\mid x)}[-\\log p_\\theta(x \\mid z)]      + \\beta\\,\\mathrm{KL}(q_\\phi(z \\mid x)\\,\\|\\,p(z))      $$",
+            "$ \\beta > 1 $: stronger regularization \u2192 more disentanglement, lower fidelity",
+            "$ \\beta < 1 $: better reconstruction, weaker latent structure"
+        ],
+        "notes": [
+            "notes",
+            "links: \u001eexternal-link\u001fbook\u001fhttps://gaussian37.github.io/deep-learning-chollet-8-4/\u001e, \u001eexternal-link\u001fpaper\u001fhttps://www.semanticscholar.org/paper/Generating-Diverse-High-Fidelity-Images-with-Razavi-Oord/6be216d93421bf19c1659e7721241ae73d483baf\u001e"
+        ],
+        "pros": [
+            "pros",
+            "principled probabilistic model; training is usually stable",
+            "smooth latent space \u2192 interpolation, attribute vectors, controllable edits",
+            "explicit objective connected to likelihood / compression (ELBO)"
+        ],
+        "cons": [
+            "cons",
+            "samples can be \u201cblurry\u201d for images if decoder likelihood is too simple (e.g. Gaussian pixels)",
+            "KL term may cause **posterior collapse** (decoder ignores $z$, common in text VAEs)",
+            "strong disentanglement often costs fidelity (esp. $\\beta>1$)"
+        ],
+        "example": [
+            "example",
+            "\u001eimage\u001falt text\u001fVAE-vs-AE.png\u001e"
+        ]
+    },
+    "smile-vector": {
+        "$links": [
+            [
+                "descriptive coordinates",
+                "descriptive-coordinates",
+                "examples"
+            ]
+        ],
+        "$images": [
+            [
+                "alt text",
+                "faces_VAE.png"
+            ],
+            [
+                "alt text",
+                "smile-vector.png"
+            ]
+        ],
+        "$keyword_name": "smile vector",
+        ">remark": [
+            ">remark",
+            "in the latent space belonging to the same person we can single out directions corresponding to change of some internal property (e.g. smile)"
+        ],
+        "idea": [
+            "idea",
+            "a *semantic direction* in a learned representation space that corresponds to the concept \u201csmiling\u201d"
+        ],
+        "typically-defined-as-a-difference-of-latent-vectors": [
+            "typically defined as a difference of latent vectors",
+            "$$ v_{\\text{smile}}      \\;=\\;      \\mathbb E[z \\mid \\text{smile}]      \\;-\\;      \\mathbb E[z \\mid \\text{neutral}]      $$      where $ z $ is the latent code (e.g. from an autoencoder or VAE)"
+        ],
+        "interpretation": [
+            "interpretation",
+            "adding the vector increases the presence of a smile",
+            "subtracting the vector removes or weakens the smile",
+            "the vector captures *what changes* when a face starts smiling"
+        ],
+        "manipulation-in-latent-space": [
+            "manipulation in latent space",
+            "$$ z_{\\text{smiling}}      \\;=\\;      z_{\\text{neutral}} + \\alpha\\, v_{\\text{smile}}      $$",
+            "$ \\alpha > 0 $: stronger smile",
+            "$ \\alpha < 0 $: frown / smile suppression"
+        ],
+        "assumptions": [
+            "assumptions",
+            "the representation space is approximately linear locally",
+            "semantic attributes are (partly) disentangled",
+            "encoder produces consistent representations"
+        ],
+        "typical-sources": [
+            "typical sources",
+            "autoencoders / variational autoencoders",
+            "GAN latent spaces",
+            "CLIP-style multimodal embeddings"
+        ],
+        "relation-to-disentanglement": [
+            "relation to disentanglement",
+            "well-disentangled representations yield cleaner smile vectors",
+            "entangled features mix smile with pose, lighting, or identity"
+        ],
+        "interpretation-as-a-concept-vector": [
+            "interpretation as a concept vector",
+            "smile vector acts as a *basis direction* for an abstract concept",
+            "analogous to word embedding analogies: $$          \\text{king} - \\text{man} + \\text{woman} \\approx \\text{queen}          $$"
+        ],
+        "failure-modes": [
+            "failure modes",
+            "dataset bias (smiling correlated with age, gender, lighting)",
+            "nonlinearity of the latent manifold",
+            "over-regularization collapsing expressive dimensions \u001eimage\u001falt text\u001ffaces_VAE.png\u001e\u001eimage\u001falt text\u001fsmile-vector.png\u001e"
+        ]
+    },
+    "feature-finding-problem": {
+        "$links": [
+            [
+                "data driven approach",
+                "data-driven-approach",
+                "methods"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "feature finding problem",
+        ">remark": [
+            ">remark",
+            "we single out a context by giving sample data, the task is to find the numerical features"
+        ],
+        "strategy": [
+            "strategy",
+            "\u001ekeyword\u001fsample data\u001fsample-data\u001e are given as $S=\\{(x_a,y_a)\\}$",
+            "\u001ekeyword\u001fsample context\u001fsample-context\u001e $\\mathcal C_{sample}= \\{ c_1, c_2,\\dots\\}$, where $c_i$ are subsets of data belonging to the same class"
+        ],
+        "task": [
+            "task",
+            "find relevant features of the context, i.e. a function constant on sample classes"
+        ],
+        "formally": [
+            "formally",
+            "find $f:x\\mapsto y$ that $f(x)=f(x')$ if $x,x'\\in c \\in\\mathcal C_{sample}$"
+        ],
+        "assess-goodness-of-a-proposed-feature": [
+            "assess goodness of a proposed feature",
+            "\u001ekeyword\u001frelevance measure\u001frelevance-measure\u001e"
+        ]
+    },
+    "relevance-measure": {
+        "$links": [
+            [
+                "feature finding problem",
+                "feature-finding-problem",
+                "assess-goodness-of-a-proposed-feature"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "relevance measure",
+        ">remark": [
+            ">remark",
+            "tell how good a given function is a good feature of a context"
+        ],
+        "function": [
+            "function",
+            "$f:x\\to y$ not fully consistent with a context"
+        ],
+        "overlap-or-relevance-measures": [
+            "overlap or relevance measures",
+            "tell how useful is this function for classification?",
+            "\u001ekeyword\u001ffeature importance\u001ffeature-importance\u001e",
+            "\u001ekeyword\u001fpermutation importance\u001fpermutation-importance\u001e, \u001ekeyword\u001ffeature masking\u001ffeature-masking\u001e",
+            "\u001ekeyword\u001frelevance based on mutual information\u001frelevance-based-on-mutual-information\u001e",
+            "neural networks Gradient-weighted Class Activation Mapping (Grad-CAM)"
+        ]
+    },
+    "permutation-importance": {
+        "$links": [
+            [
+                "relevance measure",
+                "relevance-measure",
+                "overlap-or-relevance-measures"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "permutation importance",
+        ">remark": [
+            ">remark",
+            "we mix the features and the labels and find out what changes in the classification efficiency"
+        ],
+        "method": [
+            "method",
+            "assume a model uses a feature for classification, assign a score $\\text{Score}_{model}$",
+            "permute the feature values in the data",
+            "retrain the model, and determine the score $\\text{Score}_{permuted}(f)$",
+            "importance: $$\\text{Importance}(f)=\\text{Score}_{model} - \\text{Score}_{permuted}(f)$$"
+        ],
+        "properties": [
+            "properties",
+            "model dependent",
+            "measures sensitivity for permuting values of a feature"
+        ]
+    },
+    "feature-masking": {
+        "$links": [
+            [
+                "relevance measure",
+                "relevance-measure",
+                "overlap-or-relevance-measures"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "feature masking",
+        ">remark": [
+            ">remark",
+            "for certain coordinates we give random or constant value, and find out what changes in the classification efficiency"
+        ],
+        "method": [
+            "method",
+            "measures sensitivity for setting arbitrary value for a feature",
+            "usual choices are constant or random"
+        ],
+        "properties": [
+            "properties",
+            "method is the same as in permutation importance",
+            "model dependent"
+        ]
+    },
+    "relevance-based-on-mutual-information": {
+        "$links": [
+            [
+                "relevance measure",
+                "relevance-measure",
+                "overlap-or-relevance-measures"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "relevance based on mutual information",
+        ">remark": [
+            ">remark",
+            "model independent way of assessing relevance of a feature, using mutual information"
+        ],
+        "properties": [
+            "properties",
+            "model independent",
+            "use mutual information between the feature values and the actual class from the context sample"
+        ],
+        "technically": [
+            "technically",
+            "calculate joint probability $$p(f, c) = \\frac1{N_{sample}} \\sum_{x\\in \\text{data}} \\mathbb I(f(x)=f, c(x)=c)$$",
+            "mutual information $$I(f,\\mathcal C_{sample}) = \\sum_{f, c} p(f,c) \\ln\\dfrac{p(f)p(c)}{p(f,c)}$$"
+        ]
+    },
+    "llt": {
+        "$links": [
+            [
+                "feature finding methods",
+                "feature-finding-methods",
+                "techniques"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "LLT",
+        ">remark": [
+            ">remark",
+            "try to find the features of a time series as conserved quantities (laws)"
+        ],
+        "goal": [
+            "goal",
+            "find a function that is constant in classes of a context",
+            "practically for small number of classes: multiple features, each is constant in one class"
+        ],
+        "idea": [
+            "idea",
+            "\u001ekeyword\u001ffind linear laws\u001ffind-linear-laws\u001e for subsets of the classes: find $w$ unit vectors that satisfy $$w\\cdot x=0\\; \\forall x\\in b\\subset c\\in\\mathcal C$$",
+            "cover all subsets with linear laws $\\Rightarrow c\\mapsto W_c=\\{w_{c1}, w_{c2},\\dots\\}$, i.e. $$\\forall x\\in c\\;\\exists w\\in W_c:\\; w\\cdot x=0$$",
+            "for a new element $x$ check which class'es laws are applicable"
+        ],
+        "practical-points": [
+            "practical points",
+            "collect a lot of laws, so for each class element a bunch of laws is true",
+            "check the number of applicable laws",
+            "choose the class, where the most laws are applicable",
+            "ideal case is when in the correct class one law is applicable, in other classes there is no appropriate law."
+        ]
+    },
+    "find-linear-laws": {
+        "$links": [
+            [
+                "LLT",
+                "llt",
+                "idea"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "find linear laws",
+        ">remark": [
+            ">remark",
+            "try to find a conserved quantity as a linear combination of the coordinates"
+        ],
+        "problem": [
+            "problem",
+            "for a set $c$ find $w$ unit vector satisfying $w\\cdot x=0$ for all $x\\in c$",
+            "in reality exactly zero can not be achieved; instead $w\\cdot x=\\xi_x$, and $\\sum_{x\\in c}\\xi^2$ is minimal",
+            "in matrix notation $X_{ni}=(x_n)_i$ with LAgrange multiplicator $$ \\sum_x \\xi_x^2-\\lambda w^Tw = w^T X^T X w -\\lambda w^T w=\\text{minimal}$$"
+        ],
+        "solution": [
+            "solution",
+            "$X^T X w =\\lambda w$"
+        ],
+        "write-back": [
+            "write back",
+            "expected value of the error: $$ \\mathbb E[\\xi] = \\frac 1{|c|}\\sum_{x\\in c} \\xi^2_x = \\frac{\\lambda}{|c|}$$",
+            "for smallest noise we need smallest eigenvalues"
+        ]
+    },
+    "time-series-analysis": {
+        "$links": [
+            [
+                "AI learning paradigms",
+                "ai-learning-paradigms",
+                "approaches"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "time series analysis",
+        ">remark": [
+            ">remark",
+            "try to find features for a time series"
+        ],
+        "theoretical-basis": [
+            "theoretical basis",
+            "\u001ekeyword\u001ftime evolution\u001ftime-evolution\u001e, \u001ekeyword\u001ftime evolution in a context\u001ftime-evolution-in-a-context\u001e"
+        ],
+        "representation-in-ai": [
+            "representation in AI",
+            "\u001ekeyword\u001fRNN\u001frnn\u001e (recurrrent neural networks)",
+            "\u001ekeyword\u001fLSTM\u001flstm\u001e (Long Short-Term Memory)",
+            "\u001ekeyword\u001ftime series representation via embedding and prediction\u001ftime-series-representation-via-embedding-and-prediction\u001e",
+            "\u001ekeyword\u001fPINNs\u001fpinns\u001e (Physics-Informed Neural Networks)",
+            "\u001ekeyword\u001fTCNs\u001ftcns\u001e (Temporal Convolutional Networks)"
+        ]
+    },
+    "time-evolution": {
+        "$links": [
+            [
+                "time series analysis",
+                "time-series-analysis",
+                "theoretical-basis"
+            ],
+            [
+                "time evolution in a context",
+                "time-evolution-in-a-context",
+                "formally"
+            ],
+            [
+                "prediction",
+                "prediction",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "time evolution",
+        "formally": [
+            "formally",
+            "$\\tau: \\Omega\\times dT \\to \\Omega$"
+        ],
+        "assumptions": [
+            "assumptions",
+            "assume the complete world is fully deterministic",
+            "Markov process",
+            "depends only on the time difference (not the absolute time)"
+        ],
+        "consistency": [
+            "consistency",
+            "$\\tau(\\omega, t_{ac}) = \\tau(\\tau(\\omega,t_{ab}),t_{bc}))$"
+        ],
+        "change-vs-conservation": [
+            "change vs conservation",
+            "\u001ekeyword\u001fgoal of living beings\u001fgoal-of-living-beings\u001e"
+        ]
+    },
+    "time-evolution-in-a-context": {
+        "$links": [
+            [
+                "time series analysis",
+                "time-series-analysis",
+                "theoretical-basis"
+            ],
+            [
+                "contextual prediction",
+                "contextual-prediction",
+                "goal"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "time evolution in a context",
+        ">remark": [
+            ">remark",
+            "map time evolution onto a context"
+        ],
+        "formally": [
+            "formally",
+            "$(\\mathcal C, dt) \\mapsto \\Pi_\\mathcal{C}(\\tau(\\omega, dt))$, where $\\tau$ is the \u001ekeyword\u001ftime evolution\u001ftime-evolution\u001e of the system"
+        ]
+    },
+    "goal-of-living-beings": {
+        "$links": [
+            [
+                "intelligence and AI",
+                "intelligence-and-ai",
+                "why-do-we-need-intelligence?"
+            ],
+            [
+                "time evolution",
+                "time-evolution",
+                "change-vs-conservation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "goal of living beings",
+        ">remark": [
+            ">remark",
+            "all living beings (agents) must secure the mainanence of its own life and also the existence of its species"
+        ],
+        "goal": [
+            "goal",
+            "survival in a complex environment"
+        ],
+        "tools": [
+            "tools",
+            "must observe the world, and make decision according to the actual state: \u001ekeyword\u001fprediction\u001fprediction\u001e",
+            "only partial observation is possible $\\to$ \u001ekeyword\u001fconceptual foundations\u001fconceptual-foundations\u001e, observed world, \u001ekeyword\u001fcontextual prediction\u001fcontextual-prediction\u001e",
+            "has to react to the environmental issues: $\\text{issue}\\to\\text{action}$",
+            "changing environment $\\to$ adaptation (learning)"
+        ],
+        "decisions": [
+            "decisions",
+            "\u001ekeyword\u001faction focused decision\u001faction-focused-decision\u001e",
+            "\u001ekeyword\u001fmodel based decision\u001fmodel-based-decision\u001e"
+        ]
+    },
+    "action-focused-decision": {
+        "$links": [
+            [
+                "System I",
+                "system-i",
+                "mental-model"
+            ],
+            [
+                "goal of living beings",
+                "goal-of-living-beings",
+                "decisions"
+            ]
+        ],
+        "$images": [
+            [
+                "mental model",
+                "mental-model-System-I.png"
+            ]
+        ],
+        "$keyword_name": "action focused decision",
+        ">remark": [
+            ">remark",
+            "sensory input leads directly to action"
+        ],
+        "corresponds-to": [
+            "corresponds to",
+            "\u001ekeyword\u001fdirect representation\u001fdirect-representation\u001e, \u001ekeyword\u001fSystem I\u001fsystem-i\u001e",
+            "fast and accurate (if appropriate)",
+            "\u001eimage\u001fmental model\u001fmental-model-System-I.png\u001e"
+        ],
+        "critics": [
+            "critics",
+            "world becomes too complicated to have a reaction to all possible environemntal situations"
+        ]
+    },
+    "model-based-decision": {
+        "$links": [
+            [
+                "goal of living beings",
+                "goal-of-living-beings",
+                "decisions"
+            ]
+        ],
+        "$images": [
+            [
+                "mental model",
+                "mental-model-System-II.png"
+            ],
+            [
+                "detailed mental model",
+                "mental-model-System-II-detailed.png"
+            ]
+        ],
+        "$keyword_name": "model based decision",
+        ">remark": [
+            ">remark",
+            "the agent maintains an up-to-date representation of the world"
+        ],
+        "algorithm": [
+            "algorithm",
+            "sensory input leads to updating the representation",
+            "representation can be used to try model scenarios (thinking)",
+            "decision after tried a sufficient number of scenarios"
+        ],
+        "properties": [
+            "properties",
+            "slower, general, less accurate in specific cases"
+        ],
+        "corresponds-to": [
+            "corresponds to",
+            "\u001ekeyword\u001fSystem II\u001fsystem-ii\u001e",
+            "\u001eimage\u001fmental model\u001fmental-model-System-II.png\u001e",
+            "\u001eimage\u001fdetailed mental model\u001fmental-model-System-II-detailed.png\u001e"
+        ]
+    },
+    "prediction": {
+        "$links": [
+            [
+                "goal of living beings",
+                "goal-of-living-beings",
+                "tools"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "prediction",
+        ">remark": [
+            ">remark",
+            "tell the future before it happens"
+        ],
+        "notes": [
+            "notes",
+            "\u001ekeyword\u001ftime evolution\u001ftime-evolution\u001e must be predicted in order to be able to prepare the future",
+            "exact prediciton is possible only from the complete world $\\to$ impossible in practice",
+            "we need \u001ekeyword\u001fcontextual prediction\u001fcontextual-prediction\u001e"
+        ]
+    },
+    "contextual-prediction": {
+        "$links": [
+            [
+                "goal of living beings",
+                "goal-of-living-beings",
+                "tools"
+            ],
+            [
+                "prediction",
+                "prediction",
+                "notes"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "contextual prediction",
+        ">remark": [
+            ">remark",
+            "we have limited information about the world, need to make the best possible prediction"
+        ],
+        "goal": [
+            "goal",
+            "try to predict \u001ekeyword\u001ftime evolution in a context\u001ftime-evolution-in-a-context\u001e $\\mathcal C$",
+            "must not be exact $\\to$ errors in prediction"
+        ],
+        "time-evolution-model": [
+            "time evolution model",
+            "$M: (c, t)\\mapsto (c', t')$, where $c,c'\\in\\mathcal C$"
+        ],
+        "examples": [
+            "examples",
+            "mechanical motion: $c$ contains the configuration data and the velocities, $t'=t+dt$, differential equation if $dt\\to0$",
+            "large language models: $c$ is the complete textual history, $t'$ is the next token"
+        ],
+        "treatment-of-errors": [
+            "treatment of errors",
+            "expected value of the outcomes of time evolution starting from $c$ $\\to$ \u001ekeyword\u001fdeterministic evolution\u001fdeterministic-evolution\u001e",
+            "statistical representation of the distribution around the expected value $\\to$ stochastic evolution"
+        ]
+    },
+    "deterministic-evolution": {
+        "$links": [
+            [
+                "contextual prediction",
+                "contextual-prediction",
+                "treatment-of-errors"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "deterministic evolution",
+        ">remark": [
+            ">remark",
+            "evolution of expected values of an observation"
+        ],
+        "strategy": [
+            "strategy",
+            "start from a context state $x$, and observe to possible outputs from this state after a time $dt$",
+            "assume no explicit time dependence (otherwise time is an element of the context)",
+            "everything depends on $dt$, we do not write out this dependence"
+        ],
+        "errors": [
+            "errors",
+            "$y$ is not unique $\\to P(y\\mid x)$",
+            "we expect a lot of independent effects $\\Rightarrow$ $p$ is Gaussian $$P(y\\mid x) =\\mathcal N(M(x), C(x))(y),$$ the expected value is described by the model"
+        ],
+        "construction": [
+            "construction",
+            "we use a parametrized \u001ekeyword\u001fdata model\u001fdata-model\u001e $\\mathcal M(x,\\omega)$ where $\\omega\\in\\mathcal Q$ are parameters",
+            "the model may come from human intuition or coming from a functional space",
+            "typically \u001ekeyword\u001fdifferential equations\u001fdifferential-equations\u001e or \u001ekeyword\u001fdifferentia equations\u001fdifferentia-equations\u001e (recursions), for spatially distributed quantities \u001ekeyword\u001fpartial differential equations\u001fpartial-differential-equations\u001e"
+        ],
+        "parameter-estimation": [
+            "parameter estimation",
+            "approximate distribution of observed quantities $$ P(y\\mid x, \\omega) \\sim e^{-\\ell(y, \\mathcal M(x,\\omega))},$$ where $\\ell(y,\\mu) = \\frac12 (y-\\mu)^T C^{-1}(y-\\mu)$ loss function",
+            "if the correlation matrix is not known, other approximate forms can be used for $\\ell$ (like KL divergence)",
+            "\u001ekeyword\u001flikelihood\u001flikelihood\u001e",
+            "\u001ekeyword\u001fparameter distribution\u001fparameter-distribution\u001e, maximum likelihood and \u001ekeyword\u001fconfidence\u001fconfidence\u001e levels"
+        ]
+    },
+    "likelihood": {
+        "$links": [
+            [
+                "deterministic evolution",
+                "deterministic-evolution",
+                "parameter-estimation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "likelihood",
+        ">remark": [
+            ">remark",
+            "probability of measuring the observed dataset given the model $\\mathcal M(x,\\omega)$"
+        ],
+        "notes": [
+            "notes",
+            "likelihood is a $L : \\mathcal Q \\to [0,1]$ function"
+        ],
+        "calculation": [
+            "calculation",
+            "definition: $D$ sample data, assume independent measurements $L(\\omega) = P(D \\mid \\omega)        = \\prod_{(x,y)\\in D} P(x,y \\mid \\omega)$",
+            "total loss function: $\\ell(\\omega) = \\sum_{(x,y)\\in D} \\ell(y,\\mathcal M(x,\\omega))$"
+        ]
+    },
+    "parameter-distribution": {
+        "$links": [
+            [
+                "deterministic evolution",
+                "deterministic-evolution",
+                "parameter-estimation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "parameter distribution",
+        ">remark": [
+            ">remark",
+            "what is the probability of a given parameter choice, if we see the observed data and know the model"
+        ],
+        "notes": [
+            "notes",
+            "it is not really a probability (no corresponding event space exists)"
+        ],
+        "goal": [
+            "goal",
+            "find $P(\\omega \\mid D)$ (posterior)"
+        ],
+        "priors": [
+            "priors",
+            "parameter prior: $P(\\omega)$",
+            "value prior: $P(D)$"
+        ],
+        "bayes-relation": [
+            "Bayes relation",
+            "$P(\\omega \\mid D) = \\dfrac{P(D \\mid \\omega) P(\\omega)}{P(D)}$"
+        ],
+        "assumptions": [
+            "assumptions",
+            "flat priors",
+            "$P(\\omega)=\\text{const}$",
+            "$P(D)=\\text{const}$",
+            "follows: $$P(\\omega \\mid D) \\sim L(\\omega)$$"
+        ],
+        "best-parameter": [
+            "best parameter",
+            "maximum likelihood"
+        ],
+        "normalization": [
+            "normalization",
+            "$\\int_{\\omega\\in\\mathcal Q} P(\\omega \\mid D)=1$"
+        ]
+    },
+    "confidence": {
+        "$links": [
+            [
+                "deterministic evolution",
+                "deterministic-evolution",
+                "parameter-estimation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "confidence",
+        ">remark": [
+            ">remark",
+            "how well defined the optimal parameter set?"
+        ],
+        "confidence-levels": [
+            "confidence levels",
+            "$S_p$ hypersurface in the parameter space ($\\mathcal Q$) where $P(\\omega \\in S_p \\mid D)=\\text{const}$"
+        ],
+        "confidence-regions": [
+            "confidence regions",
+            "volume $V_p \\subset \\mathcal Q$",
+            "boundary $\\partial V_p = S_p$"
+        ],
+        "parametrization": [
+            "parametrization",
+            "$\\int_{\\omega\\in V_p} P(\\omega \\mid D)=p$"
+        ]
+    },
+    "differentia-equations": {
+        "$links": [
+            [
+                "deterministic evolution",
+                "deterministic-evolution",
+                "construction"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "differentia equations",
+        ">remark": [
+            ">remark",
+            "time evolution is described as a recursion from the past data"
+        ],
+        "time-dependence": [
+            "time dependence",
+            "$f:\\mathbb R\\to W$ where $W\\sim \\mathbb R^N$ (value) are vector spaces"
+        ],
+        "assumptions": [
+            "assumptions",
+            "deterministic evolution",
+            "Markov process",
+            "assume there exists a function $F_{\\Delta t}$ for all $\\Delta t$ (time step) that $$f(t+\\Delta t) = f(t) + \\Delta t F_{\\Delta t}(f(t))$$"
+        ],
+        "initial-conditions": [
+            "initial conditions",
+            "to determine full time evolution, we need to fix $N$ values",
+            "also called order of the recursion or degrees of freedom",
+            "can be $f(t_0)\\;\\to$ initial conditions",
+            "or it can be $f_a(t_i)$ for eventually different $t_i$ times (e.g. boundary conditions)",
+            "in extreme case $f_0(t)$ for $t\\in\\{t_1,\\dots,t_N\\}$ (or similarly for other components)"
+        ],
+        "time-embedding": [
+            "time embedding",
+            "give $f_0(t+n\\Delta t)$ for $n=0,1,\\dots N-1$ for fixed $a$",
+            "determines full time evolution (c.f. \u001ekeyword\u001fdelay embedding\u001fdelay-embedding\u001e and \u001ekeyword\u001fTakens' theorem\u001ftakens'-theorem\u001e)",
+            "leads to a recursion equivalent to the original time series $$f_0(t) = \\mathcal G(f_0(t-\\Delta t),\\dots f_0(t-N\\Delta t))$$"
+        ]
+    },
+    "differential-equations": {
+        "$links": [
+            [
+                "deterministic evolution",
+                "deterministic-evolution",
+                "construction"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "differential equations",
+        ">remark": [
+            ">remark",
+            "limit of the differentia equations in the $\\Delta t\\to0$ limit"
+        ],
+        "continuum-limit": [
+            "continuum limit",
+            "$\\Delta t\\to 0$",
+            "time derivative $$\\partial _t f = \\dot f= \\lim_{\\Delta t\\to0}\\dfrac{f(t+\\Delta t)-f(t)}{\\Delta t}$$",
+            "evolution equation becomes a differential equation $$\\partial_t f = F_0(f)$$"
+        ],
+        "advantages": [
+            "advantages",
+            "simpler form (we not need to give an account for terms vanishing in the continuum limit)",
+            "time translation symmetry leads to \u001ekeyword\u001fconserved quantity\u001fconserved-quantity\u001e (Noether theorem, energy)"
+        ],
+        "disadvantages": [
+            "disadvantages",
+            "in reality we do not know the time in arbitrary resolution"
+        ]
+    },
+    "conserved-quantity": {
+        "$links": [
+            [
+                "differential equations",
+                "differential-equations",
+                "advantages"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "conserved quantity",
+        ">remark": [
+            ">remark",
+            "a function of features that do not change under time evolution"
+        ],
+        "examples": [
+            "examples",
+            "with $v(t)=\\dfrac{f(t+\\Delta t)-f(t)}{\\Delta t}$ we have $E = v- F_{\\Delta t}(f) \\equiv 0$ (equation of motion)",
+            "energy of a harmonic oscillator $$\\left\\{\\begin{cases}& \\dot x= y\\\\ &\\dot y = -\\omega^2 x\\\\ \\end{cases}\\right\\}\\Rightarrow E = \\omega^2 x^2 +y^2$$"
+        ],
+        "noether-theorem": [
+            "Noether theorem",
+            "a continuous symmetry leads to a conserved quantity"
+        ]
+    },
+    "partial-differential-equations": {
+        "$links": [
+            [
+                "deterministic evolution",
+                "deterministic-evolution",
+                "construction"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "partial differential equations",
+        ">remark": [
+            ">remark",
+            "describes evolution in multiply continuous space (typically spacetime)"
+        ],
+        "spatial-temporal-configurations": [
+            "spatial-temporal configurations $f(t,x)$, where $x\\in V\\sim \\mathbb R^d$ $d$ dimensional space",
+            "formally: multicomponent function $f_x(t)=f(t,x)$, space is an index"
+        ],
+        "assumption": [
+            "assumption",
+            "local evolution",
+            "neighborhood of $x$ is $V_x\\subset V$",
+            "time update comes only from a local neighborhood $$f(t+\\Delta t,x) = f(t,x) + \\Delta t F_{\\Delta t}(\\{f(t,y)\\mid y\\in V_x\\})$$",
+            "less degrees of freedom than expected, but still a lot"
+        ],
+        "initial-conditions": [
+            "initial conditions",
+            "theoretically: full configuration in the complete space $\\to$ usually not available",
+            "sampling space in a grid $\\to$ not enough data for a complete time evolution",
+            "earlier time data $\\to$ fewer information, diffusion, information loss"
+        ]
+    },
+    "rnn": {
+        "$links": [
+            [
+                "time series analysis",
+                "time-series-analysis",
+                "representation-in-ai"
+            ],
+            [
+                "LSTM",
+                "lstm",
+                "motivation"
+            ]
+        ],
+        "$images": [
+            [
+                "unfolding of recurrent neural networks",
+                "unfolding-recurrent-networks.png"
+            ]
+        ],
+        "$keyword_name": "RNN",
+        ">remark": [
+            ">remark",
+            "try to represent reality as a hidden layer in a neural network"
+        ],
+        "alternative-name": [
+            "alternative name",
+            "recurrent neural network"
+        ],
+        "purpose": [
+            "purpose",
+            "model sequential / time-dependent data $$        x_1, x_2, \\dots, x_T \\;\\mapsto\\; y_1, y_2, \\dots, y_T        $$"
+        ],
+        "internal-(hidden)-state": [
+            "internal (hidden) state",
+            "goal is to represent the past",
+            "updated in each timestep $$        h_t = f(h_{t-1}, x_t)        $$"
+        ],
+        "recurrent-structure": [
+            "recurrent structure",
+            "output (or hidden state) is fed back as input at the next time step",
+            "same parameters are reused across time (weight sharing)"
+        ],
+        "unfolding-in-time": [
+            "unfolding in time",
+            "RNN can be unfolded into a deep feed-forward network of depth $T$",
+            "each layer corresponds to one time step",
+            "training performed via *backpropagation through time* (BPTT)",
+            "\u001eimage\u001funfolding of recurrent neural networks\u001funfolding-recurrent-networks.png\u001e"
+        ],
+        "theoretical-properties": [
+            "theoretical properties",
+            "expressive enough to approximate sequence-to-sequence mappings",
+            "in principle can capture long-range dependencies"
+        ],
+        "problems": [
+            "problems",
+            "\u001ekeyword\u001fvanishing gradient\u001fvanishing-gradient\u001e or \u001ekeyword\u001fexploding gradient\u001fexploding-gradient\u001e is severe problem (number of layers is infinite due to unfolding)",
+            "limited effective memory in practice"
+        ]
+    },
+    "delay-embedding": {
+        "$links": [
+            [
+                "differentia equations",
+                "differentia-equations",
+                "time-embedding"
+            ],
+            [
+                "time series representation via embedding and prediction",
+                "time-series-representation-via-embedding-and-prediction",
+                "construction"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "delay embedding",
+        ">remark": [
+            ">remark",
+            "past data are taken into account as present degrees degrees of freedom"
+        ],
+        "construction": [
+            "construction",
+            "time series: $x(t_1), x(t_2), \\dots, x(t_T)$",
+            "delay vectors: $$ \\mathbf y_t =      \\big(      x(t),\\ x(t-\\tau),\\ \\dots,\\ x(t-(m-1)\\tau)      \\big)      \\in \\mathbb R^m      $$"
+        ],
+        "parameters": [
+            "parameters",
+            "$m$: embedding dimension",
+            "$\\tau$: delay time"
+        ],
+        "theoretical-result": [
+            "theoretical result",
+            "\u001ekeyword\u001fTakens' theorem\u001ftakens'-theorem\u001e"
+        ]
+    },
+    "takens'-theorem": {
+        "$links": [
+            [
+                "differentia equations",
+                "differentia-equations",
+                "time-embedding"
+            ],
+            [
+                "delay embedding",
+                "delay-embedding",
+                "theoretical-result"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "Takens' theorem",
+        ">remark": [
+            ">remark",
+            "with delayed embedding the important features of any time series can be captured"
+        ],
+        "notes": [
+            "notes",
+            "for a generic observation function and sufficiently large $m$, the delay embedding is a **diffeomorphic image** of the true state space",
+            "topological and geometric properties of the original system are preserved",
+            "implies that a single measured quantity can encode the full dynamics"
+        ]
+    },
+    "lstm": {
+        "$links": [
+            [
+                "time series analysis",
+                "time-series-analysis",
+                "representation-in-ai"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "LSTM",
+        ">remark": [
+            ">remark",
+            "solution for the unstable gradient problem of RNNs"
+        ],
+        "alternative-name": [
+            "alternative name",
+            "Long Short-Term Memory"
+        ],
+        "motivation": [
+            "motivation",
+            "address vanishing gradient problem of plain \u001ekeyword\u001fRNN\u001frnn\u001es",
+            "enable learning of long-term dependencies"
+        ],
+        "core-idea": [
+            "core idea",
+            "introduce an explicit **memory cell** with controlled information flow",
+            "separate *storage* from *exposure* of information"
+        ],
+        "components": [
+            "components",
+            "$c_t$: long-term memory",
+            "$h_t$: exposed representation",
+            "$i_t$: controls how much new information is written",
+            "$f_t$: controls how much old memory is retained",
+            "$o_t$: controls what part of memory is revealed"
+        ],
+        "gate-dynamics": [
+            "gate dynamics $$        f_t = \\sigma(W_f x_t + U_f h_{t-1} + b_f)        $$        $$        i_t = \\sigma(W_i x_t + U_i h_{t-1} + b_i)        $$        $$        c_t = f_t \\odot c_{t-1} + i_t \\odot \\tilde c_t        $$        $$        h_t = o_t \\odot \\tanh(c_t)        $$",
+            "gates use sigmoid activations $\\in [0,1]$",
+            "memory update is *additive*, improving gradient flow"
+        ],
+        "advantages": [
+            "advantages",
+            "much more stable training than vanilla RNNs",
+            "effective for medium-range temporal dependencies",
+            "historically strong performance in speech, language, and time series"
+        ],
+        "limitations": [
+            "limitations",
+            "complex architecture \u2192 many parameters",
+            "still sequential (poor parallelization)",
+            "struggles with very long sequences",
+            "training remains slow compared to modern architectures"
+        ],
+        "historical-note": [
+            "historical note",
+            "LSTMs were dominant from ~1997 to mid-2010s",
+            "today largely replaced by transformers in NLP and many sequence tasks",
+            "still used in resource-constrained or strictly causal settings"
+        ]
+    },
+    "time-series-representation-via-embedding-and-prediction": {
+        "$links": [
+            [
+                "time series analysis",
+                "time-series-analysis",
+                "representation-in-ai"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "time series representation via embedding and prediction",
+        ">remark": [
+            ">remark",
+            "represent the time evolution (recursion) kernel by neural networks"
+        ],
+        "goal": [
+            "goal",
+            "reconstruct the hidden state of a dynamical system",
+            "learn its temporal evolution for prediction or analysis"
+        ],
+        "construction": [
+            "construction",
+            "use \u001ekeyword\u001fdelay embedding\u001fdelay-embedding\u001e $(x(t),\\ x(t-\\tau),\\ \\dots,\\ x(t-(m-1)\\tau)\\to y_t$",
+            "the expected evolution $$\\mathbf y_{t+1} = F(\\mathbf y_t)$$",
+            "represent $F$ by \u001ekeyword\u001fDNNs\u001fdnns\u001e (universal approximation theorem)"
+        ],
+        "advantages": [
+            "advantages",
+            "no explicit physical model required",
+            "flexible and expressive",
+            "can handle noisy and partially observed systems"
+        ],
+        "limitations": [
+            "limitations",
+            "assumes homogeneous regime (same time evolution)",
+            "assumes fixed $m$ is enough to represent future $\\to$ if not c.f. transformers"
+        ]
+    },
+    "pinns": {
+        "$links": [
+            [
+                "time series analysis",
+                "time-series-analysis",
+                "representation-in-ai"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "PINNs",
+        ">remark": [
+            ">remark",
+            "PINNs unify representation learning and physical modeling by embedding the governing equations directly into the learning process"
+        ],
+        "alternative-name": [
+            "alternative name",
+            "Physics-Informed Neural Networks"
+        ],
+        "core-idea": [
+            "core idea",
+            "learn a function that represents the solution of a dynamical system",
+            "enforce known physical laws directly in the loss function",
+            "combine data-driven learning with first-principles constraints"
+        ],
+        "problem-setting": [
+            "problem setting",
+            "given a physical system described by differential equations: $$        \\mathcal F\\big(u(x,t), \\partial_t u, \\nabla u, \\nabla^2 u, \\dots\\big) = 0        $$",
+            "where $u(x,t)$ is the unknown state (field, trajectory, solution)"
+        ],
+        "neural-representation": [
+            "neural representation",
+            "approximate the state by a neural network: $$        u(x,t) \\approx u_\\theta(x,t)        $$",
+            "network input: space, time, parameters, boundary conditions",
+            "network output: physical state variables"
+        ],
+        "physics-informed-loss": [
+            "physics-informed loss",
+            "total loss is a sum of terms: $$ \\mathcal L =        \\mathcal L_{\\text{data}}        + \\lambda_{\\text{phys}}\\,\\mathcal L_{\\text{PDE}}        + \\lambda_{\\text{bc}}\\,\\mathcal L_{\\text{BC/IC}}        $$",
+            "physics residual: $$        \\mathcal L_{\\text{PDE}}        =        \\mathbb E\\left[        \\big\\|        \\mathcal F(u_\\theta)        \\big\\|^2        \\right]        $$",
+            "derivatives are computed via **automatic differentiation**"
+        ],
+        "advantages": [
+            "advantages",
+            "strong inductive bias from physics",
+            "requires less data than purely data-driven models",
+            "produces physically consistent predictions",
+            "can interpolate and extrapolate in space and time"
+        ],
+        "limitations": [
+            "limitations",
+            "optimization can be difficult (stiff PDEs, competing loss terms)",
+            "sensitive to loss weighting",
+            "struggles with chaotic or highly multiscale systems",
+            "computationally expensive for high-dimensional problems"
+        ],
+        "interpretation": [
+            "interpretation",
+            "PINNs replace numerical solvers with function approximation",
+            "learning becomes constrained by conservation laws, symmetries, and dynamics"
+        ]
+    },
+    "tcns": {
+        "$links": [
+            [
+                "time series analysis",
+                "time-series-analysis",
+                "representation-in-ai"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "TCNs",
+        ">remark": [
+            ">remark",
+            "TCNs model time by stacking causal, dilated convolutions, turning sequence learning into a parallel, stable convolutional problem"
+        ],
+        "goal": [
+            "goal",
+            "model sequential / time-series data",
+            "predict future values from past observations",
+            "without recurrent connections"
+        ],
+        "core-idea": [
+            "core idea",
+            "use 1D convolutions along the time axis",
+            "enforce *causality*: output at time $t$ depends only on inputs at times $\\le t$",
+            "represent temporal dependencies via convolutional receptive fields"
+        ],
+        "causal-convolution": [
+            "causal convolution",
+            "standard convolution modified so no \u201cfuture leakage\u201d occurs",
+            "for input sequence $x_t$: $$        y_t = \\sum_{k=0}^{K-1} w_k\\, x_{t-k}        $$",
+            "ensures suitability for forecasting and online prediction"
+        ],
+        "dilated-convolutions": [
+            "dilated convolutions",
+            "introduce gaps between convolution taps: $$        y_t = \\sum_{k=0}^{K-1} w_k\\, x_{t-k\\cdot d}        $$",
+            "dilation factor $d$ grows exponentially with depth",
+            "allows very large temporal receptive fields with few layers"
+        ],
+        "effective-memory": [
+            "effective memory",
+            "receptive field size: $$        R = 1 + (K-1)\\sum_{l=0}^{L-1} d_l        $$",
+            "can cover long-range dependencies efficiently",
+            "memory length is explicit and controllable"
+        ]
+    },
+    "natural-language-processing": {
+        "$links": [
+            [
+                "Lecture 5",
+                "lecture-5",
+                "topics"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "natural language processing",
+        ">remark": [
+            ">remark",
+            "automatic processing and understanding of human language (text and speech)"
+        ],
+        "abbreviation": [
+            "abbreviation",
+            "NLP"
+        ],
+        "goals": [
+            "goals",
+            "extract meaning from text",
+            "generate human-like language",
+            "enable communication between humans and machines"
+        ],
+        "key-difficulty": [
+            "key difficulty",
+            "context dependence: meaning of a word or sentence may depend on arbitrarily long preceding context, not just local environment",
+            "ambiguity at multiple levels (lexical, syntactic, semantic, pragmatic)"
+        ],
+        "fundamental-challenges": [
+            "fundamental challenges",
+            "discreteness of language vs. continuous models",
+            "ambiguity and polysemy",
+            "variability across speakers, domains, and cultures"
+        ],
+        "typical-nlp-tasks": [
+            "typical NLP tasks",
+            "text classification (spam detection, sentiment analysis)",
+            "named entity recognition",
+            "machine translation",
+            "question answering",
+            "summarization",
+            "dialogue systems",
+            "information retrieval"
+        ],
+        "main-approaches-(historical-and-conceptual)": [
+            "main approaches (historical and conceptual)",
+            "\u001ekeyword\u001flinguistic approach\u001flinguistic-approach\u001e (rule-based)",
+            "\u001ekeyword\u001fstatistical approach to NLP\u001fstatistical-approach-to-nlp\u001e",
+            "\u001ekeyword\u001fmachine-learning-based NLP\u001fmachine-learning-based-nlp\u001e",
+            "hybrid approaches"
+        ],
+        "levels-of-language-analysis-in-nlp": [
+            "Levels of language analysis in NLP",
+            "lexical level: words, tokens, morphology",
+            "syntactic level: grammatical structure",
+            "semantic level: meaning of sentences",
+            "discourse level: coherence across sentences",
+            "pragmatic level: intent, speaker goals, real-world knowledge"
+        ]
+    },
+    "linguistic-approach": {
+        "$links": [
+            [
+                "natural language processing",
+                "natural-language-processing",
+                "main-approaches-(historical-and-conceptual)"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "linguistic approach",
+        ">remark": [
+            ">remark",
+            "language is described using explicit rules derived from linguistics"
+        ],
+        "typical-components": [
+            "typical components",
+            "tokenization: splitting text into tokens (words, punctuation)",
+            "segmentation: sentence and paragraph boundaries",
+            "lexical analysis: dictionary lookup, word forms",
+            "morphology: stems, affixes, inflection",
+            "part-of-speech tagging: noun, verb, adjective, etc.",
+            "syntax: phrase structure rules, dependency parsing",
+            "semantic rules: word meanings, role assignment (subject, object, agent)",
+            "and grammars"
+        ],
+        "advantages": [
+            "advantages",
+            "interpretable, transparent behavior",
+            "works well in narrow, well-defined domains"
+        ],
+        "limitations": [
+            "limitations",
+            "brittle and hard to scale",
+            "expensive to design and maintain",
+            "poor generalization to unseen language"
+        ]
+    },
+    "statistical-approach-to-nlp": {
+        "$links": [
+            [
+                "natural language processing",
+                "natural-language-processing",
+                "main-approaches-(historical-and-conceptual)"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "statistical approach to NLP",
+        "text-is-modeled-as-a-sequence-of-symbols": [
+            "text is modeled as a sequence of symbols",
+            "letters, character $n$-grams",
+            "words, word $n$-grams"
+        ],
+        "core-assumptions": [
+            "core assumptions",
+            "frequency carries information",
+            "rare words are often more informative"
+        ],
+        "typical-techniques": [
+            "typical techniques",
+            "",
+            "$n$-gram models: probability of next token depends on last $n-1$ tokens",
+            "language models: estimate $P(w_t \\mid w_{t-1}, \\dots, w_{t-n+1})$"
+        ],
+        "empirical-observations": [
+            "empirical observations",
+            "Zipf-type behavior of word frequencies",
+            "heavy-tailed distributions"
+        ],
+        "applications": [
+            "applications",
+            "spelling correction",
+            "speech recognition",
+            "early machine translation",
+            "statistical text generation"
+        ],
+        "limitations": [
+            "limitations",
+            "context window is fixed and short",
+            "sparsity of data for large $n$",
+            "limited semantic understanding"
+        ]
+    },
+    "machine-learning-based-nlp": {
+        "$links": [
+            [
+                "natural language processing",
+                "natural-language-processing",
+                "main-approaches-(historical-and-conceptual)"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "machine-learning-based NLP",
+        ">remark": [
+            ">remark",
+            "language is represented using learned features"
+        ],
+        "training-paradigm": [
+            "training paradigm",
+            "text generation token-by-token"
+        ],
+        "text-is-mapped-into": [
+            "text is mapped into",
+            "vectors (embeddings)",
+            "latent semantic spaces"
+        ],
+        "classical-ml-methods": [
+            "classical ML methods",
+            "bag-of-words, TF-IDF",
+            "Naive Bayes, logistic regression",
+            "HMMs, CRFs for sequence labeling"
+        ],
+        "neural-approaches": [
+            "neural approaches",
+            "word embeddings (dense, continuous representations) $\\to$ \u001ekeyword\u001fstatic word embeddings\u001fstatic-word-embeddings\u001e, \u001ekeyword\u001fpretrained word embeddings\u001fpretrained-word-embeddings\u001e",
+            "recurrent neural networks (RNN, LSTM, GRU)",
+            "convolutional models for text",
+            "transformer architectures with attention mechanisms"
+        ],
+        "advantages": [
+            "advantages",
+            "automatic feature extraction",
+            "scalable to large corpora",
+            "captures semantic and syntactic regularities"
+        ],
+        "challenges": [
+            "challenges",
+            "data-hungry",
+            "computationally expensive",
+            "limited interpretability"
+        ]
+    },
+    "static-word-embeddings": {
+        "$links": [
+            [
+                "machine-learning-based NLP",
+                "machine-learning-based-nlp",
+                "neural-approaches"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "static word embeddings",
+        "core-idea": [
+            "core idea",
+            "represent each word by a single vector learned from text statistics",
+            "meaning is inferred from local co-occurrence patterns"
+        ],
+        "distributional-assumption": [
+            "distributional assumption",
+            "words occurring in similar local contexts have similar meanings"
+        ],
+        "context-modeling": [
+            "context modeling",
+            "context defined as a small, fixed-size window around the target word",
+            "only neighboring words are taken into account",
+            "long-range dependencies are ignored"
+        ],
+        "mathematical-viewpoint": [
+            "mathematical viewpoint",
+            "learn a mapping $$          w \\;\\mapsto\\; \\mathbf{v}_w \\in \\mathbb{R}^d          $$",
+            "embeddings optimized via prediction or co-occurrence objectives"
+        ],
+        "typical-training-objectives": [
+            "typical training objectives",
+            "predict context words given a target word (skip-gram)",
+            "predict target word from surrounding words (CBOW)",
+            "factorization of word co-occurrence matrices"
+        ],
+        "properties": [
+            "properties",
+            "one vector per word type",
+            "context-independent representation",
+            "captures average semantic and syntactic properties"
+        ],
+        "strengths": [
+            "strengths",
+            "simple and computationally efficient",
+            "effective semantic similarity representations",
+            "enables vector-space word algebra"
+        ],
+        "word-algebra-(vector-arithmetic)": [
+            "word algebra (vector arithmetic)",
+            "semantic relations correspond to vector differences",
+            "classic example: $$\\mathbf{v}_{\\text{king}}- \\mathbf{v}_{\\text{man}}          + \\mathbf{v}_{\\text{woman}}          \\approx          \\mathbf{v}_{\\text{queen}}          $$",
+            "Paris \u2212 France + Italy \u2248 Rome",
+            "walking \u2212 walk + swim \u2248 swimming"
+        ],
+        "limitations:": [
+            "limitations:",
+            "polysemy and homonymy collapsed into a single vector",
+            "context influence is local and fixed",
+            "ignores sentence structure and word order",
+            "no dynamic adaptation to usage"
+        ],
+        "typical-outcomes": [
+            "typical outcomes",
+            "semantic similarity clusters",
+            "linear directions encoding relations",
+            "smooth, low-dimensional semantic space"
+        ],
+        "role-in-nlp-history": [
+            "role in NLP history",
+            "first scalable dense representation of words",
+            "foundation for neural and contextual embedding methods"
+        ]
+    },
+    "pretrained-word-embeddings": {
+        "$links": [
+            [
+                "machine-learning-based NLP",
+                "machine-learning-based-nlp",
+                "neural-approaches"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "pretrained word embeddings",
+        "idea": [
+            "idea",
+            "word vectors trained on very large corpora",
+            "reused as fixed representations or fine-tuned for downstream tasks",
+            "reduce data and computation requirements"
+        ],
+        "motivation": [
+            "motivation",
+            "training embeddings from scratch is expensive",
+            "large corpora capture general semantic regularities",
+            "pretrained vectors improve performance in low-data regimes $\\to$ \u001ekeyword\u001fcommon pretrained embeddings\u001fcommon-pretrained-embeddings\u001e"
+        ],
+        "typical-usage": [
+            "typical usage",
+            "initialize embedding layers in neural networks",
+            "freeze embeddings to prevent overfitting",
+            "fine-tune embeddings jointly with task-specific models"
+        ],
+        "advantages": [
+            "advantages",
+            "faster convergence",
+            "improved generalization",
+            "strong performance with limited labeled data"
+        ],
+        "limitations": [
+            "limitations",
+            "static representations ignore context",
+            "may encode societal or domain biases",
+            "vocabulary coverage may be incomplete"
+        ]
+    },
+    "common-pretrained-embeddings": {
+        "$links": [
+            [
+                "pretrained word embeddings",
+                "pretrained-word-embeddings",
+                "motivation"
+            ]
+        ],
+        "$images": [],
+        "$keyword_name": "common pretrained embeddings",
+        "word2vec": [
+            "Word2Vec",
+            "trained using skip-gram or CBOW objectives",
+            "captures semantic and syntactic relationships",
+            "widely used as a baseline representation"
+        ],
+        "glove": [
+            "GloVe",
+            "combines global co-occurrence statistics with local context",
+            "embeddings reflect ratios of word co-occurrence probabilities",
+            "strong performance on analogy tasks"
+        ],
+        "fasttext": [
+            "FastText",
+            "represents words as sums of character n-gram embeddings",
+            "handles rare and out-of-vocabulary words",
+            "effective for morphologically rich languages"
+        ],
+        "domain-specific-embeddings": [
+            "domain-specific embeddings",
+            "trained on specialized corpora (e.g. medical, legal, scientific text)",
+            "better capture domain terminology and relations"
+        ],
+        "multilingual-embeddings": [
+            "multilingual embeddings",
+            "map multiple languages into a shared vector space",
+            "enable cross-lingual transfer and zero-shot learning"
         ]
     }
 }

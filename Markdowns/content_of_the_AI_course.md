@@ -3,6 +3,7 @@
     - **Lecture 2**: __Lecture 2__
     - **Lecture 3**: __Lecture 3__
     - **Lecture 4**: __Lecture 4__
+    - **Lecture 5**: __Lecture 5__
     - **Technical background**: __Technical background__
 
 
@@ -27,6 +28,10 @@
 - **Lecture 4**
     - **topics**
         - __AI learning paradigms__
+
+- **Lecture 5**
+    - **topics**
+        - __natural language processing__
 
 - **Technical background**
     - **topics**

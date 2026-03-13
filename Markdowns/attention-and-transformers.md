@@ -18,7 +18,7 @@
         - relevance between tokens is learned, not predefined
         - context is computed as a weighted combination of all tokens
     - **steps**
-        - attention mechanism steps
+        - __attention mechanism steps__
     - **multi-head attention**: 
         - use several $Q_i,K_i,V_i$ matrices $\text{head}_i=\text{attention}(Q_i,K_i,V_i)$, and $\text{head} = \text{Concat}(\text{head}_i,\dots,\text{head}_H)$
         - train a weight of these heads $W_O\in \mathbb R^{(Hd_k)\times d_{model} }$
@@ -42,16 +42,16 @@
         - parallelizable (GPUs)
 
 - **attention mechanism steps**
-    1. **Inputs**: we start with a sequence of token representations $$\mathbf{x}_1,\dots,\mathbf{x}_T,\quad \mathbf{x}_t\in \mathbb R^{d_{model}},$$ including
+    - **Inputs**: we start with a sequence of token representations $$\mathbf{x}_1,\dots,\mathbf{x}_T,\quad \mathbf{x}_t\in \mathbb R^{d_{model}},$$ including
         - token embedding
         - positional embedding
-    1. **Queries, Keys, Values** (linear projections): Each token is mapped into three different spaces: $$\mathbf{q}_t = W_Q \mathbf{x}_t,\; \mathbf{k}_t = W_K \mathbf{x}_t,\; \mathbf{v}_t=W_V \mathbf{x}_t,$$ 
+    - **Queries, Keys, Values** (linear projections): Each token is mapped into three different spaces: $$\mathbf{q}_t = W_Q \mathbf{x}_t,\; \mathbf{k}_t = W_K \mathbf{x}_t,\; \mathbf{v}_t=W_V \mathbf{x}_t,$$ 
         - where $W_Q, W_K, W_V\in \mathbb R^{d_k\times d_{model}}$ matrices (typically $d_k<d_{model}$)
         - query: what this token is looking for
         - key: what this token offers
         - value: the information to pass along
         - Crucial: relevance (Q·K) is computed separately from content (V).
-    1. **Simliarity scores**
+    - **Simliarity scores**
         - Each token $t$ compares itself to every other token $s$: 
             $$
           \text{score}(t,s) = \dfrac{\mathbf{q}_t^\top \mathbf{k}_s}{\sqrt{d_k}}
@@ -59,12 +59,12 @@
         - full symmetric matrix $S\in \mathbb R^T\times \mathbb R^T$
         - information content: how relevant is every token to token $t$?
         - normalization
-    1. **attention weights**
+    - **attention weights**
         - apply softmax transformation
           $$
           \alpha_{t,s} = \frac{\exp(\text{score}(t,s))}{\sum_{s'} \exp(\text{score}(t,s'))}
           $$
-    1. **context aggregation**
+    - **context aggregation**
         - weighted sum of the token values $$\mathbf{h}_t = \sum_s \alpha_{t,s} \mathbf{v}_t$$
         - provides contextual embedding
         - not selects tokens, but blends them
@@ -96,7 +96,7 @@
         - fully parallelizable
 
 - **transformer**
-    - a neural architecture built entirely on self-attention
+    - a neural architecture built entirely on __self-attention__
     - eliminates recurrence and convolution
     - processes sequences in parallel
     - **Transformer components**

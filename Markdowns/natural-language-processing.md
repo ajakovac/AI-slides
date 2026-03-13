@@ -1,206 +1,198 @@
-# Natural Language Processing
 
-- **natural language processing (NLP)**
-    - automatic processing and understanding of human language (text and speech)
-    - goals:
+- **natural language processing**
+    > automatic processing and understanding of human language (text and speech)
+    - **abbreviation**: NLP
+    - **goals**
         - extract meaning from text
         - generate human-like language
         - enable communication between humans and machines
-    - key difficulty:
-        - **context dependence**: meaning of a word or sentence may depend on arbitrarily long preceding context, not just local environment
+    - **key difficulty**
+        - context dependence: meaning of a word or sentence may depend on arbitrarily long preceding context, not just local environment
         - ambiguity at multiple levels (lexical, syntactic, semantic, pragmatic)
-    - fundamental challenges:
+    - **fundamental challenges**
         - discreteness of language vs. continuous models
         - ambiguity and polysemy
         - variability across speakers, domains, and cultures
-    - main approaches (historical and conceptual):
-        - linguistic (rule-based)
-        - statistical
-        - machine-learning-based
+    - **typical NLP tasks**
+        - text classification (spam detection, sentiment analysis)
+        - named entity recognition
+        - machine translation
+        - question answering
+        - summarization
+        - dialogue systems
+        - information retrieval
+    - **main approaches (historical and conceptual)**
+        - __linguistic approach__ (rule-based)
+        - __statistical approach to NLP__
+        - __machine-learning-based NLP__
         - hybrid approaches
+    - **Levels of language analysis in NLP**
+        - lexical level: words, tokens, morphology
+        - syntactic level: grammatical structure
+        - semantic level: meaning of sentences
+        - discourse level: coherence across sentences
+        - pragmatic level: intent, speaker goals, real-world knowledge
 
--  **linguistic approach** (rule-based NLP)
-    - language is described using **explicit rules** derived from linguistics
-    - typical components:
-        - **tokenization**: splitting text into tokens (words, punctuation)
-        - **segmentation**: sentence and paragraph boundaries
-        - **lexical analysis**: dictionary lookup, word forms
-        - **morphology**: stems, affixes, inflection
-        - **part-of-speech tagging**: noun, verb, adjective, etc.
-        - **syntax**:
-            - phrase structure rules
-            - dependency parsing
-        - **semantic rules**:
-            - word meanings
-            - role assignment (subject, object, agent)
+- **linguistic approach**
+    > language is described using explicit rules derived from linguistics
+    - **typical components**
+        - tokenization: splitting text into tokens (words, punctuation)
+        - segmentation: sentence and paragraph boundaries
+        - lexical analysis: dictionary lookup, word forms
+        - morphology: stems, affixes, inflection
+        - part-of-speech tagging: noun, verb, adjective, etc.
+        - syntax: phrase structure rules, dependency parsing
+        - semantic rules: word meanings, role assignment (subject, object, agent)
         - **regular expressions** and grammars
-    - advantages:
+    - **advantages**
         - interpretable, transparent behavior
         - works well in narrow, well-defined domains
-    - limitations:
+    - **limitations**
         - brittle and hard to scale
         - expensive to design and maintain
         - poor generalization to unseen language
 
-- **statistical approach**
-    - text is modeled as a **sequence of symbols**
+- **statistical approach to NLP**
+    - **text is modeled as a sequence of symbols**
         - letters, character $n$-grams
         - words, word $n$-grams
-    - core assumptions:
+    - **core assumptions**
         - frequency carries information
         - rare words are often more informative
-    - typical techniques:
+    - **typical techniques**
         - **letter and word statistics**
-        - **$n$-gram models**:
-            - probability of next token depends on last $n-1$ tokens
-        - **language models**:
-            - estimate $P(w_t \mid w_{t-1}, \dots, w_{t-n+1})$
-    - empirical observations:
-        - **Zipf-type behavior** of word frequencies
+        - $n$-gram models: probability of next token depends on last $n-1$ tokens
+        - language models: estimate $P(w_t \mid w_{t-1}, \dots, w_{t-n+1})$
+    - **empirical observations**
+        - Zipf-type behavior of word frequencies
         - heavy-tailed distributions
-    - applications:
+    - **applications**
         - spelling correction
         - speech recognition
         - early machine translation
-        - **statistical text generation**
-    - limitations:
+        - statistical text generation
+    - **limitations**
         - context window is fixed and short
         - sparsity of data for large $n$
         - limited semantic understanding
 
 - **machine-learning-based NLP**
-    - language is represented using **learned features**
-    - training paradigm: text generation token-by-token
-    - text is mapped into:
+    > language is represented using learned features
+    - **training paradigm**: text generation token-by-token
+    - **text is mapped into**
         - vectors (embeddings)
         - latent semantic spaces
-    - classical ML methods:
+    - **classical ML methods**
         - bag-of-words, TF-IDF
         - Naive Bayes, logistic regression
         - HMMs, CRFs for sequence labeling
-    - neural approaches:
-        - word embeddings (dense, continuous representations)
+    - **neural approaches**
+        - word embeddings (dense, continuous representations) $\to$ __static word embeddings__, __pretrained word embeddings__
         - recurrent neural networks (RNN, LSTM, GRU)
         - convolutional models for text
-        - **transformer architectures** with attention mechanisms
-    - advantages:
+        - transformer architectures with attention mechanisms
+    - **advantages**
         - automatic feature extraction
         - scalable to large corpora
         - captures semantic and syntactic regularities
-    - challenges:
+    - **challenges**
         - data-hungry
         - computationally expensive
         - limited interpretability
 
-- **early (static) word embeddings**
-    - core idea:
+- **static word embeddings**
+    - **core idea**
         - represent each word by a single vector learned from text statistics
         - meaning is inferred from local co-occurrence patterns
-    - distributional assumption:
+    - **distributional assumption**
         - words occurring in similar local contexts have similar meanings
-    - context modeling:
+    - **context modeling**
         - context defined as a small, fixed-size window around the target word
         - only neighboring words are taken into account
         - long-range dependencies are ignored
-    - mathematical viewpoint:
+    - **mathematical viewpoint**
         - learn a mapping
           $$
           w \;\mapsto\; \mathbf{v}_w \in \mathbb{R}^d
           $$
         - embeddings optimized via prediction or co-occurrence objectives
-    - typical training objectives:
+    - **typical training objectives**
         - predict context words given a target word (skip-gram)
         - predict target word from surrounding words (CBOW)
         - factorization of word co-occurrence matrices
-    - properties:
+    - **properties**
         - one vector per word type
         - context-independent representation
         - captures average semantic and syntactic properties
-    - strengths:
+    - **strengths**
         - simple and computationally efficient
         - effective semantic similarity representations
         - enables vector-space word algebra
-    - word algebra (vector arithmetic):
+    - **word algebra (vector arithmetic)**
         - semantic relations correspond to vector differences
         - classic example:
-          $$
-          \mathbf{v}_{\text{king}}
-          - \mathbf{v}_{\text{man}}
+          $$\mathbf{v}_{\text{king}}- \mathbf{v}_{\text{man}}
           + \mathbf{v}_{\text{woman}}
           \approx
           \mathbf{v}_{\text{queen}}
           $$
-        - other examples:
-          - Paris − France + Italy ≈ Rome
-          - walking − walk + swim ≈ swimming
-    - limitations:
+        - Paris − France + Italy ≈ Rome
+        - walking − walk + swim ≈ swimming
+    - **limitations:**
         - polysemy and homonymy collapsed into a single vector
         - context influence is local and fixed
         - ignores sentence structure and word order
         - no dynamic adaptation to usage
-    - typical outcomes:
+    - **typical outcomes**
         - semantic similarity clusters
         - linear directions encoding relations
         - smooth, low-dimensional semantic space
-    - role in NLP history:
+    - **role in NLP history**
         - first scalable dense representation of words
         - foundation for neural and contextual embedding methods
 
 - **pretrained word embeddings**
-    - idea:
+    - **idea**
         - word vectors trained on very large corpora
         - reused as fixed representations or fine-tuned for downstream tasks
         - reduce data and computation requirements
-    - motivation:
+    - **motivation**
         - training embeddings from scratch is expensive
         - large corpora capture general semantic regularities
-        - pretrained vectors improve performance in low-data regimes
-    - common pretrained embeddings:
-        - **Word2Vec**
-            - trained using skip-gram or CBOW objectives
-            - captures semantic and syntactic relationships
-            - widely used as a baseline representation
-        - **GloVe**
-            - combines global co-occurrence statistics with local context
-            - embeddings reflect ratios of word co-occurrence probabilities
-            - strong performance on analogy tasks
-        - **FastText**
-            - represents words as sums of character n-gram embeddings
-            - handles rare and out-of-vocabulary words
-            - effective for morphologically rich languages
-        - **domain-specific embeddings**
-            - trained on specialized corpora (e.g. medical, legal, scientific text)
-            - better capture domain terminology and relations
-        - **multilingual embeddings**
-            - map multiple languages into a shared vector space
-            - enable cross-lingual transfer and zero-shot learning
-    - typical usage:
+        - pretrained vectors improve performance in low-data regimes $\to$ __common pretrained embeddings__
+    - **typical usage**
         - initialize embedding layers in neural networks
         - freeze embeddings to prevent overfitting
         - fine-tune embeddings jointly with task-specific models
-    - advantages:
+    - **advantages**
         - faster convergence
         - improved generalization
         - strong performance with limited labeled data
-    - limitations:
+    - **limitations**
         - static representations ignore context
         - may encode societal or domain biases
         - vocabulary coverage may be incomplete
 
+- **common pretrained embeddings**
+    - **Word2Vec**
+        - trained using skip-gram or CBOW objectives
+        - captures semantic and syntactic relationships
+        - widely used as a baseline representation
+    - **GloVe**
+        - combines global co-occurrence statistics with local context
+        - embeddings reflect ratios of word co-occurrence probabilities
+        - strong performance on analogy tasks
+    - **FastText**
+        - represents words as sums of character n-gram embeddings
+        - handles rare and out-of-vocabulary words
+        - effective for morphologically rich languages
+    - **domain-specific embeddings**
+        - trained on specialized corpora (e.g. medical, legal, scientific text)
+        - better capture domain terminology and relations
+    - **multilingual embeddings**
+        - map multiple languages into a shared vector space
+        - enable cross-lingual transfer and zero-shot learning
 
 
-- **Levels of language analysis in NLP**
-    - **lexical level**: words, tokens, morphology
-    - **syntactic level**: grammatical structure
-    - **semantic level**: meaning of sentences
-    - **discourse level**: coherence across sentences
-    - **pragmatic level**: intent, speaker goals, real-world knowledge
 
-- **typical NLP tasks**
-    - text classification (spam detection, sentiment analysis)
-    - named entity recognition
-    - machine translation
-    - question answering
-    - summarization
-    - dialogue systems
-    - information retrieval
+
