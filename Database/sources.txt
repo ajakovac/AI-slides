@@ -20,11 +20,10 @@ finding-features.md
 time-series.md
 natural-language-processing.md
 attention-and-transformers.md
+reasoning.md
 
 ## Main topics
 
-# [attention-and-transformers.md]() 
-# [reasoning.md](reasoning.md) 
 # [generative-networks.md](generative-networks.md) 
 # [reinforcement-learning.md](reinforcement-learning.md) 
 # [RAG-systems.md](RAG-systems.md) 

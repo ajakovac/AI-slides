@@ -1,5 +1,4 @@
-- **Attention mechanisms and transformers**
-
+- **Transformers**
     - **motivation**
         - classical sequence models (e.g. RNNs) process text sequentially
         - long-range dependencies are difficult to capture
@@ -8,8 +7,12 @@
         - accesses all tokens directly
         - adapts dynamically to the task
         - scales efficiently to long sequences
-    - **continue**
+    - **technologies**
         - __attention mechanism__
+        - __BERT__
+        - __GPT__
+        - __instruction tuning__
+        - __agentic coding__
 
 
 - **attention mechanism**
@@ -51,6 +54,7 @@
         - key: what this token offers
         - value: the information to pass along
         - Crucial: relevance (Q·K) is computed separately from content (V).
+        - ![attention mechanism](../Images/attention-mechanism.png)
     - **Simliarity scores**
         - Each token $t$ compares itself to every other token $s$: 
             $$
@@ -71,8 +75,6 @@
     - **compact matrix form**
         - $Q, K, V \in \mathbb R^{T\times d_k}$, and then
         $$ \text{attention}(Q,K,V) = \text{softmax}\left(\dfrac{Q^TK}{\sqrt{d_k}}\right) V$$
-
-
 
 - **embedding in transformers**
     - take into account tokens (e.g. "unbelievable movie" $\to$ ["un", "##believable", "movie"])
@@ -100,12 +102,12 @@
     - eliminates recurrence and convolution
     - processes sequences in parallel
     - **Transformer components**
+        - ![transformer](../Images/transformer-architecture.png)
         - multi-head attention → __attention mechanism__
         - position-wise feed-forward networks
         - residual connections (identity shortcut paths)
-        - layer normalization
         - positional encoding → __embedding in transformers__
-        - stacking of layers
+        - encoder-decoder architecture $\to$ ![encoder](../Images/encoder-in-transformer.png)
     - **LLM system components**
         - tokenizer
         - input embedding
@@ -128,85 +130,73 @@
         - modern language models
         - large-scale pretrained models
 
-__END__
-
-
-![alt text](../Images/encoder-in-transformer.png)
-![alt text](../Images/attention-mechanism.png)
-![alt text](../Images/transformer-architecture.png)
-
-- **BERT (Bidirectional Encoder Representations from Transformers)**
+- **BERT**
     > transforms raw text into embedding to understand text
-    - model type:
+    - **alternative name**:  Bidirectional Encoder Representations from Transformers
+    - **model type**
         - transformer-based, **encoder-only** architecture
         - relies entirely on self-attention mechanisms
-    - core idea:
+    - **core idea**
         - learn deep, bidirectional representations of language
         - each token representation incorporates both left and right context
-    - input representation:
+    - **input representation**
         - static token embeddings (subword-level)
         - positional embeddings
         - optional segment (token-type) embeddings for sentence pairs
         - all embeddings are summed before entering the transformer layers
-    - bidirectionality:
+    - **bidirectionality**
         - unlike autoregressive models, BERT attends to all tokens simultaneously
         - enables full-sentence context modeling
         - particularly effective for language understanding tasks
-    - pretraining objectives:
-        - **masked language modeling (MLM)**:
-            - randomly mask input tokens
-            - predict masked tokens using surrounding context
-        - **next sentence prediction (NSP)**:
-            - learn relationships between sentence pairs
-            - supports entailment and discourse-level understanding
-    - BERT was pretrained on BooksCorpus and English Wikipedia, using a relatively small but carefully curated corpus (c.a. 3.3B words)
-    - contextual embeddings:
+    - **pretraining objectives**
+        - masked language modeling (MLM): randomly mask input tokens, and try to predict masked tokens using surrounding context
+        - next sentence prediction (NSP): learn relationships between sentence pairs, supports entailment and discourse-level understanding
+    - **training media**
+        - BooksCorpus and English Wikipedia, using a relatively small but carefully curated corpus (c.a. 3.3B words)
+    - **contextual embeddings**
         - produces one embedding per token *per occurrence*
         - meaning depends on full input sequence
         - resolves polysemy and contextual ambiguity
-    - architectural properties:
+    - **architectural properties**
+        - ![BERT architecture](../Images/BERT-architecture.png)
         - fixed maximum sequence length (typically 512 tokens)
         - no recurrence or convolution
         - deep stacking of transformer encoder layers
-    - strengths:
+    - **strengths**
         - strong performance on sentence- and token-level understanding tasks
         - effective transfer learning via fine-tuning
         - robust contextual semantic representations
-    - limitations:
+    - **limitations**
         - not designed for text generation
         - limited context window
         - computationally expensive compared to simpler models
-    - typical applications:
+    - **typical applications**
         - text classification
         - named entity recognition
-        - question answering
+        - __question answering with BERT__
         - natural language inference
-    - historical role:
+    - **historical role**
         - established transformers as the dominant architecture for NLP
         - introduced contextual embeddings as a standard paradigm
         - foundation for many later pretrained language models
-![alt text](../Images/BERT-architecture.png)
 
-- **extractive question answering with BERT**
-    - core idea:
+- **question answering with BERT**
+    > BERT performs question answering by understanding and pointing, rather than generating language
+    - **core idea**
         - answer questions by **selecting a text span** from a given context
         - no text generation is performed
-    - model:
-        - **:contentReference[oaicite:0]{index=0}**
+    - **model**
         - transformer-based, encoder-only architecture
         - jointly encodes question and context using self-attention
-    - input format:
+    - **input format**
         - question and context are concatenated into a single sequence:
-          ```
-          [CLS] question tokens [SEP] context tokens [SEP]
-          ```
+            $$\text{[CLS] question tokens [SEP] context tokens [SEP]}$$
         - special tokens mark structure but are part of the input sequence
-    - task formulation:
-        - for each token position, the model predicts:
-            - probability of being the **start** of the answer
-            - probability of being the **end** of the answer
+    - **prediction**
+        - probability of being the **start** of the answer
+        - probability of being the **end** of the answer
         - answer is defined as the span between predicted start and end indices
-    - mathematical view:
+    - **mathematical view**
         - let $ t = 1, \dots, T $ index tokens in the input
         - model outputs:
           $$
@@ -216,37 +206,35 @@ __END__
           $$
           \text{answer} = \text{tokens}[t_{\text{start}} : t_{\text{end}}]
           $$
-    - example:
+    - **example**
         - question: *Who wrote Hamlet?*
         - context: *Hamlet was written by William Shakespeare in the early 17th century.*
         - predicted answer span: *William Shakespeare*
-    - properties:
+    - **properties**
         - requires the answer to be present in the context
         - low risk of hallucination
         - strong alignment between question and evidence
-    - typical datasets:
+    - **typical datasets**
         - SQuAD (extractive)
         - Natural Questions (extractive subset)
-    - strengths:
+    - **strengths**
         - precise, evidence-based answers
         - strong performance on reading comprehension tasks
-    - limitations:
+    - **limitations**
         - cannot generate novel answers
         - fails if the answer is not explicitly contained in the text
         - limited by maximum input sequence length
-    - conceptual takeaway:
-        - BERT performs question answering by **understanding and pointing**,
-          rather than generating language
 
-- **GPT (Generative Pretrained Transformer) models**
-    > predicts next token in a probabilistic way
-    - model family:
+- **GPT**
+    > generates text by predicting next token in a probabilistic way
+    - **alternative name**: Generative Pretrained Transformer
+    - **model family**
         - transformer-based, **decoder-only** architecture
         - relies on masked self-attention (causal attention)
-    - core idea:
+    - **core idea**
         - model language as a **token-by-token generation process**
         - predict the next token given all previous tokens
-    - training objective:
+    - **training objective**
         - **autoregressive language modeling**
           $$
           \max_\theta \sum_t \log P_\theta(w_t \mid w_1, \dots, w_{t-1})
@@ -254,12 +242,12 @@ __END__
         - trained on large-scale, unlabeled text corpora
         - ChatGPT-style models are trained on large and diverse mixtures of licensed data, human-created content, and publicly available text, enabling broad language competence (c.a. 500B words)
 
-    - input representation:
+    - **input representation**
         - static token embeddings (subword-level)
         - positional embeddings
         - no explicit segment embeddings
         - sequence treated as a single stream of tokens
-    - unidirectional context:
+    - **unidirectional context**
         - each token attends only to earlier tokens
         - enforces causal, left-to-right generation
         - suitable for text generation and completion
@@ -269,74 +257,57 @@ __END__
         - the model computes a probability distribution over the next token
         - a token is selected using a decoding strategy
     - **decoding strategies**
-        - **greedy decoding**: choose the most probable next token at each step
-        - **beam search**: keep the top-$B$ most likely partial sequences and extend them jointly
-        - **temperature sampling**: sample from the probability distribution scaled by a temperature parameter
-        - **top-k sampling**: sample only from the $k$ most probable next tokens
-        - **top-p (nucleus) sampling**: sample from the smallest set of tokens whose cumulative probability is at least $p$
+        - greedy decoding: choose the most probable next token at each step
+        - beam search: keep the top-$B$ most likely partial sequences and extend them jointly
+        - temperature sampling: sample from the probability distribution scaled by a temperature parameter
+        - top-k sampling: sample only from the $k$ most probable next tokens
+        - top-p (nucleus) sampling: sample from the smallest set of tokens whose cumulative probability is at least $p$
     - **generation fine-tuning / constraints**
         - applied during decoding, not during training
         - modify token probabilities before selection
         - reduce repetition, degenerate loops, sensitive words
         - enforce context consistency and fluency
-    - capabilities:
+    - **capabilities**
         - coherent text generation
         - dialogue and conversational interaction
         - few-shot and zero-shot task adaptation
         - reasoning over provided context
-    - task handling:
+    - **task handling**
         - tasks are specified implicitly via prompts
         - no task-specific fine-tuning required in many cases
         - input format determines behavior
-    - context window:
+    - **context window**
         - fixed maximum sequence length
         - modern GPT-style models support thousands to tens of thousands of tokens
-    - strengths:
+    - **strengths**
         - flexible, general-purpose language modeling
         - strong performance on open-ended and creative tasks
         - unified framework for many NLP tasks
-    - limitations:
+    - **limitations**
         - higher risk of hallucination
         - weaker grounding without explicit context
         - computationally expensive inference
-    - typical applications:
+    - **typical applications**
         - text generation and summarization
         - conversational agents
         - code generation
         - generative question answering
-    - conceptual takeaway:
-        - GPT models perform language understanding implicitly
-          by learning to **generate language fluently and coherently**
 
-
-- **instruction tuning and agentic coding**
-    - motivation:
+- **instruction tuning**
+    > does jobs following text prompts, turns a language model into a cooperative problem solver
+    - **motivation**
         - pretrained language models learn to continue text, not to follow instructions
         - raw language modeling does not guarantee helpful, task-oriented behavior
         - users want models that *do things*, not just generate plausible text
-    - core idea (instruction tuning):
+    - **core idea (instruction tuning)**
         - adapt a pretrained generative language model to treat inputs as **instructions**
         - shift model behavior from “continue the text” to “solve the task”
         - achieved by additional supervised and preference-based training
-    - model setting:
-        - typically applied to **:contentReference[oaicite:0]{index=0}**
+    - **model setting**
         - decoder-only, autoregressive transformers
         - instruction tuning does not change the architecture
-    - technical pipeline:
-        - (1) **pretraining**:
-            - next-token prediction on large-scale text corpora
-            - learns general language competence
-        - (2) **supervised instruction fine-tuning (SFT)**:
-            - train on (instruction, desired output) pairs
-            - examples:
-                - question → answer
-                - prompt → explanation
-                - description → code
-        - (3) **preference optimization** (optional but common):
-            - humans rank multiple model outputs
-            - model learns to prefer helpful, correct, safe responses
-            - often implemented via reinforcement learning from human feedback (RLHF)
-    - mathematical view (high level):
+        - __technical pipeline__
+    - **mathematical view (high level)**
         - base objective:
           $$
           \max_\theta \sum_t \log P_\theta(w_t \mid w_{<t})
@@ -344,37 +315,49 @@ __END__
         - instruction tuning modifies the data distribution and adds
           preference-based optimization terms
         - result: a new policy aligned with human intent
-    - effect on model behavior:
+    - **effect on model behavior**
         - improved task adherence
         - reduced verbosity and randomness
         - stronger alignment with user goals
         - better safety and controllability
-    - examples of instruction-tuned models: Copilot, Codex, Cursor
-    - agentic (\"vibe\") coding:
-        - extension of instruction tuning to **multi-step problem solving**
-        - model behaves like a semi-autonomous coding agent
-        - typical capabilities:
-            - plan solution steps
-            - write and revise code
-            - debug errors
-            - iterate based on feedback
-        - interaction style:
-            - user specifies intent, not full specification
-            - model fills in details proactively
-    - technical ingredients of agentic coding:
+    - **examples of instruction-tuned models**: Copilot, Codex, Cursor, Claude Code
+
+- **technical pipeline**
+    - **(1) pretraining**:
+        - next-token prediction on large-scale text corpora
+        - learns general language competence
+    - **(2) supervised instruction fine-tuning (SFT)**:
+        - train on (instruction, desired output) pairs
+        - question → answer
+        - prompt → explanation
+        - description → code
+    - **(3) preference optimization** (optional but common):
+        - humans rank multiple model outputs
+        - model learns to prefer helpful, correct, safe responses
+        - often implemented via reinforcement learning from human feedback (RLHF)
+
+- **agentic coding:**
+    > agentic coding treats the model as an active collaborator rather than a passive generator
+    - extension of instruction tuning to **multi-step problem solving**
+    - model behaves like a semi-autonomous coding agent
+    - **typical capabilities**
+        - plan solution steps
+        - write and revise code
+        - debug errors
+        - iterate based on feedback
+    - **interaction style**
+        - user specifies intent, not full specification
+        - model fills in details proactively
+    - **technical ingredients of agentic coding**
         - instruction-tuned language model
         - long context window
         - iterative prompting and self-reflection
         - optional tool use (e.g. code execution, file editing)
-    - strengths:
+    - **strengths**
         - dramatically lowers barrier to programming
         - accelerates prototyping and experimentation
         - supports exploratory and creative workflows
-    - limitations:
+    - **limitations**
         - may hallucinate correct-looking but wrong code
         - lacks true understanding of execution unless tools are used
         - requires human oversight for correctness
-    - conceptual takeaway:
-        - instruction tuning turns a language model into a cooperative problem solver
-        - agentic coding treats the model as an active collaborator rather than a passive generator
-

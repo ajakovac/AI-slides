@@ -75,16 +75,7 @@
   - they can **hallucinate**: produce statements that sound coherent but are false
   - they may fail on tasks requiring strict symbolic guarantees
 
----
 
-## Lying vs hallucinating (important nuance)
-- **Hallucination**: incorrect content generated without a deliberate intention to deceive.
-- **Lying** (human sense) requires:
-  - an intent to mislead
-  - awareness of truth vs falsehood
-- LLMs typically lack human-like intent, so the more accurate term is:
-  - **hallucination**, not “lying”
-- However, they can still produce output that *functions like* deception (e.g., confident false claims), so careful verification is needed.
 
 ---
 
