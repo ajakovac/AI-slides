@@ -51,7 +51,7 @@
         - benefit: learns features stable to corruption and small perturbations
         - benefit: acts as regularization, reducing overfitting to exact inputs
     - **loss**
-        - reconstruction of clean input from noisy input (often MSE or cross-entropy)
+        - reconstruction of clean input from noisy input (often MSE or __cross entropy loss__)
         - optional noise/weight regularization terms (dropout, weight decay)
 
 - **VAE**
@@ -78,7 +78,7 @@
     - **reconstruction term**
         - encourages the decoder to accurately reconstruct the input
         - corresponds to maximum likelihood under the assumed data model
-        - typical choices are binary cross-entropy (Bernoulli likelihood) or mean squared error (Gaussian likelihood)
+        - typical choices are binary __cross entropy loss__ (Bernoulli likelihood) or mean squared error (Gaussian likelihood)
 
     - **KL divergence term**:
         - measures how far the learned latent distribution deviates from the prior

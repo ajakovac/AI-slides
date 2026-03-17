@@ -193,8 +193,8 @@
             $$\text{[CLS] question tokens [SEP] context tokens [SEP]}$$
         - special tokens mark structure but are part of the input sequence
     - **prediction**
-        - probability of being the **start** of the answer
-        - probability of being the **end** of the answer
+        - probability of being the <b>start</b> of the answer
+        - probability of being the <b>end</b> of the answer
         - answer is defined as the span between predicted start and end indices
     - **mathematical view**
         - let $ t = 1, \dots, T $ index tokens in the input

@@ -206,7 +206,8 @@
 
     - **result**: $$ D(p\mid\mid q) = -\sum_i p_i \ln \frac{p_i}{q_i}$$
 
-- **cross-entropy**
+- **cross entropy**
     > Kullback-Leibler dicergence in case where the observed sample contains none or all elements
+    - **see**: __Kullback-Leibler divergence__
     - **result**: for $p_i=0$ or $1$ it reduces to the cross entropy
         $$ D_{cross-entropy}(p\mid\mid q) = \sum_i p_i \ln q_i$$

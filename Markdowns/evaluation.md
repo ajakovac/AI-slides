@@ -33,9 +33,9 @@
         | predicted P | true P   | false P  |
         | predicted N | false N  |  true N  |
 
-    - **constraints**: \begin{align*}&\text{true P, N} + \text{false P, N} = \text{prediced P, N}\\
+    - **constraints**: $$\begin{aligned}&\text{true P, N} + \text{false P, N} = \text{prediced P, N}\\
     &\text{true, false P} + \text{false, true N} = \text{actual P, N}\\
-    &\text{actual, predicted P} + \text{actual, predicted N} =\text{all measured} \end{align*}
+    &\text{actual, predicted P} + \text{actual, predicted N} =\text{all measured} \end{aligned}$$
     - **measures**
         - accuracy: $P(\text{correct class}) = \dfrac{\text{true P}+\text{true N}}{\text{all measured}}$
         - precision: $P(\text{true P}\mid \text{predicted P}) = \dfrac{\text{true P}}{\text{predicted P}}$

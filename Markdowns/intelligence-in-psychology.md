@@ -374,8 +374,8 @@ and distort the processes it is intended to monitor.
     - Later → pruning and refinement.
 
 - **Characteristic errors of System I**
-
-  > The reliance on heuristics makes __System I__ vulnerable to systematic cognitive biases, including:
+  > Heuristics can be misleading
+  - The reliance on heuristics makes __System I__ vulnerable to systematic cognitive biases, including:
 
   - **Anchoring**  
     - Judgments are unduly influenced by an initial value or reference point  

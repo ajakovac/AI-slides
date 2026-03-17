@@ -10,18 +10,21 @@
 
 - **supervised learning**
     > find the context $\mathcal C$ that smoothly represents the provided sample data.
+    - **supervised vs. unsupervised learning**
+        - supervised: provide meaning
+        - unsupervised: meaning comes from data only
+    - **purely unsupervised learning does not exist**
+        - mathematically any partition is possible (context dependence) 
+        - depends on the "distance" $\to$ data representation $\to$ ![different coordination](../Images/unsupervised-groups.png)
+        - easy to manipulate (c.f. university ranking, economic data)
+        - needs a clean definition of the context (e.g. temporal-spatial closeness)
+        - examples: university ranking, economic or individual performance evaluation, IQ tests
+        - see also __Human Intelligence: A Psychological Perspective__
     - **strategy**
         - collect __sample data__, implying __sample context__ $\to$ see __publicly available databases for classification__
         - assume __data model__
-        - perform __model optimization__
+        - choose __classification models__
         - __evaluation of results of a classification__
-    - **unsupervised is not really meaningful**
-      - mathematically any partition is possible
-      - depends on the "distance" $\to$ data representation
-      - easy to manipulate (c.f. university ranking, economic data)
-      - needs a clean definition of the context (e.g. temporal-spatial closeness)
-      - examples: university ranking, economic or individual performance evaluation, IQ tests
-      - see also __Human Intelligence: A Psychological Perspective__
     - **examples**
         - __pattern recognition__
         - __data compression__
@@ -29,9 +32,9 @@
 - **publicly available databases for classification**
     > databases can be used as benchmarks or for learning
     - **links**
-        - https://davenport.libguides.com/data/public-data
-        - https://github.com/awesomedata/awesome-public-datasets?tab=readme-ov-file
-        - https://docs.pytorch.org/vision/main/datasets.html
+        - [public-data](https://davenport.libguides.com/data/public-data)
+        - [awesome-public-datasets](https://github.com/awesomedata/awesome-public-datasets?tab=readme-ov-file)
+        - [Pytorch datasets](https://docs.pytorch.org/vision/main/datasets.html)
 
 - **sample data**:
     > for training, we need data - label (meaning) pairs
@@ -45,22 +48,22 @@
         - (cat-imege-1,cat), (cat-imege-2,cat), (dog-imege-1,dog), $\dots$ (cat-imege-N,cat), 
         - what is the word the speaker says?
 
-- **sample context**
+- **Sample context**
   > data belonging to the same class
   - formally $\mathcal C_{sample} =\{ \{x_a \mid c_a=c\} \mid c \in\mathcal C\}$
 
-- **data model**
+- **Data model**
   > parametric map over a set
   - **definition**: $\mathcal M :(C,Q)\to B$, where $Q$ are the parameters, $B$ is the target (label) set
   - **names**
-    - if $B$ is a finite set: **classification models**
-    - if $B$ is continuous: **regression**
+    - if $B$ is a finite set: <b>classification</b>
+    - if $B$ is continuous: <b>regression</b>
   - **representation**: corresponds to the __direct representation__ of the context
   - **modelling a context**
     - use the __induced context__ $\mathcal M^{-1}(B,q)$
-    - example $\mathcal M(\text{image}, q_{opt}) = \text{cat}$ will be true approximately for the cat images
+    - example: since for most cat images we have $\mathcal M(\text{cat-image}, q_{opt}) ="\text{cat}"$, thus $\mathcal M^{-1}("\text{cat}", q_{opt}) \approx \{\text{cat-images}\}$
 
-- **classification models**
+- **Classification models**
   - **elementary methods**
       - __one dimensional classification__
       - __decision tree__
@@ -72,6 +75,7 @@
       - other methods (extra trees, isolated forests, oblique trees)
   - **classification via regression**
       - __classification via regression__
+      - __model optimization__
   - **distribution estimation methods**
       - __distribution estimation methods__
   - **feature finding methods**
@@ -122,15 +126,16 @@
     - **optimization condition**
       - **loss function**: $L(q) = \sum_{x\in\mathcal S} \ell(p_i(x), I(x\in c_i))$, where $I$ is the indicator function
       - smallest if $p_i(x)=1$ for the correct class
-      - $\ell$ preferrably cross-entropy loss
+      - $\ell$ preferrably __cross entropy loss__
     - **prediction**
-      - predicted class $(x)= \mathop{argmax}_i p_i(x,q_{opt})\;\Rightarrow\;$ induced context
+      - predicted class $(x)= \mathop{\text{argmax}}_i p_i(x,q_{opt})\;\Rightarrow\;$ induced context
       - classifies every element of the base class
     - **technical implementation**
-      - __perceptron__
-      - __support vector machine__
-      - __extreme learning machine__
-      - __DNNs__ (deep neural networks)
+        - in __one dimensional classification__
+        - __perceptron__
+        - __support vector machine__
+        - __extreme learning machine__
+        - __DNNs__ (deep neural networks)
 
 - **distribution estimation methods**
     > tries to model the data distribution of the sample data
@@ -151,7 +156,7 @@
     > normalizes output to be interpretable as probability distribution
     - **definition**: $(x_1,\dots x_n)\mapsto (p(x_1),\dots, p(x_n))$ where $$p(x) = \dfrac{e^{x}}{\sum_j e^{x_j}}$$
     - **properties**
-      -satisfies $p(x_i)\in [0,1]$
+      - satisfies $p(x_i)\in [0,1]$
       - sum rule: $\sum_i p(x_i)=1$
       - $p(x_i)$ can be interpreted as probabilities
 
@@ -203,6 +208,7 @@
         - $p_i \in \{0,1\}$
         - $q$ is a probability distribution
         - $\sum_i q_i = 1,\; q_i \in [0,1]$
+        - c.f. __cross entropy__
     - **loss function**: $\ell(p,q) = -\sum_i p_i \log(q_i)$
 
 

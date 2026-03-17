@@ -47,9 +47,9 @@
         - feature map: $(f\ast x)_i = \sum_j K_{i-j} x_j$ (discrete convolution)
         - translation equivariance, fewer parameters than dense layers
     - **softmax**
-        - last layer for multi-class classification
+        - last layer for multi-class classification $\to$ __softmax normalization__
         - maps logits to probabilities: $p_k = \dfrac{e^{z_k}}{\sum_j e^{z_j}}$
-        - enables cross-entropy loss with probabilistic interpretation
+        - enables __cross entropy loss__ with probabilistic interpretation
     - **dropout**
         - during training randomly set activations to zero
         - prevents co-adaptation, reduces overfitting
@@ -101,10 +101,10 @@
         - known value: $$\ell^{(L+1)}_i = \dfrac{\partial\ell}{\partial x_{out,i}}$$
         - specifically if $x^{(a)}_j =f^{(a)}_j(x^{(a-1)}) = \sigma_a(\sum_i M^{(a)}_{ji} x^{(a-1)}_i + b^{(a)}_j)$ then $$ U^{(a)}_{ij} = M^{(a)}_{ji} u_a(x^{(a)}_j),\quad \text{where}\quad u_a = \sigma'_a\circ \sigma_a^{-1}$$
         - derivatives with respect to weights 
-    \begin{align*}
+    $$\begin{aligned}
     \dfrac{\partial \ell}{\partial M^{(a)}_{ij}} &= \dfrac{\partial \ell}{\partial x^{(a)}_i} \dfrac{\partial x^{(a)}_i}{\partial M^{(a)}_{ij}} = \ell^{(a)}_i u_a(x^{(a)}_i) x^{(a-1)}_j\\
     \dfrac{\partial \ell}{\partial b^{(a)}_i} &= \dfrac{\partial \ell}{\partial x^{(a)}_i} \dfrac{\partial x^{(a)}_i}{\partial b^{(a)}_i} = \ell^{(a)}_i u_a(x^{(a)}_i)\\
-    \end{align*}
+    \end{aligned}$$
     
     - **use the above algorithm recursively**
         - forward cycle: from $x^{(0)}$ compute all $x^{(a)}$ layer values
@@ -154,7 +154,7 @@
 
 - **activation functions**
     > sigmoid functions breaking linearity
-    - **usual types**
+    - we list the most often used types
     - **sigmoid**: $\sigma(x)=\dfrac{1}{1+e^{-x}}$
         - outputs in $(0,1)$, saturates for large $|x|$
     - **ReLU**: $f(x)=\max(0, x)$

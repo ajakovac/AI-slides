@@ -6,10 +6,10 @@
     - **data model**: $\mathcal M(x; q) = \sum_\alpha q_\alpha g_\alpha(x_a)$
     - **matrix notation**: $X_{a\alpha} = g_\alpha(x_a)$
     - **loss**: Gaussian loss $$L(q) = \sum_{a=1}^{N_{data}} \dfrac{|\mathcal M(x_a; q)-y_a|^2} {\sigma_a^2} = (X\cdot q-y)^T C^{-1}(X\cdot q-y),$$ where $\sigma_a$ weights the importance of the given data and $C={\text{diag}}(\sigma^2)$.
-    - **parameter distribution**: $$L(q) = (q-\mu_q)^T C_q^{-1}(q-\mu_q)$$ Gaussian with  \begin{align*}
+    - **parameter distribution**: $$L(q) = (q-\mu_q)^T C_q^{-1}(q-\mu_q)$$ Gaussian with  $$\begin{aligned}
      & C_q = (X^T C^{-1}X)^{-1}\\
      & \mu_q = (X^T C^{-1}X)^{-1}X^T C^{-1}y.\\
-    \end{align*}
+    \end{aligned}$$
     - **goal**: find the optimal value of the parameter $q=\mu_q$
     - **distribution of the variables in the target space**: in vector notation $y = q\cdot g(x)$, thus it is also Gaussian with $$ \mu_y=\mu_q\cdot g(x),\quad C_y = g^T(x) C_q g(x) $$
     - **examples**
@@ -287,9 +287,9 @@
         - adaptive step size
         - most widely used
         - algorithm updates step size as well
-    \begin{align*}
+    $$\begin{aligned}
      & v_{k+1} = \beta_1 v_k + (1-\beta_1) p(x_k)\\
      & m_{k+1} = \beta_2 m_k + (1-\beta_2) p^2(x_k)\\
      & x_{k+1} = x_k + \eta \dfrac{v_k}{\sqrt{m_k}+\varepsilon}\\
-    \end{align*}
+    \end{aligned}$$
 

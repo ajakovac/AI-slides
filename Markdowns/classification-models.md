@@ -2,37 +2,48 @@
 - **one dimensional classification**
     > simplest case where data are one dimensional
     - **simplest case**: two sets in 1D
-    - **data model**: $$\mathcal M(x, x_{sep}) = \left\{
+    - **data model**: $$\mathcal M(x, x_{sep}) = 
         \begin{cases}
             \text{A, if}&  x> x_{sep}\\
             \text{B, if}&  x\le x_{sep}
-        \end{cases}
-    \right\}$$
-    - **hard margin problem**: if $A$ and $B$ are well separated, i.e. $\max A < \min B$ or conversely, then there exist a good separation point, for example $$x_{sep} = \dfrac{\max A + \min B}2$$
-    - **soft margin problem**: overlapping regions, not exact separation, not unique choice, result will depend on the separation condition (measure)
+        \end{cases}$$
+    - **hard margin problem**: if $A$ and $B$ are well separated, i.e. $\max A < \min B$ or conversely, then there exist a good separation point, for example $$x_{sep} = \dfrac{\max A + \min B}2$$ ![hard margin](../Images/hard-margin.png)
+    - **soft margin problem**: overlapping regions, not exact separation, not unique choice, result will depend on the separation condition (measure) ![overlapping regions](../Images/overlapping-regions.png)
     - **use heuristics**: e.g. midpoint of the overlapping regime
     - **use loss to determine separation point**
         - $p$-norm loss function $L(x_{sep}) = \sum_{x\in\text{overlap}} |x-x_{sep}|^p$
         - $p=1$ __hinge loss minimum__, minimum corresponds to median
         - $p=2$ __quadratic loss minimum__ corresponds to mean
-        - __classification via regression__, using softmax normalization of $f(x)=ax+b$
+        - __classification via regression__, using softmax normalization of $f(x)=ax+b$; $f(x)>0$ for $x\in A$
         - ![using loss in 1D classification](../Images/1d_optimization_linear_data_model.png)
+    - **impurity of the sample**
+    - **impurity of the sample**: __impurity__
+
+- **impurity**
+    - **measures the homogeneity of a sample**
+        - $p_i = N_i/N$ the ratio of elements belonging to a given class
+        - impurity is zero if $p_i=1$ for some $i$ and $p_j=0$ for other $j\neq i$
+        - impurity measures $\to$ entropy: __Shannon entropy__,  Gini impurity (from __other entropy formulea__)
 
 
 - **hinge loss minimum**
     > piecewise linear convex loss
     - **definition**: $L(x_{sep}) = \sum_{x\in\text{overlap}} |x-x_{sep}|$
-    - **corresponds to the median of the overlapping region**: \begin{align*}
-    &\sum_{i=1}^N |x_i-x_{sep}|= \sum_{x_i>x_{sep}} (x_i- x_{sep}) + \sum_{x_i<x_{sep}} (x_{sep}-x_i) =\\
-    &=(N_<-N_>) x_{ sep } + \sum_{x_i>x_{sep}} x_i - \sum_{x_i<x_{sep}} x_i = \text{minimum}\\
-    & \Rightarrow  N_<=N_>
-    \end{align*}
+    - **corresponds to the median of the overlapping region**
+        - proof $$
+        \begin{aligned}
+            & \sum_{i=1}^N |x_i-x_{sep}| = \sum_{x_i>x_{sep}} (x_i-x_{sep}) + \sum_{x_i < x_{sep}}(x_{sep}-x_i) = \\
+            & =(N_<-N_>) x_{sep} + \sum_{x_i>x_{sep}} x_i - \sum_{x_i < x_{sep}} x_i = \text{minimum}\\
+            & \Rightarrow N_<=N_>
+        \end{aligned}$$
+
     
     
 - **quadratic loss minimum**:
     > quardatic loss function
     - **definition**: $L(x_{sep}) = \sum_{x\in\text{overlap}} (x-x_{sep})^2$
-    - **corresponds to the mean of the overlapping region**: $$ 0 = \dfrac d{dx_{sep}} \sum_{i=1}^N ( x_i-x_{sep} )^2 = 2 \sum_{i=1}^N ( x_{sep} - x_i)\quad \Rightarrow\quad x_{ sep } = \frac 1N \sum_{i=1}^N x_i$$
+    - **corresponds to the mean of the overlapping region**
+        - proof: $$ 0 = \dfrac d{dx_{sep}} \sum_{i=1}^N ( x_i-x_{sep} )^2 = 2 \sum_{i=1}^N ( x_{sep} - x_i)\quad \Rightarrow\quad x_{sep} = \frac 1N \sum_{i=1}^N x_i$$
 
 
 - **decision tree**
@@ -44,10 +55,11 @@
     - **algorithm** 
         - start with step number $n_{step}=0$
         - $n_{step}\to n_{step}+1$
-        - if $n_{step}>n_{max}$, or $|S|=1$, **END**
+        - if $n_{step}>n_{max}$, or $|S|=1$, <b>END</b>
         - project data on coordinate $a$, having $s = \{(x_a, y_a)\mid (x,y)\in S\}$
         - use one dimensional classification of $s$ to split into $s_1$ and $s_2$
-        - use that direction $a$, where the total entropy is the smallest
+        - use that direction $a$, where the total __impurity__ is the smallest $$\text{total impurity} = \text{impurity}(s_1) + \text{impurity}(s_2)$$
+        ![different projections](../Images/projection-to-axes.png)
         - go back to point 1, using $s_1\to S$ and $s_2\to S$
         - ![graphical representation](../Images/decision-tree-algorithm.png)
     - **advantages**
@@ -164,10 +176,10 @@
         - Gaussian $p\sim e^{-\frac12 (x-\mu)^TC^{-1}(x-\mu)}$
         - then $\mathbb E[x] =\mu$ and $\mathbb E[(x-\mu)\otimes(x-\mu)]=C$
         - faithful estimators, assuming independent measurements
-            \begin{align*} 
+            $$\begin{aligned} 
             &\mathbb E[\frac1N \sum_{n=1}^N x_n] = \mu\\
             &\mathbb E[\frac1{N-1}\sum_{n=1}^N x_n\otimes x_n] =C
-            \end{align*}
+            \end{aligned}$$
 
 - **Gaussian Mixture Model**
     > assume that the data are coming from a sum of Gaussians
@@ -181,11 +193,11 @@
         - the responsibilities $$r_{ik} = \dfrac{\pi_k \mathcal N(x_i;\mu_k, C_k)}{\sum_{k=1}^K \pi_k \mathcal N(x_i;\mu_k, C_k)},$$
         determine the probabilities of belonging to a cluster for each points
         - redefine parameters to be attracted to fit the points belonging to a given cluster the best
-        \begin{align*}
+        $$\begin{aligned}
         &N_k=\sum_i r_{ik},\;\pi_k = \frac{N_k}N,\\
         &\mu_k = \frac1{N_k}\sum_i x_i r_{ik},\\ 
         & C_k = \frac1{N_k}\sum_i (x_i-\mu_k)\otimes(x_i-\mu_k) r_{ik}
-        \end{align*}
+        \end{aligned}$$
         - repeat from 2. until converges
 
 - **PCA**, 

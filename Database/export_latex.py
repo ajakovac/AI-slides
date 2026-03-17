@@ -19,6 +19,14 @@ def escape_latex(text: str) -> str:
     }
     return "".join(replacements.get(char, char) for char in text)
 
+def escape_latex_safe_math(text: str) -> str:
+    # In math mode, only a few characters need escaping.
+    replacements = {
+        "#": r"\#",
+        "%": r"\%",
+    }
+    return "".join(replacements.get(char, char) for char in text)
+
 def key_to_label(key: str) -> str:
     # Keep labels ASCII-safe and deterministic.
     digest = hashlib.sha1(key.encode("utf-8")).hexdigest()[:12]
@@ -43,7 +51,7 @@ def make_latex_line(line):
         else:
             raise ValueError(f"Unknown link type: {type}")
 
-    return LINK_RE.sub(repl_link, line)
+    return LINK_RE.sub(repl_link, escape_latex_safe_math(line))
 
 def create_latex(database):
     final = []
@@ -153,6 +161,9 @@ with open(args.database, 'r') as f:
 link_separator = database['$system']['link_separator']
 item_separator = database['$system']['item_separator']
 LINK_RE = re.compile(link_separator  + r'(.*?)' + item_separator + r'(.*?)' + item_separator + r'(.*?)' + link_separator)
+
+if not os.path.exists(os.path.join(os.path.dirname(__file__), '../Rendered Content')):
+    os.makedirs(os.path.join(os.path.dirname(__file__), '../Rendered Content'))
 
 with open(os.path.join(os.path.dirname(__file__), '../Rendered Content', args.output), 'w') as f:
     print(create_latex(database), file=f)
