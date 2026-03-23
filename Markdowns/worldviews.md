@@ -1,222 +1,204 @@
-# Worldviews and Intelligence
+- **Worldviews**
+    - **types**
+        - __pre-scientific worldview__
+        - __scientific worldview__
+        - __intelligence worldview__
 
-These items describe different worldviews, their assumptions, methods, and relation to intelligence and learning.
-
----
-
-<a id="worldviews"></a>
-- **worldviews**
-    - types:
-        - pre-scientific worldview
-        - scientific worldview
-        - intelligence worldview
-
----
-
-<a id="pre-scientific-worldview"></a>
 - **pre-scientific worldview**
-    - characteristics:
+    - **characteristics**
         - nature is chaotic and unpredictable
         - anthropomorphic explanations
         - understanding based on personal skills
         - artistic view: ateliers and schools
         - everything is art, from bridge building to poetry
         - divine spheres are controlled by laws
-    - examples:
+    - **examples**
         - castle building
         - medieval art
         - Hagia Sophia dome
 
----
-
-<a id="scientific-worldview"></a>
 - **scientific worldview**
-    - characteristics:
+    - **characteristics**
         - nature is governed by laws
         - laws can be discovered by systematic observation and experiment
         - mathematical description of nature
         - predictive models
         - technology based on scientific knowledge
         - laws are simple and elegant (Occam’s razor)
-    - worldview traits:
+    - **worldview traits**
         - analytic
         - reductionist
         - deterministic
-    - method:
-        - scientific method
-    - examples:
-        - physics (Newtonian mechanics, Maxwell’s equations, thermodynamics, etc.)
+    - **method**
+        - __scientific method__
+        - __analytic worldview__
+        - __the particle physicist and the grandma's cake__
+        - __number of relevant features__
+    - **examples**
+        - physics (__Newtonian mechanics__, Maxwell’s equations, thermodynamics, etc.)
         - chemical elements
         - taxonomy in biology
+    - **properties**
+        - contains few relevant quantities
+        - each feature has a unique role, character (c.f. units of measure)
+        - parameters can be fixed by dedicated measurements
+        - unique description: **the model** of the world, fully determinable $\to$ *scientific method*
+        - predictive ability (using the unique model), small deviation from reality, accurate
+    - **methods of predictions**:
+        - causal description (equations)
+        - stochastic description
 
----
-
-<a id="scientific-method"></a>
 - **scientific method**
-    - steps:
+    - **steps**
         - observation
         - modelling
         - computation
         - prediction
         - experiment
         - theory refinement
-    - assumptions:
+    - **assumptions**
         - nature is objective
         - laws are universal
         - experiments are reproducible
         - all effects have distinct causes
-    - requirements:
+    - **requirements**
         - parameters can be fixed by experiments
         - accurate measurements
         - controlled experiments
         - few relevant variables
-    - consequences:
+    - **consequences**
         - unique theory can be derived
         - prediction of new phenomena
         - limited validity range
         - falsifiability
-    - hints:
+    - **hints**
         - symmetry principles
         - conservation laws
         - dimensional analysis
         - Occam’s razor
-    - examples:
-        - Ising model
-        - Newtonian mechanics
+    - **examples**
+        - __Ising model__
+        - __Newtonian mechanics__
         - physics (mechanics, electromagnetism, thermodynamics, quantum mechanics, relativity, QFT)
         - chemistry of simple systems
         - genetics and molecular biology of simple organisms
         - constraint systems (engineering, traffic, logistics)
 
----
-
-<a id="ising-model"></a>
 - **Ising model**
-    - definition:
-      a mathematical model describing ferromagnetism in statistical mechanics
-    - lattice:
+    >  a mathematical model describing ferromagnetism in statistical mechanics
+    - **lattice**
         - $M = \{1,\dots,N\}^d$
         - $d$-dimensional cubic lattice
-    - states:
+    - **states**
         - spin at each lattice site ($\pm 1$)
-    - Hamiltonian:
+    - **Hamiltonian**
         - $H(\sigma) = -J \sum_{\langle i,j\rangle} \sigma_i\sigma_j - h\sum_i\sigma_i$
-    - relevant parameters:
+    - **relevant parameters**
         - $J$: interaction strength
         - $h$: external magnetic field
-    - partition function:
+    - **partition function**
         - $Z = \sum_{\{\sigma\}} e^{-\beta H(\sigma)}$
-    - temperature:
+    - **temperature**
         - $\beta = 1/(k_B T)$
-    - applications:
+    - **applications**
         - phase transitions
         - critical phenomena
         - complex systems
 
----
-
-<a id="newtonian-mechanics"></a>
 - **Newtonian mechanics**
-    - definition:
-      classical framework describing motion using Newton’s laws
-    - laws:
+    > classical framework describing motion using Newton’s laws
+    - **laws**
         - inertia
         - $F=ma$
         - action–reaction
-    - components:
+    - **components**
         - point masses
         - forces
         - absolute time and space
-    - applications:
+    - **applications**
         - planetary motion
         - engineering mechanics
         - classical dynamics
 
----
-
-<a id="intelligence-method"></a>
-- **intelligence method**
-    - steps:
+- **intelligence worldview**
+    - **steps**
         - set up a generic model
         - gather information
         - learn from data
         - refine model by experience
-    - assumptions:
+    - **assumptions**
         - many relevant features exist
         - features do not have unique roles
         - not all effects have distinct causes
-    - requirements:
+    - **requirements**
         - learning ability
         - adaptability
         - uncertainty handling
         - integration of multiple sources
-    - consequences:
+    - **consequences**
         - multiple models can fit data
         - no unique theory
         - validation by real-world performance
         - limited validity and precision
-    - examples:
+    - **examples**
         - pattern recognition
         - NLP
         - chemistry of complex molecules
         - biology of complex organisms
         - economics and social systems
+    - **intelligent approach**
+        - contains a lot of relevant quantities
+        - roles of the features are burred, conflated
+    - **not a unique description (no singled out model)**
+        - several descriptions work equally well $\to$ *intelligence method*
+        - not fully "understandable" (which description?)
+        - may have more and less important features
+    - all descriptions are insufficient, makes mistakes, "Exceptio probat regulam", exceptions challange the rule
+    - different methods to represent reality
 
----
 
-<a id="analytic-worldview"></a>
 - **analytic worldview**
-    - definition:
-      understanding complex systems by decomposing them into elementary components
-    - characteristics:
+    > understanding complex systems by decomposing them into elementary components
+    - **characteristics**
         - reductionism
         - determinism
         - focus on individual elements
-    - ontology:
+    - **ontology**
         - realism
         - materialism
         - mechanism
-    - ultimate theory:
+    - **ultimate theory**
         - theory of everything
-    - practical realizations:
+    - **practical realizations**
         - standard model
         - general relativity
-    - criticism:
-        - analytic worldview fails for multicomponent systems
+    - **criticism**
+        - __analytic worldview__ fails for multicomponent systems
 
----
-
-<a id="particle-physicist-cake"></a>
-- **the particle physicist and the grandma’s cake**
-    - story:
+- **the particle physicist and the grandma's cake**
+    - **story**
         - physicist understands fundamental particles
         - grandma bakes a cake
         - paradox: knowledge of fundamentals does not imply practical competence
-    - moral:
-        - analytic worldview must fail somewhere
-        - criticism of the analytic worldview
+    - **moral**
+        - __analytic worldview__ must fail somewhere
+        - __criticism of the analytic worldview__
 
----
-
-<a id="criticism-analytic-worldview"></a>
 - **criticism of the analytic worldview**
-    - points:
+    - **points**
         - complexity does not scale linearly with components
         - multicomponent systems require new concepts
-    - mathematical background: contexts, relevant features
-    - examples:
+    - **mathematical background**: contexts, relevant features
+    - **examples**
         - few-molecule chaos vs many-molecule ideal gases
-    - facit: the world can not be understood as a whole, only partial understadning is possibe
-        - software-hardware analogy
+    - **facit**: the world can not be understood as a whole, only partial understadning is possibe
+        - __software-hardware analogy__
 
----
-
-<a id="software-hardware-analogy"></a>
-- **software–hardware analogy**
-    - points:
+- **software-hardware analogy**
+    - **points**
         - software does not determine hardware
         - hardware does not determine software
-    - implications:
+    - **implications**
         - disciplines correspond to different descriptive levels
         - no single analytic reduction exists
         - multiple contexts are necessary
@@ -225,34 +207,14 @@ These items describe different worldviews, their assumptions, methods, and relat
     - depends only on the context alone (not follows from other contexts)
     - few relevant features $\to$ *scientific approach*
     - lot os relevant features $\to$ *intelligent approach*
-    - reason of few parameters
+    - **reason of few parameters**
         - large "distance" from underlying world
         - forced by a subsystem (e.c. traffic)
-    - examples for large distances
+    - **examples for large distances**
         - Standard Model: valid at least from 1GeV to 100 TeV: 5 orders of magnitude, details of the underlying theory do not count
         - quantum mechanics: atomic physics: 10 $\AA$, nucleus size: 1 fm = $10^{-15}m$, 5 orders of magnitude, details of the nucleus do not count
         - mechanics: intermolecular distances: $10^{-10}-10^{-8}$ m (solid vs. gas), observation scale $\sim 10^{-3}$ m: molecular details do not count
-    - facit:
+    - **facit**
         - science (and mathematics) is not the language of the Nature, they are applicable by some fortunate circumstances
-    - image: number_of_parameters
-    ![alt text](../Images/number_of_parameters.png)
+    - **image**: ![number_of_parameters](../Images/number_of_parameters.png)
 
-- **scientific approach**
-    - contains few relevant quantities
-    - each feature has a unique role, character (c.f. units of measure)
-    - parameters can be fixed by dedicated measurements
-    - unique description: **the model** of the world, fully determinable $\to$ *scientific method*
-    - predictive ability (using the unique model), small deviation from reality, accurate
-    - methods of predictions:
-        - causal description (equations)
-        - stochastic description
-
-- **intelligent approach**:
-    - contains a lot of relevant quantities
-    - roles of the features are burred, conflated
-    - not a unique description (no singled out model)
-        - several descriptions work equally well $\to$ *intelligence method*
-        - not fully "understandable" (which description?)
-        - may have more and less important features
-    - all descriptions are insufficient, makes mistakes, "Exceptio probat regulam", exceptions challange the rule
-    - different methods to represent reality

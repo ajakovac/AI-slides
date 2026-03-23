@@ -1,4 +1,4 @@
-- **Transformers**
+- **Transformers and attention mechanism**
     - **motivation**
         - classical sequence models (e.g. RNNs) process text sequentially
         - long-range dependencies are difficult to capture
@@ -9,6 +9,7 @@
         - scales efficiently to long sequences
     - **technologies**
         - __attention mechanism__
+        - __transformer__
         - __BERT__
         - __GPT__
         - __instruction tuning__

@@ -4,9 +4,13 @@
     - **goal of AI**: provide sensible context for an underlying set
     - **approaches**
         - __supervised learning__
+        - __compression__
         - __data driven approach__
         - __reinforcement learning__
         - __time series analysis__
+        - __transformers and attention mechanism__
+        - __reasoning in LLMs__, __RAG__
+        - __generative networks__
 
 - **supervised learning**
     > find the context $\mathcal C$ that smoothly represents the provided sample data.

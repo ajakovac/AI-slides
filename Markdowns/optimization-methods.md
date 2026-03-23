@@ -19,6 +19,7 @@
     - **failure modes**
         - __accuracy drop__
         - __overfitting__
+        - __interpolation__ problems
         - __extrapolation__
     - **improvements**
         - __pseudoinverse__

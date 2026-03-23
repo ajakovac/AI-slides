@@ -24,14 +24,14 @@
 
 
 - **Core GDPR principles**
-- Personal data belongs to the individual
-- A lawful basis is required for processing
-- Data may only be used for specific purposes
-- Data collection must be minimized
-- Transparency is mandatory
-- Automated decision-making is limited
-- Individuals have correction and deletion rights
-- Organizations must prove compliance
+  - Personal data belongs to the individual
+  - A lawful basis is required for processing
+  - Data may only be used for specific purposes
+  - Data collection must be minimized
+  - Transparency is mandatory
+  - Automated decision-making is limited
+  - Individuals have correction and deletion rights
+  - Organizations must prove compliance
 
 
 - **The EU AI Act**

@@ -21,43 +21,17 @@ time-series.md
 natural-language-processing.md
 attention-and-transformers.md
 reasoning.md
-
-## Main topics
-
-# [generative-networks.md](generative-networks.md) 
-# [reinforcement-learning.md](reinforcement-learning.md) 
-# [RAG-systems.md](RAG-systems.md) 
-# [worldviews.md](worldviews.md) 
-
-
+generative-networks.md
+reinforcement-learning.md
+RAG-systems.md
+worldviews.md
+#math_tricks.md
+#
 ## Auxiliary material
 
-# [math_tricks.md](math_tricks.md) 
 # [math-basics.md](math-basics.md) 
-# [probability-information-theory.md](probability-information-theory.md) 
 
 ## Other links
 
 # [representation.md](representation.md) 
 
-#RAG-systems.md
-#attention-and-transformers.md
-#classification-models.md
-#compression.md
-#content_of_the_AI_course.md
-#databases.md
-#deep-neural-networks.md
-#evaluation.md
-#finding-features.md
-#generative-networks.md
-#intelligence.md
-#math-basics.md
-#math_tricks.md
-#natural-language-processing.md
-#optimization-methods.md
-#reasoning.md
-#reinforcement-learning.md
-#representation.md
-#time-series.md
-#worldviews.md
-#

@@ -570,7 +570,6 @@ __END__
   Later discussions also included **naturalistic intelligence**,
   related to the recognition and classification of patterns in nature.
 
----
 
 - **Independence and interaction**
 

@@ -1,6 +1,7 @@
 - **Probability and information theory basics**
     - **events**: $\Omega$ set
     - **ensemble**: __estimation of time series__
+    - **transformation of distribution functions**: __transformation of distribution functions__
     - **random variable**
         - $\Omega\to V$ function, where $V$ is a vector space
         - __probability of a random variable__
@@ -12,7 +13,15 @@
         - __gamma distribution__
     - **other concepts**
         - __marginal probability__
+        - __independence__
     - **information theory**: __information theory__
+
+- **transformation of distribution functions**
+    - **formula**
+        - $\eta$ has a distribution $p(\eta)$
+        - $\xi$ has q distribution $q(\xi)$
+        - same probability for a set of events: $d\eta p(\eta) = d\xi q(\xi)$
+        - follows (with change of variables) $$\left|\dfrac{\partial\eta}{\partial\xi}\right|p(\eta) = p(\xi)$$
 
 - **estimation of time series**
     > if we do not have enough information, the dynamics is replaced by statistical correlations

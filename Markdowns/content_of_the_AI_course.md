@@ -1,13 +1,14 @@
 - **Lecture Contents**
-    - **Lecture 1**: __Lecture 1__
-    - **Lecture 2**: __Lecture 2__
-    - **Lecture 3**: __Lecture 3__
-    - **Lecture 4**: __Lecture 4__
-    - **Lecture 5**: __Lecture 5__
+    - **Topic 1**: __Topic 1__
+    - **Topic 2**: __Topic 2__
+    - **Topic 3**: __Topic 3__
+    - **Topic 4**: __Topic 4__
+    - **Topic 5**: __Topic 5__
+    - **Topic 6**: __worldviews__
     - **Technical background**: __Technical background__
 
 
-- **Lecture 1**
+- **Topic 1**
     - **topics**
         - __about the Introduction to AI course__  ![Introduction to AI](../Images/introduction_to_AI.png)
         - __learning in the AI era__
@@ -15,21 +16,21 @@
         - __social and ethical aspects of artificial intelligence__
         - __a brief history of Artificial Intelligence__
 
-- **Lecture 2**
+- **Topic 2**
     - **topics**
         - __changes in problem solving__
         - __human intelligence: a psychological perspective__
 
-- **Lecture 3**
+- **Topic 3**
     - **topics**
         - __intelligence and AI__
         - __conceptual foundations__
 
-- **Lecture 4**
+- **Topic 4**
     - **topics**
         - __AI learning paradigms__
 
-- **Lecture 5**
+- **Topic 5**
     - **topics**
         - __natural language processing__
 

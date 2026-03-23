@@ -28,7 +28,7 @@
         - __symmetries of the data__
         - expensive training $\to$ __pretrained models__ (transfer learning)
         - __catastrophic forgetting__
-        - __error-prone behavior__
+        - __error-prone behavior__, __adversarial attacks__
 
 - **CNNs**
     > convolutional neural networks

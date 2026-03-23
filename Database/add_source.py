@@ -228,6 +228,20 @@ def add_source(
             print(f"  - {link}")
         print(f"Total unresolved links: {len(database['$system']['unresolved_links'])}")
 
+    print("Explore connections...")
+    database['$system']['unconnected_links'] = []
+    for k in database:
+        if k == '$system':
+            continue
+        if len(database[k]['$links']) == 0:
+            database['$system']['unconnected_links'].append(k)
+    
+    if len(database['$system']['unconnected_links']) > 0:
+        print(f"WARNING: unconnected entries:")
+        for link in database['$system']['unconnected_links']:
+            print(f"  - {link} -> {database[link]['$keyword_name']}")
+        print(f"Total unconnected entries: {len(database['$system']['unconnected_links'])}")
+
     with open(database_name, 'w') as f:
         json.dump(database, f, indent=4)
 

@@ -97,7 +97,7 @@
         - $ \beta > 1 $: stronger regularization → more disentanglement, lower fidelity
         - $ \beta < 1 $: better reconstruction, weaker latent structure
 
-    - links: [book](https://gaussian37.github.io/deep-learning-chollet-8-4/), [paper](https://www.semanticscholar.org/paper/Generating-Diverse-High-Fidelity-Images-with-Razavi-Oord/6be216d93421bf19c1659e7721241ae73d483baf)
+    - **links**: [book](https://gaussian37.github.io/deep-learning-chollet-8-4/), [paper](https://www.semanticscholar.org/paper/Generating-Diverse-High-Fidelity-Images-with-Razavi-Oord/6be216d93421bf19c1659e7721241ae73d483baf)
 
     - **pros**
         - principled probabilistic model; training is usually stable
@@ -109,7 +109,12 @@
         - KL term may cause **posterior collapse** (decoder ignores $z$, common in text VAEs)
         - strong disentanglement often costs fidelity (esp. $\beta>1$)
 
-    - **example**: ![alt text](../Images/VAE-vs-AE.png)
+    - **example**: ![VAE vs. AE latent space](../Images/VAE-vs-AE.png)
+    - **typical use cases**
+        - representation learning
+        - controllable latent factors
+        - anomaly detection
+        - semi-supervised learning
 
 - **smile vector**
     > in the latent space belonging to the same person we can single out directions corresponding to change of some internal property (e.g. smile)

@@ -214,8 +214,9 @@
     - **examples**
         - features of a cat: furry, four legged, cat-eye animal, etc.
         - features of a laptop: producer, vendor, type of CPU, type of GPU, display size, etc
+    - **corresponding context**: __induced context__
 
-- **induced context**
+- **Induced context**
     > a context defined by given vallues of a function (feature)
     - **definition**: $f\mapsto \mathcal \{ f^{-1}(\{y\}) \mid y \in \operatorname{Ran}(f) \}$
 

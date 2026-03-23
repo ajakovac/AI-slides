@@ -6,9 +6,15 @@
     - __The First AI Boom (1956–1973)__
     - __The First AI Winter (1974–1980)__
     - __Expert Systems and the Second AI Boom (1980–1987)__
+      -__Renewed investments and national programs__
+      - __Theoretical advances__
+      - __Early practical successes: OCR__
     - __The Second AI Winter (1987–1993)__
-    - __Probabilistic AI, Statistical Learning, and the Data-Driven Revival (1993–2014)__
-    - __Deep Learning and the Representation Revolution (2014–present)__
+      - __Limits of expert systems__
+      - __Unfulfilled national ambitions__
+      - __Conceptual lesson of the second AI winter__
+    - __Probabilistic AI, Statistical Learning, and the Data-Driven Revival (1993-2014)__
+    - __Deep Learning and the Representation Revolution (2014-present)__
     - summary image: ![history image](../Images/history_image.png)
 
 - **Pre-scientific origins of Artificial Intelligence**
@@ -338,7 +344,7 @@
 
   - **Japan** launched the *Fifth Generation Computer Systems* project,
     aiming to build massively parallel computers
-    based on logic programming and AI principles.
+    based on logic programming and AI principles (1982 to 1992)
 
   - **United States** the government supported
     collaborative industrial research through organizations such as
@@ -420,10 +426,8 @@
     statistical learning, probabilistic models,
     and data-driven approaches in the 1990s.
 
-  > After two winters, AI learned a hard lesson: intelligence must be learned, not written. ❄️➡️📈
 
-
-- **Probabilistic AI, Statistical Learning, and the Data-Driven Revival (1993–2014)**
+- **Probabilistic AI, Statistical Learning, and the Data-Driven Revival (1993-2014)**
 
   > *Intelligence as inference from data.*
 
@@ -539,9 +543,9 @@
     for the deep learning revolution that followed.
 
 
-  > Once data and computation became abundant, representation became the bottleneck. 🔥🧠
+  > Once data and computation became abundant, representation became the bottleneck.
 
-- **Deep Learning and the Representation Revolution (2014–present)**
+- **Deep Learning and the Representation Revolution (2014-present)**
 
   > *Intelligence as learned representation.*
 

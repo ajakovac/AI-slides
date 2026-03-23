@@ -302,7 +302,7 @@
 
     - **limitations**:
         - assumes homogeneous regime (same time evolution)
-        - assumes fixed $m$ is enough to represent future $\to$ if not c.f. __transformers__
+        - assumes fixed $m$ is enough to represent future $\to$ if not c.f. __transformers and attention mechanism__
 
 
 - **PINNs**
