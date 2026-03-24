@@ -242,8 +242,37 @@ def add_source(
             print(f"  - {link} -> {database[link]['$keyword_name']}")
         print(f"Total unconnected entries: {len(database['$system']['unconnected_links'])}")
 
+    shortest_way = { k: None for k in database if k != '$system' }
+    shortest_way['lecture-contents'] = []
+    found_shorter = True
+    while found_shorter:
+        found_shorter = False
+        for k in shortest_way:
+            for link in database[k]['$links']:
+                name = link[1]
+                if shortest_way[name] is not None:
+                    if shortest_way[k] is None or len(shortest_way[k]) > len(shortest_way[name]) + 1:
+                        shortest_way[k] = shortest_way[name] + [name]
+                        found_shorter = True
+
+    lengths = sorted([[len(shortest_way[k]), k] for k in shortest_way if shortest_way[k] is not None])
+    ordered_list = {}
+    for length, k in lengths:
+        if length not in ordered_list:
+            ordered_list[length] = []
+        ordered_list[length].append(k)
+    for length in ordered_list:
+        ordered_list[length].sort(key=lambda k: database[k]['$keyword_name'])
+
+    
     with open(database_name, 'w') as f:
         json.dump(database, f, indent=4)
+
+    with open(database_name.replace('.json', '_ordered.json'), 'w') as f:
+            print(f"Shortest way to lecture-contents: {len(ordered_list)} steps")
+    for length, v in ordered_list.items():
+        for k in v:
+            print(f"{length}\t{k} : {shortest_way[k]}")
 
 
 if __name__ == "__main__":

@@ -2,23 +2,28 @@
 - **DNNs**
     > deep neural networks are the basis of the today's main stream applications
     - **alternative name**: deep neural network
-    - **idea**: classification via regression
+    - **method**
+        - __classification via regression__
+        - ![DNN architecture](../Images/DNN-architecture.png)
+        - ![a single DNN layer](../Images/DNN-layer.png) ![DNN layers](../Images/DNN-layer-system.png)
     - **data model**: $\mathcal M :(C,W)\to B$ is a composite function $\mathcal M = f^{(L)}\circ\dots f^{(L-1)} \circ f^{(0)},$ 
     where $$f^{(a)}: \mathbb R^{d_a} \to \mathbb R^{d_{a+1}},\qquad f^{(a)}_i(x) = \sigma_a\left(\sum_{j=1}^{d_a} M^{(a)}_{ij} x_j +b^{(a)}_i\right)$$
         - layered architecture, $L$ is the number of hidden layers $\to$ __layer types__
         - parameters (weights): $W=(M,b)$ of the linear map
-        - $\sigma_a$ are sigmoid (nonlinear) functions called __activation functions__
     - **activation function**
+        - $\sigma_a$ are sigmoid (nonlinear) functions called __activation functions__
         - may depend on the layer
         - in the last layer softmax normalization
-        - usual types: tanh, ReLU
     - **examples**
         - image classification: $a=0$ layer is the image in pixel representation, $a=L+1$ layer is the layer of classes
         - bird song recognition: $a=0$ layer is the wav file, $a=L+1$ layer is the bird species
-    - **universal approximation theorem**: any function can be realized in this way
+    - **universal approximation theorem**
+        - any function can be realized in this way
+        - [theorem in geeksforgeeks](https://www.geeksforgeeks.org/deep-learning/universal-approximation-theorem-for-neural-networks/?utm_source=chatgpt.com)
+        - [wiki page](https://en.wikipedia.org/wiki/Universal_approximation_theorem)
     - **contextual correspondence**: implements a __System I__ approach, with all of its advantages and disadvantages
     - **training**
-        - usually high dimensional optimization
+        - usually __high dimensional optimization__
         - needs gradient, now of composite functions $\to$ __backpropagation__
         - **Python optimizers**: [pytorch optimizers]https://docs.pytorch.org/docs/stable/optim.html
     - **problems with deep networks**

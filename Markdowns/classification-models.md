@@ -62,6 +62,8 @@
         ![different projections](../Images/projection-to-axes.png)
         - go back to point 1, using $s_1\to S$ and $s_2\to S$
         - ![graphical representation](../Images/decision-tree-algorithm.png)
+        - ![decision tree result](../Images/decision-tree-result.png)
+        - ![decision tree regions](../Images/decision-tree-regions.png)
     - **advantages**
         - simple
         - interpretable
@@ -139,6 +141,8 @@
     - **Rosenblatt algorithm**
         - reward $L=\sum_n y_n (w\cdot x_n+b)$
         - for a misclassified point update $w$ and $b$ with $\eta$ parameter as $$w\to w+\eta y_n x_n, \quad b\to b+\eta y_n$$ (always increases reward)
+    - **results**
+        - ![perceptron decision boundary](../Images/perceptron-decision-boundary.png)
 
 
 - **Support Vector Machine**
@@ -147,17 +151,20 @@
     - **method**: __classification via regression__
     - **linear version**
         - data model: $y = w\cdot x$
+        - ![SVM coordinates](../Images/svm-coordinates.png)
         - maps to one dimensional classification
         - loss function: hinge loss in the overlapping region
         - optimal $w$ minimize total impurity
+        - ![linear SVM decision boundary](../Images/svm-linear-decision-boundary.png)
     - **nonlinear version**
         - support vectors: $x_s$ points in the overlapping region
         - data model: linear combination of basis functions (kernels) $$y = \sum_s \alpha_s y_s K(x-x_s,\gamma) + b,$$
         where $\gamma$ denotes paramters of the kernel
-        - mostly used fixed width Gaussians $K(x,\gamma) = e^{-\gamma x^2}$
+        - mostly used fixed width Gaussians (RBF=Radial Basis Function): $K(x,\gamma) = e^{-\gamma x^2}$ $\to$ ![RBF kernel in SVM](../Images/svm-nonlinear-element.png)
         - linear optimization problem with $(b,\alpha_s)$
         - $\gamma$ is fixed, or treated as meta-parameter
-
+        - ![SVM nonlinear decision boundary](../Images/svm-nonlinear-decision-boundary.png)
+        - ![SVM RBF decision surface](../Images/svm-RBF-decision-surface.png)
 
 - **Extreme Learning Machine**
     > classification with a data model built from linearly parametrized random basis

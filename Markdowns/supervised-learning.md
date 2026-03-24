@@ -91,7 +91,6 @@
       - define a __sample loss__ $L=\text{loss}(\mathcal M(C,q),\mathcal C \mid \text{samples})$
       - minimize $L$
       - we need $\partial L/\partial q=0$
-      - practically batch evaluation
       - optimization $\to$ __optimization methods__
     - **failure modes**
         - __gradient calculation in complete database__  is numerically inefficitent

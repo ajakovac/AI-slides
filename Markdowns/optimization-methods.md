@@ -15,7 +15,6 @@
     - **examples**
         - __line fitting__
         - __function fitting in functional basis__
-        - __role of the weights__
     - **failure modes**
         - __accuracy drop__
         - __overfitting__
@@ -29,7 +28,6 @@
     > we try to best approximate a function in a designated basis
     - **data model**: $F = \sum_{i=1}^N \omega_i g_i$
     - **optimal parameters**: $\omega_{\text{opt}} = (G^T C_x^{-1} G)^{-1} G^T C_x^{-1} y$
-    - **role of covariance matrix**: __role of the weights__
     - **examples**
         - __line fitting__
         - __approximation of a random function__
@@ -44,11 +42,11 @@
     - **from the general formula** $$C_q^{-1} = X^T C^{-1} X =  \dfrac 1{\sigma^2}\left( \begin{matrix}1 & 0 \cr 0 & \langle \xi\xi\rangle\cr \end{matrix}\right),\quad X^TC^{-1}y = \dfrac 1{\sigma^2}\left( \begin{matrix}\langle \xi\eta \rangle \cr \langle \eta\eta\rangle \cr\end{matrix}\right)$$
     - **relevant parameters**
         - $a_* = {\langle \xi\xi\rangle}^{-1}{\langle \eta\eta\rangle},\; b_* = \langle \xi\eta\rangle,\; C_y = \sigma^2(1 + \xi{\langle \xi\xi\rangle}^{-1}\xi)$
-    - **example**: ![line fitting example](../Images/line-fitting.png)
-
-- **role of the weights**
-    > the weights (in general the covariance matrix) sets the importance of the individual data points
-    - **example**: ![line fitting for uniform and variable weights](../Images/role-of-weight.png)
+    - **example**
+        - ![line fitting example](../Images/line-fitting.png)
+    - **role of the weights**
+        -  the weights (in general the covariance matrix) sets the importance of the individual data points
+        - ![line fitting for uniform and variable weights](../Images/role-of-weight.png)
 
 - **approximation of a random function**:
     > example for function fitting
