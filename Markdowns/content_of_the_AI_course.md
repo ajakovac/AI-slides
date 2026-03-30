@@ -10,7 +10,8 @@
 
 - **Topic 1**
     - **topics**
-        - __about the Introduction to AI course__  ![Introduction to AI](../Images/introduction_to_AI.png)
+        - __about the Introduction to AI course__  ![AI course](../Images/AI-course.png)
+        ![Introduction to AI](../Images/introduction_to_AI.png)
         - __learning in the AI era__
         - introduction: __general facts about AI__
         - __social and ethical aspects of artificial intelligence__
