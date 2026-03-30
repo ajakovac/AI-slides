@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Sidebar({ keys = [], onSelectKey }) {
+export default function Sidebar({ keys = [], title = "Contents", onSelectKey }) {
   console.log(keys)
   return (
     <div className="sidebar-inner">
-      <h2>Contents</h2>
+      <h2>{title}</h2>
       <div className="nav-list">
         {keys.map((entry) => {
           const [label, key] = Array.isArray(entry)

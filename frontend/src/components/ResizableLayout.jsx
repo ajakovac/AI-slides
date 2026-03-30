@@ -1,7 +1,8 @@
 import React, { useCallback, useMemo, useRef, useState } from "react";
 import { clamp, startDrag } from "../lib/drag";
+import { BASE_URL } from "../api/client";
 
-export default function ResizableLayout({ sidebar, left, right }) {
+export default function ResizableLayout({ layout, sidebar, left, right }) {
   const containerRef = useRef(null);
   const [headerHeight, setHeaderHeight] = useState(120);
   const [sidebarWidth, setSidebarWidth] = useState(200);
@@ -56,8 +57,15 @@ export default function ResizableLayout({ sidebar, left, right }) {
     <div ref={containerRef} className="app">
       <header className="header" style={{ height: headerHeight }}>
         <div className="header-content">
-          <div className="brand">AI Slides</div>
-          <div className="meta">Document viewer</div>
+          {layout?.logo && <img src={`${BASE_URL}${layout.logo}`} alt="Logo" className="logo" />}
+          <div className="title-section">
+            {layout?.title && <div className="title">{layout.title}</div>}
+            {layout?.subtitle && <div className="subtitle">{layout.subtitle}</div>}
+          </div>
+          <div className="meta-section">
+            {layout?.author && <div className="author">{layout.author}</div>}
+            {layout?.date && <div className="date">{layout.date}</div>}
+          </div>
         </div>
       </header>
 

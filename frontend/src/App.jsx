@@ -4,32 +4,8 @@ import Sidebar from "./components/Sidebar";
 import DocPane from "./components/DocPane";
 import ImageGalleryPane from "./components/ImageGalleryPane";
 import { getKeyFromUrl, setUrlForKey } from "./lib/history";
-import { fetchEntry } from "./api/database";
+import { fetchLayout } from "./api/database";
 import { useSystem } from "./context/SystemContext";
-import { parsePayload } from "./lib/linkPayload";
-
-function normalizeContentsToKeys(data, system) {
-  if (!data || typeof data !== "object" || Array.isArray(data)) return [];
-
-  const linkSeparator = system?.link_separator;
-  const itemSeparator = system?.item_separator;
-  if (!linkSeparator || !itemSeparator) return [];
-
-  return Object.entries(data)
-    .map(([key, value]) => {
-      if (String(key).startsWith("$")) return null;
-      if (!Array.isArray(value) || value.length < 2) return null;
-
-      const label = String(value[0] ?? "").trim();
-      const linkInfo = String(value[1] ?? "");
-
-      const parsed = parsePayload(linkInfo, { linkSeparator, itemSeparator });
-      if (!parsed) return null;
-
-      return [label || parsed.name || key, parsed.value];
-    })
-    .filter(Boolean);
-}
 
 export default function App() {
   const system = useSystem();
@@ -39,12 +15,10 @@ export default function App() {
     ["Contents", "lecture-contents"],
   ], []);
 
-  const contentsItemName =
-    import.meta.env.VITE_CONTENTS_ITEM ||
-    new URLSearchParams(window.location.search).get("lecture-contents") ||
-    "lecture-contents";
-
   const [keys, setKeys] = useState(fallbackKeys);
+  const [sidebarTitle, setSidebarTitle] = useState("Contents");
+  const [startingSlide, setStartingSlide] = useState("lecture-contents");
+  const [layout, setLayout] = useState(null);
   const [activeKey, setActiveKey] = useState(urlKey || null);
 
   const [imagesFromEntry, setImagesFromEntry] = useState([]);
@@ -53,29 +27,47 @@ export default function App() {
   useEffect(() => {
     let cancelled = false;
 
-    if (!system) return;
-
     (async () => {
       try {
-        const data = await fetchEntry("item", contentsItemName);
-        const loadedKeys = normalizeContentsToKeys(data, system);
+        const layoutData = await fetchLayout();
+        setLayout(layoutData);
+        const contents = layoutData.contents;
+        
+        if (contents) {
+          // Set the sidebar title
+          const title = contents.$keyword_name || "Contents";
+          setSidebarTitle(title);
+          
+          // Set the starting slide
+          const starting = layoutData.starting_slide || "lecture-contents";
+          setStartingSlide(starting);
+          
+          // Extract the navigation keys (excluding $keyword_name)
+          const loadedKeys = Object.entries(contents)
+            .filter(([key]) => !key.startsWith('$'))
+            .map(([key, value]) => {
+              if (Array.isArray(value) && value.length >= 2) {
+                return [String(value[0] || key), String(value[1] || key)];
+              }
+              return [String(key), String(key)];
+            });
 
-        if (!cancelled && loadedKeys.length > 0) {
-          setKeys(loadedKeys);
+          if (!cancelled && loadedKeys.length > 0) {
+            setKeys(loadedKeys);
 
-          if (!urlKey) {
-            const firstKey = loadedKeys[0][1];
-            setActiveKey(firstKey);
-            setUrlForKey(firstKey, { replace: true });
+            if (!urlKey) {
+              setActiveKey(starting);
+              setUrlForKey(starting, { replace: true });
+            }
+          } else if (!cancelled && urlKey) {
+            setUrlForKey(urlKey, { replace: true });
           }
-        } else if (!cancelled && urlKey) {
-          setUrlForKey(urlKey, { replace: true });
         }
       } catch (e) {
-        console.error("Failed to fetch contents keys:", e);
+        console.error("Failed to fetch layout:", e);
 
         if (!cancelled) {
-          const fallbackDefault = fallbackKeys[0]?.[1];
+          const fallbackDefault = startingSlide || fallbackKeys[0]?.[1];
           if (!activeKey && fallbackDefault) {
             setActiveKey(fallbackDefault);
             setUrlForKey(fallbackDefault, { replace: true });
@@ -87,8 +79,7 @@ export default function App() {
     return () => {
       cancelled = true;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [contentsItemName, system]);
+  }, [urlKey]); // Removed system dependency
 
   useEffect(() => {
     const onPop = (event) => {
@@ -109,7 +100,8 @@ export default function App() {
 
   return (
     <ResizableLayout
-      sidebar={<Sidebar keys={keys} onSelectKey={(k) => navigateKey(k, { push: true })} />}
+      layout={layout}
+      sidebar={<Sidebar keys={keys} title={sidebarTitle} onSelectKey={(k) => navigateKey(k, { push: true })} />}
       left={<DocPane
         initialKey={safeActiveKey}
         onNavigateKey={(k) => navigateKey(k, { push: true })}

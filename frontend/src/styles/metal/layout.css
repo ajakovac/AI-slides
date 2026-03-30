@@ -1,0 +1,135 @@
+/* ===== Layout (structure) ===== */
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f5f7fb;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 18px 28px;
+  background: var(--panel);
+  color: var(--text-main);
+  box-shadow: var(--shadow-soft);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.header-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  height: 64px;
+  width: auto;
+  border-radius: 8px;
+  border: none;
+  box-shadow: none;
+  margin-right: 18px;
+  background: transparent;
+}
+
+.title-section {
+  flex: 1;
+  text-align: left;
+  min-width: 200px;
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: 0.35px;
+  color: var(--text-main);
+  text-shadow: none;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin: 8px 0 0 0;
+  font-weight: 600;
+}
+
+.meta-section {
+  text-align: right;
+  font-size: 13px;
+  min-width: 150px;
+  color: var(--text-main);
+}
+
+.author,
+.date {
+  margin: 0;
+  line-height: 1.3;
+}
+
+.author {
+  font-weight: 700;
+}
+
+.date {
+  margin-top: 4px;
+  color: var(--text-muted);
+}
+
+
+.body {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sidebar {
+  height: 100%;
+  overflow: auto;
+  min-width: 120px; /* matches your JS minSidebar */
+}
+
+.main-area {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pane {
+  height: 100%;
+  overflow: auto;
+  padding: 24px;
+}
+
+.splitter {
+  z-index: 5;
+  flex: 0 0 auto;
+}
+
+.splitter.horizontal {
+  height: 6px;
+  cursor: row-resize;
+}
+
+.splitter.vertical {
+  width: 6px;
+  cursor: col-resize;
+}
+
+/* Fade animation hook used by your panes */
+.pane.is-fading,
+.doc-pane.is-fading {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}

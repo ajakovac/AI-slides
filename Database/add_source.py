@@ -7,16 +7,16 @@ from collections.abc import Iterable
 import argparse
 from pathlib import Path
 
-params = {
-    "IMG_RE": re.compile(r'!\[([^\]]*)\]\(([^)]+)\)'),
-    "LINK_RE": re.compile(r'\[([^\]]+)\]\(([^)]+)\)'),
-    "LINK_SEPARATOR": "\x1e",
-    "ITEM_SEPARATOR": "\x1f"
+data_system = {
+    "IMG_RE": r'!\[([^\]]*)\]\(([^)]+)\)',
+    "LINK_RE": r'\[([^\]]+)\]\(([^)]+)\)',
+    "link_separator": "\x1e",
+    "item_separator": "\x1f"
 }
 
 def link_format(type, name, value):
-    link_separator = params["LINK_SEPARATOR"]
-    item_separator = params["ITEM_SEPARATOR"]
+    link_separator = data_system["link_separator"]
+    item_separator = data_system["item_separator"]
     return f'{link_separator}{type}{item_separator}{name}{item_separator}{value}{link_separator}'
 
 def extract_keyword(line) -> tuple[str | None, str, int, bool]:
@@ -55,7 +55,7 @@ def resolve_link(database:dict, line:str, keyword:str, property:str):
             if len(found) == 0:
                 raise ValueError(f"Multiple matches found for keyword: '{skey}' in line: '{line}'")
         if len(found) == 0:
-            database['$system']['unresolved_links'].append(skey)
+            data_system['unresolved_links'].append(skey)
         else:
             if len(found) > 1:
                 print(f"\tWARNING -> Multiple matches found for keyword: '{skey}' in line: '{line}'")
@@ -80,7 +80,9 @@ def resolve_markdown_links(database:dict, line:str, keyword:str) -> str:
         # ✨ return the link
         return link_format("external-link", alt, url)
 
-    return params["LINK_RE"].sub(repl_external_link, params["IMG_RE"].sub(repl_image, line))
+    return data_system["_COMPILED_LINK_RE"].sub(
+        repl_external_link, 
+        data_system["_COMPILED_IMG_RE"].sub(repl_image, line))
 
 
 def add_source(
@@ -91,21 +93,26 @@ def add_source(
         startnew=False
         ):
 
-    try:
-        with open(database_name, 'r') as f:
-            database = json.load(f)
-    except FileNotFoundError:
-        print(f"Database file '{database_name}' not found. Starting with an empty database.")
-        startnew = True
+    
+    if not startnew and not if_delete:
+        print(f"WARNING: You are adding/updating entries in the database. If you want to start with an empty database, use the --startnew flag. If you want to delete entries of the file instead of adding/updating them, use the --delete flag.")
+        try:
+            with open(database_name, 'r') as f:
+                database = json.load(f)
+            with open(database_name.replace('.json', '_system.json'), 'w') as f:
+                data_system.update(json.load(f))
+        except:
+            print(f"Database directory is corrupted or not found. Starting with an empty database.")
+            startnew = True
     
     if startnew:
-        database = {
-            "$system": {
-                "link_separator": "\x1e",
-                "item_separator": "\x1f",
-                "unresolved_links": []
-            }
-        }
+        database = {}
+        data_system['unresolved_links'] = []
+        data_system['unconnected_links'] = []
+
+    data_system['_COMPILED_LINK_RE'] = re.compile(data_system['LINK_RE'])
+    data_system['_COMPILED_IMG_RE'] = re.compile(data_system['IMG_RE'])
+
 
     for filename in input_files:
         print(f"Processing file: {filename}")
@@ -118,11 +125,6 @@ def add_source(
                 if line == '__END__':
                     break
                 input_lines.append(line)
-
-        params["LINK_SEPARATOR"] = database['$system']['link_separator']
-        params["ITEM_SEPARATOR"] = database['$system']['item_separator']
-
-        
 
         keyword = None
         depth_descriptor = [-1]
@@ -207,42 +209,39 @@ def add_source(
                 database[key][property][-1] += " " +content.strip()
 
     print("Resolving links...")
-    database['$system']['unresolved_links'] = []
+    data_system['unresolved_links'] = []
     for k in database:
-        if k == '$system':
-            continue
         for property in database[k]:
             if property.startswith('$'):
                 continue
-            for line_index, line in enumerate(database[k][property]):
-                line = resolve_link(database, line, k, property)
+            property_name = database[k][property][0]
+            for line_index, line in enumerate(database[k][property][1:]):
+                line = resolve_link(database, line, k, property_name)
                 line = resolve_markdown_links(database, line, k)
                 try:
-                    database[k][property][line_index] = line
+                    database[k][property][line_index + 1] = line
                 except Exception as e:
                     print(f"Error resolving link in {k}.{property}: {e}")
 
-    if len(database['$system']['unresolved_links']) > 0:
+    if len(data_system['unresolved_links']) > 0:
         print(f"WARNING: unresolved links:")
-        for link in database['$system']['unresolved_links']:
+        for link in data_system['unresolved_links']:
             print(f"  - {link}")
-        print(f"Total unresolved links: {len(database['$system']['unresolved_links'])}")
+        print(f"Total unresolved links: {len(data_system['unresolved_links'])}")
 
     print("Explore connections...")
-    database['$system']['unconnected_links'] = []
+    data_system['unconnected_links'] = []
     for k in database:
-        if k == '$system':
-            continue
         if len(database[k]['$links']) == 0:
-            database['$system']['unconnected_links'].append(k)
+            data_system['unconnected_links'].append(k)
     
-    if len(database['$system']['unconnected_links']) > 0:
+    if len(data_system['unconnected_links']) > 0:
         print(f"WARNING: unconnected entries:")
-        for link in database['$system']['unconnected_links']:
+        for link in data_system['unconnected_links']:
             print(f"  - {link} -> {database[link]['$keyword_name']}")
-        print(f"Total unconnected entries: {len(database['$system']['unconnected_links'])}")
+        print(f"Total unconnected entries: {len(data_system['unconnected_links'])}")
 
-    shortest_way = { k: None for k in database if k != '$system' }
+    shortest_way = { k: None for k in database}
     shortest_way['lecture-contents'] = []
     found_shorter = True
     while found_shorter:
@@ -267,12 +266,16 @@ def add_source(
     
     with open(database_name, 'w') as f:
         json.dump(database, f, indent=4)
-
-    with open(database_name.replace('.json', '_ordered.json'), 'w') as f:
-            print(f"Shortest way to lecture-contents: {len(ordered_list)} steps")
-    for length, v in ordered_list.items():
-        for k in v:
-            print(f"{length}\t{k} : {shortest_way[k]}")
+    del data_system['_COMPILED_LINK_RE']
+    del data_system['_COMPILED_IMG_RE']
+    with open(database_name.replace('.json', '_system.json'), 'w') as f:
+        json.dump(data_system, f, indent=4)
+    with open(database_name.replace('.json', '_ordered.txt'), 'w') as f:
+        print('length\tkey : path', file=f)
+        print('-----\t--- : ---', file=f)
+        for length, v in ordered_list.items():
+            for k in v:
+                print(f"{length:<5}\t{k} : {shortest_way[k]}", file=f)
 
 
 if __name__ == "__main__":

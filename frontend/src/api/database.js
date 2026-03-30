@@ -5,3 +5,7 @@ export function fetchEntry(section, key) {
     `/${encodeURIComponent(section)}/${encodeURIComponent(key)}`
   );
 }
+
+export function fetchLayout() {
+  return apiFetch("/layout");
+}

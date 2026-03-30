@@ -7,7 +7,7 @@ export function SystemProvider({ children }) {
   const [system, setSystem] = useState(null);
 
   useEffect(() => {
-    apiFetch("/item/$system")
+    apiFetch("/system")
       .then(setSystem)
       .catch(console.error);
   }, []);

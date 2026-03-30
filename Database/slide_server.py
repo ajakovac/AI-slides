@@ -15,39 +15,76 @@ from fastapi.middleware.cors import CORSMiddleware
 
 
 data_store: Dict[str, Any] = {}
+system_store: Dict[str, Any] = {}
+layout_store: Dict[str, Any] = {}
 _data_lock = asyncio.Lock()
 
-DATA_FILE = "data.json"
+DATA_FILE = "data/database.json"
+SYSTEM_FILE = "data/database_system.json"
+LAYOUT_FILE = "data/database_layout.json"
 POLL_SECONDS = 1.0
 
+async def load_data() -> None:
+    # Load main content data
+    main_data = {}
+    try:
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            main_data = json.load(f)
+    except FileNotFoundError:
+        print(f"Warning: {DATA_FILE} not found")
+    except json.JSONDecodeError as e:
+        print(f"Error loading {DATA_FILE}: {e}")
 
-async def load_data(filename: str) -> None:
-    with open(filename, "r", encoding="utf-8") as f:
-        new_data = json.load(f)
+    # Load system data
+    system_data = {}
+    try:
+        with open(SYSTEM_FILE, "r", encoding="utf-8") as f:
+            system_data = json.load(f)
+    except FileNotFoundError:
+        print(f"Warning: {SYSTEM_FILE} not found")
+    except json.JSONDecodeError as e:
+        print(f"Error loading {SYSTEM_FILE}: {e}")
 
-    if not isinstance(new_data, dict):
-        raise ValueError("Top-level JSON must be an object/dict.")
+    # Load layout data
+    layout_data = {}
+    try:
+        with open(LAYOUT_FILE, "r", encoding="utf-8") as f:
+            layout_data = json.load(f)
+    except FileNotFoundError:
+        print(f"Warning: {LAYOUT_FILE} not found")
+    except json.JSONDecodeError as e:
+        print(f"Error loading {LAYOUT_FILE}: {e}")
 
     async with _data_lock:
         data_store.clear()
-        data_store.update(new_data)
+        data_store.update(main_data)
+        system_store.clear()
+        system_store.update(system_data)
+        layout_store.clear()
+        layout_store.update(layout_data)
 
 
-async def hot_reload_loop(filename: str, poll_seconds: float):
-    last_mtime = None
+async def hot_reload_loop(poll_seconds: float):
+    last_mtimes = {}
+    files_to_watch = [DATA_FILE, SYSTEM_FILE, LAYOUT_FILE]
 
     while True:
         try:
-            mtime = os.path.getmtime(filename)
-            if last_mtime is None:
-                last_mtime = mtime
-
-            if mtime != last_mtime:
-                await load_data(filename)
-                last_mtime = mtime
+            changed = False
+            for filename in files_to_watch:
+                try:
+                    mtime = os.path.getmtime(filename)
+                    if filename not in last_mtimes:
+                        last_mtimes[filename] = mtime
+                    elif mtime != last_mtimes[filename]:
+                        changed = True
+                        last_mtimes[filename] = mtime
+                except FileNotFoundError:
+                    continue
+            
+            if changed:
+                await load_data()
                 print(f"[hot-reload] Reloaded at {time.strftime('%H:%M:%S')}")
-        except json.JSONDecodeError as e:
-            print(f"[hot-reload] JSON error: {e}")
         except Exception as e:
             print(f"[hot-reload] Error: {e}")
 
@@ -57,8 +94,8 @@ async def hot_reload_loop(filename: str, poll_seconds: float):
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup phase
-    await load_data(DATA_FILE)
-    task = asyncio.create_task(hot_reload_loop(DATA_FILE, POLL_SECONDS))
+    await load_data()
+    task = asyncio.create_task(hot_reload_loop(POLL_SECONDS))
 
     yield  # App runs here
 
@@ -83,14 +120,27 @@ app.add_middleware(
 @app.get("/item/{key}")
 async def get_item(key: str):
     async with _data_lock:
-        if key not in data_store:
+        if key in data_store:
+            return data_store[key]
+        elif key in layout_store:
+            return layout_store[key]
+        else:
             raise HTTPException(status_code=404, detail="Key not found")
-        return data_store[key]
 
 @app.get("/keys")
 async def get_keys():
     async with _data_lock:
         return list(data_store.keys())
+
+@app.get("/system")
+async def get_system():
+    async with _data_lock:
+        return system_store
+
+@app.get("/layout")
+async def get_layout():
+    async with _data_lock:
+        return layout_store
 
 # Directory where images live (relative to this file)
 IMAGES_DIR = (Path(__file__).resolve().parent / "../Images").resolve()
@@ -144,6 +194,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     DATA_FILE = args.data
+    SYSTEM_FILE = args.data.replace('.json', '_system.json')
+    LAYOUT_FILE = args.data.replace('.json', '_layout.json')
     POLL_SECONDS = args.poll
 
     uvicorn.run(app, host=args.host, port=args.port)

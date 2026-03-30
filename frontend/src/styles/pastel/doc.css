@@ -1,0 +1,195 @@
+/* ===============================
+   Document Card
+   =============================== */
+
+.card {
+  max-width: 900px;
+  margin: 0 auto 32px auto;
+  padding: 28px 32px;
+  background: linear-gradient(180deg, #ffffff 0%, #e9edf3 100%);
+  border-radius: 12px;
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+  border: 1px solid #c5cbd6;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #1b212a;
+  border-bottom: 1px solid #d0d6df;
+  padding-bottom: 10px;
+}
+
+/* ===============================
+   Topic Sections
+   =============================== */
+
+.topic {
+  margin-top: 26px;
+}
+
+.topic h3 {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #4b5663;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   Lists
+   =============================== 
+
+.topic ul,
+.references ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.topic li,
+.references li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.topic li::before,
+.references li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #5f6b7a;
+  font-size: 14px;
+}
+*/
+.references ul,
+.topic ul {
+  list-style: none;      /* remove default bullets */
+  padding-left: 1.5rem;
+}
+
+.references ul li,
+.topic ul li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.references ul li::before,
+.topic ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: #2ecc71;
+  border-radius: 50%;    /* makes it a blob */
+}
+
+/* ===============================
+   Blockquotes
+   =============================== */
+
+blockquote {
+  margin: 18px 0;
+  padding: 12px 18px;
+  background: linear-gradient(180deg, #f8f9fb 0%, #e1e6ee 100%);
+  border-left: 4px solid #a3acb9;
+  border-radius: 6px;
+  font-style: italic;
+  color: #3a404a;
+}
+
+/* ===============================
+   Links
+   =============================== */
+
+.inline-link,
+.back-link {
+  color: #2f5c9a;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(47,92,154,0.35);
+  transition: all 0.18s ease;
+}
+
+.inline-link:hover,
+.back-link:hover {
+  color: #1f3d68;
+  border-bottom-color: #1f3d68;
+}
+
+/* ===============================
+   Image links
+   =============================== */
+
+.inline-image {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(47, 92, 154, 0.08);
+  color: #2f5c9a;
+  font-size: 0.92em;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid rgba(47, 92, 154, 0.25);
+  transition: all 0.18s ease;
+}
+
+.inline-image:hover {
+  background: rgba(47, 92, 154, 0.18);
+  border-color: #2f5c9a;
+}
+
+/* ===============================
+   External links
+   =============================== */
+
+.external-link {
+  color: #1e6f5c;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-right: 1.1em;
+  transition: color 0.18s ease;
+}
+
+.external-link::after {
+  content: "↗";
+  position: absolute;
+  right: 0;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+.external-link:hover {
+  color: #145244;
+  text-decoration: underline;
+}
+
+
+/* ===============================
+   References
+   =============================== */
+
+.references {
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid #d0d6df;
+}
+
+.references h3 {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #586270;
+  margin-bottom: 12px;
+}
