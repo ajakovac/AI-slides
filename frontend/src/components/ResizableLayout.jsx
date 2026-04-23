@@ -2,7 +2,7 @@ import React, { useCallback, useMemo, useRef, useState } from "react";
 import { clamp, startDrag } from "../lib/drag";
 import { BASE_URL } from "../api/client";
 
-export default function ResizableLayout({ layout, sidebar, left, right }) {
+export default function ResizableLayout({ layout, theme, onThemeChange, sidebar, left, right }) {
   const containerRef = useRef(null);
   const [headerHeight, setHeaderHeight] = useState(120);
   const [sidebarWidth, setSidebarWidth] = useState(200);

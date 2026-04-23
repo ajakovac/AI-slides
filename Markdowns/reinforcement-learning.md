@@ -188,14 +188,14 @@
         plus the **expected discounted value of successor states**
         - expresses the principle of **optimal substructure**
     - **Bellman expectation equation (for a fixed policy $\pi$)**
-    $$ V^\pi(s)  = \sum_{a} \pi(a \mid s)\sum_{s'}P(s' \mid s, a)\bigl[ r(s,a,s') + \gamma V^\pi(s')\bigr]$$
+        - $$ V^\pi(s)  = \sum_{a} \pi(a \mid s)\sum_{s'}P(s' \mid s, a)\bigl[ r(s,a,s') + \gamma V^\pi(s')\bigr]$$
     - **explanation**
         - we choose an action with probability $\pi(a\mid s)$
         - the system goes into $s'$ with probability $P(s' \mid s, a)$
         - we obtain a rewards **and** a discounted reward from the future
     - **Bellman optimality equation**: simplified form when we choose only the best strategy
     $$ V^*(s)=\max_{a}\sum_{s'} P(s' \mid s, a)\bigl[r(s,a,s') + \gamma V^*(s')\bigr]$$
-        - for two-player game: (c.f. __Two-Player Zero-Sum  Games__) $$V(s) = \max_{a}\min_{a'}[r(s,a,a') + \gamm V(s)]
+        - for two-player game: (c.f. __Two-Player Zero-Sum  Games__) $$V(s) = \max_{a}\min_{a'}[r(s,a,a') + \gamma V(s)]$$
         - __optimal Policy from the Bellman Equation__
 
 - **Optimal Policy from the Bellman Equation**
@@ -249,8 +249,7 @@
         - positive value → winning position
         - negative value → losing position
 
-    - **Bellman optimality equation (minimax form)**
-        $$V^*(s)=\begin{cases}
+    - **Bellman optimality equation (minimax form)**: $$V^*(s)=\begin{cases}
             \displaystyle \max_{a}\sum_{s'}P(s' \mid s,a)\bigl[r(s,a,s') + \gamma V^*(s')\bigr], & \text{agent’s turn}\\
             \displaystyle \min_{a}\sum_{s'}P(s' \mid s,a)\bigl[r(s,a,s') + \gamma V^*(s')\bigr], & \text{opponent’s turn}
         \end{cases}$$
@@ -289,7 +288,7 @@
     - **Code**: [https://github.com/LeelaChessZero/lc0](https://github.com/LeelaChessZero/lc0)
 
 - **Stockfish**
-    - **Description / reference**: Romstad, T., Costalba, M., Kiiski, J., & Österlund, G. Stockfish: a strong open-source chess engine.
+    - **Description / reference**: Romstad, T., Costalba, M., Kiiski, J., and Österlund, G. Stockfish: a strong open-source chess engine.
     - **Official website**: [https://stockfishchess.org](https://stockfishchess.org)
     - **Code**: [https://github.com/official-stockfish/Stockfish](https://github.com/official-stockfish/Stockfish)
     - **Remark**: Stockfish is primarily a classical search + evaluation engine, but modern versions integrate neural-network-based evaluation (NNUE).

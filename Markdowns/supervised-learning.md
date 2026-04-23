@@ -92,6 +92,7 @@
       - minimize $L$
       - we need $\partial L/\partial q=0$
       - optimization $\to$ __optimization methods__
+      - __evaluation of results of a classification__
     - **failure modes**
         - __gradient calculation in complete database__  is numerically inefficitent
         - __underfitting__

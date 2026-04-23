@@ -23,9 +23,9 @@
         - [wiki page](https://en.wikipedia.org/wiki/Universal_approximation_theorem)
     - **contextual correspondence**: implements a __System I__ approach, with all of its advantages and disadvantages
     - **training**
-        - usually __high dimensional optimization__
+        - __model optimization__ $\to$ usually __high dimensional optimization__
         - needs gradient, now of composite functions $\to$ __backpropagation__
-        - **Python optimizers**: [pytorch optimizers]https://docs.pytorch.org/docs/stable/optim.html
+        - **Python optimizers**: [pytorch optimizers](https://docs.pytorch.org/docs/stable/optim.html)
     - **problems with deep networks**
         - __high dimensional optimization__ problem
         - __vanishing gradient__ and __exploding gradient__
@@ -101,7 +101,11 @@
         - we want to have derivatives of the loss function with respect to the weights $$\dfrac{\partial \ell}{\partial W^{(a)}_{ij}}\quad \text{and}\quad \dfrac{\partial \ell}{\partial b^{(a)}_{i}}$$ 
         - loss function: $\ell(x) = \ell(\mathcal M(x;W,b))$ where $\mathcal M$ is a composite function
         - introduce intermediate results $x^{(0)}$ (input) $\to x^{(1)}\to \dots \to x^{(L)}\to x_{out}$ (output), here $x^{(a)}_j = f^{(a)}_j(x^{(a-1)})$
-        - use chain rule $$\dfrac{\partial \ell}{\partial x^{(a-1)}_i} = \dfrac{\partial \ell}{\partial x^{(a)}_j}\dfrac{\partial x^{(a)}_j}{\partial x^{(a-1)}_i} = \dfrac{\partial \ell}{\partial x^{(a)}_j} \partial_i f^{(a)}_j(x^{(a-1)}) = \dfrac{\partial \ell}{\partial x^{(a)}_j} \partial_i f^{(a)}_j(f_a^{-1}(x^{(a)}))$$
+        - use chain rule $$
+        \begin{aligned}
+        \dfrac{\partial \ell}{\partial x^{(a-1)}_i} &= \dfrac{\partial \ell}{\partial x^{(a)}_j}\dfrac{\partial x^{(a)}_j}{\partial x^{(a-1)}_i} = \dfrac{\partial \ell}{\partial x^{(a)}_j} \partial_i f^{(a)}_j(x^{(a-1)}) =\\
+        & =\dfrac{\partial \ell}{\partial x^{(a)}_j} \partial_i f^{(a)}_j(f_a^{-1}(x^{(a)}))
+        \end{aligned}$$
         - implies a recursion: with notations $\ell^{(a)}_i = \dfrac{\partial \ell}{\partial x^{(a)}_i}$ and $U^{(a)}_{ij} = \partial_i f^{(a)}_j\circ f_a^{-1}$ we find in matrix notation $$\ell^{(a-1)}= U^{(a)} \ell^{(a)}.$$
         - known value: $$\ell^{(L+1)}_i = \dfrac{\partial\ell}{\partial x_{out,i}}$$
         - specifically if $x^{(a)}_j =f^{(a)}_j(x^{(a-1)}) = \sigma_a(\sum_i M^{(a)}_{ji} x^{(a-1)}_i + b^{(a)}_j)$ then $$ U^{(a)}_{ij} = M^{(a)}_{ji} u_a(x^{(a)}_j),\quad \text{where}\quad u_a = \sigma'_a\circ \sigma_a^{-1}$$

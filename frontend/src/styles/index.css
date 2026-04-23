@@ -1,3 +1,1 @@
-@import "./pastel/layout.css";
-@import "./pastel/app.css";
-@import "./pastel/doc.css";
+/* Theme-specific CSS is now loaded dynamically in App.jsx */

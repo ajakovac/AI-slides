@@ -23,16 +23,11 @@
 - **confusion matrix**
     > measure how well the true labels are guessed correctly
     - **contruction**: tabulate predicted class vs. actual class results
-    - **as probability**: $C_{ij} = P(\text{predicted}_i, \text{actual}_i)$ or $C_{ij} = P(\text{predicted}_i | \text{actual}_i)$
-
+    - **as probability**
+        - $C_{ij} = P(\text{predicted}_i, \text{actual}_i)$ or $C_{ij} = P(\text{predicted}_i | \text{actual}_i)$
+        - ![confusion matrix example](../Images/confusion-matrix-example.png)
 - **2-class performance metrics**
-    - in case of 2 classes (positive/negative) the confusion matrix is
-
-        | all measured| actual P | actual N |
-        |-------------|----------|----------|
-        | predicted P | true P   | false P  |
-        | predicted N | false N  |  true N  |
-
+    - in case of 2 classes (positive/negative) the confusion matrix is ![2D confusion matrix](../Images/confusion-matrix-2d.png)
     - **constraints**: $$\begin{aligned}&\text{true P, N} + \text{false P, N} = \text{prediced P, N}\\
     &\text{true, false P} + \text{false, true N} = \text{actual P, N}\\
     &\text{actual, predicted P} + \text{actual, predicted N} =\text{all measured} \end{aligned}$$
@@ -42,27 +37,17 @@
         - recall (true alarm probability): $P(\text{true P} \mid \text{actual P}) = \dfrac{\text{true P}}{\text{actual P}}$
         - type-I error (false alarm probability): $P(\text{false P} \mid \text{actual N}) = \dfrac{\text{false P}}{\text{actual N}}$
         - type-II error (unobserved signal): $P(\text{false N} \mid \text{actual P}) = \dfrac{\text{false N}}{\text{actual P}}$
-    - **example**: balanced datasets, example confusion matrix
+    - **example**: balanced datasets, ![example confusion matrix](../Images/confusion-matrix-balanced.png)
+        $$\begin{aligned}
+            & \text{accuracy} = \text{precision} = \text{recall} = 98\%\\
+            & \text{type-I} = \text{type-II} = 2\%\\
+        \end{aligned}$$
 
-        |1.0  | 0.5   | 0.5 |
-        |-----|-------|-----|
-        | 0.5 | 0.49  | 0.01|
-        | 0.5 | 0.01  | 0.49|
-
-        | accuracy | precision | recall | type-I | type-II |
-        |----------|-----------|--------|--------|---------|
-        |   0.98   |   0.98    |  0.98  |  0.02  |   0.02  |
-
-    - **example**: inbalanced classes, classify everything to class A; confusion matrix. Problem can be seen only on type-I error!
-
-        |1.0  | 0.99  | 0.01|
-        |-----|-------|-----|
-        | 1.0 | 0.99  | 0.01|
-        | 0.0 | 0.0   | 0.0 |
-
-        | accuracy | precision | recall | type-I | type-II |
-        |----------|-----------|--------|--------|---------|
-        |   0.99   |   0.99    |  1.0   |  1.0   |   0.0  |
+    - **example**: inbalanced classes, classify everything to class A; confusion matrix. Problem can be seen only on type-I error! ![inbalanced confusion matrix](../Images/confusion-matrix-imbalanced.png)
+        $$\begin{aligned}
+            & \text{accuracy} = \text{precision} = 99\%, \;\text{recall} = 100\%\\
+            & \text{type-I} = 100\% (!),\; \text{type-II} = 0\%\\
+        \end{aligned}$$
 
 - **ROC curve**
     - ROC = receiver operating characteristics

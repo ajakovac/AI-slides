@@ -185,8 +185,23 @@
         - faithful estimators, assuming independent measurements
             $$\begin{aligned} 
             &\mathbb E[\frac1N \sum_{n=1}^N x_n] = \mu\\
-            &\mathbb E[\frac1{N-1}\sum_{n=1}^N x_n\otimes x_n] =C
+            &\mathbb E[\frac1{N-1}\sum_{n=1}^N (x_n-\mu)\otimes (x_n-\mu)] =C
             \end{aligned}$$
+    - **example**: 2D points in an ellipsis
+        - generate points with
+        $$ 
+            C = \begin{pmatrix}
+            2.5 & 1 \\
+            1 & 1
+            \end{pmatrix},\quad \lambda=(0.5, 3),\;
+            v = \dfrac1{\sqrt{5}}\begin{pmatrix}
+            1 & -2 \\
+            2 & 1
+            \end{pmatrix}
+            
+        $$
+        - numerically determine correlation matrix and eigensystem
+        - ![draw ellipses](../Images/ellipsis_2d_generated.png) containing 99\% of data → about 3$\sigma$ in 2D
 
 - **Gaussian Mixture Model**
     > assume that the data are coming from a sum of Gaussians
@@ -194,6 +209,7 @@
     - **assumed distribution**
         - $$p(x) \sim \sum_{k=1}^K \pi_k \mathcal N(x; \mu_k, C_k),\qquad \pi_k\in[0,1],\;\sum_{k=1}^K \pi_k=1$$
         - $K$ is the number of clusters, a parameter to be given
+        - ![three Gaussian spot](../Images/three-Gaussian.png)
     - **parameter estimation**: Expectation-Maximization method
     - **Expectation-Maximization method**
         - start from an initial guess $\pi,\mu,C$
@@ -206,6 +222,7 @@
         & C_k = \frac1{N_k}\sum_i (x_i-\mu_k)\otimes(x_i-\mu_k) r_{ik}
         \end{aligned}$$
         - repeat from 2. until converges
+        - ![EM algorithm](../Images/EM-algorithm.png), ![EM algorithm convergence](../Images/EM-algorithm-convergence.png)
 
 - **PCA**, 
     > assume data come from a single Gaussian distribution, but influenced by noise
@@ -213,6 +230,7 @@
     - **geometrically an ellipsoid**
         - large width: the real data (dimensional reduction)
         - small width: noise
+        - ![2D example of eigenvectors](../Images/PCA-illustration-axes.png), ![data projection to axes](../Images/PCA-data-projection.png)
     - **denoising**: represent the date without noise $\to$ use zero instead of small width
     - **technically** 
         - determine the directions where data vary the most
@@ -223,5 +241,7 @@
         - solution
         $$ X^T X w = \lambda w $$
         - writing back $$ w^T X^T X w = \lambda w^T w = \lambda,$$ so we need the largest eigenvalues
-    - **linear data compression**: store projection to the largest eigenvalues: $$Y_n = v_n^T (x-\mu),$$ where $\dfrac{\lambda_n}{\lambda_{max}}>r$
+    - **linear data compression**
+        - store projection to the largest eigenvalues: $$Y_n = v_n^T (x-\mu),$$ where $\dfrac{\lambda_n}{\lambda_{max}}>r$
+        - ![data approximation in PCA](../Images/PCA-data-approximation.png)
     - **restore data**: (without noise) $$ x\to \sum_n Y_n v_n + \mu,$$ because the exact representation $x=\sum_n (v_n\otimes v_n^T) (x-\mu) + \mu$

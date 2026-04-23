@@ -3,15 +3,19 @@
     > fit a linear data model to the data
     - **data**: sample data with $C\sim\mathbb R^N$, $\mathcal C\sim\mathbb R^M$
     - **basis functions**: $g_\alpha:C\to\mathcal C$ for $\alpha=1,\dots,N_{basis}$
-    - **data model**: $\mathcal M(x; q) = \sum_\alpha q_\alpha g_\alpha(x_a)$
+    - **data model**
+        - $\mathcal M(x; q) = \sum_\alpha q_\alpha g_\alpha(x_a)$
+        - collect __sample data__
     - **matrix notation**: $X_{a\alpha} = g_\alpha(x_a)$
-    - **loss**: Gaussian loss $$L(q) = \sum_{a=1}^{N_{data}} \dfrac{|\mathcal M(x_a; q)-y_a|^2} {\sigma_a^2} = (X\cdot q-y)^T C^{-1}(X\cdot q-y),$$ where $\sigma_a$ weights the importance of the given data and $C={\text{diag}}(\sigma^2)$.
-    - **parameter distribution**: $$L(q) = (q-\mu_q)^T C_q^{-1}(q-\mu_q)$$ Gaussian with  $$\begin{aligned}
+    - **loss**: __Gaussian loss__ $$L(q) = \sum_{a=1}^{N_{data}} \dfrac{|\mathcal M(x_a; q)-y_a|^2} {\sigma_a^2} = (X\cdot q-y)^T C^{-1}(X\cdot q-y),$$ where $\sigma_a$ weights the importance of the given data and $C={\text{diag}}(\sigma^2)$.
+    - **parameter distribution**: 
+        - c.f. __parameter distribution__
+        $$L(q) = (q-\mu_q)^T C_q^{-1}(q-\mu_q)$$ Gaussian with  $$\begin{aligned}
      & C_q = (X^T C^{-1}X)^{-1}\\
      & \mu_q = (X^T C^{-1}X)^{-1}X^T C^{-1}y.\\
     \end{aligned}$$
     - **goal**: find the optimal value of the parameter $q=\mu_q$
-    - **distribution of the variables in the target space**: in vector notation $y = q\cdot g(x)$, thus it is also Gaussian with $$ \mu_y=\mu_q\cdot g(x),\quad C_y = g^T(x) C_q g(x) $$
+    - **distribution of the variables in the target space**: in vector notation $y = q\cdot g(x)$, thus it is also __Gaussian distribution__ with $$ \mu_y=\mu_q\cdot g(x),\quad C_y = g^T(x) C_q g(x) $$
     - **examples**
         - __line fitting__
         - __function fitting in functional basis__
@@ -36,9 +40,9 @@
 
 - **line fitting**
     > given the data points, fit a line (or a hyperplane) on them
-    - **data model**: linear regression with $M=1$ (one dimensional output) and $g_0=1,\;g_1=x$
+    - **data model**: __linear regression__ with $M=1$ (one dimensional output) and basis functions $$g_0=1,\;g_1=x$$
     - **notation**: $\langle u\rangle = \dfrac{\sum_n u_n/\sigma_n^2}{\sum_n 1/\sigma_n^2}$ and $\dfrac1{\sigma^2} = \sum_n\dfrac1{\sigma_n^2}$
-    - **better representation**: $\xi = x-\langle x\rangle, \eta = y-\langle y\rangle \Rightarrow \xi = a\eta +b$
+    - **better representation**: $\xi = x-\langle x\rangle, \eta = y-\langle y\rangle \Rightarrow \eta = a\xi +b$
     - **from the general formula** $$C_q^{-1} = X^T C^{-1} X =  \dfrac 1{\sigma^2}\left( \begin{matrix}1 & 0 \cr 0 & \langle \xi\xi\rangle\cr \end{matrix}\right),\quad X^TC^{-1}y = \dfrac 1{\sigma^2}\left( \begin{matrix}\langle \xi\eta \rangle \cr \langle \eta\eta\rangle \cr\end{matrix}\right)$$
     - **relevant parameters**
         - $a_* = {\langle \xi\xi\rangle}^{-1}{\langle \eta\eta\rangle},\; b_* = \langle \xi\eta\rangle,\; C_y = \sigma^2(1 + \xi{\langle \xi\xi\rangle}^{-1}\xi)$
@@ -51,7 +55,7 @@
 - **approximation of a random function**:
     > example for function fitting
     - **construction**
-        - create random function, e.g. with recursion $x_{n+1} = K(2x_n-x_{n-1}+\sigma\xi)$ with $\xi$ uniform normal random variable. With $K=0.9, \sigma=0.1$ $\to$ ![random function](../Images/random-function.png)
+        - create random function, e.g. with recursion $$x_{n+1} = K(2x_n-x_{n-1}+\sigma\xi)$$ with $\xi$ uniform normal random variable. With $K=0.9, \sigma=0.1$ $\to$ ![random function](../Images/random-function.png)
         - choose a functional basis, for example $g_\alpha(t)=(\sin \alpha t, \cos\alpha t)$
         - use fit formulae from linear regression
     - **lessons**
@@ -151,6 +155,7 @@
     - **algorithm**
         - recursion: start from an appropriate $x_0$, and perform recursion $$x_{n+1} = x_n - r\nabla f,$$ where $r$ is the step size (learning rate)
         - stop if $|\nabla f|$ is small, or $r$ is small (if it is changed)
+        - ![path in gradient descent](../Images/gradient-descent-path.png)
     - **proof** 
         - $f(x_{n+1})= f(x_n- r\nabla f) = f(x_n)-r|\nabla f|^2 +\text{higher order terms}$
         - as long as linear approximation applies, the value decreases

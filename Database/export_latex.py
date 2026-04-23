@@ -4,6 +4,10 @@ import argparse
 import hashlib
 import os
 
+DATA_FILE = "data/database.json"
+SYSTEM_FILE = "data/database_system.json"
+LAYOUT_FILE = "data/database_layout.json"
+
 def escape_latex(text: str) -> str:
     replacements = {
         "\\": r"\textbackslash{}",
@@ -155,11 +159,19 @@ parser.add_argument("--output", type=str, default="content.tex")
 
 args = parser.parse_args()
 
-with open(args.database, 'r') as f:
-    database = json.load(f)
+try:
+    with open(args.database, 'r') as f:
+        database = json.load(f)
+    # Load system data
+    with open(SYSTEM_FILE, "r", encoding="utf-8") as f:
+        system_data = json.load(f)
+except FileNotFoundError:
+    print(f"Warning: file not found")
+except json.JSONDecodeError as e:
+    print(f"Error loading: {e}")
 
-link_separator = database['$system']['link_separator']
-item_separator = database['$system']['item_separator']
+link_separator = system_data['link_separator']
+item_separator = system_data['item_separator']
 LINK_RE = re.compile(link_separator  + r'(.*?)' + item_separator + r'(.*?)' + item_separator + r'(.*?)' + link_separator)
 
 if not os.path.exists(os.path.join(os.path.dirname(__file__), '../Rendered Content')):

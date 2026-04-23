@@ -12,9 +12,9 @@
         - discovering physical laws
         - dimensionality reduction
     - **methods**
-        - autoencoders
+        - __autoencoders__
         - generative models
-        - principal component analysis
-        - linear laws discovery
+        - __PCA__ (principal component analysis)
+        - __LLT__ (linear laws discovery)
         - contrastive learning
         - __feature finding problem__
